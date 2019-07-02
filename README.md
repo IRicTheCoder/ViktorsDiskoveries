@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="http://oi66.tinypic.com/2pzh4k8.jpg">
+  <img src="https://raw.githubusercontent.com/RicardoTheCoder/ViktorsDiskoveries/master/WikiPics/Logo.png">
 </p>
 
 A expansion like mod for Slime Rancher (Using SRML)
