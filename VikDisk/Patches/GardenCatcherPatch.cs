@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using VikDisk.Handlers;
 
 namespace VikDisk.Patches
 {
@@ -9,7 +10,7 @@ namespace VikDisk.Patches
 	{
 		public static void Prefix(GardenCatcher __instance)
 		{
-			Main.garden.AddGardenGrowables(__instance);
+			GardenHandler.Instance.AddGardenGrowables(__instance);
 		}
 	}
 }

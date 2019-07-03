@@ -5,15 +5,15 @@ namespace VikDisk.Handlers
 	/// <summary>
 	/// Handles the mails added by the mod
 	/// </summary>
-	public class MailHandler
+	public class MailHandler : Handler<MailHandler>
 	{
 		// THE KEY TO ACCESS THE EMBBEDDED MAIL TEXT FILES
-		private const string MAIL_RESOURCE_KEY = "Mails.";
+		private const string RESOURCE_KEY = "Mails.";
 
 		/// <summary>
-		/// Adds the new mails to the game
+		/// Setups the handler
 		/// </summary>
-		public void AddMails()
+		public override void Setup()
 		{
 			foreach (MailInfo info in Configs.Mails.mails)
 				RegisterMail(info);
@@ -25,7 +25,7 @@ namespace VikDisk.Handlers
 			MailRegistry.MailEntry entry = MailRegistry.RegisterMailEntry(info.key);
 			entry.SetSubjectTranslation(info.subject);
 			entry.SetFromTranslation(info.author);
-			entry.SetBodyTranslation(Utils.GetTextFromEmbbededTxt(MAIL_RESOURCE_KEY + info.key + ".txt"));
+			entry.SetBodyTranslation(Utils.GetTextFromEmbbededFile(RESOURCE_KEY + info.key + ".txt"));
 		}
 
 		/// <summary>

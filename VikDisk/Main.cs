@@ -15,13 +15,6 @@ namespace VikDisk
 		// THE EXECUTING ASSEMBLY
 		public static Assembly execAssembly;
 
-		// ALL THE HANDLERS
-		public static FoodHandler food = new FoodHandler();
-		public static GardenHandler garden = new GardenHandler();
-		public static MailHandler mail = new MailHandler();
-		public static PediaHandler pedia = new PediaHandler();
-		public static VacHandler vac = new VacHandler();
-
 		// ALL LORE GENERATORS
 		public static ViktorLoreGen viktor = new ViktorLoreGen();
 
@@ -32,11 +25,15 @@ namespace VikDisk
 			execAssembly = Assembly.GetExecutingAssembly();
 			HarmonyInstance.PatchAll(execAssembly);
 
-			// Add mails into the game
-			mail.AddMails();
+			// Reads all Mods loaded
+			Mods.CheckMods();
 
-			// Fixes the Slimepedia Entries
-			pedia.FixEntries();
+			// Setup each handler
+			FoodHandler.Instance.Setup();
+			GardenHandler.Instance.Setup();
+			MailHandler.Instance.Setup();
+			PediaHandler.Instance.Setup();
+			VacHandler.Instance.Setup();
 
 			// Register callbacks for the lore generators
 			viktor.RegisterCallbacks();
@@ -53,6 +50,9 @@ namespace VikDisk
 				HashSet<Identifiable.Id> plortSet = new HashSet<Identifiable.Id>();
 				SlimeDiet diet = slimeDefinition.Diet;
 
+				if (Configs.Food.tarrRecipe.ContainsKey(slimeDefinition.IdentifiableId))
+					FoodHandler.Instance.AddTarrBuilder(diet, Configs.Food.tarrRecipe[slimeDefinition.IdentifiableId]);
+
 				// Grabs all plot results
 				foreach (SlimeDiet.EatMapEntry eatMapEntry in diet.EatMap)
 				{
@@ -61,10 +61,10 @@ namespace VikDisk
 				}
 
 				// Removes all foods to prevent the game from yeilding multiple results
-				food.RemoveFoods(plortSet, diet);
+				FoodHandler.Instance.RemoveFoods(plortSet, diet);
 
 				// Registers all new foods
-				food.RegisterFoods(plortSet, diet);
+				FoodHandler.Instance.RegisterFoods(plortSet, diet);
 			}
 			
 			// Makes all craft resources also plorts
@@ -80,7 +80,7 @@ namespace VikDisk
 			if (!Identifiable.VEGGIE_CLASS.Contains(Identifiable.Id.GINGER_VEGGIE))
 				Identifiable.VEGGIE_CLASS.Add(Identifiable.Id.GINGER_VEGGIE);
 
-			vac.RegisterNewVacSlimes();
+			VacHandler.Instance.RegisterNewVacSlimes();
 		}
 	}
 }

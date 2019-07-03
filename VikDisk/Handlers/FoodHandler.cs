@@ -6,8 +6,34 @@ namespace VikDisk.Handlers
 	/// <summary>
 	/// Handles the food for the slimes
 	/// </summary>
-	public class FoodHandler
+	public class FoodHandler : Handler<FoodHandler>
 	{
+		/// <summary>
+		/// Setups the handler
+		/// </summary>
+		public override void Setup()
+		{
+			// NO SETUP REQUIRED FOR NOW
+		}
+
+		// TODO: Add slime diet processing here
+
+		/// <summary>
+		/// Adds Tarr Building recipes (essentially for Casual Mode)
+		/// </summary>
+		public void AddTarrBuilder(SlimeDiet diet, Identifiable.Id id)
+		{
+			diet.EatMap.Add(new SlimeDiet.EatMapEntry
+			{
+				eats = id,
+				producesId = Identifiable.Id.NONE,
+				becomesId = Identifiable.Id.TARR_SLIME,
+				isFavorite = false,
+				favoriteProductionCount = 0,
+				driver = SlimeEmotions.Emotion.NONE
+			});
+		}
+
 		/// <summary>
 		/// Removes the foods from the old eat maps to add the new ones
 		/// </summary>
@@ -119,7 +145,7 @@ namespace VikDisk.Handlers
 						eats = Identifiable.Id.GINGER_VEGGIE,
 						producesId = id,
 						isFavorite = true,
-						favoriteProductionCount = Configs.Food.GF_PROD,
+						favoriteProductionCount = Configs.Food.SFAV_PROD,
 						driver = SlimeEmotions.Emotion.HUNGER
 					});
 					diet.Favorites.AddItem(Identifiable.Id.GINGER_VEGGIE);

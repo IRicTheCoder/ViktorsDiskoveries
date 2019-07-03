@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System;
 
 namespace VikDisk
 {
@@ -8,11 +9,11 @@ namespace VikDisk
 	public static class Utils
 	{
 		/// <summary>
-		/// Gets the text from embbeded text files in the mod's dll
+		/// Gets the text from embbeded files in the mod's dll
 		/// </summary>
 		/// <param name="name">Name of the resource</param>
 		/// <returns>The text inside the file</returns>
-		public static string GetTextFromEmbbededTxt(string name)
+		public static string GetTextFromEmbbededFile(string name)
 		{
 			string result = "";
 

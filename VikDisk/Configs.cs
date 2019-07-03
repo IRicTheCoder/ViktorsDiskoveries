@@ -3,8 +3,38 @@ using VikDisk.Handlers;
 
 namespace VikDisk
 {
+	/// <summary>
+	/// Contains all internal configs
+	/// </summary>
 	public static class Configs
 	{
+		//---------------------------------------------------
+		// MODS RELATED
+		//---------------------------------------------------
+
+		public static class Mods
+		{
+			// CONSTANTS WITH MOD NAMES/ASSEMBLIES
+			public const string UMF_ITSELF = "UMF:uModFramework";
+			public const string VACUUM_MANIA = "UMF:SRVacuumMania";
+		}
+
+		//---------------------------------------------------
+		// VACS RELATED
+		//---------------------------------------------------
+
+		public static class Vacs
+		{
+			// BASE VAC ENTRIES (ALREADY HAVE AN ENTRY JUST NEED THE AMMO)
+			public static readonly List<Identifiable.Id> vanillaVacs = new List<Identifiable.Id>
+			{
+				Identifiable.Id.SABER_SLIME,
+				Identifiable.Id.LUCKY_SLIME,
+				Identifiable.Id.GOLD_SLIME,
+				Identifiable.Id.TARR_SLIME
+			};
+		}
+
 		//---------------------------------------------------
 		// FOOD RELATED
 		//---------------------------------------------------
@@ -14,7 +44,17 @@ namespace VikDisk
 			// CONSTANTS
 			public const int FAV_PROD = 2; // Amount produced by normal favorite foods
 			public const int SCI_PROD = 6; // Amount of slime resources produced by Kookadoba and Spicy Tofu
-			public const int GF_PROD = 3; // Amount produced by Gilded Ginger
+			public const int SFAV_PROD = 3; // Amount produced by super favorite foods
+
+			// TARR SLIME RECIPES
+			// KEY = SLIME TO TURN; VALUE = STUFF TO EAT IN ORDER TO TURN
+			public static readonly Dictionary<Identifiable.Id, Identifiable.Id> tarrRecipe = new Dictionary<Identifiable.Id, Identifiable.Id>
+			{
+				{
+					Identifiable.Id.LUCKY_SLIME,
+					Identifiable.Id.MANIFOLD_CUBE_CRAFT
+				}
+			};
 
 			// KOOKADOBA FOOD RESULTS
 			// KEY = TARGET; VALUE = NEW RESULT

@@ -5,8 +5,16 @@ namespace VikDisk.Handlers
 	/// <summary>
 	/// Handles everything related to the gardens
 	/// </summary>
-	public class GardenHandler
+	public class GardenHandler : Handler<GardenHandler>
 	{
+		/// <summary>
+		/// Setups the handler
+		/// </summary>
+		public override void Setup()
+		{
+			// NO SETUP REQUIRED FOR NOW
+		}
+
 		// ADDS GROWABLES TO THE GARDEN
 		public void AddGardenGrowables(GardenCatcher catcher)
 		{
