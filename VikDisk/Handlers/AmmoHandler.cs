@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using static LookupDirector;
 using UnityEngine;
+using VikDisk.ConsoleSystem;
 
 namespace VikDisk.Handlers
 {
@@ -58,11 +59,7 @@ namespace VikDisk.Handlers
 		/// </summary>
 		public void RegisterStorage()
 		{
-			foreach (Identifiable.Id id in Identifiable.CRAFT_CLASS)
-			{
-				AmmoRegistry.RegisterSiloAmmo(SiloStorage.StorageType.PLORT, id);
-			}
-			
+
 		}
 	}
 }
