@@ -20,12 +20,10 @@ namespace SRML.ConsoleSystem
 
 		private static readonly string openUnityLog = "Unity Log";
 		private static readonly string openSRMLLog = "SRML Log";
-
-		private static readonly string runMods = "Mods";
-		private static readonly string runCommands = "Help";
-		private static readonly string runReload = "Reload";
+		private static readonly string commands = "Command Menu";
 
 		private static Vector2 consoleScroll = Vector2.zero;
+		private static Vector2 commandScroll = Vector2.zero;
 
 		internal static string cmdsText = string.Empty;
 		internal static string modsText = string.Empty;
@@ -78,7 +76,7 @@ namespace SRML.ConsoleSystem
 				windowRect = new Rect(windowPosition, windowSize);
 			}
 
-			canPress = true;
+			canPress = true;			
 		}
 
 		// DRAWS THE WINDOW
@@ -107,8 +105,9 @@ namespace SRML.ConsoleSystem
 			Font defFont = GUI.skin.font;
 			GUI.skin.font = consoleFont;
 
-			Rect leftGroup = new Rect(15, 25, windowRect.width - 150, windowRect.height - 30);
-			Rect rightGroup = new Rect(leftGroup.width + 25, leftGroup.y, 110, leftGroup.height - 5);
+			Rect leftGroup = new Rect(15, 25, windowRect.width - 190, windowRect.height - 30);
+			Rect rightGroupA = new Rect(leftGroup.width + 25, leftGroup.y, 150, 70);
+			Rect rightGroupB = new Rect(leftGroup.width + 25, rightGroupA.y + rightGroupA.height + 5, 150, leftGroup.height - rightGroupA.height - 10);
 
 			// CONSOLE AREA
 			GUI.BeginGroup(leftGroup);
@@ -136,22 +135,38 @@ namespace SRML.ConsoleSystem
 			GUI.EndGroup();
 
 			// MENU AREA
-			GUI.BeginGroup(rightGroup, GUI.skin.textArea);
+			GUI.BeginGroup(rightGroupA, GUI.skin.textArea);
 
-			if (GUI.Button(new Rect(10, 7, 90, 25), openUnityLog))
+			if (GUI.Button(new Rect(10, 7, 130, 25), openUnityLog))
 				System.Diagnostics.Process.Start(Console.unityLogFile);
 
-			if (GUI.Button(new Rect(10, 37, 90, 25), openSRMLLog))
+			if (GUI.Button(new Rect(10, 37, 130, 25), openSRMLLog))
 				System.Diagnostics.Process.Start(Console.srmlLogFile);
 
-			if (GUI.Button(new Rect(10, 67, 90, 25), runMods))
-				Console.ProcessInput("mods", true);
+			GUI.EndGroup();
 
-			if (GUI.Button(new Rect(10, 97, 90, 25), runCommands))
-				Console.ProcessInput("help", true);
+			GUI.BeginGroup(rightGroupB, GUI.skin.textArea);
 
-			if (GUI.Button(new Rect(10, 127, 90, 25), runReload))
-				Console.ProcessInput("reload", true);
+			GUI.skin.label.alignment = TextAnchor.MiddleCenter;
+			GUI.Label(new Rect(10, 7, 130, 25), commands);
+			GUI.skin.label.alignment = TextAnchor.MiddleLeft;
+
+			Rect csRect = new Rect(10, 37, rightGroupB.width - 15, rightGroupB.height - 45);
+			Rect caRect = new Rect(0, 0, csRect.width - 20, (30 * Console.cmdButtons.Count) + 5);
+			commandScroll = GUI.BeginScrollView(csRect, commandScroll, caRect, false, true);
+			GUI.BeginGroup(caRect);
+
+			int y = 5;
+			foreach (ConsoleButton button in Console.cmdButtons)
+			{
+				if (GUI.Button(new Rect(0, y, caRect.width - 5, 25), button.Text))
+					Console.ProcessInput(button.Command, true);
+
+				y += 30;
+			}
+
+			GUI.EndGroup();
+			GUI.EndScrollView();
 
 			GUI.EndGroup();
 
@@ -223,7 +238,11 @@ namespace SRML.ConsoleSystem
 
 			if (showWindow)
 			{
-				SceneContext.Instance.TimeDirector.Pause(true);
+				if (SceneManager.GetActiveScene().name.Equals("worldGenerated"))
+				{
+					if (!SceneContext.Instance.TimeDirector.HasPauser())
+						SceneContext.Instance.TimeDirector.Pause(true);
+				}
 
 				cachedCasters = FindObjectsOfType<GraphicRaycaster>();
 				foreach (GraphicRaycaster caster in cachedCasters)
@@ -233,7 +252,11 @@ namespace SRML.ConsoleSystem
 			}
 			else
 			{
-				SceneContext.Instance.TimeDirector.Unpause(true);
+				if (SceneManager.GetActiveScene().name.Equals("worldGenerated"))
+				{
+					if (SceneContext.Instance.TimeDirector.HasPauser())
+						SceneContext.Instance.TimeDirector.Unpause(true);
+				}
 
 				foreach (GraphicRaycaster caster in cachedCasters)
 				{

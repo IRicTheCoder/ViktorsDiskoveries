@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using static LookupDirector;
 using UnityEngine;
-using VikDisk.ConsoleSystem;
 
 namespace VikDisk.Handlers
 {

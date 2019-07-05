@@ -1,5 +1,7 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace VikDisk
 {
@@ -52,6 +54,44 @@ namespace VikDisk
 			}
 
 			return dict;
+		}
+
+		/// <summary>
+		/// Runs a reflected method
+		/// </summary>
+		/// <param name="typeName">The name of the type to run in</param>
+		/// <param name="methodName">The method to run</param>
+		/// <param name="args">The arguments for that method</param>
+		/// <returns>True if the method was executed, false otherwise</returns>
+		public static bool RunReflectedMethod(string typeName, string methodName, params object[] args)
+		{
+			Type type = Type.GetType(typeName, false);
+			if (type == null)
+				return false;
+
+			MethodInfo info;
+			Type[] types = new Type[args.Length];
+			for (int i = 0; i < args.Length; i++)
+				types[i] = args[i].GetType();
+			try
+			{
+				info = type.GetMethod(methodName, BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.Public, null, types, null);
+				if (info == null)
+				{
+					SRML.Console.LogError($"The method 'methodName' couldn't be found");
+					return false;
+				}
+
+				info?.Invoke(null, args);
+
+				return true;
+			}
+			catch (Exception e)
+			{
+				SRML.Console.LogError($"The method 'methodName' generated an exception, found below:");
+				UnityEngine.Debug.LogException(e);
+				return false;
+			}
 		}
 	}
 }

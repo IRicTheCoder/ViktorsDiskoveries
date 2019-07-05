@@ -1,4 +1,6 @@
-﻿namespace SRML.ConsoleSystem
+﻿using System.Collections.Generic;
+
+namespace SRML.ConsoleSystem
 {
 	/// <summary>
 	/// Base class for all console commands
@@ -28,21 +30,29 @@
 		public abstract bool Execute(string[] args);
 
 		/// <summary>
+		/// Gets the auto complete list
+		/// </summary>
+		/// <param name="argIndex">The index of the argument in the command string</param>
+		/// <param name="argText">The already inputed argument text (to filter)</param>
+		/// <returns>The list of auto complete options</returns>
+		public virtual List<string> GetAutoComplete(int argIndex, string argText) { return null; }
+
+		/// <summary>
 		/// The arguments are invalid (either too many or too little)
 		/// </summary>
 		/// <param name="min">Amount of arguments</param>
 		/// <param name="min">Minimun amount</param>
 		/// <param name="max">Maximun amount</param>
 		/// <returns>True if arguments are out of bounds, false otherwise</returns>
-		protected virtual bool ArgsOutOfBounds(int argCount, int min = 0, int max = 0)
+		protected virtual bool ArgsOutOfBounds(int argCount, int min = -1, int max = -1)
 		{
-			if (argCount < min)
+			if (argCount < min && min > -1)
 			{
 				Console.LogError($"The '{ID}' command got less arguments then expected (Had: {argCount}; Min: {min})");
 				return true;
 			}
 
-			if (argCount > max)
+			if (argCount > max && max > -1)
 			{
 				Console.LogError($"The '{ID}' command got more arguments then expected (Had: {argCount}; Max: {max})");
 				return true;

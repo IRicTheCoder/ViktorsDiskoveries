@@ -30,6 +30,14 @@ namespace VikDisk
 			// Reads all Mods loaded
 			Mods.CheckMods();
 
+			Console.RegisterDumpAction("vacColors", (writer) =>
+			{
+				foreach (LookupDirector.VacEntry entry in GameContext.Instance.LookupDirector.vacEntries)
+				{
+					writer.WriteLine($"{entry.id.ToString()} [R: {(int)(entry.color.r * 255f)} G: {(int)(entry.color.g * 255f)} B: {(int)(entry.color.b * 255f)} HEX: #{UnityEngine.ColorUtility.ToHtmlStringRGB(entry.color)}]");
+				}
+			});
+
 			// Setup each handler
 			FoodHandler.Instance.Setup();
 			GardenHandler.Instance.Setup();
@@ -39,6 +47,13 @@ namespace VikDisk
 
 			// Register callbacks for the lore generators
 			viktor.RegisterCallbacks();
+
+			UnityEngine.SceneManagement.SceneManager.activeSceneChanged += ChangeScene;
+		}
+
+		public void ChangeScene(UnityEngine.SceneManagement.Scene old, UnityEngine.SceneManagement.Scene scene)
+		{
+			Console.Log($"{scene.buildIndex}: {scene.name ?? "NoName"}");
 		}
 
 		// POST LOAD MOD

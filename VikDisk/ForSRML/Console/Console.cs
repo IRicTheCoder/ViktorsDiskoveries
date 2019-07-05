@@ -25,6 +25,7 @@ namespace SRML
 
 		// COMMAND STUFF
 		private static Dictionary<string, ConsoleCommand> commands = new Dictionary<string, ConsoleCommand>();
+		internal static List<ConsoleButton> cmdButtons = new List<ConsoleButton>();
 
 		// LINE COUNTER
 		private static int lines = 0;
@@ -35,6 +36,11 @@ namespace SRML
 		// RELOAD EVENT (THIS IS CALLED WHEN THE COMMAND RELOAD IS CALLED, USED TO RUN A RELOAD METHOD FOR A MOD, IF THE AUTHOR WISHES TO CREATE ONE)
 		public delegate void ReloadAction(); // Creates the delegate here to prevent 'TypeNotFound' exceptions
 		public static event ReloadAction Reload;
+
+		// DUMP ACTIONS
+		// KEY = Dump Command Argument; VALUE = The method to run
+		public delegate void DumpAction(StreamWriter writer);
+		public static Dictionary<string, DumpAction> dumpActions = new Dictionary<string, DumpAction>();
 
 		/// <summary>
 		/// Initializes the console
@@ -54,10 +60,21 @@ namespace SRML
 			Log("CONSOLE INITIALIZED!");
 			Log("Patching SceneManager to attach window");
 
+			RegisterCommand(new Commands.ClearCommand());
 			RegisterCommand(new Commands.HelpCommand());
 			RegisterCommand(new Commands.ReloadCommand());
 			RegisterCommand(new Commands.ModsCommand());
+			RegisterCommand(new Commands.DumpCommand());
+			RegisterCommand(new Commands.AddButtonCommand());
+			RegisterCommand(new Commands.RemoveButtonCommand());
 
+			RegisterButton(new ConsoleButton("Clear", "clear"));
+			RegisterButton(new ConsoleButton("Help", "help"));
+			RegisterButton(new ConsoleButton("Mods", "mods"));
+			RegisterButton(new ConsoleButton("Reload", "reload"));
+			RegisterButton(new ConsoleButton("Dump All", "dump all"));
+
+			ConsoleBinder.ReadBinds();
 			SceneManager.activeSceneChanged += ConsoleWindow.AttachWindow;
 		}
 
@@ -78,12 +95,31 @@ namespace SRML
 		}
 
 		/// <summary>
+		/// Registers a new console button
+		/// </summary>
+		/// <param name="button">Button to register</param>
+		public static void RegisterButton(ConsoleButton button)
+		{
+			cmdButtons.Add(button);
+		}
+
+		/// <summary>
+		/// Registers a new dump action for the dump command
+		/// </summary>
+		/// <param name="id">The id to use for the dump command argument</param>
+		/// <param name="action">The dump action to run</param>
+		public static void RegisterDumpAction(string id, DumpAction action)
+		{
+			dumpActions.Add(id, action);
+		}
+
+		/// <summary>
 		/// Logs a info message
 		/// </summary>
 		/// <param name="message">Message to log</param>
 		public static void Log(string message)
 		{
-			unityHandler.LogFormat(LogType.Log, null, message, string.Empty);
+			unityHandler.LogFormat(LogType.Log, null, Regex.Replace(message, @"\<[a-z=]+\>|\<\/[a-z]+\>", ""), string.Empty);
 			console.LogEntry(LogType.Log, message);
 		}
 
@@ -93,7 +129,7 @@ namespace SRML
 		/// <param name="message">Message to log</param>
 		public static void LogWarning(string message)
 		{
-			unityHandler.LogFormat(LogType.Warning, null, message, string.Empty);
+			unityHandler.LogFormat(LogType.Warning, null, Regex.Replace(message, @"\<[a-z=]+\>|\<\/[a-z]+\>", ""), string.Empty);
 			console.LogEntry(LogType.Warning, message);
 		}
 
@@ -103,7 +139,7 @@ namespace SRML
 		/// <param name="message">Message to log</param>
 		public static void LogError(string message)
 		{
-			unityHandler.LogFormat(LogType.Error, null, message, string.Empty);
+			unityHandler.LogFormat(LogType.Error, null, Regex.Replace(message, @"\<[a-z=]+\>|\<\/[a-z]+\>", ""), string.Empty);
 			console.LogEntry(LogType.Error, message);
 		}
 
@@ -121,18 +157,25 @@ namespace SRML
 				history.Add(command);
 			}
 
-			Log("<color=cyan>CMD: </color>" + command);
+			try
+			{
+				Log("<color=cyan>CMD: </color>" + command);
 
-			bool spaces = command.Contains(" ");
-			string cmd = spaces ? command.Substring(0, command.IndexOf(' ')) : command;
-			
-			if (commands.ContainsKey(cmd))
-			{
-				commands[cmd].Execute(spaces ? StripArgs(command) : null);
+				bool spaces = command.Contains(" ");
+				string cmd = spaces ? command.Substring(0, command.IndexOf(' ')) : command;
+
+				if (commands.ContainsKey(cmd))
+				{
+					commands[cmd].Execute(spaces ? StripArgs(command) : null);
+				}
+				else
+				{
+					LogError("Unknown command. Please use 'help' for available commands or check the menu on the right");
+				}
 			}
-			else
+			catch (Exception e)
 			{
-				LogError("Unknown command. Please use 'help' for available commands or check the menu on the right");
+				Debug.LogException(e);
 			}
 		}
 
@@ -189,7 +232,7 @@ namespace SRML
 		// THE TWO FOLLOWING METHODS CAN BE IGNORED, THEY TAP INTO UNITY'S SYSTEM TO LISTEN TO THE LOG
 		void ILogHandler.LogFormat(LogType logType, UnityEngine.Object context, string format, params object[] args)
 		{
-			unityHandler.LogFormat(logType, context, format, args);
+			unityHandler.LogFormat(logType, context, Regex.Replace(format, @"\<[a-z=]+\>|\<\/[a-z]+\>", ""), args);
 			LogEntry(logType, Regex.Replace(string.Format(format, args), @"\[INFO]\s|\[ERROR]\s|\[WARNING]\s", ""));
 		}
 
