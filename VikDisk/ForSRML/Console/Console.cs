@@ -4,8 +4,9 @@ using System.IO;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using System.Text.RegularExpressions;
+using SRML.ConsoleSystem;
 
-namespace VikDisk.Console
+namespace SRML
 {
 	/// <summary>
 	/// Controls the in-game console
@@ -32,7 +33,8 @@ namespace VikDisk.Console
 		internal static List<string> history = new List<string>(HISTORY);
 
 		// RELOAD EVENT (THIS IS CALLED WHEN THE COMMAND RELOAD IS CALLED, USED TO RUN A RELOAD METHOD FOR A MOD, IF THE AUTHOR WISHES TO CREATE ONE)
-		//public static event Action Reload;
+		public delegate void ReloadAction(); // Creates the delegate here to prevent 'TypeNotFound' exceptions
+		public static event ReloadAction Reload;
 
 		/// <summary>
 		/// Initializes the console
@@ -72,7 +74,7 @@ namespace VikDisk.Console
 			}
 
 			commands.Add(cmd.ID, cmd);
-			ConsoleWindow.cmdsText += $"{(ConsoleWindow.cmdsText.Equals(string.Empty) ? "" : "\n")}<b><color=teal>{cmd.Usage}</color></b> - {cmd.Description}";
+			ConsoleWindow.cmdsText += $"{(ConsoleWindow.cmdsText.Equals(string.Empty) ? "" : "\n")}<color=#8ab7ff>{cmd.Usage}</color> - {cmd.Description}";
 		}
 
 		/// <summary>
@@ -108,6 +110,9 @@ namespace VikDisk.Console
 		// PROCESSES THE TEXT FROM THE CONSOLE INPUT
 		internal static void ProcessInput(string command, bool forced = false)
 		{
+			if (command.Equals(string.Empty))
+				return;
+
 			if (!forced)
 			{
 				if (history.Count == HISTORY)
@@ -158,8 +163,8 @@ namespace VikDisk.Console
 		private void LogEntry(LogType logType, string message)
 		{
 			string type = TypeToText(logType);
-			string color = "lightblue";
-			if (type.Equals("ERRO")) color = "red";
+			string color = "white";
+			if (type.Equals("ERRO")) color = "#ff7070";
 			if (type.Equals("WARN")) color = "yellow";
 
 			if (lines == MAX_ENTRIES)
@@ -167,16 +172,18 @@ namespace VikDisk.Console
 			else
 				lines++;
 
-			ConsoleWindow.fullText += $"<color=cyan>[{DateTime.Now.ToString("HH:mm:ss")}]</color><color={color}>[{type}] </color>{Regex.Replace(message, @"<material[^>]*>|<\/material>|<size[^>]*>|<\/size>|<quad[^>]*>|<b>|</b>", "")}\n";
+			ConsoleWindow.fullText += $"{(ConsoleWindow.fullText.Equals(string.Empty) ? "" : "\n")}<color=cyan>[{DateTime.Now.ToString("HH:mm:ss")}]</color><color={color}>[{type}] {Regex.Replace(message, @"<material[^>]*>|<\/material>|<size[^>]*>|<\/size>|<quad[^>]*>|<b>|</b>", "")}</color>";
 
 			using (StreamWriter writer = File.AppendText(srmlLogFile))
 				writer.WriteLine($"[{DateTime.Now.ToString("HH:mm:ss")}][{type}] {Regex.Replace(message, @"\<[a-z=]+\>|\<\/[a-z]+\>", "")}");
+
+			ConsoleWindow.updateDisplay = true;
 		}
 
 		// RUNS THE RELOAD COMMAND
 		internal static void ReloadMods()
 		{
-			//Reload?.Invoke();
+			Reload?.Invoke();
 		}
 
 		// THE TWO FOLLOWING METHODS CAN BE IGNORED, THEY TAP INTO UNITY'S SYSTEM TO LISTEN TO THE LOG
@@ -188,10 +195,10 @@ namespace VikDisk.Console
 
 		void ILogHandler.LogException(Exception exception, UnityEngine.Object context)
 		{
-			System.Diagnostics.StackTrace trace = new System.Diagnostics.StackTrace(1, true);
+			System.Diagnostics.StackTrace trace = new System.Diagnostics.StackTrace(exception, true);
 
 			unityHandler.LogException(exception, context);
-			LogEntry(LogType.Exception, trace.ToString());
+			LogEntry(LogType.Exception, exception.Message + "\n" + trace.ToString());
 		}
 	}
 }

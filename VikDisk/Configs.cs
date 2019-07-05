@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using VikDisk.Handlers;
+using UnityEngine;
 
 namespace VikDisk
 {
@@ -20,18 +21,27 @@ namespace VikDisk
 		}
 
 		//---------------------------------------------------
-		// VACS RELATED
+		// AMMO RELATED
 		//---------------------------------------------------
 
-		public static class Vacs
+		public static class Ammo
 		{
 			// BASE VAC ENTRIES (ALREADY HAVE AN ENTRY JUST NEED THE AMMO)
-			public static readonly List<Identifiable.Id> vanillaVacs = new List<Identifiable.Id>
+			public static readonly Identifiable.Id[] vanillaVacs = new[]
 			{
 				Identifiable.Id.SABER_SLIME,
 				Identifiable.Id.LUCKY_SLIME,
 				Identifiable.Id.GOLD_SLIME,
 				Identifiable.Id.TARR_SLIME
+			};
+
+			// FIXES THE COLORS OF CERTAIN VAC ENTRIES
+			public static readonly Dictionary<Identifiable.Id, Color> fixColors = new Dictionary<Identifiable.Id, Color>
+			{
+				{
+					Identifiable.Id.SABER_SLIME,
+					Color.yellow * 0.5f
+				}
 			};
 		}
 

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace VikDisk.Console
+﻿namespace SRML.ConsoleSystem
 {
 	/// <summary>
 	/// Base class for all console commands
@@ -44,13 +38,13 @@ namespace VikDisk.Console
 		{
 			if (argCount < min)
 			{
-				Console.LogError($"Less arguments then expected (Had: {argCount}; Min: {min})");
+				Console.LogError($"The '{ID}' command got less arguments then expected (Had: {argCount}; Min: {min})");
 				return true;
 			}
 
 			if (argCount > max)
 			{
-				Console.LogError($"More arguments then expected (Had: {argCount}; Max: {max})");
+				Console.LogError($"The '{ID}' command got more arguments then expected (Had: {argCount}; Max: {max})");
 				return true;
 			}
 

@@ -1,6 +1,7 @@
 ﻿using System;
+using SRML.ConsoleSystem;
 
-namespace VikDisk.Console.Commands
+namespace SRML.Commands
 {
 	/// <summary>
 	/// A command to reload the mods

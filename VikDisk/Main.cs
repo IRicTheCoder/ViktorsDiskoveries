@@ -21,7 +21,7 @@ namespace VikDisk
 		// PRE LOAD MOD
 		public override void PreLoad()
 		{
-			Console.Console.Init();
+			Console.Init();
 
 			// Gets the Assembly being executed
 			execAssembly = Assembly.GetExecutingAssembly();
@@ -35,7 +35,7 @@ namespace VikDisk
 			GardenHandler.Instance.Setup();
 			MailHandler.Instance.Setup();
 			PediaHandler.Instance.Setup();
-			VacHandler.Instance.Setup();
+			AmmoHandler.Instance.Setup();
 
 			// Register callbacks for the lore generators
 			viktor.RegisterCallbacks();
@@ -82,7 +82,20 @@ namespace VikDisk
 			if (!Identifiable.VEGGIE_CLASS.Contains(Identifiable.Id.GINGER_VEGGIE))
 				Identifiable.VEGGIE_CLASS.Add(Identifiable.Id.GINGER_VEGGIE);
 
-			VacHandler.Instance.RegisterNewVacSlimes();
+			AmmoHandler.Instance.RegisterSlimes();
+			AmmoHandler.Instance.RegisterStorage();
 		}
 	}
+
+	// DELEGATES FOR USE WITH THE MOD
+	public delegate void ModAction();
+	public delegate void ModAction<A>(A a);
+	public delegate void ModAction<A1, A2>(A1 a1, A2 a2);
+	public delegate void ModAction<A1, A2, A3>(A1 a1, A2 a2, A3 a3);
+
+	public delegate R ModFunc<out R>();
+	public delegate R ModFunc<A, out R>(A a);
+	public delegate R ModFunc<A1, A2, out R>(A1 a1, A2 a2);
+	public delegate R ModFunc<A1, A2, A3, out R>(A1 a1, A2 a2, A3 a3);
+
 }

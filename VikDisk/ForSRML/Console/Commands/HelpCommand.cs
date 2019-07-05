@@ -1,6 +1,7 @@
 ﻿using System;
+using SRML.ConsoleSystem;
 
-namespace VikDisk.Console.Commands
+namespace SRML.Commands
 {
 	/// <summary>
 	/// A command to display all commands
@@ -19,7 +20,7 @@ namespace VikDisk.Console.Commands
 				return false;
 			}
 
-			Console.Log("<color=lightblue>List of Commands Available:</color>");
+			Console.Log("List of Commands Available:");
 
 			foreach (string line in ConsoleWindow.cmdsText.Split('\n'))
 				Console.Log(line);

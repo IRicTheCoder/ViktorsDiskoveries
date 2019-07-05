@@ -1,5 +1,5 @@
 ﻿using System.IO;
-using System;
+using System.Collections.Generic;
 
 namespace VikDisk
 {
@@ -26,6 +26,32 @@ namespace VikDisk
 			}
 
 			return result;
+		}
+
+		/// <summary>
+		/// Processes a file that as rules to fix stuff
+		/// </summary>
+		/// <param name="name">Name of the file</param>
+		/// <param name="action">Action to run for each line</param>
+		/// <typeparam name="K">The type for the key</typeparam>
+		/// <typeparam name="V">The type for the value</typeparam>
+		/// <returns>A dictionary with the keys and values processed</returns>
+		public static Dictionary<K, V> ProcessFixesFile<K, V>(string name, ModFunc<string, string, KeyValuePair<K, V>?> convert)
+		{
+			Dictionary<K, V> dict = new Dictionary<K, V>();
+			string[] fixesFile = Utils.GetTextFromEmbbededFile($"VikDisk.Resources.Fixes.{name}.fix").Split('\n');
+
+			foreach (string line in fixesFile)
+			{
+				if (line.Equals(string.Empty) || line.StartsWith("#"))
+					continue;
+
+				string[] splited = line.Split('=');
+				KeyValuePair<K, V>? pair = convert(splited[0], splited[1]);
+				if (pair != null) dict.Add(pair.GetValueOrDefault().Key, pair.GetValueOrDefault().Value);
+			}
+
+			return dict;
 		}
 	}
 }

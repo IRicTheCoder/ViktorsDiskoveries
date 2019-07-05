@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using SRML;
 
-namespace VikDisk.Console
+namespace SRML.ConsoleSystem
 {
 	/// <summary>
 	/// Draws the window for the in-game console
@@ -11,6 +10,7 @@ namespace VikDisk.Console
 	public class ConsoleWindow : MonoBehaviour
 	{
 		// CONTROL VARIABLES
+		internal static bool updateDisplay = false;
 		private static bool showWindow = false;
 		private static bool canPress = true;
 		private static Vector2 oldRes = new Vector2(Screen.width, Screen.height);
@@ -59,7 +59,10 @@ namespace VikDisk.Console
 			Console.Log("Use command 'mods' for a list of all mods loaded");
 			Console.Log("You can also check the menu on the right");
 
-			// TODO: Read mod list here
+			foreach (SRModInfo info in SRModLoader.LoadedMods)
+			{
+				modsText += $"{(modsText.Equals(string.Empty) ? "" : "\n")}<color=#8ab7ff>{info.Name}</color> [<color=#8ab7ff>Author:</color> {info.Author} | <color=#8ab7ff>ID:</color> {info.Id} | <color=#8ab7ff>Version:</color> {info.Version}]";
+			}
 		}
 
 		// JUST TO CHECK FOR A KEY
@@ -160,8 +163,6 @@ namespace VikDisk.Console
 				{
 					Console.ProcessInput(cmdText);
 					cmdText = string.Empty;
-
-					consoleScroll.y = textArea.CalcSize(new GUIContent(fullText.ToString())).y;
 				}
 
 				// CLOSES THE WINDOW
@@ -203,6 +204,13 @@ namespace VikDisk.Console
 						}
 					}
 				}
+			}
+
+			// UPDATES THE SCROLL POSITION FOR THE CONSOLE TO SHOW LATEST MESSAGES
+			if (updateDisplay)
+			{
+				consoleScroll.y = textArea.CalcSize(new GUIContent(fullText.ToString())).y;
+				updateDisplay = false;
 			}
 
 			GUI.skin.font = defFont;
