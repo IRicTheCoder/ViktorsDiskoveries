@@ -21,7 +21,7 @@ namespace VikDisk.Handlers
 		// FIXES SOME ENTRIES IN THE SLIMEPEDIA
 		private void FixEntries()
 		{
-			string[] fixesFile = Utils.GetTextFromEmbbededFile(RESOURCE_KEY + "Fixes.txt").Split('\n');
+			/*string[] fixesFile = Utils.GetTextFromEmbbededFile(RESOURCE_KEY + "Fixes.txt").Split('\n');
 
 			foreach (string line in fixesFile)
 			{
@@ -30,7 +30,7 @@ namespace VikDisk.Handlers
 
 				string[] splited = line.Split('=');
 				TranslationPatcher.AddPediaTranslation(splited[0].TrimEnd(' '), splited[1].TrimStart(' '));
-			}
+			}*/
 
 			// Fixes to Slime Favorites
 			//TranslationPatcher.AddPediaTranslation("m.favorite.gold_slime", "Gilded Ginger");

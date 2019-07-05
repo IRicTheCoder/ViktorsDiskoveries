@@ -21,6 +21,8 @@ namespace VikDisk
 		// PRE LOAD MOD
 		public override void PreLoad()
 		{
+			Console.Console.Init();
+
 			// Gets the Assembly being executed
 			execAssembly = Assembly.GetExecutingAssembly();
 			HarmonyInstance.PatchAll(execAssembly);
