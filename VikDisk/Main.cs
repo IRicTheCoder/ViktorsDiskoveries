@@ -30,7 +30,7 @@ namespace VikDisk
 			// Reads all Mods loaded
 			Mods.CheckMods();
 
-			Console.RegisterDumpAction("vac Colors", (writer) =>
+			Console.RegisterDumpAction("vacColors", (writer) =>
 			{
 				foreach (LookupDirector.VacEntry entry in GameContext.Instance.LookupDirector.vacEntries)
 				{

@@ -136,13 +136,13 @@ namespace SRML
 		/// <returns>True if registered succesfully, false otherwise</returns>
 		public static bool RegisterDumpAction(string id, DumpAction action)
 		{
-			if (dumpActions.ContainsKey(id))
+			if (dumpActions.ContainsKey(id.Replace(" ", string.Empty)))
 			{
-				LogWarning($"Trying to register dump action with id '<color=white>{id}</color>' but the ID is already registered!");
+				LogWarning($"Trying to register dump action with id '<color=white>{id.Replace(" ", string.Empty)}</color>' but the ID is already registered!");
 				return false;
 			}
 
-			dumpActions.Add(id, action);
+			dumpActions.Add(id.Replace(" ", string.Empty), action);
 			return true;
 		}
 
@@ -283,7 +283,7 @@ namespace SRML
 			else
 				lines++;
 
-			ConsoleWindow.fullText += $"{(ConsoleWindow.fullText.Equals(string.Empty) ? "" : "\n")}<color=cyan>[{DateTime.Now.ToString("HH:mm:ss")}]</color><color={color}>[{type}] {Regex.Replace(message, @"<material[^>]*>|<\/material>|<size[^>]*>|<\/size>|<quad[^>]*>|<b>|</b>", "")}</color>";
+			ConsoleWindow.fullText += $"{(ConsoleWindow.fullText.Equals(string.Empty) ? "" : "\n")}<color=cyan>[{DateTime.Now.ToString("HH:mm:ss")}]</color><color={color}>[{type}] {Regex.Replace(message, @"<material[^>]*>|<\/material>|<size[^>]*>|<\/size>|<quad[^>]*>|<b>|<\/b>", "")}</color>";
 
 			if (logToFile)
 				FileLogger.LogEntry(logType, message);

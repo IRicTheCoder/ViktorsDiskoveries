@@ -52,7 +52,7 @@ namespace SRML
 		internal static void LogEntry(LogType logType, string message)
 		{
 			using (StreamWriter writer = File.AppendText(srmlLogFile))
-				writer.WriteLine($"[{DateTime.Now.ToString("HH:mm:ss")}][{TypeToText(logType)}] {Regex.Replace(message, @"\<[a-z=]+\>|\<\/[a-z]+\>", "")}");
+				writer.WriteLine($"[{DateTime.Now.ToString("HH:mm:ss")}][{TypeToText(logType)}] {Regex.Replace(message, @"<material[^>]*>|<\/material>|<size[^>]*>|<\/size>|<quad[^>]*>|<b>|<\/b>|<color=[^>]*>|<\/color>|<i>|<\/i>", "")}");
 		}
 	}
 }
