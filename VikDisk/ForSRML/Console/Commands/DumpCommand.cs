@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System;
 using SRML.ConsoleSystem;
+using System.Collections.Generic;
 
 namespace SRML.Commands
 {
@@ -11,7 +12,9 @@ namespace SRML.Commands
 	{
 		public override string ID { get; } = "dump";
 		public override string Usage { get; } = "dump <type>";
-		public override string Description { get; } = "Dumps information to a dump file";
+		public override string Description { get; } = "Dumps information to a dump file. Made for developer use";
+
+		public override string ExtendedDescription => "<color=#8ab7ff><type></color> - The type of dump to execute. 'all' can be used to execute all dumps.";
 
 		public override bool Execute(string[] args)
 		{
@@ -66,6 +69,18 @@ namespace SRML.Commands
 
 			Console.Log($"File '{name}' dumped succesfully");
 			return true;
+		}
+
+		public override List<string> GetAutoComplete(int argIndex, string argText)
+		{
+			if (argIndex == 0)
+			{
+				List<string> vs = new List<string>(Console.dumpActions.Keys);
+				vs.Add("all");
+				return vs;
+			}
+			else
+				return base.GetAutoComplete(argIndex, argText);
 		}
 	}
 }

@@ -23,7 +23,7 @@
 		public ConsoleButton(string text, string command)
 		{
 			Text = text;
-			Command = command;
+			Command = command.ToLowerInvariant();
 		}
 	}
 }

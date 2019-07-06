@@ -20,11 +20,11 @@ namespace SRML
 		// LOG STUFF
 		internal static string unityLogFile = Path.Combine(Application.persistentDataPath, "output_log.txt");
 		internal static string srmlLogFile = Path.Combine(Application.persistentDataPath, "SRML/srml.log");
-		private static ILogHandler unityHandler = Debug.unityLogger.logHandler;
-		private static Console console = new Console();
+		private static readonly ILogHandler unityHandler = Debug.unityLogger.logHandler;
+		private static readonly Console console = new Console();
 
 		// COMMAND STUFF
-		private static Dictionary<string, ConsoleCommand> commands = new Dictionary<string, ConsoleCommand>();
+		internal static Dictionary<string, ConsoleCommand> commands = new Dictionary<string, ConsoleCommand>();
 		internal static List<ConsoleButton> cmdButtons = new List<ConsoleButton>();
 
 		// LINE COUNTER
@@ -40,7 +40,11 @@ namespace SRML
 		// DUMP ACTIONS
 		// KEY = Dump Command Argument; VALUE = The method to run
 		public delegate void DumpAction(StreamWriter writer);
-		public static Dictionary<string, DumpAction> dumpActions = new Dictionary<string, DumpAction>();
+		internal static Dictionary<string, DumpAction> dumpActions = new Dictionary<string, DumpAction>();
+
+		// COMMAND CATCHER
+		public delegate bool CommandCatcher(string cmd, string[] args);
+		internal static List<CommandCatcher> catchers = new List<CommandCatcher>();
 
 		/// <summary>
 		/// Initializes the console
@@ -67,6 +71,7 @@ namespace SRML
 			RegisterCommand(new Commands.DumpCommand());
 			RegisterCommand(new Commands.AddButtonCommand());
 			RegisterCommand(new Commands.RemoveButtonCommand());
+			RegisterCommand(new Commands.EditButtonCommand());
 
 			RegisterButton(new ConsoleButton("Clear", "clear"));
 			RegisterButton(new ConsoleButton("Help", "help"));
@@ -84,13 +89,13 @@ namespace SRML
 		/// <param name="cmd">Command to register</param>
 		public static void RegisterCommand(ConsoleCommand cmd)
 		{
-			if (commands.ContainsKey(cmd.ID))
+			if (commands.ContainsKey(cmd.ID.ToLowerInvariant()))
 			{
-				LogWarning($"Trying to register command with id '{cmd.ID}' but the ID is already registered!");
+				LogWarning($"Trying to register command with id '{cmd.ID.ToLowerInvariant()}' but the ID is already registered!");
 				return;
 			}
 
-			commands.Add(cmd.ID, cmd);
+			commands.Add(cmd.ID.ToLowerInvariant(), cmd);
 			ConsoleWindow.cmdsText += $"{(ConsoleWindow.cmdsText.Equals(string.Empty) ? "" : "\n")}<color=#8ab7ff>{cmd.Usage}</color> - {cmd.Description}";
 		}
 
@@ -110,37 +115,49 @@ namespace SRML
 		/// <param name="action">The dump action to run</param>
 		public static void RegisterDumpAction(string id, DumpAction action)
 		{
-			dumpActions.Add(id, action);
+			dumpActions.Add(id.ToLowerInvariant(), action);
+		}
+
+		/// <summary>
+		/// Registers a command catcher which allows commands to be processed and their execution controlled by outside methods
+		/// </summary>
+		/// <param name="catcher">The method to catch the commands</param>
+		public static void RegisterCommandCatcher(CommandCatcher catcher)
+		{
+			catchers.Add(catcher);
 		}
 
 		/// <summary>
 		/// Logs a info message
 		/// </summary>
 		/// <param name="message">Message to log</param>
-		public static void Log(string message)
+		/// <param name="logToFile">Should log to file?</param>
+		public static void Log(string message, bool logToFile = true)
 		{
 			unityHandler.LogFormat(LogType.Log, null, Regex.Replace(message, @"\<[a-z=]+\>|\<\/[a-z]+\>", ""), string.Empty);
-			console.LogEntry(LogType.Log, message);
+			console.LogEntry(LogType.Log, message, logToFile);
 		}
 
 		/// <summary>
 		/// Logs a warning message
 		/// </summary>
 		/// <param name="message">Message to log</param>
-		public static void LogWarning(string message)
+		/// <param name="logToFile">Should log to file?</param>
+		public static void LogWarning(string message, bool logToFile = true)
 		{
 			unityHandler.LogFormat(LogType.Warning, null, Regex.Replace(message, @"\<[a-z=]+\>|\<\/[a-z]+\>", ""), string.Empty);
-			console.LogEntry(LogType.Warning, message);
+			console.LogEntry(LogType.Warning, message, logToFile);
 		}
 
 		/// <summary>
 		/// Logs an error message
 		/// </summary>
 		/// <param name="message">Message to log</param>
-		public static void LogError(string message)
+		/// <param name="logToFile">Should log to file?</param>
+		public static void LogError(string message, bool logToFile = true)
 		{
 			unityHandler.LogFormat(LogType.Error, null, Regex.Replace(message, @"\<[a-z=]+\>|\<\/[a-z]+\>", ""), string.Empty);
-			console.LogEntry(LogType.Error, message);
+			console.LogEntry(LogType.Error, message, logToFile);
 		}
 
 		// PROCESSES THE TEXT FROM THE CONSOLE INPUT
@@ -166,7 +183,19 @@ namespace SRML
 
 				if (commands.ContainsKey(cmd))
 				{
-					commands[cmd].Execute(spaces ? StripArgs(command) : null);
+					bool keepExecution = true;
+					string[] args = spaces ? StripArgs(command) : null;
+
+					foreach (CommandCatcher catcher in catchers)
+					{
+						keepExecution = catcher.Invoke(cmd, args);
+
+						if (!keepExecution)
+							break;
+					}
+
+					if (keepExecution)
+						commands[cmd].Execute(args);
 				}
 				else
 				{
@@ -185,7 +214,7 @@ namespace SRML
 			List<string> args = new List<string>(result.Count);
 
 			foreach (Match match in result)
-				args.Add(Regex.Replace(match.Value, "'|\"", ""));
+				args.Add(Regex.Replace(match.Value, "'|\"", "").ToLowerInvariant());
 
 			return args.ToArray();
 		}
@@ -196,14 +225,11 @@ namespace SRML
 			if (logType == LogType.Error || logType == LogType.Exception)
 				return "ERRO";
 
-			if (logType == LogType.Warning)
-				return "WARN";
-
-			return "INFO";
+			return logType == LogType.Warning ? "WARN" : "INFO";
 		}
 
 		// LOGS A NEW ENTRY
-		private void LogEntry(LogType logType, string message)
+		private void LogEntry(LogType logType, string message, bool logToFile)
 		{
 			string type = TypeToText(logType);
 			string color = "white";
@@ -217,8 +243,8 @@ namespace SRML
 
 			ConsoleWindow.fullText += $"{(ConsoleWindow.fullText.Equals(string.Empty) ? "" : "\n")}<color=cyan>[{DateTime.Now.ToString("HH:mm:ss")}]</color><color={color}>[{type}] {Regex.Replace(message, @"<material[^>]*>|<\/material>|<size[^>]*>|<\/size>|<quad[^>]*>|<b>|</b>", "")}</color>";
 
-			using (StreamWriter writer = File.AppendText(srmlLogFile))
-				writer.WriteLine($"[{DateTime.Now.ToString("HH:mm:ss")}][{type}] {Regex.Replace(message, @"\<[a-z=]+\>|\<\/[a-z]+\>", "")}");
+			if (logToFile)
+				FileLogger.LogEntry(logType, message);
 
 			ConsoleWindow.updateDisplay = true;
 		}
@@ -233,7 +259,7 @@ namespace SRML
 		void ILogHandler.LogFormat(LogType logType, UnityEngine.Object context, string format, params object[] args)
 		{
 			unityHandler.LogFormat(logType, context, Regex.Replace(format, @"\<[a-z=]+\>|\<\/[a-z]+\>", ""), args);
-			LogEntry(logType, Regex.Replace(string.Format(format, args), @"\[INFO]\s|\[ERROR]\s|\[WARNING]\s", ""));
+			LogEntry(logType, Regex.Replace(string.Format(format, args), @"\[INFO]\s|\[ERROR]\s|\[WARNING]\s", ""), true);
 		}
 
 		void ILogHandler.LogException(Exception exception, UnityEngine.Object context)
@@ -241,7 +267,7 @@ namespace SRML
 			System.Diagnostics.StackTrace trace = new System.Diagnostics.StackTrace(exception, true);
 
 			unityHandler.LogException(exception, context);
-			LogEntry(LogType.Exception, exception.Message + "\n" + trace.ToString());
+			LogEntry(LogType.Exception, exception.Message + "\n" + trace.ToString(), true);
 		}
 	}
 }

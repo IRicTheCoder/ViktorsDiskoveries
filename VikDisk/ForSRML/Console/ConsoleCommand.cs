@@ -23,6 +23,12 @@ namespace SRML.ConsoleSystem
 		public abstract string Description { get; }
 
 		/// <summary>
+		/// The extended description of this command, with a description of each argument to
+		/// display when you use help command on this command (Multiline is supported)
+		/// </summary>
+		public virtual string ExtendedDescription { get; } = null;
+
+		/// <summary>
 		/// Executes the command
 		/// </summary>
 		/// <param name="args">The arguments passed in the console (null if no arguments are provided)</param>
@@ -30,10 +36,10 @@ namespace SRML.ConsoleSystem
 		public abstract bool Execute(string[] args);
 
 		/// <summary>
-		/// Gets the auto complete list
+		/// Gets the auto complete list (word filter is done by the system)
 		/// </summary>
 		/// <param name="argIndex">The index of the argument in the command string</param>
-		/// <param name="argText">The already inputed argument text (to filter)</param>
+		/// <param name="argText">The text of the argument</param>
 		/// <returns>The list of auto complete options</returns>
 		public virtual List<string> GetAutoComplete(int argIndex, string argText) { return null; }
 

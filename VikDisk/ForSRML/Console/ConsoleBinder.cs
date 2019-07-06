@@ -68,5 +68,38 @@ namespace SRML.ConsoleSystem
 			File.WriteAllText(bindFile, Regex.Replace(File.ReadAllText(bindFile), $@"{text}:.+\n", ""));
 			return true;
 		}
+
+		/// <summary>
+		/// Removes all binds
+		/// </summary>
+		public static void RemoveAll()
+		{
+			string[] lines = File.ReadAllLines(bindFile);
+			foreach (string line in lines)
+			{
+				if (!line.Contains(":"))
+					continue;
+
+				RemoveBind(line.Substring(0, line.LastIndexOf(":")));
+			}
+		}
+
+		/// <summary>
+		/// Gets all the binds registered
+		/// </summary>
+		public static List<string> GetAllBinds()
+		{
+			List<string> result = new List<string>();
+
+			foreach (string line in File.ReadAllLines(bindFile))
+			{
+				if (!line.Contains(":"))
+					continue;
+
+				result.Add(line.Substring(0, line.LastIndexOf(":")));
+			}
+
+			return result;
+		}
 	}
 }
