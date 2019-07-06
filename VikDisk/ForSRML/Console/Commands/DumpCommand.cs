@@ -14,13 +14,13 @@ namespace SRML.Commands
 		public override string Usage { get; } = "dump <type>";
 		public override string Description { get; } = "Dumps information to a dump file. Made for developer use";
 
-		public override string ExtendedDescription => "<color=#8ab7ff><type></color> - The type of dump to execute. 'all' can be used to execute all dumps.";
+		public override string ExtendedDescription => "<color=#77DDFF><type></color> - The type of dump to execute. '<color=#77DDFF>all</color>' can be used to execute all dumps.";
 
 		public override bool Execute(string[] args)
 		{
 			if (args == null)
 			{
-				Console.LogError($"The '{ID}' command requires at least 1 argument");
+				Console.LogError($"The '<color=white>{ID}</color>' command takes 1 argument");
 				return false;
 			}
 
@@ -45,7 +45,7 @@ namespace SRML.Commands
 			}
 			catch { }
 
-			Console.LogError($"Couldn't find or create file '{args[0]}'");
+			Console.LogError($"Couldn't find or create file '<color=white>{args[0]}</color>'");
 			return false;
 		}
 
@@ -53,7 +53,7 @@ namespace SRML.Commands
 		{
 			if (!Console.dumpActions.ContainsKey(name))
 			{
-				Console.LogError($"No dump action found for '{name}'");
+				Console.LogError($"No dump action found for '<color=white>{name}</color>'");
 				return false;
 			}
 
@@ -67,7 +67,7 @@ namespace SRML.Commands
 				Console.dumpActions[name].Invoke(writer);
 			}
 
-			Console.Log($"File '{name}' dumped succesfully");
+			Console.LogSuccess($"File '<color=white>{name}</color>' dumped succesfully");
 			return true;
 		}
 
@@ -75,8 +75,8 @@ namespace SRML.Commands
 		{
 			if (argIndex == 0)
 			{
-				List<string> vs = new List<string>(Console.dumpActions.Keys);
-				vs.Add("all");
+				List<string> vs = new List<string>() { "all" };
+				vs.AddRange(Console.dumpActions.Keys);
 				return vs;
 			}
 			else

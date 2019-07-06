@@ -16,7 +16,7 @@ namespace SRML.Commands
 		{
 			if (args != null)
 			{
-				Console.LogError($"The 'reload' command takes no arguments");
+				Console.LogError($"The '<color=white>{ID}</color>' command takes no arguments");
 				return false;
 			}
 
@@ -25,7 +25,7 @@ namespace SRML.Commands
 			try
 			{
 				Console.ReloadMods();
-				Console.Log($"Reloaded Successfully! (Took {(DateTime.Now - now).TotalMilliseconds} ms)");
+				Console.LogSuccess($"Reloaded Successfully! (Took {(DateTime.Now - now).TotalMilliseconds} ms)");
 
 				return true;
 			}

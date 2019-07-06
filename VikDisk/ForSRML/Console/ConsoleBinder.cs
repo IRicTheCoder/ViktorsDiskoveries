@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using UnityEngine.SceneManagement;
 using UnityEngine;
 using System.Text.RegularExpressions;
-using SRML.ConsoleSystem;
 
 namespace SRML.ConsoleSystem
 {
@@ -29,43 +26,41 @@ namespace SRML.ConsoleSystem
 				if (!line.Contains(":"))
 					continue;
 
-				Console.RegisterButton(new ConsoleButton("U: " + line.Substring(0, line.LastIndexOf(":")), line.Substring(line.LastIndexOf(":") + 1)));
+				string[] split = line.Split(':');
+				Console.RegisterButton("user." + split[0], new ConsoleButton("U: " + split[1], split[2]));
 			}
 		}
 
 		/// <summary>
 		/// Registers a new bind
 		/// </summary>
+		/// <param name="id">The id of the button</param>
 		/// <param name="text">The text to show on the button</param>
 		/// <param name="command">The command to execute</param>
-		public static void RegisterBind(string text, string command)
+		public static void RegisterBind(string id, string text, string command)
 		{
-			Console.RegisterButton(new ConsoleButton("U: " + text, command));
-			File.AppendAllText(bindFile, $"{text}:{command}\n");
+			if (id.Equals("all"))
+			{
+				Console.LogWarning($"Trying to register user defined button with id 'all' but 'all' is not a valid id!");
+				return;
+			}
+
+			if (Console.RegisterButton("user." + id, new ConsoleButton("U: " + text, command)))
+				File.AppendAllText(bindFile, $"{id}:{text}:{command}\n");
 		}
 
 		/// <summary>
 		/// Removes a bind
 		/// </summary>
-		/// <param name="text">The text of the bind to remove</param>
+		/// <param name="id">The id of the bind to remove</param>
 		/// <returns>True if the bind got removed, false otherwise</returns>
-		public static bool RemoveBind(string text)
+		public static bool RemoveBind(string id)
 		{
-			int index = -1;
-			for (int i = 0; i < Console.cmdButtons.Count ; i++)
-			{
-				if (Console.cmdButtons[i].Text.Equals("U: " + text))
-				{
-					index = i;
-					break;
-				}
-			}
-
-			if (index == -1)
+			if (!Console.cmdButtons.ContainsKey("user." + id))
 				return false;
 				
-			Console.cmdButtons.RemoveAt(index);
-			File.WriteAllText(bindFile, Regex.Replace(File.ReadAllText(bindFile), $@"{text}:.+\n", ""));
+			Console.cmdButtons.Remove("user." + id);
+			File.WriteAllText(bindFile, Regex.Replace(File.ReadAllText(bindFile), $@"{id}:.+\n", ""));
 			return true;
 		}
 
@@ -80,7 +75,7 @@ namespace SRML.ConsoleSystem
 				if (!line.Contains(":"))
 					continue;
 
-				RemoveBind(line.Substring(0, line.LastIndexOf(":")));
+				RemoveBind(line.Substring(0, line.IndexOf(":")));
 			}
 		}
 
@@ -96,7 +91,7 @@ namespace SRML.ConsoleSystem
 				if (!line.Contains(":"))
 					continue;
 
-				result.Add(line.Substring(0, line.LastIndexOf(":")));
+				result.Add(line.Substring(0, line.IndexOf(":")));
 			}
 
 			return result;

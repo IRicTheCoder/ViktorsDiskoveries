@@ -8,7 +8,7 @@ namespace SRML.ConsoleSystem
 	public abstract class ConsoleCommand
 	{
 		/// <summary>
-		/// The ID of this command
+		/// The ID of this command (Always lowercase)
 		/// </summary>
 		public abstract string ID { get; }
 
@@ -44,7 +44,7 @@ namespace SRML.ConsoleSystem
 		public virtual List<string> GetAutoComplete(int argIndex, string argText) { return null; }
 
 		/// <summary>
-		/// The arguments are invalid (either too many or too little)
+		/// The arguments are out of bounds (either too many or too little)
 		/// </summary>
 		/// <param name="min">Amount of arguments</param>
 		/// <param name="min">Minimun amount</param>

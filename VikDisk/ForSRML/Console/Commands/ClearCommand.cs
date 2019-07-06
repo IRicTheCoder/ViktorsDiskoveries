@@ -16,7 +16,7 @@ namespace SRML.Commands
 		{
 			if (args != null)
 			{
-				Console.LogError($"The 'clear' command takes no arguments");
+				Console.LogError($"The '<color=white>{ID}</color>' command takes no arguments");
 				return false;
 			}
 

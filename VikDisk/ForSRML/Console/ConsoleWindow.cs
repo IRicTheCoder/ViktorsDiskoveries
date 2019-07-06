@@ -2,6 +2,7 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace SRML.ConsoleSystem
 {
@@ -20,7 +21,7 @@ namespace SRML.ConsoleSystem
 		private static readonly string cmdName = "cmdLine";
 		private static readonly string openUnityLog = "Unity Log";
 		private static readonly string openSRMLLog = "SRML Log";
-		private static readonly string commands = "Command Menu";
+		private static readonly string commands = "<b><size=16>Command Menu</size></b>";
 		private static readonly string acTitle = "Auto Complete";
 
 		// SCROLL VIEWS
@@ -45,9 +46,9 @@ namespace SRML.ConsoleSystem
 		private static Vector2 windowPosition = new Vector2(-10, -20);
 		private static Rect windowRect = new Rect(windowPosition, windowSize);
 
-		private static Rect leftGroup = new Rect(15, 25, windowRect.width - 190, windowRect.height - 30);
-		private static Rect rightGroupA = new Rect(leftGroup.width + 25, leftGroup.y, 150, 70);
-		private static Rect rightGroupB = new Rect(leftGroup.width + 25, rightGroupA.y + rightGroupA.height + 5, 150, leftGroup.height - rightGroupA.height - 10);
+		private static Rect leftGroup = new Rect(15, 25, windowRect.width - 290, windowRect.height - 30);
+		private static Rect rightGroupA = new Rect(leftGroup.width + 25, leftGroup.y, 250, 70);
+		private static Rect rightGroupB = new Rect(leftGroup.width + 25, rightGroupA.y + rightGroupA.height + 5, 250, leftGroup.height - rightGroupA.height - 10);
 
 		private static float cmdLineY = leftGroup.height - 25;
 		private static Rect cmdRect = new Rect(0, cmdLineY, leftGroup.width, 20);
@@ -59,14 +60,14 @@ namespace SRML.ConsoleSystem
 		private static Rect sRect = new Rect(5, 7, oRect.width - 15, cmdLineY - 20);
 		private static Rect tRect = new Rect(0, 0, 0, 0);
 
-		private static readonly Rect ulRect = new Rect(10, 7, 130, 25);
-		private static readonly Rect slRect = new Rect(10, 37, 130, 25);
-		private static readonly Rect cmRect = new Rect(10, 7, 130, 25);
+		private static readonly Rect ulRect = new Rect(10, 7, rightGroupA.width - 20, 25);
+		private static readonly Rect slRect = new Rect(10, 37, rightGroupA.width - 20, 25);
+		private static readonly Rect cmRect = new Rect(10, 7, rightGroupB.width - 20, 25);
 
 		private static Rect csRect = new Rect(10, 37, rightGroupB.width - 15, rightGroupB.height - 45);
 		private static Rect caRect = new Rect(0, 0, csRect.width - 20, (30 * Console.cmdButtons.Count) + 5);
 
-		private static Rect btnRect = new Rect(0, 5, caRect.width - 5, 22);
+		private static Rect btnRect = new Rect(0, 5, caRect.width - 5, 25);
 
 		// UI RAYCASTERS (TO DISABLE UI INTEREACTION)
 		private static GraphicRaycaster[] cachedCasters;
@@ -75,6 +76,8 @@ namespace SRML.ConsoleSystem
 		internal static int currHistory = -1;
 
 		// AUTO COMPLETE - CONTROL VARIABLES
+		private static float CursorX => ((TextEditor)GUIUtility.GetStateObject(typeof(TextEditor), GUIUtility.keyboardControl)).graphicalCursorPos.x;
+		private static bool forceClose = true;
 		private static bool justActivated = false;
 		private static bool moveCursor = false;
 		private static int completeIndex = 0;
@@ -105,13 +108,13 @@ namespace SRML.ConsoleSystem
 		private void Start()
 		{
 			Console.Log("Console Window running.");
-			Console.Log("Use command 'help' for a list of all commands");
-			Console.Log("Use command 'mods' for a list of all mods loaded");
+			Console.Log("Use command '<color=#77DDFF>help</color>' for a list of all commands");
+			Console.Log("Use command '<color=#77DDFF>mods</color>' for a list of all mods loaded");
 			Console.Log("You can also check the menu on the right");
 
 			foreach (SRModInfo info in SRModLoader.LoadedMods)
 			{
-				modsText += $"{(modsText.Equals(string.Empty) ? "" : "\n")}<color=#8ab7ff>{info.Name}</color> [<color=#8ab7ff>Author:</color> {info.Author} | <color=#8ab7ff>ID:</color> {info.Id} | <color=#8ab7ff>Version:</color> {info.Version}]";
+				modsText += $"{(modsText.Equals(string.Empty) ? "" : "\n")}<color=#77DDFF>{info.Name}</color> [<color=#77DDFF>Author:</color> {info.Author} | <color=#77DDFF>ID:</color> {info.Id} | <color=#77DDFF>Version:</color> {info.Version}]";
 			}
 		}
 
@@ -142,6 +145,9 @@ namespace SRML.ConsoleSystem
 		// DRAWS THE WINDOW
 		private void OnGUI()
 		{
+			Font font = GUI.skin.font;
+			GUI.skin.font = consoleFont;
+
 			// UNITY PREVENTS "GUI" STUFF FROM BEING CALLED OUTSIDE "OnGUI"
 			if (textArea == null) textArea = new GUIStyle(GUI.skin.label);
 			if (window == null) window = new GUIStyle(GUI.skin.window);
@@ -165,33 +171,36 @@ namespace SRML.ConsoleSystem
 
 			if (showWindow)
 			{
-				Font defFont = GUI.skin.font;
-				GUI.skin.font = consoleFont;
-
 				GUI.Window(1234567890, windowRect, DrawWindow, string.Empty, window);
 				GUI.BringWindowToFront(1234567890);
 
 				if (autoComplete)
 				{
-					completeRect.x = 3 + (3 * cmdText.Length);
+					completeRect.x = 4 + CursorX;
 					GUI.Window(1234567891, completeRect, DrawACWindow, acTitle, window);
 					GUI.BringWindowToFront(1234567891);
 				}
-
-				GUI.skin.font = defFont;
 			}
+
+			GUI.skin.font = font;
 		}
 
 		private void DrawWindow(int id)
 		{
+			if (cachedAC.Count == 0)
+			{
+				autoComplete = false;
+			}
+
 			// LISTENING TO THE KEY EVENTS
 			if (Event.current.isKey && Event.current.type == EventType.KeyDown)
 			{
 				// SUBMITS THE TEXTFIELD
 				if (Event.current.keyCode == KeyCode.Return || Event.current.keyCode == KeyCode.KeypadEnter)
 				{
-					Console.ProcessInput(cmdText.TrimEnd(' ').ToLowerInvariant());
+					Console.ProcessInput(cmdText.TrimEnd(' '));
 					cmdText = string.Empty;
+					oldCmdText = string.Empty;
 
 					autoComplete = false;
 
@@ -202,8 +211,10 @@ namespace SRML.ConsoleSystem
 				// AUTO COMPLETE TOGGLE
 				if ((Event.current.modifiers == EventModifiers.Control || Event.current.modifiers == EventModifiers.Command) && Event.current.keyCode == KeyCode.Space)
 				{
-					autoComplete = !autoComplete;
+					forceClose = !forceClose;
+					autoComplete = !forceClose;
 					justActivated = true;
+					oldCmdText = null;
 
 					Event.current.Use();
 					return;
@@ -242,6 +253,7 @@ namespace SRML.ConsoleSystem
 						}
 					}
 
+					moveCursor = true;
 					Event.current.Use();
 					return;
 				}
@@ -251,6 +263,8 @@ namespace SRML.ConsoleSystem
 
 					if (completeIndex < 0)
 						completeIndex = cachedAC.Count - 1;
+
+					aCompleteScroll.y = (25 * completeIndex) + 5;
 
 					Event.current.Use();
 					return;
@@ -273,6 +287,7 @@ namespace SRML.ConsoleSystem
 						}
 					}
 
+					moveCursor = true;
 					Event.current.Use();
 					return;
 				}
@@ -283,23 +298,30 @@ namespace SRML.ConsoleSystem
 					if (completeIndex > cachedAC.Count - 1)
 						completeIndex = 0;
 
+					aCompleteScroll.y = (25 * completeIndex) + 5;
+
 					Event.current.Use();
 					return;
 				}
 
 				// TRIGGER AUTO COMPLETE
-				if (Event.current.keyCode == KeyCode.None && !cmdText.Equals(oldCmdText) && Event.current.modifiers == EventModifiers.None)
+				if (Event.current.keyCode != KeyCode.None && Event.current.keyCode != KeyCode.Space && Event.current.keyCode != KeyCode.Backspace && (!cmdText.Equals(oldCmdText) || cmdText.Equals(string.Empty)) && Event.current.modifiers == EventModifiers.None)
 				{
-					autoComplete = true;
-					Event.current.Use();
-				}
-			}
+					if (cmdText.Equals(string.Empty))
+						forceClose = false;
 
-			if (cmdText.EndsWith(" ") && justActivated)
-			{
-				cmdText = cmdText.TrimEnd(' ');
-				oldCmdText = null;
-				justActivated = false;
+					autoComplete = !forceClose;
+				}
+
+				// FIXES SPACE && BACKSPACE
+				if ((Event.current.keyCode == KeyCode.Space && Event.current.keyCode == KeyCode.Backspace) && Event.current.modifiers == EventModifiers.None)
+				{
+					if (Regex.Matches(cmdText, "\"").Count % 2 == 0)
+						forceClose = false;
+
+					if (!forceClose)
+						autoComplete = true;
+				}
 			}
 
 			// CONSOLE AREA
@@ -307,6 +329,13 @@ namespace SRML.ConsoleSystem
 
 			GUI.SetNextControlName(cmdName);
 			cmdText = GUI.TextField(cmdRect, cmdText);
+
+			if (cmdText.EndsWith(" ") && justActivated)
+			{
+				cmdText = cmdText.TrimEnd(' ');
+				oldCmdText = null;
+				justActivated = false;
+			}
 
 			if (!focus)
 			{
@@ -318,6 +347,7 @@ namespace SRML.ConsoleSystem
 			textArea.clipping = TextClipping.Clip;
 			textArea.richText = true;
 			textArea.padding = new RectOffset(5, 5, 5, 5);
+			textArea.font = consoleFont;
 
 			tRect.width = TextSize.x;
 			tRect.height = TextSize.y;
@@ -332,6 +362,8 @@ namespace SRML.ConsoleSystem
 
 			// MENU AREA
 			GUI.BeginGroup(rightGroupA, GUI.skin.textArea);
+
+			GUI.skin.button.fontStyle = FontStyle.Bold;
 
 			if (GUI.Button(ulRect, openUnityLog))
 				System.Diagnostics.Process.Start(Console.unityLogFile);
@@ -352,17 +384,19 @@ namespace SRML.ConsoleSystem
 			GUI.BeginGroup(caRect);
 
 			int y = 5;
-			foreach (ConsoleButton button in Console.cmdButtons)
+			foreach (ConsoleButton button in Console.cmdButtons.Values)
 			{
 				btnRect.y = y;
 				if (GUI.Button(btnRect, button.Text))
-					Console.ProcessInput(button.Command.TrimEnd(' ').ToLowerInvariant(), true);
+					Console.ProcessInput(button.Command.TrimEnd(' '), true);
 
 				y += 30;
 			}
 
 			GUI.EndGroup();
 			GUI.EndScrollView();
+
+			GUI.skin.button.fontStyle = FontStyle.Normal;
 
 			GUI.EndGroup();
 
@@ -387,6 +421,11 @@ namespace SRML.ConsoleSystem
 		private void DrawACWindow(int id)
 		{
 			bool spaces = cmdText.Contains(" ");
+			string command = spaces ? cmdText.Substring(0, cmdText.IndexOf(' ')) : cmdText;
+
+			TextEditor txt = (TextEditor)GUIUtility.GetStateObject(typeof(TextEditor), GUIUtility.keyboardControl);
+			if (txt.hasSelection)
+				command = string.Empty;
 
 			intRect.height = (25 * cachedAC.Count) + 5;
 			aCompleteScroll = GUI.BeginScrollView(acsRect, aCompleteScroll, intRect, false, true);
@@ -396,86 +435,102 @@ namespace SRML.ConsoleSystem
 			GUI.skin.textField.normal.background = GUI.skin.button.active.background;
 			GUI.skin.textField.richText = true;
 
-			if (!spaces)
+			if (!spaces || txt.hasSelection)
 			{
-				if (!cmdText.Equals(oldCmdText))
+				if (!command.Equals(oldCmdText))
 				{
-					cachedAC.RemoveAll(s => true); // .Clear() gets broken sometimes when you dynamically load an Assembly, do the same another way
+					cachedAC.RemoveAll(s => true); // .Clear() gets broken sometimes when you dynamically load an Assembly, so do the same another way
 					foreach (string cmd in Console.commands.Keys)
 					{
-						if (cmd.StartsWith(cmdText.ToLowerInvariant()))
+						if (cmd.StartsWith(command))
 							cachedAC.Add(cmd);
 					}
 
-					oldCmdText = cmdText;
+					oldCmdText = command;
 				}
 
-				selectComplete = cachedAC[completeIndex].Substring(cmdText.Length);
-
-				int y = 5;
-				for (int i = 0; i < cachedAC.Count; i++)
+				if (cachedAC.Count > 0)
 				{
-					GUI.backgroundColor = Color.white;
-					if (completeIndex == i)
-						GUI.backgroundColor = Color.red;
+					selectComplete = cachedAC[completeIndex].Substring(command.Length);
 
-					cBtnRect.y = y;
-					if (GUI.Button(cBtnRect, $"<b>{cmdText.ToLowerInvariant()}</b>{cachedAC[i].Substring(cmdText.Length)}", GUI.skin.textField))
+					int y = 5;
+					for (int i = 0; i < cachedAC.Count; i++)
 					{
-						cmdText += cachedAC[i].Substring(cmdText.Length);
-						moveCursor = true;
+						GUI.backgroundColor = Color.white;
+						if (completeIndex == i)
+							GUI.backgroundColor = Color.yellow;
 
-						autoComplete = false;
+						cBtnRect.y = y;
+						if (GUI.Button(cBtnRect, $"{(completeIndex == i ? "►" : string.Empty)}<b><color=#77DDFF>{command}</color></b>{cachedAC[i].Substring(command.Length)}", GUI.skin.textField))
+						{
+							cmdText += cachedAC[i].Substring(command.Length);
+							moveCursor = true;
+
+							autoComplete = false;
+						}
+
+						y += 25;
 					}
-
-					y += 25;
 				}
 			}
 			else
-			{
-				string[] args = cmdText.ToLowerInvariant().Split(' ');
+			{				
+				string[] args = Console.StripArgs(cmdText, true);
 
-				int count = args.Length - 1;
-				string lastArg = args[count];
+				int count = args.Length;
+				string lastArg = args[count - 1];
 
-				List<string> autoC = Console.commands[args[0]].GetAutoComplete(count - 1, lastArg);
-
-				if (autoC == null)
-					autoComplete = false;
-
-				if (!cmdText.Equals(oldCmdText))
+				if (Console.commands.ContainsKey(command))
 				{
-					cachedAC.RemoveAll(s => true); // .Clear() gets broken sometimes when you dynamically load an Assembly, do the same another way
-					foreach (string cmd in autoC)
-					{
-						if (cmd.StartsWith(lastArg))
-							cachedAC.Add(cmd.ToLowerInvariant());
-					}
+					List<string> autoC = Console.commands[command].GetAutoComplete(count - 1, lastArg);
+					autoC?.RemoveAll(s => s.Contains(" "));
 
-					oldCmdText = cmdText;
-				}
-
-				selectComplete = cachedAC[completeIndex].Substring(lastArg.Length);
-
-				int y = 5;
-				for (int i = 0; i < cachedAC.Count; i++)
-				{
-					GUI.backgroundColor = Color.white;
-					if (completeIndex == i)
-						GUI.backgroundColor = Color.red;
-
-					cBtnRect.y = y;
-					if (GUI.Button(cBtnRect, $"<b>{lastArg}</b>{cachedAC[i].Substring(lastArg.Length)}", GUI.skin.textField))
-					{
-						cmdText += cachedAC[i].Substring(lastArg.Length);
-						moveCursor = true;
-
+					if (autoC == null || autoC.Count == 0 || Regex.Matches(cmdText, "\"").Count % 2 != 0)
 						autoComplete = false;
-					}
 
-					y += 25;
+					if (autoComplete)
+					{
+						if (!cmdText.Equals(oldCmdText))
+						{
+							cachedAC.RemoveAll(s => true); // .Clear() gets broken sometimes when you dynamically load an Assembly, so do the same another way
+							foreach (string cmd in autoC)
+							{
+								if (cmd.StartsWith(lastArg))
+									cachedAC.Add(cmd);
+							}
+
+							oldCmdText = cmdText;
+						}						
+
+						if (cachedAC.Count > 0)
+						{
+							selectComplete = cachedAC[completeIndex].Substring(lastArg.Length);
+
+							int y = 5;
+							for (int i = 0; i < cachedAC.Count; i++)
+							{
+								GUI.backgroundColor = Color.white;
+								if (completeIndex == i)
+									GUI.backgroundColor = Color.yellow;
+
+								cBtnRect.y = y;
+								if (GUI.Button(cBtnRect, $"{(completeIndex == i ? "►" : string.Empty)}<b><color=#77DDFF>{lastArg}</color></b>{cachedAC[i].Substring(lastArg.Length)}", GUI.skin.textField))
+								{
+									cmdText += cachedAC[i].Substring(lastArg.Length);
+									moveCursor = true;
+
+									autoComplete = false;
+								}
+
+								y += 25;
+							}
+						}
+					}
 				}
 			}
+
+			if (cachedAC.Count == 0)
+				autoComplete = false;
 
 			GUI.skin.textField.richText = false;
 			GUI.skin.textField.normal.background = bg;
@@ -505,6 +560,8 @@ namespace SRML.ConsoleSystem
 			}
 			else
 			{
+				autoComplete = false;
+
 				if (SceneManager.GetActiveScene().name.Equals("worldGenerated"))
 				{
 					if (SceneContext.Instance.TimeDirector.HasPauser())

@@ -14,7 +14,7 @@ namespace SRML.Commands
 		public override string Description { get; } = "Displays all commands available, or an extended description of a command";
 
 		public override string ExtendedDescription => 
-			"<color=#8ab7ff>[cmdName]</color> - The command you want to check the extended description for.\n" +
+			"<color=#77DDFF>[cmdName]</color> - The command you want to check the extended description for.\n" +
 			"Running without an argument shows all commands";
 
 		public override bool Execute(string[] args)
@@ -24,26 +24,33 @@ namespace SRML.Commands
 
 			if (args == null)
 			{
-				Console.Log("List of Commands Available:");
-				Console.Log("<> is a required argument; [] is an optional argument");
+				Console.Log("<color=cyan>List of Commands Available:</color>");
+				Console.Log("<i><> is a required argument; [] is an optional argument</i>");
 
 				foreach (string line in ConsoleWindow.cmdsText.Split('\n'))
-					Console.Log(line);
+					Console.LogSuccess(line);
 			}
 			else
 			{
-				ConsoleCommand cmd = Console.commands[args[0]];
-
-				if (cmd.ExtendedDescription != null)
+				if (Console.commands.ContainsKey(args[0]))
 				{
-					Console.Log($"<color=#8ab7ff>{cmd.Usage}</color> - {cmd.Description}");
-					foreach (string line in cmd.ExtendedDescription.Split('\n'))
-						Console.Log(line);
+					ConsoleCommand cmd = Console.commands[args[0]];
+
+					if (cmd.ExtendedDescription != null)
+					{
+						Console.Log($"<color=#77DDFF>{cmd.Usage}</color> - {cmd.Description}");
+						foreach (string line in cmd.ExtendedDescription.Split('\n'))
+							Console.LogSuccess(line);
+					}
+					else
+					{
+						Console.LogWarning($"No extended description was found for command '<color=#77DDFF>{cmd.ID}</color>'. Showing default description");
+						Console.LogSuccess($"<color=#77DDFF>{Console.ColorUsage(cmd.Usage)}</color> - {cmd.Description}");
+					}
 				}
 				else
 				{
-					Console.Log($"No extended description was found for command '{cmd.ID}'. Showing default description");
-					Console.Log($"<color=#8ab7ff>{cmd.Usage}</color> - {cmd.Description}");
+					Console.LogError($"Command '<color=white>{args[0]}</color>' not found");
 				}
 			}
 

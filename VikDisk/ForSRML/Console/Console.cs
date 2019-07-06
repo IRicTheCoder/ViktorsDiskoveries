@@ -11,7 +11,7 @@ namespace SRML
 	/// <summary>
 	/// Controls the in-game console
 	/// </summary>
-	public class Console : ILogHandler
+	public class Console
 	{
 		// CONFIGURE SOME NUMBERS
 		public const int MAX_ENTRIES = 200; // MAX ENTRIES TO SHOW ON CONSOLE
@@ -20,12 +20,11 @@ namespace SRML
 		// LOG STUFF
 		internal static string unityLogFile = Path.Combine(Application.persistentDataPath, "output_log.txt");
 		internal static string srmlLogFile = Path.Combine(Application.persistentDataPath, "SRML/srml.log");
-		private static readonly ILogHandler unityHandler = Debug.unityLogger.logHandler;
 		private static readonly Console console = new Console();
 
 		// COMMAND STUFF
 		internal static Dictionary<string, ConsoleCommand> commands = new Dictionary<string, ConsoleCommand>();
-		internal static List<ConsoleButton> cmdButtons = new List<ConsoleButton>();
+		internal static Dictionary<string, ConsoleButton> cmdButtons = new Dictionary<string, ConsoleButton>();
 
 		// LINE COUNTER
 		private static int lines = 0;
@@ -35,6 +34,10 @@ namespace SRML
 
 		// RELOAD EVENT (THIS IS CALLED WHEN THE COMMAND RELOAD IS CALLED, USED TO RUN A RELOAD METHOD FOR A MOD, IF THE AUTHOR WISHES TO CREATE ONE)
 		public delegate void ReloadAction(); // Creates the delegate here to prevent 'TypeNotFound' exceptions
+
+		/// <summary>
+		/// The event that triggers when the Reload Command is called
+		/// </summary>
 		public static event ReloadAction Reload;
 
 		// DUMP ACTIONS
@@ -51,7 +54,7 @@ namespace SRML
 		/// </summary>
 		public static void Init()
 		{
-			Debug.unityLogger.logHandler = console;
+			Application.logMessageReceived += console.AppLog;
 
 			if (!Directory.Exists(srmlLogFile.Substring(0, srmlLogFile.LastIndexOf('/'))))
 				Directory.CreateDirectory(srmlLogFile.Substring(0, srmlLogFile.LastIndexOf('/')));
@@ -73,11 +76,11 @@ namespace SRML
 			RegisterCommand(new Commands.RemoveButtonCommand());
 			RegisterCommand(new Commands.EditButtonCommand());
 
-			RegisterButton(new ConsoleButton("Clear", "clear"));
-			RegisterButton(new ConsoleButton("Help", "help"));
-			RegisterButton(new ConsoleButton("Mods", "mods"));
-			RegisterButton(new ConsoleButton("Reload", "reload"));
-			RegisterButton(new ConsoleButton("Dump All", "dump all"));
+			RegisterButton("clear", new ConsoleButton("Clear Console", "clear"));
+			RegisterButton("help", new ConsoleButton("Show Help", "help"));
+			RegisterButton("mods", new ConsoleButton("Show Mods", "mods"));
+			RegisterButton("reload", new ConsoleButton("Run Reload", "reload"));
+			RegisterButton("dump.all", new ConsoleButton("Dump All Files", "dump all"));
 
 			ConsoleBinder.ReadBinds();
 			SceneManager.activeSceneChanged += ConsoleWindow.AttachWindow;
@@ -87,25 +90,42 @@ namespace SRML
 		/// Registers a new command into the console
 		/// </summary>
 		/// <param name="cmd">Command to register</param>
-		public static void RegisterCommand(ConsoleCommand cmd)
+		/// <returns>True if registered succesfully, false otherwise</returns>
+		public static bool RegisterCommand(ConsoleCommand cmd)
 		{
 			if (commands.ContainsKey(cmd.ID.ToLowerInvariant()))
 			{
-				LogWarning($"Trying to register command with id '{cmd.ID.ToLowerInvariant()}' but the ID is already registered!");
-				return;
+				LogWarning($"Trying to register command with id '<color=white>{cmd.ID.ToLowerInvariant()}</color>' but the ID is already registered!");
+				return false;
 			}
 
 			commands.Add(cmd.ID.ToLowerInvariant(), cmd);
-			ConsoleWindow.cmdsText += $"{(ConsoleWindow.cmdsText.Equals(string.Empty) ? "" : "\n")}<color=#8ab7ff>{cmd.Usage}</color> - {cmd.Description}";
+			ConsoleWindow.cmdsText += $"{(ConsoleWindow.cmdsText.Equals(string.Empty) ? "" : "\n")}<color=#77DDFF>{ColorUsage(cmd.Usage)}</color> - {cmd.Description}";
+			return true;
 		}
 
 		/// <summary>
 		/// Registers a new console button
 		/// </summary>
+		/// <param name="id">The id of the button</param>
 		/// <param name="button">Button to register</param>
-		public static void RegisterButton(ConsoleButton button)
+		/// <returns>True if registered succesfully, false otherwise</returns>
+		public static bool RegisterButton(string id, ConsoleButton button)
 		{
-			cmdButtons.Add(button);
+			if (id.Equals("all"))
+			{
+				LogWarning($"Trying to register command button with id '<color=white>all</color>' but '<color=white>all</color>' is not a valid id!");
+				return false;
+			}
+
+			if (cmdButtons.ContainsKey(id))
+			{
+				LogWarning($"Trying to register command button with id '<color=white>{id}</color>' but the ID is already registered!");
+				return false;
+			}
+
+			cmdButtons.Add(id, button);
+			return true;
 		}
 
 		/// <summary>
@@ -113,9 +133,17 @@ namespace SRML
 		/// </summary>
 		/// <param name="id">The id to use for the dump command argument</param>
 		/// <param name="action">The dump action to run</param>
-		public static void RegisterDumpAction(string id, DumpAction action)
+		/// <returns>True if registered succesfully, false otherwise</returns>
+		public static bool RegisterDumpAction(string id, DumpAction action)
 		{
-			dumpActions.Add(id.ToLowerInvariant(), action);
+			if (dumpActions.ContainsKey(id))
+			{
+				LogWarning($"Trying to register dump action with id '<color=white>{id}</color>' but the ID is already registered!");
+				return false;
+			}
+
+			dumpActions.Add(id, action);
+			return true;
 		}
 
 		/// <summary>
@@ -134,8 +162,17 @@ namespace SRML
 		/// <param name="logToFile">Should log to file?</param>
 		public static void Log(string message, bool logToFile = true)
 		{
-			unityHandler.LogFormat(LogType.Log, null, Regex.Replace(message, @"\<[a-z=]+\>|\<\/[a-z]+\>", ""), string.Empty);
 			console.LogEntry(LogType.Log, message, logToFile);
+		}
+
+		/// <summary>
+		/// Logs a success message
+		/// </summary>
+		/// <param name="message">Message to log</param>
+		/// <param name="logToFile">Should log to file?</param>
+		public static void LogSuccess(string message, bool logToFile = true)
+		{
+			console.LogEntry(LogType.Log, $"<color=#AAFF99>{message}</color>", logToFile);
 		}
 
 		/// <summary>
@@ -145,7 +182,6 @@ namespace SRML
 		/// <param name="logToFile">Should log to file?</param>
 		public static void LogWarning(string message, bool logToFile = true)
 		{
-			unityHandler.LogFormat(LogType.Warning, null, Regex.Replace(message, @"\<[a-z=]+\>|\<\/[a-z]+\>", ""), string.Empty);
 			console.LogEntry(LogType.Warning, message, logToFile);
 		}
 
@@ -156,7 +192,6 @@ namespace SRML
 		/// <param name="logToFile">Should log to file?</param>
 		public static void LogError(string message, bool logToFile = true)
 		{
-			unityHandler.LogFormat(LogType.Error, null, Regex.Replace(message, @"\<[a-z=]+\>|\<\/[a-z]+\>", ""), string.Empty);
 			console.LogEntry(LogType.Error, message, logToFile);
 		}
 
@@ -176,13 +211,14 @@ namespace SRML
 
 			try
 			{
-				Log("<color=cyan>CMD: </color>" + command);
+				Log("<color=cyan>Command: </color>" + command);
 
 				bool spaces = command.Contains(" ");
 				string cmd = spaces ? command.Substring(0, command.IndexOf(' ')) : command;
 
 				if (commands.ContainsKey(cmd))
 				{
+					bool executed = false;
 					bool keepExecution = true;
 					string[] args = spaces ? StripArgs(command) : null;
 
@@ -195,11 +231,14 @@ namespace SRML
 					}
 
 					if (keepExecution)
-						commands[cmd].Execute(args);
+						executed = commands[cmd].Execute(args);
+
+					if (!executed && keepExecution)
+						Console.Log($"<color=cyan>Usage:</color> <color=#77DDFF>{ColorUsage(commands[cmd].Usage)}</color>");
 				}
 				else
 				{
-					LogError("Unknown command. Please use 'help' for available commands or check the menu on the right");
+					LogError("Unknown command. Please use '<color=white>help</color>' for available commands or check the menu on the right");
 				}
 			}
 			catch (Exception e)
@@ -208,13 +247,16 @@ namespace SRML
 			}
 		}
 
-		private static string[] StripArgs(string command)
+		internal static string[] StripArgs(string command, bool autoComplete = false)
 		{
-			MatchCollection result = Regex.Matches(command.Substring(command.IndexOf(' ')+1), "\\w+|\'[^']+\'|\"[^\"]+\"");
+			MatchCollection result = Regex.Matches(command.Substring(command.IndexOf(' ')+1), "[^'\"\\s\\n]+|'[^']+'?|\"[^\"]+\"?");
 			List<string> args = new List<string>(result.Count);
 
 			foreach (Match match in result)
-				args.Add(Regex.Replace(match.Value, "'|\"", "").ToLowerInvariant());
+				args.Add(autoComplete ? match.Value : Regex.Replace(match.Value, "'|\"", ""));
+
+			if (autoComplete && command.EndsWith(" "))
+				args.Add(string.Empty);
 
 			return args.ToArray();
 		}
@@ -233,8 +275,8 @@ namespace SRML
 		{
 			string type = TypeToText(logType);
 			string color = "white";
-			if (type.Equals("ERRO")) color = "#ff7070";
-			if (type.Equals("WARN")) color = "yellow";
+			if (type.Equals("ERRO")) color = "#FFAAAA";
+			if (type.Equals("WARN")) color = "#EEEE99";
 
 			if (lines == MAX_ENTRIES)
 				ConsoleWindow.fullText = ConsoleWindow.fullText.Substring(ConsoleWindow.fullText.IndexOf('\n'));
@@ -249,25 +291,47 @@ namespace SRML
 			ConsoleWindow.updateDisplay = true;
 		}
 
+		internal static string ColorUsage(string usage)
+		{
+			string result = string.Empty;
+			MatchCollection matches = Regex.Matches(usage, @"[\w\d]+|\<[\w]+\>|\[[\w]+\]");
+
+			foreach (Match match in matches)
+			{
+				if (match.Value.StartsWith("<") && match.Value.EndsWith(">"))
+				{
+					result += $" <<color=white>{match.Value.Substring(1, match.Value.Length - 2)}</color>>";
+					continue;
+				}
+
+				if (match.Value.StartsWith("[") && match.Value.EndsWith("]"))
+				{
+					result += $" <i>[<color=white>{match.Value.Substring(1, match.Value.Length - 2)}</color>]</i>";
+					continue;
+				}
+
+				result += " " + match.Value;
+			}
+
+			return result.TrimStart(' ');
+		}
+
 		// RUNS THE RELOAD COMMAND
 		internal static void ReloadMods()
 		{
 			Reload?.Invoke();
 		}
 
-		// THE TWO FOLLOWING METHODS CAN BE IGNORED, THEY TAP INTO UNITY'S SYSTEM TO LISTEN TO THE LOG
-		void ILogHandler.LogFormat(LogType logType, UnityEngine.Object context, string format, params object[] args)
+		private void AppLog(string message, string trace, LogType type)
 		{
-			unityHandler.LogFormat(logType, context, Regex.Replace(format, @"\<[a-z=]+\>|\<\/[a-z]+\>", ""), args);
-			LogEntry(logType, Regex.Replace(string.Format(format, args), @"\[INFO]\s|\[ERROR]\s|\[WARNING]\s", ""), true);
-		}
+			if (message.Equals(string.Empty))
+				return;
 
-		void ILogHandler.LogException(Exception exception, UnityEngine.Object context)
-		{
-			System.Diagnostics.StackTrace trace = new System.Diagnostics.StackTrace(exception, true);
+			string toDisplay = message;
+			if (!trace.Equals(string.Empty))
+				toDisplay += "\n" + trace;
 
-			unityHandler.LogException(exception, context);
-			LogEntry(LogType.Exception, exception.Message + "\n" + trace.ToString(), true);
+			LogEntry(type, Regex.Replace(toDisplay, @"\[INFO]\s|\[ERROR]\s|\[WARNING]\s", ""), true);
 		}
 	}
 }
