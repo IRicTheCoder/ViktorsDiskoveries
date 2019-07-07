@@ -21,22 +21,12 @@ namespace VikDisk
 		// PRE LOAD MOD
 		public override void PreLoad()
 		{
-			Console.Init();
-
 			// Gets the Assembly being executed
 			execAssembly = Assembly.GetExecutingAssembly();
 			HarmonyInstance.PatchAll(execAssembly);
 
 			// Reads all Mods loaded
 			Mods.CheckMods();
-
-			Console.RegisterDumpAction("vacColors", (writer) =>
-			{
-				foreach (LookupDirector.VacEntry entry in GameContext.Instance.LookupDirector.vacEntries)
-				{
-					writer.WriteLine($"{entry.id.ToString()} [R: {(int)(entry.color.r * 255f)} G: {(int)(entry.color.g * 255f)} B: {(int)(entry.color.b * 255f)} HEX: #{UnityEngine.ColorUtility.ToHtmlStringRGB(entry.color)}]");
-				}
-			});
 
 			// Setup each handler
 			FoodHandler.Instance.Setup();
@@ -49,11 +39,6 @@ namespace VikDisk
 			viktor.RegisterCallbacks();
 
 			UnityEngine.SceneManagement.SceneManager.activeSceneChanged += ChangeScene;
-		}
-
-		public void ChangeScene(UnityEngine.SceneManagement.Scene old, UnityEngine.SceneManagement.Scene scene)
-		{
-			Console.Log($"{scene.buildIndex}: {scene.name ?? "NoName"}");
 		}
 
 		// POST LOAD MOD
