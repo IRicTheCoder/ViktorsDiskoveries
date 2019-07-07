@@ -21,6 +21,7 @@ namespace SRML.ConsoleSystem
 		private static readonly string cmdName = "cmdLine";
 		private static readonly string openUnityLog = "Unity Log";
 		private static readonly string openSRMLLog = "SRML Log";
+		private static readonly string toggleAutoAC = " Auto-Open Auto Complete";
 		private static readonly string commands = "<b><size=16>Command Menu</size></b>";
 		private static readonly string acTitle = "Auto Complete";
 
@@ -47,7 +48,7 @@ namespace SRML.ConsoleSystem
 		private static Rect windowRect = new Rect(windowPosition, windowSize);
 
 		private static Rect leftGroup = new Rect(15, 25, windowRect.width - 290, windowRect.height - 30);
-		private static Rect rightGroupA = new Rect(leftGroup.width + 25, leftGroup.y, 250, 70);
+		private static Rect rightGroupA = new Rect(leftGroup.width + 25, leftGroup.y, 250, 100);
 		private static Rect rightGroupB = new Rect(leftGroup.width + 25, rightGroupA.y + rightGroupA.height + 5, 250, leftGroup.height - rightGroupA.height - 10);
 
 		private static float cmdLineY = leftGroup.height - 25;
@@ -62,6 +63,7 @@ namespace SRML.ConsoleSystem
 
 		private static readonly Rect ulRect = new Rect(10, 7, rightGroupA.width - 20, 25);
 		private static readonly Rect slRect = new Rect(10, 37, rightGroupA.width - 20, 25);
+		private static readonly Rect tacRect = new Rect(10, 67, rightGroupA.width - 20, 25);
 		private static readonly Rect cmRect = new Rect(10, 7, rightGroupB.width - 20, 25);
 
 		private static Rect csRect = new Rect(10, 37, rightGroupB.width - 15, rightGroupB.height - 45);
@@ -77,11 +79,14 @@ namespace SRML.ConsoleSystem
 
 		// AUTO COMPLETE - CONTROL VARIABLES
 		private static float CursorX => ((TextEditor)GUIUtility.GetStateObject(typeof(TextEditor), GUIUtility.keyboardControl)).graphicalCursorPos.x;
-		private static bool forceClose = true;
+		private static bool forceClose = false;
 		private static bool justActivated = false;
 		private static bool moveCursor = false;
 		private static int completeIndex = 0;
 		private static string selectComplete = string.Empty;
+
+		private static bool autoAC = true;
+		private static bool oldAutoAC = true;
 
 		private static Rect completeRect = new Rect(3, windowSize.y - 25, 200, 300);
 
@@ -195,13 +200,23 @@ namespace SRML.ConsoleSystem
 			// LISTENING TO THE KEY EVENTS
 			if (Event.current.isKey && Event.current.type == EventType.KeyDown)
 			{
+				if (Event.current.keyCode == KeyCode.Escape && autoComplete)
+				{
+					forceClose = true;
+					autoComplete = false;
+
+					Event.current.Use();
+					return;
+				}
+
 				// SUBMITS THE TEXTFIELD
 				if (Event.current.keyCode == KeyCode.Return || Event.current.keyCode == KeyCode.KeypadEnter)
 				{
 					Console.ProcessInput(cmdText.TrimEnd(' '));
 					cmdText = string.Empty;
-					oldCmdText = string.Empty;
+					oldCmdText = null;
 
+					completeIndex = 0;
 					autoComplete = false;
 
 					Event.current.Use();
@@ -211,8 +226,11 @@ namespace SRML.ConsoleSystem
 				// AUTO COMPLETE TOGGLE
 				if ((Event.current.modifiers == EventModifiers.Control || Event.current.modifiers == EventModifiers.Command) && Event.current.keyCode == KeyCode.Space)
 				{
-					forceClose = !forceClose;
-					autoComplete = !forceClose;
+					forceClose = false;
+
+					if (Regex.Matches(cmdText, "\"").Count % 2 == 0)
+						autoComplete = true;
+
 					justActivated = true;
 					oldCmdText = null;
 
@@ -225,7 +243,7 @@ namespace SRML.ConsoleSystem
 				{
 					if (!selectComplete.Equals(string.Empty))
 					{
-						cmdText += selectComplete;
+						cmdText = selectComplete;
 						selectComplete = string.Empty;
 						moveCursor = true;
 
@@ -305,7 +323,7 @@ namespace SRML.ConsoleSystem
 				}
 
 				// TRIGGER AUTO COMPLETE
-				if (Event.current.keyCode != KeyCode.None && Event.current.keyCode != KeyCode.Space && Event.current.keyCode != KeyCode.Backspace && (!cmdText.Equals(oldCmdText) || cmdText.Equals(string.Empty)) && Event.current.modifiers == EventModifiers.None)
+				if (autoAC && Event.current.keyCode != KeyCode.None && Event.current.keyCode != KeyCode.Space && (!cmdText.Equals(oldCmdText) || cmdText.Equals(string.Empty)) && (Event.current.modifiers == EventModifiers.None || Event.current.modifiers == EventModifiers.Shift))
 				{
 					if (cmdText.Equals(string.Empty))
 						forceClose = false;
@@ -314,7 +332,7 @@ namespace SRML.ConsoleSystem
 				}
 
 				// FIXES SPACE && BACKSPACE
-				if ((Event.current.keyCode == KeyCode.Space && Event.current.keyCode == KeyCode.Backspace) && Event.current.modifiers == EventModifiers.None)
+				if (autoAC && (Event.current.keyCode == KeyCode.Space) && Event.current.modifiers == EventModifiers.None)
 				{
 					if (Regex.Matches(cmdText, "\"").Count % 2 == 0)
 						forceClose = false;
@@ -370,6 +388,22 @@ namespace SRML.ConsoleSystem
 
 			if (GUI.Button(slRect, openSRMLLog))
 				System.Diagnostics.Process.Start(Console.srmlLogFile);
+
+			autoAC = GUI.Toggle(tacRect, autoAC, toggleAutoAC);
+
+			if (autoAC != oldAutoAC)
+			{
+				if (autoAC)
+				{
+					Console.LogSuccess("Auto complete will now open automatically.");
+				}
+				else
+				{
+					Console.LogSuccess("Auto complete will only open by pressing CTRL+Space or CMD+Space");
+				}
+
+				oldAutoAC = autoAC;
+			}
 
 			GUI.EndGroup();
 
@@ -442,7 +476,7 @@ namespace SRML.ConsoleSystem
 					cachedAC.RemoveAll(s => true); // .Clear() gets broken sometimes when you dynamically load an Assembly, so do the same another way
 					foreach (string cmd in Console.commands.Keys)
 					{
-						if (cmd.StartsWith(command))
+						if (cmd.ToLowerInvariant().StartsWith(command.ToLowerInvariant()))
 							cachedAC.Add(cmd);
 					}
 
@@ -451,7 +485,10 @@ namespace SRML.ConsoleSystem
 
 				if (cachedAC.Count > 0)
 				{
-					selectComplete = cachedAC[completeIndex].Substring(command.Length);
+					if (completeIndex >= cachedAC.Count)
+						completeIndex = 0;
+
+					selectComplete = cmdText.Substring(0, cmdText.Length - command.Length) + cachedAC[completeIndex];
 
 					int y = 5;
 					for (int i = 0; i < cachedAC.Count; i++)
@@ -461,9 +498,10 @@ namespace SRML.ConsoleSystem
 							GUI.backgroundColor = Color.yellow;
 
 						cBtnRect.y = y;
-						if (GUI.Button(cBtnRect, $"{(completeIndex == i ? "►" : string.Empty)}<b><color=#77DDFF>{command}</color></b>{cachedAC[i].Substring(command.Length)}", GUI.skin.textField))
+						if (GUI.Button(cBtnRect, $"{(completeIndex == i ? "►" : string.Empty)}<b><color=#77DDFF>{cachedAC[i].Substring(0, command.Length)}</color></b>{cachedAC[i].Substring(command.Length)}", GUI.skin.textField))
 						{
-							cmdText += cachedAC[i].Substring(command.Length);
+							cmdText = cmdText.Substring(0, cmdText.Length - command.Length) + cachedAC[i];
+							GUI.FocusControl(cmdName);
 							moveCursor = true;
 
 							autoComplete = false;
@@ -495,7 +533,7 @@ namespace SRML.ConsoleSystem
 							cachedAC.RemoveAll(s => true); // .Clear() gets broken sometimes when you dynamically load an Assembly, so do the same another way
 							foreach (string cmd in autoC)
 							{
-								if (cmd.StartsWith(lastArg))
+								if (cmd.ToLowerInvariant().StartsWith(lastArg.ToLowerInvariant()))
 									cachedAC.Add(cmd);
 							}
 
@@ -504,7 +542,10 @@ namespace SRML.ConsoleSystem
 
 						if (cachedAC.Count > 0)
 						{
-							selectComplete = cachedAC[completeIndex].Substring(lastArg.Length);
+							if (completeIndex >= cachedAC.Count)
+								completeIndex = 0;
+
+							selectComplete = cmdText.Substring(0, cmdText.Length - lastArg.Length) + cachedAC[completeIndex];
 
 							int y = 5;
 							for (int i = 0; i < cachedAC.Count; i++)
@@ -514,9 +555,10 @@ namespace SRML.ConsoleSystem
 									GUI.backgroundColor = Color.yellow;
 
 								cBtnRect.y = y;
-								if (GUI.Button(cBtnRect, $"{(completeIndex == i ? "►" : string.Empty)}<b><color=#77DDFF>{lastArg}</color></b>{cachedAC[i].Substring(lastArg.Length)}", GUI.skin.textField))
+								if (GUI.Button(cBtnRect, $"{(completeIndex == i ? "►" : string.Empty)}<b><color=#77DDFF>{cachedAC[i].Substring(0, lastArg.Length)}</color></b>{cachedAC[i].Substring(lastArg.Length)}", GUI.skin.textField))
 								{
-									cmdText += cachedAC[i].Substring(lastArg.Length);
+									cmdText = cmdText.Substring(0, cmdText.Length - lastArg.Length) + cachedAC[i];
+									GUI.FocusControl(cmdName);
 									moveCursor = true;
 
 									autoComplete = false;
