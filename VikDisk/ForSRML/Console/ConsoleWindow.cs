@@ -323,7 +323,7 @@ namespace SRML.ConsoleSystem
 				}
 
 				// TRIGGER AUTO COMPLETE
-				if (autoAC && Event.current.keyCode != KeyCode.None && Event.current.keyCode != KeyCode.Space && (!cmdText.Equals(oldCmdText) || cmdText.Equals(string.Empty)) && (Event.current.modifiers == EventModifiers.None || Event.current.modifiers == EventModifiers.Shift))
+				if (autoAC && Event.current.keyCode != KeyCode.None && Event.current.keyCode != KeyCode.Space && Event.current.keyCode != KeyCode.Escape && (!cmdText.Equals(oldCmdText) || cmdText.Equals(string.Empty)) && (Event.current.modifiers == EventModifiers.None || Event.current.modifiers == EventModifiers.Shift))
 				{
 					if (cmdText.Equals(string.Empty))
 						forceClose = false;
