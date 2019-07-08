@@ -37,8 +37,6 @@ namespace VikDisk
 
 			// Register callbacks for the lore generators
 			viktor.RegisterCallbacks();
-
-			UnityEngine.SceneManagement.SceneManager.activeSceneChanged += ChangeScene;
 		}
 
 		// POST LOAD MOD

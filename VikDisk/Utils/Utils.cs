@@ -78,7 +78,7 @@ namespace VikDisk
 				info = type.GetMethod(methodName, BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.Public, null, types, null);
 				if (info == null)
 				{
-					SRML.Console.LogError($"The method 'methodName' couldn't be found");
+					//SRML.Console.LogError($"The method 'methodName' couldn't be found");
 					return false;
 				}
 
@@ -88,7 +88,7 @@ namespace VikDisk
 			}
 			catch (Exception e)
 			{
-				SRML.Console.LogError($"The method 'methodName' generated an exception, found below:");
+				//SRML.Console.LogError($"The method 'methodName' generated an exception, found below:");
 				UnityEngine.Debug.LogException(e);
 				return false;
 			}

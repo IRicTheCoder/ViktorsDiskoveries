@@ -39,21 +39,7 @@
     </DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ForSRML\Console\Commands\EditButtonCommand.cs" />
-    <Compile Include="ForSRML\Console\Commands\RemoveButtonCommand.cs" />
-    <Compile Include="ForSRML\Console\Commands\AddButtonCommand.cs" />
-    <Compile Include="ForSRML\Console\Commands\DumpCommand.cs" />
     <Compile Include="Configs.cs" />
-    <Compile Include="ForSRML\Console\Commands\ClearCommand.cs" />
-    <Compile Include="ForSRML\Console\Commands\HelpCommand.cs" />
-    <Compile Include="ForSRML\Console\Commands\ModsCommand.cs" />
-    <Compile Include="ForSRML\Console\Commands\ReloadCommand.cs" />
-    <Compile Include="ForSRML\Console\Console.cs" />
-    <Compile Include="ForSRML\Console\ConsoleBinder.cs" />
-    <Compile Include="ForSRML\Console\ConsoleButton.cs" />
-    <Compile Include="ForSRML\Console\ConsoleCommand.cs" />
-    <Compile Include="ForSRML\Console\ConsoleWindow.cs" />
-    <Compile Include="ForSRML\Console\FileLogger.cs" />
     <Compile Include="Handlers\AmmoHandler.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Properties\GlobalSuppressions.cs" />
@@ -138,6 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Commands\" />
+    <Folder Include="ForSRML\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
