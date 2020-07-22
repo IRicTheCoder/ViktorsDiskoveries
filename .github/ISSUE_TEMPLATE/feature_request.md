@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-NOTE: If you wish to present more than one feature in this request just give a number to each, so it can be easily read. **OR** write each of them in a different comment.
+**NOTE: If you wish to present more than one feature in this request write each one in a comment**
 
 **What will this feature do?**
 A clear and concise description of what this feature should do
