@@ -19,7 +19,7 @@ When suggesting features you should take into account the information on the tem
 ### New Slimes
 You should use the Slime Suggestion template to suggest slimes, **slimes need to have at least 80% of the questions in the file filled to be considered valid**. If there is less than 80% of the info, then the suggestion will be closed.
 
-# New Areas
+### New Areas
 New areas should use the Area Suggestion template, **in this case, a new area needs to have at least 6 slimes (and at least 3 of them need to be new), 2 types of food, an explanation of how you get there and what is the purpose of said area. If possible you should also provide a list of materials found on that area**
 
 If these requirements aren't furfilled then the suggestion will be closed.
