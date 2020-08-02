@@ -14,6 +14,16 @@ When placing an issue please verify if another one is already present or not, if
 ## Feature Suggestions
 When suggesting features you should take into account the information on the template and change it accordingly. **If you are going to make more than one suggestion, make it in the same post and separate each suggestion in a comment, this makes it easier to read**
 
+**Some suggestions require you to use special templates and follow those templates, otherwise your suggestion will not be accepted**
+
+### New Slimes
+You should use the Slime Suggestion template to suggest slimes, **slimes need to have at least 80% of the questions in the file filled to be considered valid**. If there is less than 80% of the info, then the suggestion will be closed.
+
+# New Areas
+New areas should use the Area Suggestion template, **in this case, a new area needs to have at least 6 slimes (and at least 3 of them need to be new), 2 types of food, an explanation of how you get there and what is the purpose of said area. If possible you should also provide a list of materials found on that area**
+
+If these requirements aren't furfilled then the suggestion will be closed.
+
 # Information
 You can follow the mod's development on <a href="http://discord.gg/yjnKFsH" target="_blank">Discord</a>, or you can check the mod's <a href="http://vikdisk.ricthecoder.com" target="_blank">website</a> regularly.
 
