@@ -2,7 +2,7 @@
 name: Feature Suggestion
 about: Suggest an idea for this project that is not a slime or an area
 title: ''
-labels: suggestion
+labels: Suggestion
 assignees: ''
 
 ---

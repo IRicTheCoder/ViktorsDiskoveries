@@ -2,7 +2,7 @@
 name: Slime Suggestion
 about: Suggest a slime for this project that
 title: ''
-labels: suggestion
+labels: Suggestion
 assignees: ''
 
 ---
@@ -30,31 +30,31 @@ assignees: ''
 
 ## Slime Technical Sheet
 ### Type
-* [ ] **Normal** – Just your ordinay slime.
-* [ ] **Mutation** – Rare versions of other slimes, like the Albino which is a mutation of the Pink Slime.
-* [ ] **Ancient** – Slimes that have lived for a very long time, like the gold slime, it is an ancient being almost as old as the planet
-* [ ] **Fossil** – Slimes that can only be found as fossils (or in the case of the saber as descendants). It will be possible to use their DNA, from the fossils, to bring them back.
-* [ ] **Godly** – Slimes that have great power and can use some energy similar to magic. They are seen as gods by the other slimes as they keep the slime world alive with their energy.
-* [ ] **Special** – Slimes like the Tarr or Twinkle slime are seen as special cause they aren’t normal and don’t fit into any other category.
+* [ ] **Normal** â€“ Just your ordinay slime.
+* [ ] **Mutation** â€“ Rare versions of other slimes, like the Albino which is a mutation of the Pink Slime.
+* [ ] **Ancient** â€“ Slimes that have lived for a very long time, like the gold slime, it is an ancient being almost as old as the planet
+* [ ] **Fossil** â€“ Slimes that can only be found as fossils (or in the case of the saber as descendants). It will be possible to use their DNA, from the fossils, to bring them back.
+* [ ] **Godly** â€“ Slimes that have great power and can use some energy similar to magic. They are seen as gods by the other slimes as they keep the slime world alive with their energy.
+* [ ] **Special** â€“ Slimes like the Tarr or Twinkle slime are seen as special cause they arenâ€™t normal and donâ€™t fit into any other category.
 
 ### Mutation of what slime? (If you choose Mutation above)
 *Identify a slime that this is a mutation of, if it is a mutation of something previously suggested, say it is a suggestion given before*
 
 ### Behavior
-* [ ] **Passive** – Does not damage the rancher in any way. The aggitation will not cause difference in behaviours.
-* [ ] **Neutral** – Might damage the rancher indirectly. The aggitation might cause aggressive behaviour similar to the rolling of the rock slime.
-* [ ] **Aggressive** – Attacks the rancher directly.
+* [ ] **Passive** â€“ Does not damage the rancher in any way. The aggitation will not cause difference in behaviours.
+* [ ] **Neutral** â€“ Might damage the rancher indirectly. The aggitation might cause aggressive behaviour similar to the rolling of the rock slime.
+* [ ] **Aggressive** â€“ Attacks the rancher directly.
 
 ### Risk for the rancher? (If you choose something other than Passive above)
 *What is the risk for the rancher? Directly or Indirectly*
 
 ### Activity Pattern
-* [ ] **Diurnal** – Only survives in the light / during the day
-* [ ] **Nocturnal** – Only survives in the dark / during the night
-* [ ] **Metatunal** – Survives in the Dark and Light
-* [ ] **Crepuscular** – Is active only during Dusk and Dawn. Disappears during the inactive time.
-* [ ] **Matitunal** – Is active only during Dawn. Disappears during the inactive time.
-* [ ] **Vespertine** – Is active only during Dusk. Disappears during the inactive time.
+* [ ] **Diurnal** â€“ Only survives in the light / during the day
+* [ ] **Nocturnal** â€“ Only survives in the dark / during the night
+* [ ] **Metatunal** â€“ Survives in the Dark and Light
+* [ ] **Crepuscular** â€“ Is active only during Dusk and Dawn. Disappears during the inactive time.
+* [ ] **Matitunal** â€“ Is active only during Dawn. Disappears during the inactive time.
+* [ ] **Vespertine** â€“ Is active only during Dusk. Disappears during the inactive time.
 
 ### Can become a largo?
 * [ ] **Yes** - This slime can become a largo with any slime that normally can.
@@ -71,21 +71,21 @@ assignees: ''
 *If this slime has a condition to find or see it, write it here*
 
 ### Environment?
-* [ ] **Land** – Anywhere on land, does not need a special condition for it
-* [ ] **Water** – Anywhere on water, does not need a special condition for it
-* [ ] **Deep Water** – On water, requires a place where the water pressure is higher (deep water)
-* [ ] **Lava** – On land, requires Lava or a region that contains lava to survive
-* [ ] **Arid** – On land, requires a arid/dry zone to survive
+* [ ] **Land** â€“ Anywhere on land, does not need a special condition for it
+* [ ] **Water** â€“ Anywhere on water, does not need a special condition for it
+* [ ] **Deep Water** â€“ On water, requires a place where the water pressure is higher (deep water)
+* [ ] **Lava** â€“ On land, requires Lava or a region that contains lava to survive
+* [ ] **Arid** â€“ On land, requires a arid/dry zone to survive
 * [ ] **Other** - Make a suggestion of a new environment
 
 ### Environment Specification (If you choose other above)
 *Specify the type of environment and talk a bit about it*
 
 ### Temperature
-* [ ] **Cold** – Requires cold temperatures (below 15°C/59°F)
-* [ ] **Hot** – Requires hot temperatures (above 30°C/86°F)
-* [ ] **Moderated** – Requires moderated temperatures (between 10°C/50°F and 35°C/95°F)
-* [ ] **Indifferent** – It doesn’t matter the temperature
+* [ ] **Cold** â€“ Requires cold temperatures (below 15Â°C/59Â°F)
+* [ ] **Hot** â€“ Requires hot temperatures (above 30Â°C/86Â°F)
+* [ ] **Moderated** â€“ Requires moderated temperatures (between 10Â°C/50Â°F and 35Â°C/95Â°F)
+* [ ] **Indifferent** â€“ It doesnâ€™t matter the temperature
 
 ### Vaccable?
 * [ ] **Yes** - Can be vacced normally
