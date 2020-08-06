@@ -24,9 +24,11 @@ New areas should use the Area Suggestion template, **in this case, a new area ne
 
 If these requirements aren't furfilled then the suggestion will be closed.
 
-# Information
+# Support Me
 You can follow the mod's development on <a href="https://discord.gg/eBPAdFw" target="_blank">Discord</a>, or you can check the mod's <a href="http://vikdisk.ricthecoder.com" target="_blank">website</a> regularly.
 
 To follow my work, you can find me on social media (<a href="https://twitter.com/RicTheCoder" target="_blank">Twitter</a>, <a href="https://www.instagram.com/ricthecoder/" target="_blank">Instagram</a>) and on <a href="https://www.patreon.com/ricthecoder" target="_blank">Patreon</a>. Consider supporting me there as it will help in the development of this mod and some of my other projects.
+
+If you can't support me on Patreon, consider a one-time donation to <a href="https://ko-fi.com/ricthecoder" target="_blank">ko-fi</a>
 
 Thank you for your time!
