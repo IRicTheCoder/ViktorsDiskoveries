@@ -3,3 +3,5 @@
 */obj
 */.vs
 *.zip
+*.dll
+*.pdb
