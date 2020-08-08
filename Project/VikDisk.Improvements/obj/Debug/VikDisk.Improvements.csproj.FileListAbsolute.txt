@@ -1,0 +1,7 @@
+C:\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SRML\Mods\VikDisk\VikDisk.Improvements.dll
+C:\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SRML\Mods\VikDisk\VikDisk.Improvements.pdb
+C:\Users\RicardoTheCoder\Documents\_VikDisk\Project\VikDisk.Improvements\obj\Debug\VikDisk.Improvements.csprojAssemblyReference.cache
+C:\Users\RicardoTheCoder\Documents\_VikDisk\Project\VikDisk.Improvements\obj\Debug\VikDisk.Improvements.csproj.CoreCompileInputs.cache
+C:\Users\RicardoTheCoder\Documents\_VikDisk\Project\VikDisk.Improvements\obj\Debug\VikDisk.Improvements.csproj.CopyComplete
+C:\Users\RicardoTheCoder\Documents\_VikDisk\Project\VikDisk.Improvements\obj\Debug\VikDisk.Improvements.dll
+C:\Users\RicardoTheCoder\Documents\_VikDisk\Project\VikDisk.Improvements\obj\Debug\VikDisk.Improvements.pdb

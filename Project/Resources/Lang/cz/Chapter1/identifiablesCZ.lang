@@ -1,0 +1,70 @@
+﻿//=====================================
+// FOOD
+//=====================================
+
+// Veggies
+actor:l.dark_ginger_veggie:Temný Zázvor
+
+// Fruits
+actor:l.glitch_pogo_fruit:Glitch PogoOvoce
+
+// Meats
+actor:l.fire_hen:Ohnivá čslepice
+actor:l.fire_chick:Ohnivé kuře
+
+// Others
+actor:l.extra_spicy_tofu:Extra pálivé tofu
+
+//=====================================
+// PLORTS, SLIMES & RESOURCES
+//=====================================
+
+// Plorts
+actor:l.real_glitch_plort:Glitch Plort
+actor:l.tarr_plort:Zamazaný Plort
+actor:l.dream_plort:Plort snů
+
+// Slimes
+actor:l.real_glitch_slime:'Opravdový' Glitch Sliz
+
+// Slime Resources
+actor:l.pink_slime_extract_craft:Výtažek Z Růžového Slizu
+
+//=====================================
+// DECORATIONS
+//=====================================
+
+// Echos
+actor:l.white_echo:Bílá Ozvěna
+actor:l.rainbow_echo:duhová ozvěna
+
+// Effies
+actor:l.glitch_effy:Glitch Effy
+actor:l.cartoon_stars_effy:Barevné Hvězdy Effy
+
+// Ornaments
+actor:l.dream_ornament:Ozdoba snů
+actor:l.viktor_ornament:Viktor Ozdoba
+
+//=====================================
+// WORLD RELATED
+//=====================================
+
+// Crates
+actor:l.glitch_crate:Glitch Bedna
+
+// Liquids
+actor:l.guu_liquid:Slizká Hmota
+
+//=====================================
+// MISC
+//=====================================
+
+// Fashions
+actor:l.santa_stache_fashion:Santův Knír pod
+
+// Toys
+actor:l.basket_ball_toy:Basketballový Míč
+
+// Others
+actor:l.wonder_ticket:Lístek do Říše Divů

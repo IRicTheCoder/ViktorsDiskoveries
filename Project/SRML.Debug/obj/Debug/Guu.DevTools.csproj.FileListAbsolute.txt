@@ -1,0 +1,7 @@
+C:\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SRML\Mods\VikDisk\Guu.DevTools.dll
+C:\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SRML\Mods\VikDisk\Guu.DevTools.pdb
+C:\Users\RicardoTheCoder\Documents\_VikDisk\Project\SRML.Debug\obj\Debug\Guu.DevTools.csprojAssemblyReference.cache
+C:\Users\RicardoTheCoder\Documents\_VikDisk\Project\SRML.Debug\obj\Debug\Guu.DevTools.csproj.CoreCompileInputs.cache
+C:\Users\RicardoTheCoder\Documents\_VikDisk\Project\SRML.Debug\obj\Debug\Guu.DevTools.csproj.CopyComplete
+C:\Users\RicardoTheCoder\Documents\_VikDisk\Project\SRML.Debug\obj\Debug\Guu.DevTools.dll
+C:\Users\RicardoTheCoder\Documents\_VikDisk\Project\SRML.Debug\obj\Debug\Guu.DevTools.pdb

@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VikDisk</RootNamespace>
+    <AssemblyName>VikDisk</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <ProjectGuid>{B32A88E3-5022-421C-9569-DB8446F2733D}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>C:\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SRML\Mods\VikDisk</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>C:\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SRML\Mods\VikDisk</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="API\Identifiables\Effy.cs" />
+    <Compile Include="API\Identifiables\SynergyLargo.cs" />
+    <Compile Include="Components\Decorations\EffyProximity.cs" />
+    <Compile Include="Components\Fixes\FixColliders.cs" />
+    <Compile Include="Components\Food\CorrusiveAura.cs" />
+    <Compile Include="Components\Plorts\PlortSmoke.cs" />
+    <Compile Include="Components\Plorts\GlitchedPlort.cs" />
+    <Compile Include="Core\Attributes\NoRegisterAttribute.cs" />
+    <Compile Include="Core\GameFixer.cs" />
+    <Compile Include="Core\CallbackHandler.cs" />
+    <Compile Include="Core\ModLogger.cs" />
+    <Compile Include="Enums\Enums.Lang.cs" />
+    <Compile Include="Game\Gadgets\FashionPods\SantaStachePod.cs" />
+    <Compile Include="Game\Gadgets\Gadgets.cs" />
+    <Compile Include="Game\Identifiables\Largos\RealGlitchLargos.cs" />
+    <Compile Include="Game\Identifiables\Largos\ElectricLargo.cs" />
+    <Compile Include="Game\Others\Slime Definitions\ElectricLargoDefinition.cs" />
+    <Compile Include="Game\Others\Slime Definitions\RealGlitchDefinition.cs" />
+    <Compile Include="Game\Identifiables\Decorations\CartoonStarsEffy.cs" />
+    <Compile Include="Game\Identifiables\Decorations\GlitchEffy.cs" />
+    <Compile Include="Game\Identifiables\Food\DarkGinger.cs" />
+    <Compile Include="Game\UI\UIs.cs" />
+    <Compile Include="Game\UI\TestCorralUI.cs" />
+    <Compile Include="Game\Plots\Plots.cs" />
+    <Compile Include="Game\Plots\TestCorral.cs" />
+    <Compile Include="Game\SpawnResources\Garden\GlitchPogoGardenDeluxe.cs" />
+    <Compile Include="Game\SpawnResources\Garden\GlitchPogoGarden.cs" />
+    <Compile Include="Game\SpawnResources\Garden\DarkGingerGarden.cs" />
+    <Compile Include="Game\SpawnResources\Garden\DarkGingerGardenDeluxe.cs" />
+    <Compile Include="Game\SpawnResources\Garden\GingerGardenDeluxe.cs" />
+    <Compile Include="Game\SpawnResources\GardenResourceFixes.cs" />
+    <Compile Include="Game\SpawnResources\SpawnResources.cs" />
+    <Compile Include="Game\SpawnResources\Garden\GingerGarden.cs" />
+    <Compile Include="Game\Upgrades\Upgrades.cs" />
+    <Compile Include="Game\Upgrades\Player\UpgradeARGlasses.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Game\Identifiables\Decorations\ViktorOrnament.cs" />
+    <Compile Include="Game\Identifiables\Decorations\RainbowEcho.cs" />
+    <Compile Include="Game\Identifiables\Fashions\SantaStacheFashion.cs" />
+    <Compile Include="Game\Identifiables\Food\FireChick.cs" />
+    <Compile Include="Game\Identifiables\Food\FireHen.cs" />
+    <Compile Include="Game\Identifiables\Toys\ToyBasketBall.cs" />
+    <Compile Include="Game\Identifiables\Liquid\GuuLiquid.cs" />
+    <Compile Include="Game\Identifiables\Resources\PinkSlimeExtract.cs" />
+    <Compile Include="Game\Identifiables\Decorations\WhiteEcho.cs" />
+    <Compile Include="Game\Identifiables\Food\ExtraSpicyTofu.cs" />
+    <Compile Include="Game\Identifiables\IPediaRegistry.cs" />
+    <Compile Include="Game\Identifiables\Decorations\DreamOrnament.cs" />
+    <Compile Include="Game\Identifiables\Plorts\DreamPlort.cs" />
+    <Compile Include="Game\Identifiables\Plorts\RealGlitchPlort.cs" />
+    <Compile Include="Game\Identifiables\Others\WonderTicket.cs" />
+    <Compile Include="Game\Identifiables\Plorts\TarrPlort.cs" />
+    <Compile Include="Game\Identifiables\Crates\GlitchCrate.cs" />
+    <Compile Include="Game\Identifiables\Slimes\RealGlitchSlime.cs" />
+    <Compile Include="Game\Identifiables\Food\GlitchPogofruit.cs" />
+    <Compile Include="Game\Identifiables\Identifiables.cs" />
+    <Compile Include="Enums\Enums.Identifiables.cs" />
+    <Compile Include="Enums\Enums.LandPlots.cs" />
+    <Compile Include="Enums\Enums.Gadgets.cs" />
+    <Compile Include="Enums\Enums.Pedia.cs" />
+    <Compile Include="Enums\Enums.PlayerUpgrades.cs" />
+    <Compile Include="Enums\Enums.SpawnResources.cs" />
+    <Compile Include="QOL.cs" />
+    <Compile Include="Packs.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\GlobalSuppressions.cs" />
+    <Compile Include="Game\Others\Others.cs" />
+    <Compile Include="Debug\Commands\TestModeCommand.cs" />
+    <Compile Include="TODOs.cs" />
+    <Compile Include="Utils\DelegateUtils.cs" />
+    <Compile Include="Utils\RegistryUtils.cs" />
+    <Compile Include="VikDisk.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SRML\Libs\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SRML, Version=0.1.8.2, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\SRML.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="modinfo.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\Callbacks\" />
+    <Folder Include="Game\Identifiables\Largos\Synergies" />
+    <Folder Include="Game\Others\Slime Appearance\" />
+    <Folder Include="Game\SpawnResources\World\" />
+    <Folder Include="Game\Upgrades\Plots\" />
+    <Folder Include="Game\Upgrades\Ranch\" />
+    <Folder Include="Game\Upgrades\Tech\" />
+    <Folder Include="Game\Upgrades\World\" />
+    <Folder Include="Resources\Lang\en\Chapter1\Mails\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bundles\Chapter1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Lang\en.lang">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Lang\en\Chapter1\identifiables.lang">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Lang\en\Chapter1\upgrades.lang">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Lang\en\Chapter1\ui.lang">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Lang\en\Chapter1\pedia.lang">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Lang\en\overrides.lang">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Guu.API\Guu.API.csproj">
+      <Project>{d5841ab9-bcc8-4fd7-b49e-bda353be0964}</Project>
+      <Name>Guu.API</Name>
+    </ProjectReference>
+    <ProjectReference Include="Guu.Common\Guu.Common.csproj">
+      <Project>{983fbf90-1f81-4eae-8c73-ec2570b8e00f}</Project>
+      <Name>Guu.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="SRML.Debug\Guu.DevTools.csproj">
+      <Project>{5226813f-4651-40ab-97e7-4a8475e61a27}</Project>
+      <Name>Guu.DevTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="VikDisk.Improvements\VikDisk.Improvements.csproj">
+      <Project>{fd5a13c8-5491-4f3f-8294-d8a2c93b8a04}</Project>
+      <Name>VikDisk.Improvements</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!--<PropertyGroup>
+    <PostBuildEvent>start steam://rungameid/433340</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>tasklist /fi "imagename eq SlimeRancher.exe" |find ":" &gt; nul
+if errorlevel 1 taskkill /f /im "SlimeRancher.exe"</PreBuildEvent>
+  </PropertyGroup>-->
+</Project>
