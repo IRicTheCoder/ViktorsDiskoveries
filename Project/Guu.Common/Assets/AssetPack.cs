@@ -1,7 +1,6 @@
-﻿using SRML.Utils;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace SRML
+namespace Guu
 {
 	/// <summary>
 	/// An asset pack that contains all assets in a bundle

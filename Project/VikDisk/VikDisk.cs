@@ -20,6 +20,7 @@ namespace VikDisk
 		internal static void SetupMod()
 		{
 			Packs.Setup();
+			LanguageHandler.Setup();
 			CallbackHandler.Setup();
 
 			//SlimeUtils.GenerateLargoIDs(Enums.Identifiables.REAL_GLITCH_SLIME);
@@ -41,6 +42,7 @@ namespace VikDisk
 			// TODO: Change these to SRML
 			GameContext.Instance.MessageDirector.RegisterBundlesListener(LanguageUtils.LanguageChange);
 			//GordoRegistry.Setup();
+			
 			Console.RegisterCommand(new DumperCommand());
 			Console.RegisterCommand(new UnlockAllCommand());
 			Console.RegisterCommand(new TPCommand());

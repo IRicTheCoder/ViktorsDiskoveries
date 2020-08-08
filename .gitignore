@@ -1,7 +1,10 @@
 *.user
 */bin
 */obj
+*/Guu.API/obj
+*/Guu.Common/obj
+*/Guu.DevTools/obj
+*/VikDisk.Improvements/obj
+*/VikDisk/obj
 */.vs
 *.zip
-*.dll
-*.pdb

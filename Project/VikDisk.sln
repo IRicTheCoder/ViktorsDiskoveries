@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VikDisk", "VikDisk.csproj", "{B32A88E3-5022-421C-9569-DB8446F2733D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guu.API", "Guu.API\Guu.API.csproj", "{D5841AB9-BCC8-4FD7-B49E-BDA353BE0964}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guu.DevTools", "SRML.Debug\Guu.DevTools.csproj", "{5226813F-4651-40AB-97E7-4A8475E61A27}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guu.Common", "Guu.Common\Guu.Common.csproj", "{983FBF90-1F81-4EAE-8C73-EC2570B8E00F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VikDisk.Improvements", "VikDisk.Improvements\VikDisk.Improvements.csproj", "{FD5A13C8-5491-4F3F-8294-D8A2C93B8A04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guu.DevTools", "Guu.DevTools\Guu.DevTools.csproj", "{5226813F-4651-40AB-97E7-4A8475E61A27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VikDisk", "VikDisk\VikDisk.csproj", "{B32A88E3-5022-421C-9569-DB8446F2733D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,18 +19,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B32A88E3-5022-421C-9569-DB8446F2733D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B32A88E3-5022-421C-9569-DB8446F2733D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B32A88E3-5022-421C-9569-DB8446F2733D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B32A88E3-5022-421C-9569-DB8446F2733D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D5841AB9-BCC8-4FD7-B49E-BDA353BE0964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D5841AB9-BCC8-4FD7-B49E-BDA353BE0964}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5841AB9-BCC8-4FD7-B49E-BDA353BE0964}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5841AB9-BCC8-4FD7-B49E-BDA353BE0964}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5226813F-4651-40AB-97E7-4A8475E61A27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5226813F-4651-40AB-97E7-4A8475E61A27}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5226813F-4651-40AB-97E7-4A8475E61A27}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5226813F-4651-40AB-97E7-4A8475E61A27}.Release|Any CPU.Build.0 = Release|Any CPU
 		{983FBF90-1F81-4EAE-8C73-EC2570B8E00F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{983FBF90-1F81-4EAE-8C73-EC2570B8E00F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{983FBF90-1F81-4EAE-8C73-EC2570B8E00F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +31,14 @@ Global
 		{FD5A13C8-5491-4F3F-8294-D8A2C93B8A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD5A13C8-5491-4F3F-8294-D8A2C93B8A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD5A13C8-5491-4F3F-8294-D8A2C93B8A04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5226813F-4651-40AB-97E7-4A8475E61A27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5226813F-4651-40AB-97E7-4A8475E61A27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5226813F-4651-40AB-97E7-4A8475E61A27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5226813F-4651-40AB-97E7-4A8475E61A27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B32A88E3-5022-421C-9569-DB8446F2733D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B32A88E3-5022-421C-9569-DB8446F2733D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B32A88E3-5022-421C-9569-DB8446F2733D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B32A88E3-5022-421C-9569-DB8446F2733D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

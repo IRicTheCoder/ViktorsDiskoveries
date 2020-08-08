@@ -35,7 +35,10 @@ namespace VikDisk.Core
 		// Applies changes to the main menu
 		private static void ApplyMenuChanges(MainMenuUI ui)
 		{
-			
+			foreach (Transform child in ui.transform.Find("StandardModePanel"))
+			{
+				ModLogger.Log("  " + child.name);
+			}
 		}
 	}
 }

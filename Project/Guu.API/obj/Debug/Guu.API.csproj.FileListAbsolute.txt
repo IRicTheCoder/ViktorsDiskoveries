@@ -1,7 +1,12 @@
-C:\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SRML\Mods\VikDisk\Guu.API.dll
-C:\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SRML\Mods\VikDisk\Guu.API.pdb
 C:\Users\RicardoTheCoder\Documents\_VikDisk\Project\Guu.API\obj\Debug\Guu.API.csprojAssemblyReference.cache
 C:\Users\RicardoTheCoder\Documents\_VikDisk\Project\Guu.API\obj\Debug\Guu.API.csproj.CoreCompileInputs.cache
 C:\Users\RicardoTheCoder\Documents\_VikDisk\Project\Guu.API\obj\Debug\Guu.API.csproj.CopyComplete
 C:\Users\RicardoTheCoder\Documents\_VikDisk\Project\Guu.API\obj\Debug\Guu.API.dll
 C:\Users\RicardoTheCoder\Documents\_VikDisk\Project\Guu.API\obj\Debug\Guu.API.pdb
+C:\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SRML\Mods\VikDisk\Guu.API.dll
+C:\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SRML\Mods\VikDisk\Guu.API.pdb
+C:\Users\RicardoTheCoder\Documents\_VikDisk\Repo\Project\Guu.API\obj\Debug\Guu.API.csprojAssemblyReference.cache
+C:\Users\RicardoTheCoder\Documents\_VikDisk\Repo\Project\Guu.API\obj\Debug\Guu.API.csproj.CoreCompileInputs.cache
+C:\Users\RicardoTheCoder\Documents\_VikDisk\Repo\Project\Guu.API\obj\Debug\Guu.API.csproj.CopyComplete
+C:\Users\RicardoTheCoder\Documents\_VikDisk\Repo\Project\Guu.API\obj\Debug\Guu.API.dll
+C:\Users\RicardoTheCoder\Documents\_VikDisk\Repo\Project\Guu.API\obj\Debug\Guu.API.pdb

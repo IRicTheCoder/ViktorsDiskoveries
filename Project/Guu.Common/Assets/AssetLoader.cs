@@ -1,10 +1,11 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
-using SRML.Utils;
-using UnityEngine;
 
-namespace SRML
+using SRML;
+using SRML.Utils;
+
+namespace Guu
 {
 	/// <summary>
 	/// Class to help load assets from bundles

@@ -1,6 +1,10 @@
-C:\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SRML\Mods\VikDisk\Guu.Common.dll
-C:\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SRML\Mods\VikDisk\Guu.Common.pdb
 C:\Users\RicardoTheCoder\Documents\_VikDisk\Project\Guu.Common\obj\Debug\Guu.Common.csprojAssemblyReference.cache
 C:\Users\RicardoTheCoder\Documents\_VikDisk\Project\Guu.Common\obj\Debug\Guu.Common.csproj.CoreCompileInputs.cache
 C:\Users\RicardoTheCoder\Documents\_VikDisk\Project\Guu.Common\obj\Debug\Guu.Common.dll
 C:\Users\RicardoTheCoder\Documents\_VikDisk\Project\Guu.Common\obj\Debug\Guu.Common.pdb
+C:\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SRML\Mods\VikDisk\Guu.Common.dll
+C:\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SRML\Mods\VikDisk\Guu.Common.pdb
+C:\Users\RicardoTheCoder\Documents\_VikDisk\Repo\Project\Guu.Common\obj\Debug\Guu.Common.csprojAssemblyReference.cache
+C:\Users\RicardoTheCoder\Documents\_VikDisk\Repo\Project\Guu.Common\obj\Debug\Guu.Common.csproj.CoreCompileInputs.cache
+C:\Users\RicardoTheCoder\Documents\_VikDisk\Repo\Project\Guu.Common\obj\Debug\Guu.Common.dll
+C:\Users\RicardoTheCoder\Documents\_VikDisk\Repo\Project\Guu.Common\obj\Debug\Guu.Common.pdb
