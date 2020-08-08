@@ -31,6 +31,10 @@ namespace VikDisk
 		// them
 		internal static void PopulateMod()
 		{
+			// Fixes language display issues & game font
+			LanguageHandler.FixLangs();
+			
+			// Registers all game objects
 			Others.RegisterAll();
 			Identifiables.RegisterAll();
 			SpawnResources.RegisterAll();
@@ -39,28 +43,37 @@ namespace VikDisk
 			UIs.RegisterAll();
 			Plots.RegisterAll();
 
-			// TODO: Change these to SRML
+			// TODO: Remake Language Utils to account for multiple mods, just register your mod to Guu with
+			// TODO: Guu.RegisterLang(modAssembly);
 			GameContext.Instance.MessageDirector.RegisterBundlesListener(LanguageUtils.LanguageChange);
 			//GordoRegistry.Setup();
 			
+			// Adds new commands to the game
 			Console.RegisterCommand(new DumperCommand());
 			Console.RegisterCommand(new UnlockAllCommand());
 			Console.RegisterCommand(new TPCommand());
 			Console.RegisterCommand(new DebugModeCommand());
-
+			
 			if (TESTING)
 				Console.RegisterCommand(new TestModeCommand());
-
+			
+			// Runs fixing methods
 			GameFixer.FixAtGameLoad();
 			
 			// TODO: Remove this code (Glitch Slime version)
-			SlimeDiet diet = GameContext.Instance?.SlimeDefinitions.GetSlimeByIdentifiableId(Identifiable.Id.PINK_SLIME).Diet;
+			#region Glitch Slime Workaround
+			
+			SlimeDiet diet = GameContext.Instance?.SlimeDefinitions
+			                            .GetSlimeByIdentifiableId(Identifiable.Id.PINK_SLIME).Diet;
+			
 			diet.EatMap.Add(new SlimeDiet.EatMapEntry()
 			{
 				becomesId = Enums.Identifiables.REAL_GLITCH_SLIME,
 				driver = SlimeEmotions.Emotion.HUNGER,
 				eats = Identifiable.Id.MANIFOLD_CUBE_CRAFT
 			});
+			
+			#endregion
 		}
 
 		// Takes care of all intermod communication,
