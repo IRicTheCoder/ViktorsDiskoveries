@@ -1,7 +1,0 @@
-﻿# Fixes for Slime Favorites
-m.favorite.gold_slime = Gilded Ginger
-m.favorite.lucky_slime = Shiny Things
-
-# Fixes for Lore Stuff
-m.how_to_use.kookadoba = Kookadoba can only grow in the soils of The Wilds. A garden's replicator will reject it. At least with current technology!
-m.favored_by.manifold_cube_craft = (not slime food) But Lucky Slimes do like shiny things
