@@ -37,7 +37,7 @@ namespace SRML
 
 			MessageDirector.Lang lang = (MessageDirector.Lang)GameContext.Instance.AutoSaveDirector.ProfileManager.Settings.options.language;
 
-			if (SceneManager.GetActiveScene().buildIndex != 2 || currLang == lang)
+			if (Levels.isMainMenu() || currLang == lang)
 				return;
 
 			Assembly assembly = yourAssembly ?? ReflectionUtils.GetRelevantAssembly();

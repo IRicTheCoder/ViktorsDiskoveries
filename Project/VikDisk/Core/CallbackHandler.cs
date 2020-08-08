@@ -6,6 +6,8 @@ using UnityEngine;
 using SRML.SR;
 using SRML.Areas;
 
+using TMPro;
+
 namespace VikDisk.Core
 {
 	/// <summary>
@@ -30,15 +32,28 @@ namespace VikDisk.Core
 			//DebugHandler.Build();
 
 			GameFixer.FixAtWorldGen();
+
+			// Fixes the objects on the world
+			/*if (LanguageHandler.symbolFont)
+			{
+				TMP_Text[] texts = Resources.FindObjectsOfTypeAll<TMP_Text>();
+				foreach (TMP_Text text in texts) text.font = LanguageHandler.newFont;
+			}
+			else if (LanguageHandler.hasSymbolFont)
+			{
+				TMP_Text[] texts = Resources.FindObjectsOfTypeAll<TMP_Text>();
+				foreach (TMP_Text text in texts) text.font = LanguageHandler.oldFont;
+			}*/
 		}
 
 		// Applies changes to the main menu
 		private static void ApplyMenuChanges(MainMenuUI ui)
 		{
-			foreach (Transform child in ui.transform.Find("StandardModePanel"))
-			{
-				ModLogger.Log("  " + child.name);
-			}
+			LanguageHandler.oldFont = ui.languageDropdown.captionText.font;
+
+			ui.languageDropdown.itemText.font = LanguageHandler.newFont;
+			TMP_Text[] texts = Object.FindObjectsOfType<TMP_Text>();
+			foreach (TMP_Text text in texts) text.font = LanguageHandler.newFont;
 		}
 	}
 }

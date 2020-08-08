@@ -122,7 +122,7 @@
       <Project>{983fbf90-1f81-4eae-8c73-ec2570b8e00f}</Project>
       <Name>Guu.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SRML.Debug\Guu.DevTools.csproj">
+    <ProjectReference Include="..\Guu.DevTools\Guu.DevTools.csproj">
       <Project>{5226813f-4651-40ab-97e7-4a8475e61a27}</Project>
       <Name>Guu.DevTools</Name>
     </ProjectReference>

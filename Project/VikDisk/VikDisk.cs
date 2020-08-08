@@ -31,9 +31,6 @@ namespace VikDisk
 		// them
 		internal static void PopulateMod()
 		{
-			// Fixes language display issues & game font
-			LanguageHandler.FixLangs();
-			
 			// Registers all game objects
 			Others.RegisterAll();
 			Identifiables.RegisterAll();
@@ -46,6 +43,7 @@ namespace VikDisk
 			// TODO: Remake Language Utils to account for multiple mods, just register your mod to Guu with
 			// TODO: Guu.RegisterLang(modAssembly);
 			GameContext.Instance.MessageDirector.RegisterBundlesListener(LanguageUtils.LanguageChange);
+			GameContext.Instance.MessageDirector.RegisterBundlesListener(LanguageHandler.FixLangDisplay);
 			//GordoRegistry.Setup();
 			
 			// Adds new commands to the game
