@@ -1,0 +1,70 @@
+﻿#=====================================
+# FOOD
+#=====================================
+
+# Veggies
+actor:l.dark_ginger_veggie: Dark Ginger
+
+# Fruits
+actor:l.glitch_pogo_fruit: Glitch Pogofruit
+
+# Meats
+actor:l.fire_hen: Fire Hen
+actor:l.fire_chick: Fire Chick
+
+# Others
+actor:l.extra_spicy_tofu: Extra Spicy Tofu
+
+#=====================================
+# PLORTS, SLIMES & RESOURCES
+#=====================================
+
+# Plorts
+actor:l.real_glitch_plort: Glitch Plort
+actor:l.tarr_plort: Tarr Plort
+actor:l.dream_plort: Dream Plort
+
+# Slimes
+actor:l.real_glitch_slime: 'Real' Glitch Slime
+
+# Slime Resources
+actor:l.pink_slime_extract_craft: Pink Slime Extract
+
+#=====================================
+# DECORATIONS
+#=====================================
+
+# Echos
+actor:l.white_echo: White Echo
+actor:l.rainbow_echo: Rainbow Echo
+
+# Effies
+actor:l.glitch_effy: Glitch Effy
+actor:l.cartoon_stars_effy: Toon Stars Effy
+
+# Ornaments
+actor:l.dream_ornament: Dream Ornament
+actor:l.viktor_ornament: Viktor Ornament
+
+#=====================================
+# WORLD RELATED
+#=====================================
+
+# Crates
+actor:l.glitch_crate: Glitch Crate
+
+# Liquids
+actor:l.guu_liquid: Slimy Guu
+
+#=====================================
+# MISC
+#=====================================
+
+# Fashions
+actor:l.santa_stache_fashion: Santa Stache Fashion
+
+# Toys
+actor:l.basket_ball_toy: Basket Ball
+
+# Others
+actor:l.wonder_ticket: Wonderland Ticket
