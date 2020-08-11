@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Guu
+namespace Guu.Assets
 {
 	/// <summary>
 	/// An asset pack that contains all assets in a bundle

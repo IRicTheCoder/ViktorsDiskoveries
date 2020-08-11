@@ -47,6 +47,7 @@
     <Compile Include="Extensions\ScriptableObjectExtensions.cs" />
     <Compile Include="Extensions\SlimeDefinitionExtensions.cs" />
     <Compile Include="Guu.cs" />
+    <Compile Include="Language\LanguageController.cs" />
     <Compile Include="Modules\ModuleEntry.cs" />
     <Compile Include="Modules\ModuleManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -55,7 +56,6 @@
     <Compile Include="Utils\EnumUtils.cs" />
     <Compile Include="Utils\ExceptionUtils.cs" />
     <Compile Include="Utils\GameUtils.cs" />
-    <Compile Include="Utils\LanguageUtils.cs" />
     <Compile Include="Utils\ScriptableObjectsUtils.cs" />
     <Compile Include="Utils\SlimeUtils.cs" />
     <Compile Include="Utils\TextureUtils.cs" />

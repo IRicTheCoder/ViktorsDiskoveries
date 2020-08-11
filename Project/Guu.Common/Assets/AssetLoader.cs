@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Reflection;
+
+using Guu.Assets;
 
 using SRML;
 using SRML.Utils;
@@ -25,6 +28,7 @@ namespace Guu
 		/// Loads a bundle from the mod's folder
 		/// </summary>
 		/// <param name="relPath">Relative path to the bundle</param>
+		[SuppressMessage("ReSharper", "AssignNullToNotNullAttribute")]
 		public static AssetPack LoadModBundle(string relPath)
 		{
 			Assembly assembly = ReflectionUtils.GetRelevantAssembly();

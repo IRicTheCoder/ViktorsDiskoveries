@@ -2,16 +2,16 @@
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Reflection;
+
 using SRML.SR;
 using SRML.Utils;
-using UnityEngine.SceneManagement;
 
-namespace SRML
+namespace Guu.Language
 {
 	/// <summary>
-	/// An utility class to help with language
+	/// A controller to deal with language
 	/// </summary>
-	public static class LanguageUtils
+	public static class LanguageController
 	{
 		// To lock the system before it actually reads the language
 		private static bool firstLock = true;
@@ -27,7 +27,7 @@ namespace SRML
 		/// <param name="yourAssembly">The assembly you want to get it from 
 		/// (if null will get the relevant assembly for your mod)</param>
 		[SuppressMessage("ReSharper", "AssignNullToNotNullAttribute")]
-		private static void SetTranslations(Assembly yourAssembly = null)
+		public static void SetTranslations(Assembly yourAssembly = null)
 		{
 			if (firstLock)
 			{
@@ -47,26 +47,19 @@ namespace SRML
 			UriBuilder uri = new UriBuilder(codeBase);
 			string path = Uri.UnescapeDataString(uri.Path);
 			
-			FileInfo langFile = new FileInfo(Path.Combine(Path.GetDirectoryName(path), $"Resources\\Lang\\{code}.lang"));
+			FileInfo langFile = new FileInfo(Path.Combine(Path.GetDirectoryName(path), $"Resources\\Lang\\{code}.yaml"));
 
 			using (StreamReader reader = new StreamReader(langFile.FullName))
 			{
 				foreach (string line in reader.ReadToEnd().Split('\n'))
 				{
-					if (line.StartsWith("@import "))
-					{
-						string imp = line.Replace("@import ", "").Trim().Replace("/", "\\");
-						FileInfo extFile = new FileInfo(Path.Combine(Path.GetDirectoryName(path), $"Resources\\Lang\\{code}\\{imp}"));
+					if (!line.StartsWith("@import ")) continue;
+					
+					string imp = line.Replace("@import ", "").Trim().Replace("/", "\\");
+					FileInfo extFile = new FileInfo(Path.Combine(Path.GetDirectoryName(path), $"Resources\\Lang\\{code}\\{imp}"));
 
-						if (extFile.Exists)
-							SetTranslations(extFile);
-					}
-
-					if (line.StartsWith("//") || line.Equals(string.Empty) || !line.Contains(":"))
-						continue;
-
-					string[] args = line.Split(':');
-					TranslationPatcher.AddTranslationKey(args[0], args[1], args[2]);
+					if (extFile.Exists)
+						SetTranslations(extFile);
 				}
 			}
 
@@ -94,19 +87,13 @@ namespace SRML
 							SetTranslations(extFile);
 					}
 
-					if (line.StartsWith("//") || line.Equals(string.Empty) || !line.Contains(":"))
+					if (line.StartsWith("#") || line.Equals(string.Empty) || !line.Contains(":"))
 						continue;
 
 					string[] args = line.Split(':');
-					TranslationPatcher.AddTranslationKey(args[0], args[1], args[2]);
+					TranslationPatcher.AddTranslationKey(args[0], args[1], args[2].TrimStart());
 				}
 			}
-		}
-
-		// When the language changes
-		public static void LanguageChange(MessageDirector dir)
-		{
-			SetTranslations();
 		}
 	}
 }

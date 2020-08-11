@@ -11,8 +11,9 @@ namespace VikDisk
 		[EnumHolder]
 		public static class Langs
 		{
-			public static MessageDirector.Lang CZ; // Czech
+			public static MessageDirector.Lang CS; // Czech
 			public static MessageDirector.Lang PL; // Polish
+			public static MessageDirector.Lang FIL; // Tagalog (Filipino)
 		}
 	}
 }

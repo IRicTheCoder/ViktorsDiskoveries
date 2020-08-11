@@ -1,4 +1,6 @@
-﻿using SRML;
+﻿using Guu;
+
+using SRML;
 using SRML.Console;
 using VikDisk.Core;
 using VikDisk.Debug;
@@ -39,11 +41,7 @@ namespace VikDisk
 			Upgrades.RegisterAll();
 			UIs.RegisterAll();
 			Plots.RegisterAll();
-
-			// TODO: Remake Language Utils to account for multiple mods, just register your mod to Guu with
-			// TODO: Guu.RegisterLang(modAssembly);
-			GameContext.Instance.MessageDirector.RegisterBundlesListener(LanguageUtils.LanguageChange);
-			GameContext.Instance.MessageDirector.RegisterBundlesListener(LanguageHandler.FixLangDisplay);
+			
 			//GordoRegistry.Setup();
 			
 			// Adds new commands to the game
@@ -55,9 +53,18 @@ namespace VikDisk
 			if (TESTING)
 				Console.RegisterCommand(new TestModeCommand());
 			
+			// Registers the remaining callback
+			CallbackHandler.LateSetup();
+			
 			// Runs fixing methods
 			GameFixer.FixAtGameLoad();
-			
+		}
+
+		// Takes care of all intermod communication,
+		// this will also work with UMF mods as
+		// VikDisk has a way to connect to those mods
+		internal static void IntermodComms()
+		{
 			// TODO: Remove this code (Glitch Slime version)
 			#region Glitch Slime Workaround
 			
@@ -72,14 +79,6 @@ namespace VikDisk
 			});
 			
 			#endregion
-		}
-
-		// Takes care of all intermod communication,
-		// this will also work with UMF mods as
-		// VikDisk has a way to connect to those mods
-		internal static void IntermodComms()
-		{
-
 		}
 	}
 }

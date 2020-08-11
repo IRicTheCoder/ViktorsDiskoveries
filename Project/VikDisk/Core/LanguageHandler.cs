@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 using JetBrains.Annotations;
@@ -21,39 +22,38 @@ namespace VikDisk.Core
         // The fonts to use for the game, the new font is to support special symbols
         internal static TMP_FontAsset oldFont;
         internal static TMP_FontAsset newFont;
-        
-        // The type of font and the cache of that value
-        internal static bool symbolFont = false;
-        internal static bool hasSymbolFont = false;
 
         // List of all new languages added by the mod
         private static readonly Dictionary<MessageDirector.Lang, string> LANGUAGES = new Dictionary<MessageDirector.Lang, string>()
         {
-            {MessageDirector.Lang.EN, "English"},
-            {MessageDirector.Lang.DE, "Deutsch"},
-            {MessageDirector.Lang.ES, "Español"},
-            {MessageDirector.Lang.FR, "Français"},
-            {MessageDirector.Lang.RU, "Pyccкий"},
-            {MessageDirector.Lang.ZH, "中文"},
-            {MessageDirector.Lang.JA, "日本語"},
-            {MessageDirector.Lang.SV, "Svenska"},
-            {MessageDirector.Lang.PT, "Português-Brasil"},
-            {MessageDirector.Lang.KO, "한국어"},
-            {Enums.Langs.CZ, "Čeština"},
-            {Enums.Langs.PL, "Polski"}
+            {MessageDirector.Lang.EN, "English"}, // English
+            {MessageDirector.Lang.DE, "German"}, // Deutsch
+            {MessageDirector.Lang.ES, "Spanish"}, // Español
+            {MessageDirector.Lang.FR, "French"}, // Français
+            {MessageDirector.Lang.RU, "Russian"}, // Pyccкий
+            {MessageDirector.Lang.ZH, "Chinese"}, // 中文
+            {MessageDirector.Lang.JA, "Japanese"}, // 日本語
+            {MessageDirector.Lang.SV, "Swedish"}, //Svenska 
+            {MessageDirector.Lang.PT, "Brazilian Pt"}, // Português-Brasil
+            {MessageDirector.Lang.KO, "Korean"}, // 한국어
+            {Enums.Langs.CS, "Czech"}, // Čeština 
+            {Enums.Langs.PL, "Polish"}, // Polski
+            {Enums.Langs.FIL, "Filipino"} // Tagalog
         };
         
         // List of all the languages that require special symbols 
-        private static readonly List<MessageDirector.Lang> SYMBOL_LANGUAGES = new List<MessageDirector.Lang>()
+        private static readonly List<MessageDirector.Lang> KANJI_LANGUAGES = new List<MessageDirector.Lang>()
         {
-            Enums.Langs.CZ,
-            Enums.Langs.PL
+            MessageDirector.Lang.ZH,
+            MessageDirector.Lang.JA,
+            MessageDirector.Lang.KO
         };
 
         // Sets up all the languages
         internal static void Setup()
         {
             newFont = TMP_FontAsset.CreateFontAsset(Packs.Global.Get<Font>("CustomFont"));
+            newFont.name = "CustomFont";
 
             foreach (MessageDirector.Lang lang in LANGUAGES.Keys)
                 TranslationPatcher.AddUITranslation("l.lang_" + lang.ToString().ToLowerInvariant(), LANGUAGES[lang]);
@@ -64,21 +64,22 @@ namespace VikDisk.Core
         {
             if (oldFont == null) return;
             
-            /*hasSymbolFont = symbolFont;
-            symbolFont = SYMBOL_LANGUAGES.Contains(dir.GetCultureLang());
+            ApplyFontChange(dir);
+        }
 
-            if (symbolFont)
+        // Applies the new font to the game
+        internal static void ApplyFontChange(MessageDirector dir)
+        {
+            if (KANJI_LANGUAGES.Contains(dir.GetCultureLang()))
             {
-                TMP_Text[] texts = Resources.FindObjectsOfTypeAll<TMP_Text>();
+                TMP_Text[] texts = Object.FindObjectsOfType<TMP_Text>();
+                foreach (TMP_Text text in texts) text.font = oldFont;
+            }
+            else
+            {
+                TMP_Text[] texts = Object.FindObjectsOfType<TMP_Text>();
                 foreach (TMP_Text text in texts) text.font = newFont;
             }
-            else if (hasSymbolFont)
-            {
-                TMP_Text[] texts = Resources.FindObjectsOfTypeAll<TMP_Text>();
-                foreach (TMP_Text text in texts) text.font = oldFont;
-            }*/
-            
-            
         }
     }
 }
