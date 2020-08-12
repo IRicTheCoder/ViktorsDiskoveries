@@ -138,3 +138,14 @@ pedia:m.instructions.ps4.plorts: "Vac up plorts and shoot them into the Plort Ma
 pedia:m.desc.plorts: ""
 pedia:t.ssbasics: "Slime Science: Basics"
 pedia:m.intro.ssbasics: "Definitely weird."
+pedia:m.instructions.ssbasics: "Slime Science allows you to use plorts and other resources to make fantastic gadgets that you can install all over the world. 
+
+Slime Science basics: 
+- Shoot plorts and resources into the Refinery (cannot be withdrawn once deposited) 
+- Buy new blueprints or discover them in treasure pods 
+- Use the Fabricator to make new gadgets 
+- <b>T</b>: Enter Gadget Mode 
+- Place gadgets in Gadget Mode 
+- <b>Left Mouse Button/Right Mouse Button</b>: Rotate gadget (when in Gadget Mode) 
+
+Visit the Slime Science section of the Slimepedia for more details on Slime Science."
