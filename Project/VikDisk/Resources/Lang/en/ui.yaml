@@ -2,704 +2,704 @@
 # AUTO GENERATED FROM THE GAME
 #=====================================
 
-ui:l.version_watermark: Slime Rancher v {0}
-ui:l.version_watermark_xbox: Slime Rancher v {0}
-ui:l.version_watermark_xboxgp: Slime Rancher (Game Preview) v {0}
-ui:l.version_full_watermark: Version: {0} ({1})
-ui:l.version: v {0}
-ui:t.pedia: Slimepedia
-ui:m.new_pedia_entry: New Slimepedia Entry:
-ui:b.tutorials: Tutorials
-ui:b.slimes: Slimes
-ui:b.resources: Resources
-ui:b.ranch: Ranch
-ui:b.world: World
-ui:b.science: Slime Science
-ui:l.favored_by: Favored By:
-ui:l.instructions: Instructions:
-ui:l.diet: Diet:
-ui:l.favorite: Favorite:
-ui:l.biology: Slimeology:
-ui:l.risks: Rancher Risks:
-ui:l.plorts: Plortonomics:
-ui:l.upgrades: Upgrades:
-ui:l.resource_type: Type:
-ui:l.about: About:
-ui:l.how_to_use: On the Ranch:
-ui:m.pedia_hint: {0}: Slimepedia
-ui:m.hudinfo_diet: Diet: {0}
-ui:m.hudinfo_type: Food Type: {0}
-ui:m.hudinfo_plort: Type: Plort
-ui:m.hudinfo_echo: Type: Echo
-ui:m.hudinfo_ornament: Type: Ornament
-ui:m.hudinfo_toy: Type: Slime Toy
-ui:m.hudinfo_fruitball: Contains Kookadobas
-ui:m.hudinfo_echo_note: Type: Chime
-ui:m.foodgroup.veggies: Veggie
-ui:m.foodgroup.fruit: Fruit
-ui:m.foodgroup.meat: Meat
-ui:m.foodgroup.none: None
-ui:m.foodgroup.all: Everything
-ui:m.foodgroup.nonblackgold_slimes: Slimes
-ui:m.foodgroup.tarr: Slimes, Meat, and Ranchers
-ui:m.foodgroup.water: Water
-ui:m.foodgroup.ash: Ash
-ui:m.foodgroup.ginger: Gilded Ginger
-ui:b.ok: OK
-ui:b.cancel: Cancel
-ui:b.retry: Retry
-ui:m.day: Day {0}
-ui:l.autosave: Game Saved
-ui:l.empty: EMPTY
-ui:l.ammo: x {0}
-ui:t.access_door: Ranch Expansion
-ui:b.unlock: Unlock
-ui:b.open_door: Open
-ui:b.close_door: Close
-ui:m.press_to_activate: Press {0} to activate
-ui:m.press_to_activate.pre_gamepad: Press
-ui:m.press_to_activate.post_gamepad: to activate
-ui:m.press_to_use_key: Press {0} to use a Slime Key
-ui:m.press_to_use_key.pre_gamepad: Press
-ui:m.press_to_use_key.post_gamepad: to use a Slime Key
-ui:m.needs_key: Requires a Slime Key to open
-ui:m.ranch_house_unavailable: Ranch House unavailable in demo
-ui:m.lab_unavailable: Lab unavailable in demo
-ui:m.press_to_open_pod: Press {0} to open pod
-ui:m.press_to_open_pod.pre_gamepad: Press
-ui:m.press_to_open_pod.post_gamepad: to open pod
-ui:m.needs_treasure_cracker: Treasure Pod is locked
-ui:m.insuf_treasure_cracker: A more advanced Treasure Cracker is required
-ui:m.press_to_open_gate: Press {0} to open the gate
-ui:m.press_to_open_gate.pre_gamepad: Press
-ui:m.press_to_open_gate.post_gamepad: to open the gate
-ui:m.gate_locked: The gate is locked
-ui:b.purchase: Purchase
-ui:b.place: Install
-ui:b.sold_out: Sold Out
-ui:b.learn_more: Learn More
-ui:l.curr_count: ({0})
-ui:b.extractors: Extractors
-ui:b.warp_tech: Warp Tech
-ui:b.utilities: Utilities
-ui:b.decorations: Decorations
-ui:b.curios: Curios
-ui:b.ranch_tech: Tech
-ui:b.house: House
-ui:b.ogden_tech: Ogden Tech
-ui:b.ogden_house: Ogden House
-ui:b.mochi_tech: Mochi Tech
-ui:b.mochi_house: Mochi House
-ui:b.viktor_tech: Viktor Tech
-ui:b.viktor_house: Viktor House
-ui:b.vac: Vac
-ui:b.select: Select
-ui:b.already_selected: Selected
-ui:l.cost: Cost:
-ui:m.upgrades: Upgrades:
-ui:b.demolish: Demolish
-ui:b.pick_up: Pick Up
-ui:l.demolish_plot: Demolish Plot
-ui:l.demolish_gadget: Demolish Gadget
-ui:l.demolish_linked_gadget: Demolish Linked Gadget
-ui:l.pick_up_gadget: Pick Up Gadget
-ui:m.desc.demolish_plot: Clears this ranch plot and allows you to build something new.
-ui:m.desc.demolish_gadget: Destroys this gadget, allowing you to place a new gadget at this build site.
-ui:m.desc.demolish_linked_gadget: Destroys this gadget and its linked gadget installed elsewhere.
-ui:m.desc.pick_up_gadget: Pick up this gadget, allowing you to place it again elsewhere.
-ui:e.insuf_coins: Not enough newbucks!
-ui:m.select_option: Select an option for details.
-ui:e.already_has_upgrade: Upgrade already purchased.
-ui:w.gadget_install_permanent: This gadget is installed permanently until demolished.
-ui:w.destroying_gadget_destroys_contents: Demolishing this gadget will destroy its contents!
-ui:w.pick_up_gadget_destroys_contents: Picking up this gadget will destroy its contents!
-ui:w.destroying_silo_destroys_contents: Demolishing a silo will destroy its contents!
-ui:w.limit_reached_drill: Drill install limit reached. Limit: 6
-ui:w.limit_reached_pump: Pump install limit reached. Limit: 6
-ui:w.limit_reached_apiary: Apiary install limit reached. Limit: 6
-ui:w.cannot_demolish_corral_tutorial: You cannot demolish the corral at this time.
-ui:b.limit_reached: Limit Reached
-ui:t.empty_plot: Empty Ranch Plot
-ui:t.coop: Coop
-ui:b.walls: Walls
-ui:b.feeder: Feeder
-ui:b.vitamizer: Vitamizer
-ui:t.corral: Corral
-ui:b.music_box: Music Box
-ui:t.garden: Garden
-ui:b.nutrient_soil: Nutrient Soil
-ui:b.sprinkler: Sprinkler
-ui:b.scareslime: Scareslime
-ui:b.clear_crop: Remove Crops
-ui:m.desc.clear_crop: Remove the existing crops to plant something new.
-ui:l.remaining_harvest_time: Remaining Harvest Time:
-ui:l.growing: Growing:
-ui:t.silo: Silo
-ui:m.empty: Empty
-ui:b.extra_storage: Extra Storage
-ui:t.incinerator: Incinerator
-ui:t.pond: Pond
-ui:t.teleporter: Teleporter
-ui:t.personal_upgrades: Vacpack Upgrades
-ui:e.already_has_personal_upgrade: You already have this upgrade.
-ui:e.ineligible_for_personal_upgrade: This upgrade is not yet available.
-ui:t.slime_toys: Slime Toys
-ui:t.ranch_house: Ranch House
-ui:b.sleep_until_morning: Sleep Until Morning
-ui:b.mail: Starmail
-ui:b.leave_to_ranch: Return to Ranch
-ui:m.select_mail: Select a starmail message on the left.
-ui:m.new_mail: Starmail Received!
-ui:m.mail_from_wrap: <b>From: </b>{0}
-ui:m.new_mail_hint: Visit the Ranch House to view.
-ui:t.new_game: Create New Game
-ui:t.load_game: Load Game
-ui:b.new_game: New Game
-ui:b.start_game: Play
-ui:b.delete_game: Delete
-ui:b.continue: Continue
-ui:b.confirm: Confirm
-ui:b.load: Load
-ui:b.quit: Quit
-ui:b.back: Back
-ui:b.switch_user: : Switch User
-ui:m.default_game_name: Game{0}
-ui:e.game_name_exists: A game of that name already exists.
-ui:e.letters_nums_only: Game names should only contain letters and numbers.
-ui:e.no_spaces: Spaces not allowed in game names currently.
-ui:e.max_length: Game names must be between 1 and {0} characters in length.
-ui:m.game_name: Game Name:
-ui:l.five_day_challenge: Five Day Rush
-ui:l.loading: Loading
-ui:l.unknown: Unknown
-ui:t.confirm_delete: Delete File
-ui:m.confirm_delete: Are you sure you wish to permanently delete this game?
-ui:l.select_game_icon: Choose a Save Icon:
-ui:l.select_game_mode: Select Game Mode:
-ui:l.pedia_count: Discoveries: {0}
-ui:m.no_saved_games: No Saved Games Available
-ui:m.xbox_user_change_detected: A User Change Has Been Detected
-ui:m.xbox_controller_disconnect: Your controller may have been disconnected.
-ui:m.xbox_press_menu_to_continue: Press Menu to Continue
-ui:m.uwp_user_signout: You have been signed out of Xbox Live on this device.
-ui:m.uwp_controller_disconnect: Your controller may have been disconnected. Press any key to continue or reconnect a controller and press any button to continue.
-ui:m.gamemode_classic: Adventure
-ui:m.desc.gamemode_classic: Live the life of a Slime Rancher and explore the wonders of the Far, Far Range at your own pace.
-ui:m.gamemode_casual: Casual
-ui:m.desc.gamemode_casual: A relaxed take on Adventure Mode without any threat of tarr slimes.
-ui:m.gamemode_time_limit: Five Day Rush
-ui:m.desc.gamemode_time_limit: A mad sprint for the most newbucks you can earn in 5 days. Bragging is encouraged!
-ui:m.gamemode_time_limit_v2: Rush
-ui:m.gamemode_time_limit_v2.long: Rush Mode
-ui:m.desc.gamemode_time_limit_v2: A race against the clock to earn as many newbucks as possible!
-ui:m.desc.gamemode_time_limit_v2_high_score: A race against the clock to earn as many newbucks as possible!
-High Score: {0}
-ui:b.resume: Resume
-ui:b.restart: Restart
-ui:b.screenshot: Screenshot
-ui:b.save_and_quit: Save & Quit
-ui:b.emergency_return: Emergency Return
-ui:m.emergency_return: WARNING: This feature allows you to knock yourself out in order to return home. You will lose everything in your vac tanks and sleep until the next day. Do not use unless you are truly stuck!
-ui:b.expo_play: Play
-ui:b.expo_gamepad: Controls
-ui:b.expo_quit: Quit
-ui:b.expo_change_gamepad_settings: Change Settings
-ui:t.options: Options
-ui:t.expo_options: Controls
-ui:b.video: Video
-ui:b.audio: Audio
-ui:b.input: Input
-ui:b.gamepad: Gamepad
-ui:b.gamepad_ps4: Controls
-ui:b.other: Other
-ui:l.reset_defaults: Reset Defaults
-ui:l.quality: Master Graphics Quality:
-ui:l.disable_camera_bob: Disable Camera Bob
-ui:l.buffer_for_gif: Buffer Video for Gif Capture
-ui:l.lock_vac: Enable Toggle Grip
-ui:l.sprint_hold: Hold to Sprint
-ui:l.tutorials: Tutorials:
-ui:l.tutorials.all: Show All
-ui:l.tutorials.advanced_only: Show Advanced Only
-ui:l.tutorials.none: Disable All
-ui:l.quality_lowest: Lowest
-ui:l.quality_low: Low
-ui:l.quality_default: Default
-ui:l.quality_high: High
-ui:l.quality_very_high: Very High
-ui:l.quality_custom: Custom
-ui:l.lighting: Lighting:
-ui:l.lighting_low: Low
-ui:l.lighting_medium: Medium
-ui:l.lighting_high: High
-ui:l.lighting_highest: Highest
-ui:l.textures: Textures:
-ui:l.textures_low: Low
-ui:l.textures_medium: Medium
-ui:l.textures_high: High
-ui:l.particles: Particles:
-ui:l.particles_low: Low
-ui:l.particles_medium: Medium
-ui:l.particles_high: High
-ui:l.shadows: Shadows:
-ui:l.shadows_none: None
-ui:l.shadows_low: Low
-ui:l.shadows_medium: Medium
-ui:l.shadows_high: High
-ui:l.antialiasing: Antialiasing:
-ui:l.antialiasing_none: None
-ui:l.antialiasing_multisampling_2x: 2x Multi-sampling
-ui:l.antialiasing_multisampling_4x: 4x Multi-sampling
-ui:l.antialiasing_multisampling_8x: 8x Multi-sampling
-ui:l.model_detail: Model Quality:
-ui:l.model_detail_low: Low
-ui:l.model_detail_medium: Medium
-ui:l.model_detail_high: High
-ui:l.water_detail: Shader Quality:
-ui:l.water_detail_low: Low
-ui:l.water_detail_medium: Medium
-ui:l.water_detail_high: High
-ui:l.ambient_occlusion: Ambient Occlusion:
-ui:l.bloom: Bloom:
-ui:l.fov: Field of View:
-ui:l.resolution: Resolution:
-ui:l.fullscreen: Fullscreen:
-ui:m.resolution: {0}x{1}
-ui:m.resolution_refresh: {0}x{1} @ {2}Hz
-ui:m.keep_settings: Keep these settings?
-ui:b.apply: Apply
-ui:b.mods: Mods
-ui:l.mod_vampiric_chickens: Cluckula
-ui:l.mod_night_tarr_slimes: Bad Moon Rising
-ui:l.mod_random_plorts: The Gambler
-ui:l.mod_increased_slime_spawns: Gobs of Globs
-ui:l.mod_slime_hunger: The Hunger
-ui:l.mod_unstable_plorts: Unstable Plorts
-ui:l.master: Master:
-ui:l.music: Music:
-ui:l.sfx: Effects:
-ui:dir.horizontal: Horizontal
-ui:dir.vertical: Vertical
-ui:key.forward: Forward
-ui:key.back: Back
-ui:key.left: Left
-ui:key.right: Right
-ui:key.shoot: Shoot
-ui:key.vac: Vac
-ui:key.slimefilter: Slime Filter
-ui:key.burst: Pulse
-ui:key.jump: Jump
-ui:key.run: Sprint
-ui:key.interact: Interact
-ui:key.gadgetMode: Gadget Mode
-ui:key.flashlight: Flashlight
-ui:key.radar: Radar
-ui:key.map: Map
-ui:key.reportissue: Report Issue
-ui:key.screenshot: Screenshot
-ui:key.recordgif: Record Gif
-ui:key.pedia: Slimepedia
-ui:key.slot_1: Slot 1
-ui:key.slot_2: Slot 2
-ui:key.slot_3: Slot 3
-ui:key.slot_4: Slot 4
-ui:key.slot_5: Slot 5
-ui:key.prev_slot: Prev Slot
-ui:key.next_slot: Next Slot
-ui:m.keys.0: -
-ui:m.keys.1: {0}
-ui:m.keys.2: {0}
-ui:m.slot_indicator: {0}
-ui:m.press_key: Press Key...
-ui:m.press_button: Press Button...
-ui:t.gamepad_settings: Gamepad Settings
-ui:l.sensitivity: Mouse Sensitivity:
-ui:l.swap_sticks: Swap Analog Sticks
-ui:l.swap_sticks_ps4: Swap Left Stick / Right Stick
-ui:l.x_look_sensitivity: Look Sensitivity X
-ui:l.y_look_sensitivity: Look Sensitivity Y
-ui:l.deadzone: Dead Zone
-ui:l.invert_gamepad_look_y: Invert Look Y Axis
-ui:l.invert_mouse_look_y: Invert Mouse Look Y Axis
-ui:l.disable_mouse_look_smooth: Disable Mouse Look Smooth
-ui:l.disable_gamepad: Disable Gamepad/Joystick Input
-(May fix some issues with camera spin)
-ui:m.gamepad_button: {0}: {1}
-ui:m.gamepad_button_action_only: {0}
-ui:m.gamepad_button_pause: {0}: Pause
-ui:m.gamepad_stick: {0}: {1}
-{3}: {2}
-ui:l.gamepad_left_stick_press_action: Push
-ui:l.gamepad_right_stick_press_action: Push
-ui:l.move: Move
-ui:l.view: Look
-ui:l.minimal_hud: Minimal HUD
-ui:l.enable_vsync: Enable VSync:
-ui:l.overscan: Overscan Adjustment:
-ui:b.reset_profile: Reset Options & Achievements
-ui:m.confirm_reset_profile: Permanently reset your settings and achievement progress?
-ui:t.report_issue: Report an Issue
-ui:l.description: Describe the issue:
-ui:b.submit: Submit
-ui:m.summary: Summary
-ui:l.placeholder_summary: Summary (required)...
-ui:m.description: Detailed Description
-ui:l.placeholder_description: Detailed Description (optional)...
-ui:m.reporter: Email
-ui:l.placeholder_reporter: Your Email (optional)...
-ui:e.require_summary: Please include a summary of the issue.
-ui:m.sending_report: Sending report...
-ui:t.market: Plort Market
-ui:l.loading_prices: Loading Market Prices...
-ui:l.daily_bonus: Daily Bonus!
-ui:l.market.rush_bonus: EARN A BONUS FOR 25 OF EACH PLORT
-ui:t.range_exchange: Range Exchange
-ui:t.special_exchange: Hello, Beatrix!
-ui:l.time_hours_mins: {0}:{1}
-ui:l.time_hours_mins_unset: --:--
-ui:l.time_days_hours_mins: {0}:{1}:{2}
-ui:l.exchange_progress: {0}/{1}
-ui:l.no_offers_available: Range Exchange Offline...
-ui:l.select_offer: Select Range
-Exchange Request
-ui:l.request: Trade Me:
-ui:l.receive: And Receive:
-ui:l.exchange_directions: Shoot the requested items into the depositor to complete the trade.
-ui:t.select_offer: Select a Rancher
-ui:m.gif_screenshot_confirm: Save GIF of last several seconds?
-ui:m.no_buffer_for_gif: No video has been buffered to save as a GIF.
-ui:m.gif_storing: Saving GIF
-ui:t.achievements: Achievements
-ui:m.achievement_unlocked: Achievement Unlocked!
-ui:m.achieve_progress: {0} / {1}
-ui:m.achieve_overall_progress: Overall: {0} / {1}
-ui:m.knocked_out1: You've Been Knocked Out!
-ui:m.knocked_out2: (But a day's rest should fix you right up...)
-ui:e.savefile_inaccessible: The save file is inaccessible and cannot be written: {0}
-ui:e.savefile_invalid_name: The save file name is invalid and cannot be written: {0}
-ui:e.savefile_dir_not_found: The save file directory was not found: {0}
-ui:e.savefile_unknown: An unknown error prevented writing the save file: {0}
-ui:e.pushfile_error: The saved game named {0} could not be loaded.
-ui:e.file_load_failed: We were unable to load your file. Would you like to try reloading an older autosave?
-ui:e.fallback_failed: We were unable to load a valid autosave for this game.
-ui:e.yes_button: Yes
-ui:e.no_button: No
-ui:e.ok_button: Ok
-ui:e.file_load_failed.dlc_purged: This save file is associated with DLC not found in system storage. Loading this save file without first downloading the DLC may result in loss of items within the game.
+ui:l.version_watermark: "Slime Rancher v {0}"
+ui:l.version_watermark_xbox: "Slime Rancher v {0}"
+ui:l.version_watermark_xboxgp: "Slime Rancher (Game Preview) v {0}"
+ui:l.version_full_watermark: "Version: {0} ({1})"
+ui:l.version: "v {0}"
+ui:t.pedia: "Slimepedia"
+ui:m.new_pedia_entry: "New Slimepedia Entry:"
+ui:b.tutorials: "Tutorials"
+ui:b.slimes: "Slimes"
+ui:b.resources: "Resources"
+ui:b.ranch: "Ranch"
+ui:b.world: "World"
+ui:b.science: "Slime Science"
+ui:l.favored_by: "Favored By:"
+ui:l.instructions: "Instructions:"
+ui:l.diet: "Diet:"
+ui:l.favorite: "Favorite:"
+ui:l.biology: "Slimeology:"
+ui:l.risks: "Rancher Risks:"
+ui:l.plorts: "Plortonomics:"
+ui:l.upgrades: "Upgrades:"
+ui:l.resource_type: "Type:"
+ui:l.about: "About:"
+ui:l.how_to_use: "On the Ranch:"
+ui:m.pedia_hint: "{0}: Slimepedia"
+ui:m.hudinfo_diet: "Diet: {0}"
+ui:m.hudinfo_type: "Food Type: {0}"
+ui:m.hudinfo_plort: "Type: Plort"
+ui:m.hudinfo_echo: "Type: Echo"
+ui:m.hudinfo_ornament: "Type: Ornament"
+ui:m.hudinfo_toy: "Type: Slime Toy"
+ui:m.hudinfo_fruitball: "Contains Kookadobas"
+ui:m.hudinfo_echo_note: "Type: Chime"
+ui:m.foodgroup.veggies: "Veggie"
+ui:m.foodgroup.fruit: "Fruit"
+ui:m.foodgroup.meat: "Meat"
+ui:m.foodgroup.none: "None"
+ui:m.foodgroup.all: "Everything"
+ui:m.foodgroup.nonblackgold_slimes: "Slimes"
+ui:m.foodgroup.tarr: "Slimes, Meat, and Ranchers"
+ui:m.foodgroup.water: "Water"
+ui:m.foodgroup.ash: "Ash"
+ui:m.foodgroup.ginger: "Gilded Ginger"
+ui:b.ok: "OK"
+ui:b.cancel: "Cancel"
+ui:b.retry: "Retry"
+ui:m.day: "Day {0}"
+ui:l.autosave: "Game Saved"
+ui:l.empty: "EMPTY"
+ui:l.ammo: "x {0}"
+ui:t.access_door: "Ranch Expansion"
+ui:b.unlock: "Unlock"
+ui:b.open_door: "Open"
+ui:b.close_door: "Close"
+ui:m.press_to_activate: "Press {0} to activate"
+ui:m.press_to_activate.pre_gamepad: "Press"
+ui:m.press_to_activate.post_gamepad: "to activate"
+ui:m.press_to_use_key: "Press {0} to use a Slime Key"
+ui:m.press_to_use_key.pre_gamepad: "Press"
+ui:m.press_to_use_key.post_gamepad: "to use a Slime Key"
+ui:m.needs_key: "Requires a Slime Key to open"
+ui:m.ranch_house_unavailable: "Ranch House unavailable in demo"
+ui:m.lab_unavailable: "Lab unavailable in demo"
+ui:m.press_to_open_pod: "Press {0} to open pod"
+ui:m.press_to_open_pod.pre_gamepad: "Press"
+ui:m.press_to_open_pod.post_gamepad: "to open pod"
+ui:m.needs_treasure_cracker: "Treasure Pod is locked"
+ui:m.insuf_treasure_cracker: "A more advanced Treasure Cracker is required"
+ui:m.press_to_open_gate: "Press {0} to open the gate"
+ui:m.press_to_open_gate.pre_gamepad: "Press"
+ui:m.press_to_open_gate.post_gamepad: "to open the gate"
+ui:m.gate_locked: "The gate is locked"
+ui:b.purchase: "Purchase"
+ui:b.place: "Install"
+ui:b.sold_out: "Sold Out"
+ui:b.learn_more: "Learn More"
+ui:l.curr_count: "({0})"
+ui:b.extractors: "Extractors"
+ui:b.warp_tech: "Warp Tech"
+ui:b.utilities: "Utilities"
+ui:b.decorations: "Decorations"
+ui:b.curios: "Curios"
+ui:b.ranch_tech: "Tech"
+ui:b.house: "House"
+ui:b.ogden_tech: "Ogden Tech"
+ui:b.ogden_house: "Ogden House"
+ui:b.mochi_tech: "Mochi Tech"
+ui:b.mochi_house: "Mochi House"
+ui:b.viktor_tech: "Viktor Tech"
+ui:b.viktor_house: "Viktor House"
+ui:b.vac: "Vac"
+ui:b.select: "Select"
+ui:b.already_selected: "Selected"
+ui:l.cost: "Cost:"
+ui:m.upgrades: "Upgrades:"
+ui:b.demolish: "Demolish"
+ui:b.pick_up: "Pick Up"
+ui:l.demolish_plot: "Demolish Plot"
+ui:l.demolish_gadget: "Demolish Gadget"
+ui:l.demolish_linked_gadget: "Demolish Linked Gadget"
+ui:l.pick_up_gadget: "Pick Up Gadget"
+ui:m.desc.demolish_plot: "Clears this ranch plot and allows you to build something new."
+ui:m.desc.demolish_gadget: "Destroys this gadget, allowing you to place a new gadget at this build site."
+ui:m.desc.demolish_linked_gadget: "Destroys this gadget and its linked gadget installed elsewhere."
+ui:m.desc.pick_up_gadget: "Pick up this gadget, allowing you to place it again elsewhere."
+ui:e.insuf_coins: "Not enough newbucks!"
+ui:m.select_option: "Select an option for details."
+ui:e.already_has_upgrade: "Upgrade already purchased."
+ui:w.gadget_install_permanent: "This gadget is installed permanently until demolished."
+ui:w.destroying_gadget_destroys_contents: "Demolishing this gadget will destroy its contents!"
+ui:w.pick_up_gadget_destroys_contents: "Picking up this gadget will destroy its contents!"
+ui:w.destroying_silo_destroys_contents: "Demolishing a silo will destroy its contents!"
+ui:w.limit_reached_drill: "Drill install limit reached. Limit: 6"
+ui:w.limit_reached_pump: "Pump install limit reached. Limit: 6"
+ui:w.limit_reached_apiary: "Apiary install limit reached. Limit: 6"
+ui:w.cannot_demolish_corral_tutorial: "You cannot demolish the corral at this time."
+ui:b.limit_reached: "Limit Reached"
+ui:t.empty_plot: "Empty Ranch Plot"
+ui:t.coop: "Coop"
+ui:b.walls: "Walls"
+ui:b.feeder: "Feeder"
+ui:b.vitamizer: "Vitamizer"
+ui:t.corral: "Corral"
+ui:b.music_box: "Music Box"
+ui:t.garden: "Garden"
+ui:b.nutrient_soil: "Nutrient Soil"
+ui:b.sprinkler: "Sprinkler"
+ui:b.scareslime: "Scareslime"
+ui:b.clear_crop: "Remove Crops"
+ui:m.desc.clear_crop: "Remove the existing crops to plant something new."
+ui:l.remaining_harvest_time: "Remaining Harvest Time:"
+ui:l.growing: "Growing:"
+ui:t.silo: "Silo"
+ui:m.empty: "Empty"
+ui:b.extra_storage: "Extra Storage"
+ui:t.incinerator: "Incinerator"
+ui:t.pond: "Pond"
+ui:t.teleporter: "Teleporter"
+ui:t.personal_upgrades: "Vacpack Upgrades"
+ui:e.already_has_personal_upgrade: "You already have this upgrade."
+ui:e.ineligible_for_personal_upgrade: "This upgrade is not yet available."
+ui:t.slime_toys: "Slime Toys"
+ui:t.ranch_house: "Ranch House"
+ui:b.sleep_until_morning: "Sleep Until Morning"
+ui:b.mail: "Starmail"
+ui:b.leave_to_ranch: "Return to Ranch"
+ui:m.select_mail: "Select a starmail message on the left."
+ui:m.new_mail: "Starmail Received!"
+ui:m.mail_from_wrap: "<b>From: </b>{0}"
+ui:m.new_mail_hint: "Visit the Ranch House to view."
+ui:t.new_game: "Create New Game"
+ui:t.load_game: "Load Game"
+ui:b.new_game: "New Game"
+ui:b.start_game: "Play"
+ui:b.delete_game: "Delete"
+ui:b.continue: "Continue"
+ui:b.confirm: "Confirm"
+ui:b.load: "Load"
+ui:b.quit: "Quit"
+ui:b.back: "Back"
+ui:b.switch_user: ": Switch User"
+ui:m.default_game_name: "Game{0}"
+ui:e.game_name_exists: "A game of that name already exists."
+ui:e.letters_nums_only: "Game names should only contain letters and numbers."
+ui:e.no_spaces: "Spaces not allowed in game names currently."
+ui:e.max_length: "Game names must be between 1 and {0} characters in length."
+ui:m.game_name: "Game Name:"
+ui:l.five_day_challenge: "Five Day Rush"
+ui:l.loading: "Loading"
+ui:l.unknown: "Unknown"
+ui:t.confirm_delete: "Delete File"
+ui:m.confirm_delete: "Are you sure you wish to permanently delete this game?"
+ui:l.select_game_icon: "Choose a Save Icon:"
+ui:l.select_game_mode: "Select Game Mode:"
+ui:l.pedia_count: "Discoveries: {0}"
+ui:m.no_saved_games: "No Saved Games Available"
+ui:m.xbox_user_change_detected: "A User Change Has Been Detected"
+ui:m.xbox_controller_disconnect: "Your controller may have been disconnected."
+ui:m.xbox_press_menu_to_continue: "Press Menu to Continue"
+ui:m.uwp_user_signout: "You have been signed out of Xbox Live on this device."
+ui:m.uwp_controller_disconnect: "Your controller may have been disconnected. Press any key to continue or reconnect a controller and press any button to continue."
+ui:m.gamemode_classic: "Adventure"
+ui:m.desc.gamemode_classic: "Live the life of a Slime Rancher and explore the wonders of the Far, Far Range at your own pace."
+ui:m.gamemode_casual: "Casual"
+ui:m.desc.gamemode_casual: "A relaxed take on Adventure Mode without any threat of tarr slimes."
+ui:m.gamemode_time_limit: "Five Day Rush"
+ui:m.desc.gamemode_time_limit: "A mad sprint for the most newbucks you can earn in 5 days. Bragging is encouraged!"
+ui:m.gamemode_time_limit_v2: "Rush"
+ui:m.gamemode_time_limit_v2.long: "Rush Mode"
+ui:m.desc.gamemode_time_limit_v2: "A race against the clock to earn as many newbucks as possible!"
+ui:m.desc.gamemode_time_limit_v2_high_score: "A race against the clock to earn as many newbucks as possible!
+High Score: {0}"
+ui:b.resume: "Resume"
+ui:b.restart: "Restart"
+ui:b.screenshot: "Screenshot"
+ui:b.save_and_quit: "Save & Quit"
+ui:b.emergency_return: "Emergency Return"
+ui:m.emergency_return: "WARNING: This feature allows you to knock yourself out in order to return home. You will lose everything in your vac tanks and sleep until the next day. Do not use unless you are truly stuck!"
+ui:b.expo_play: "Play"
+ui:b.expo_gamepad: "Controls"
+ui:b.expo_quit: "Quit"
+ui:b.expo_change_gamepad_settings: "Change Settings"
+ui:t.options: "Options"
+ui:t.expo_options: "Controls"
+ui:b.video: "Video"
+ui:b.audio: "Audio"
+ui:b.input: "Input"
+ui:b.gamepad: "Gamepad"
+ui:b.gamepad_ps4: "Controls"
+ui:b.other: "Other"
+ui:l.reset_defaults: "Reset Defaults"
+ui:l.quality: "Master Graphics Quality:"
+ui:l.disable_camera_bob: "Disable Camera Bob"
+ui:l.buffer_for_gif: "Buffer Video for Gif Capture"
+ui:l.lock_vac: "Enable Toggle Grip"
+ui:l.sprint_hold: "Hold to Sprint"
+ui:l.tutorials: "Tutorials:"
+ui:l.tutorials.all: "Show All"
+ui:l.tutorials.advanced_only: "Show Advanced Only"
+ui:l.tutorials.none: "Disable All"
+ui:l.quality_lowest: "Lowest"
+ui:l.quality_low: "Low"
+ui:l.quality_default: "Default"
+ui:l.quality_high: "High"
+ui:l.quality_very_high: "Very High"
+ui:l.quality_custom: "Custom"
+ui:l.lighting: "Lighting:"
+ui:l.lighting_low: "Low"
+ui:l.lighting_medium: "Medium"
+ui:l.lighting_high: "High"
+ui:l.lighting_highest: "Highest"
+ui:l.textures: "Textures:"
+ui:l.textures_low: "Low"
+ui:l.textures_medium: "Medium"
+ui:l.textures_high: "High"
+ui:l.particles: "Particles:"
+ui:l.particles_low: "Low"
+ui:l.particles_medium: "Medium"
+ui:l.particles_high: "High"
+ui:l.shadows: "Shadows:"
+ui:l.shadows_none: "None"
+ui:l.shadows_low: "Low"
+ui:l.shadows_medium: "Medium"
+ui:l.shadows_high: "High"
+ui:l.antialiasing: "Antialiasing:"
+ui:l.antialiasing_none: "None"
+ui:l.antialiasing_multisampling_2x: "2x Multi-sampling"
+ui:l.antialiasing_multisampling_4x: "4x Multi-sampling"
+ui:l.antialiasing_multisampling_8x: "8x Multi-sampling"
+ui:l.model_detail: "Model Quality:"
+ui:l.model_detail_low: "Low"
+ui:l.model_detail_medium: "Medium"
+ui:l.model_detail_high: "High"
+ui:l.water_detail: "Shader Quality:"
+ui:l.water_detail_low: "Low"
+ui:l.water_detail_medium: "Medium"
+ui:l.water_detail_high: "High"
+ui:l.ambient_occlusion: "Ambient Occlusion:"
+ui:l.bloom: "Bloom:"
+ui:l.fov: "Field of View:"
+ui:l.resolution: "Resolution:"
+ui:l.fullscreen: "Fullscreen:"
+ui:m.resolution: "{0}x{1}"
+ui:m.resolution_refresh: "{0}x{1} @ {2}Hz"
+ui:m.keep_settings: "Keep these settings?"
+ui:b.apply: "Apply"
+ui:b.mods: "Mods"
+ui:l.mod_vampiric_chickens: "Cluckula"
+ui:l.mod_night_tarr_slimes: "Bad Moon Rising"
+ui:l.mod_random_plorts: "The Gambler"
+ui:l.mod_increased_slime_spawns: "Gobs of Globs"
+ui:l.mod_slime_hunger: "The Hunger"
+ui:l.mod_unstable_plorts: "Unstable Plorts"
+ui:l.master: "Master:"
+ui:l.music: "Music:"
+ui:l.sfx: "Effects:"
+ui:dir.horizontal: "Horizontal"
+ui:dir.vertical: "Vertical"
+ui:key.forward: "Forward"
+ui:key.back: "Back"
+ui:key.left: "Left"
+ui:key.right: "Right"
+ui:key.shoot: "Shoot"
+ui:key.vac: "Vac"
+ui:key.slimefilter: "Slime Filter"
+ui:key.burst: "Pulse"
+ui:key.jump: "Jump"
+ui:key.run: "Sprint"
+ui:key.interact: "Interact"
+ui:key.gadgetMode: "Gadget Mode"
+ui:key.flashlight: "Flashlight"
+ui:key.radar: "Radar"
+ui:key.map: "Map"
+ui:key.reportissue: "Report Issue"
+ui:key.screenshot: "Screenshot"
+ui:key.recordgif: "Record Gif"
+ui:key.pedia: "Slimepedia"
+ui:key.slot_1: "Slot 1"
+ui:key.slot_2: "Slot 2"
+ui:key.slot_3: "Slot 3"
+ui:key.slot_4: "Slot 4"
+ui:key.slot_5: "Slot 5"
+ui:key.prev_slot: "Prev Slot"
+ui:key.next_slot: "Next Slot"
+ui:m.keys.0: "-"
+ui:m.keys.1: "{0}"
+ui:m.keys.2: "{0}"
+ui:m.slot_indicator: "{0}"
+ui:m.press_key: "Press Key..."
+ui:m.press_button: "Press Button..."
+ui:t.gamepad_settings: "Gamepad Settings"
+ui:l.sensitivity: "Mouse Sensitivity:"
+ui:l.swap_sticks: "Swap Analog Sticks"
+ui:l.swap_sticks_ps4: "Swap Left Stick / Right Stick"
+ui:l.x_look_sensitivity: "Look Sensitivity X"
+ui:l.y_look_sensitivity: "Look Sensitivity Y"
+ui:l.deadzone: "Dead Zone"
+ui:l.invert_gamepad_look_y: "Invert Look Y Axis"
+ui:l.invert_mouse_look_y: "Invert Mouse Look Y Axis"
+ui:l.disable_mouse_look_smooth: "Disable Mouse Look Smooth"
+ui:l.disable_gamepad: "Disable Gamepad/Joystick Input
+(May fix some issues with camera spin)"
+ui:m.gamepad_button: "{0}: {1}"
+ui:m.gamepad_button_action_only: "{0}"
+ui:m.gamepad_button_pause: "{0}: Pause"
+ui:m.gamepad_stick: "{0}: {1}
+{3}: {2}"
+ui:l.gamepad_left_stick_press_action: "Push"
+ui:l.gamepad_right_stick_press_action: "Push"
+ui:l.move: "Move"
+ui:l.view: "Look"
+ui:l.minimal_hud: "Minimal HUD"
+ui:l.enable_vsync: "Enable VSync:"
+ui:l.overscan: "Overscan Adjustment:"
+ui:b.reset_profile: "Reset Options & Achievements"
+ui:m.confirm_reset_profile: "Permanently reset your settings and achievement progress?"
+ui:t.report_issue: "Report an Issue"
+ui:l.description: "Describe the issue:"
+ui:b.submit: "Submit"
+ui:m.summary: "Summary"
+ui:l.placeholder_summary: "Summary (required)..."
+ui:m.description: "Detailed Description"
+ui:l.placeholder_description: "Detailed Description (optional)..."
+ui:m.reporter: "Email"
+ui:l.placeholder_reporter: "Your Email (optional)..."
+ui:e.require_summary: "Please include a summary of the issue."
+ui:m.sending_report: "Sending report..."
+ui:t.market: "Plort Market"
+ui:l.loading_prices: "Loading Market Prices..."
+ui:l.daily_bonus: "Daily Bonus!"
+ui:l.market.rush_bonus: "EARN A BONUS FOR 25 OF EACH PLORT"
+ui:t.range_exchange: "Range Exchange"
+ui:t.special_exchange: "Hello, Beatrix!"
+ui:l.time_hours_mins: "{0}:{1}"
+ui:l.time_hours_mins_unset: "--:--"
+ui:l.time_days_hours_mins: "{0}:{1}:{2}"
+ui:l.exchange_progress: "{0}/{1}"
+ui:l.no_offers_available: "Range Exchange Offline..."
+ui:l.select_offer: "Select Range
+Exchange Request"
+ui:l.request: "Trade Me:"
+ui:l.receive: "And Receive:"
+ui:l.exchange_directions: "Shoot the requested items into the depositor to complete the trade."
+ui:t.select_offer: "Select a Rancher"
+ui:m.gif_screenshot_confirm: "Save GIF of last several seconds?"
+ui:m.no_buffer_for_gif: "No video has been buffered to save as a GIF."
+ui:m.gif_storing: "Saving GIF"
+ui:t.achievements: "Achievements"
+ui:m.achievement_unlocked: "Achievement Unlocked!"
+ui:m.achieve_progress: "{0} / {1}"
+ui:m.achieve_overall_progress: "Overall: {0} / {1}"
+ui:m.knocked_out1: "You've Been Knocked Out!"
+ui:m.knocked_out2: "(But a day's rest should fix you right up...)"
+ui:e.savefile_inaccessible: "The save file is inaccessible and cannot be written: {0}"
+ui:e.savefile_invalid_name: "The save file name is invalid and cannot be written: {0}"
+ui:e.savefile_dir_not_found: "The save file directory was not found: {0}"
+ui:e.savefile_unknown: "An unknown error prevented writing the save file: {0}"
+ui:e.pushfile_error: "The saved game named {0} could not be loaded."
+ui:e.file_load_failed: "We were unable to load your file. Would you like to try reloading an older autosave?"
+ui:e.fallback_failed: "We were unable to load a valid autosave for this game."
+ui:e.yes_button: "Yes"
+ui:e.no_button: "No"
+ui:e.ok_button: "Ok"
+ui:e.file_load_failed.dlc_purged: "This save file is associated with DLC not found in system storage. Loading this save file without first downloading the DLC may result in loss of items within the game.
 
 Please download the following DLC before loading:
-{0}
-ui:e.file_load_failed.dlc_purged.load_anyway_button: Load Anyway
-ui:e.please_contact_support: Please Contact Support at
-support@monomipark.com
-ui:e.no_buffered_gif: No video has been buffered to save as a GIF.
-ui:b.take_screenshot: Take Screenshot
-ui:m.slime_rancher: Slime Rancher
-ui:l.total: Total:
-ui:l.most_profitable_plorts: Most Profitable Plorts:
-ui:m.plort_amount: x{0}
-ui:l.knockouts: Knockouts:
-ui:l.spent: Spent:
-ui:m.none: None
-ui:l.endgame.newbucks: Newbucks:
-ui:l.endgame.plort_bonus: Plort Bonus:
-ui:l.endgame.score: Final Score:
-ui:l.endgame.plort_bonuses_acquired: Plort Bonuses Acquired:
-ui:m.percentage: {0}%
-ui:b.about: About
-ui:t.about: About Slime Rancher
-ui:l.game_director: Game Director
-ui:l.technical_director: Technical Director
-ui:l.art_director: Art Director
-ui:l.engineering: Engineering
-ui:l.game_design: Game Design
-ui:l.art: Art
-ui:l.music_sfx: Music and Sound Effects
-ui:l.production: Production
-ui:l.operations: Operations
-ui:l.communications: Communications
-ui:l.quality_assurance: Quality Assurance
-ui:l.localization: Localization
-ui:l.additional_art: Additional Art
-ui:l.video_production: Video Production
-ui:l.community_support: Community Support
-ui:l.performed_by: Performed by {0}
-ui:l.lyrics_by: Lyrics by {0}
-ui:l.produced_by: Produced by {0}
-ui:b.unity_privacy_info: Unity privacy info
-ui:l.dedication_1: For every pioneer on every new frontier:
-ui:l.dedication_2: Be brave.
-ui:l.dedication_3: Be bold.
-ui:l.dedication_4: And stay wiggly.
-ui:l.pre_credits_1: That day, Beatrix took a moment to reflect.
-ui:l.pre_credits_2: She thought about Hobson and Thora, and the adventures she'd had exploring the Far, Far Range.
-ui:l.pre_credits_3: But most of all, she thought of Casey, and wondered where life would take her next.
-ui:l.copyright: Slime Rancher is developed by Monomi Park. Copyright © 2014-2018 Monomi Park, LLC
-ui:b.credits_sequence: Play Credits Sequence
-ui:l.game_intro_1: 1,000 light years away from Earth,
-ui:l.game_intro_2: on a planet known as 'The Far, Far Range,'
-ui:l.game_intro_3: Beatrix LeBeau begins her first day as a slime rancher.
-ui:l.select_expo_game: Select a special demo save file:
-ui:b.expo_start: Fresh Start
-ui:b.expo_advanced: Advanced Ranch
-ui:b.expo_range: Out on the Range
-ui:m.desc.expo_start: Begin on a brand-new ranch and learn the ropes with a handy tutorial.
-ui:m.desc.expo_advanced: Experience a ranch that's decked-out with all kinds of awesome features, packed with slimes, and ready for ranching!
-ui:m.desc.expo_range: For the adventurous, begin somewhere out in the untamed wilds of the Far, Far Range.
-ui:b.faq: FAQ
-ui:t.xbox_faq: Xbox One Version FAQ
-ui:l.xbox_faq_q_achievements: Will Slime Rancher have Xbox Achievements?
-ui:l.xbox_faq_a_achievements: Xbox achievements will be enabled after Slime Rancher leaves Game Preview. At that time, all achievements earned in-game will instantly become Xbox achievements!
-ui:l.xbox_faq_q_versions: Are the PC and Xbox One versions of Slime Rancher the same?
-ui:l.xbox_faq_a_versions: Yes, our aim is to keep both versions in sync. However, at any given time there may be a few days difference during Xbox build certification.
-ui:l.xbox_faq_q_whats_next: What’s next for Slime Rancher?
-ui:l.xbox_faq_a_whats_next: We’ve got a lot of great content in development, including new zones to explore, slimes to wrangle, and brand-new features like Slime Science! Learn more on our public roadmap:
-slimerancher.com/roadmap
-ui:l.demo_end_title: This trial is over but the adventure has just begun!
-ui:l.demo_end_message: Purchase the full version of Slime Rancher to keep your progress and experience these awesome features:
+{0}"
+ui:e.file_load_failed.dlc_purged.load_anyway_button: "Load Anyway"
+ui:e.please_contact_support: "Please Contact Support at
+support@monomipark.com"
+ui:e.no_buffered_gif: "No video has been buffered to save as a GIF."
+ui:b.take_screenshot: "Take Screenshot"
+ui:m.slime_rancher: "Slime Rancher"
+ui:l.total: "Total:"
+ui:l.most_profitable_plorts: "Most Profitable Plorts:"
+ui:m.plort_amount: "x{0}"
+ui:l.knockouts: "Knockouts:"
+ui:l.spent: "Spent:"
+ui:m.none: "None"
+ui:l.endgame.newbucks: "Newbucks:"
+ui:l.endgame.plort_bonus: "Plort Bonus:"
+ui:l.endgame.score: "Final Score:"
+ui:l.endgame.plort_bonuses_acquired: "Plort Bonuses Acquired:"
+ui:m.percentage: "{0}%"
+ui:b.about: "About"
+ui:t.about: "About Slime Rancher"
+ui:l.game_director: "Game Director"
+ui:l.technical_director: "Technical Director"
+ui:l.art_director: "Art Director"
+ui:l.engineering: "Engineering"
+ui:l.game_design: "Game Design"
+ui:l.art: "Art"
+ui:l.music_sfx: "Music and Sound Effects"
+ui:l.production: "Production"
+ui:l.operations: "Operations"
+ui:l.communications: "Communications"
+ui:l.quality_assurance: "Quality Assurance"
+ui:l.localization: "Localization"
+ui:l.additional_art: "Additional Art"
+ui:l.video_production: "Video Production"
+ui:l.community_support: "Community Support"
+ui:l.performed_by: "Performed by {0}"
+ui:l.lyrics_by: "Lyrics by {0}"
+ui:l.produced_by: "Produced by {0}"
+ui:b.unity_privacy_info: "Unity privacy info"
+ui:l.dedication_1: "For every pioneer on every new frontier:"
+ui:l.dedication_2: "Be brave."
+ui:l.dedication_3: "Be bold."
+ui:l.dedication_4: "And stay wiggly."
+ui:l.pre_credits_1: "That day, Beatrix took a moment to reflect."
+ui:l.pre_credits_2: "She thought about Hobson and Thora, and the adventures she'd had exploring the Far, Far Range."
+ui:l.pre_credits_3: "But most of all, she thought of Casey, and wondered where life would take her next."
+ui:l.copyright: "Slime Rancher is developed by Monomi Park. Copyright © 2014-2018 Monomi Park, LLC"
+ui:b.credits_sequence: "Play Credits Sequence"
+ui:l.game_intro_1: "1,000 light years away from Earth,"
+ui:l.game_intro_2: "on a planet known as 'The Far, Far Range,'"
+ui:l.game_intro_3: "Beatrix LeBeau begins her first day as a slime rancher."
+ui:l.select_expo_game: "Select a special demo save file:"
+ui:b.expo_start: "Fresh Start"
+ui:b.expo_advanced: "Advanced Ranch"
+ui:b.expo_range: "Out on the Range"
+ui:m.desc.expo_start: "Begin on a brand-new ranch and learn the ropes with a handy tutorial."
+ui:m.desc.expo_advanced: "Experience a ranch that's decked-out with all kinds of awesome features, packed with slimes, and ready for ranching!"
+ui:m.desc.expo_range: "For the adventurous, begin somewhere out in the untamed wilds of the Far, Far Range."
+ui:b.faq: "FAQ"
+ui:t.xbox_faq: "Xbox One Version FAQ"
+ui:l.xbox_faq_q_achievements: "Will Slime Rancher have Xbox Achievements?"
+ui:l.xbox_faq_a_achievements: "Xbox achievements will be enabled after Slime Rancher leaves Game Preview. At that time, all achievements earned in-game will instantly become Xbox achievements!"
+ui:l.xbox_faq_q_versions: "Are the PC and Xbox One versions of Slime Rancher the same?"
+ui:l.xbox_faq_a_versions: "Yes, our aim is to keep both versions in sync. However, at any given time there may be a few days difference during Xbox build certification."
+ui:l.xbox_faq_q_whats_next: "What’s next for Slime Rancher?"
+ui:l.xbox_faq_a_whats_next: "We’ve got a lot of great content in development, including new zones to explore, slimes to wrangle, and brand-new features like Slime Science! Learn more on our public roadmap:
+slimerancher.com/roadmap"
+ui:l.demo_end_title: "This trial is over but the adventure has just begun!"
+ui:l.demo_end_message: "Purchase the full version of Slime Rancher to keep your progress and experience these awesome features:
 
 - Boom slimes, honey slimes, rad slimes, hunter slimes, and many more!
 - A giant, open world filled with secrets to uncover!
 - Build strange gadgets and helpful tools with Slime Science!
-- Uncover the mysteries of the Ancient Ruins and what lies beyond!
-ui:b.demo_end_visit_store_page: Visit Store Page
-ui:b.demo_end_back_to_main_menu: Back to Main Menu
-ui:t.place_gadget: Install Gadget
-ui:t.fabricate_gadget: Fabricate Gadget
-ui:t.purchase_blueprint: Builder's Shop
-ui:t.refinery: Refinery
-ui:m.gadget_pair: {0} x2
-ui:m.new_blueprint: Blueprint Acquired!
-ui:m.new_blueprint_hint: Visit the Fabricator to build this gadget.
-ui:m.avail_blueprint: New Blueprint Available!
-ui:m.avail_blueprint_hint: Visit the Builder's Shop to purchase.
-ui:m.ready: Ready!
-ui:l.installing: Installing
-ui:b.fabricate: Fabricate
-ui:l.requires: Requires:
-ui:m.count_of_required: {0} / {1}
-ui:e.insuf_craft_resources: Not enough resources to craft item.
-ui:e.cannot_add_gadget: You cannot produce another of that gadget.
-ui:e.cannot_destroy_gadget: That gadget cannot be destroyed.
-ui:e.cannot_pickup_gadget: That gadget cannot be picked up.
-ui:l.score: Score:
-ui:m.avail_upgrade: New Upgrade Available!
-ui:m.avail_upgrade_hint: Visit the Upgrade Shop to purchase.
-ui:t.corporate_partner: 7Zee Rewards Club
-ui:l.curr_rank: Current Rank:
-ui:l.next_rank: Next Rank:
-ui:l.rewards: Rewards:
-ui:e.ineligible_for_corp_level: You are ineligible to reach that rank.
-ui:e.already_has_corp_level: You already have that rank.
-ui:t.chroma_packs: Chroma Packs
-ui:t.drone: Drone Program
-ui:t.drone.pick_target: Select Target
-ui:t.drone.pick_source: Select Source
-ui:t.drone.pick_destination: Select Destination
-ui:l.drone.target: Target
-ui:l.drone.source: Source
-ui:l.drone.destination: Destination
-ui:b.drone.reset: Reset
-ui:b.drone.activate: Activate
-ui:m.drone.deactivated: Deactivated
-ui:w.not_on_ranch_drone: Drones can only be installed on the Ranch.
-ui:w.limit_reached_drone: Drone limit reached for this Ranch Expansion. Limit: 2
-ui:w.drone_reprogram_drops_ammo: This drone is currently carrying cargo. Modifying its target or resetting the program will result in dropped cargo.
-ui:w.drone_remove_drops_ammo: This drone is currently carrying cargo. Removing it will result in dropped cargo.
-ui:w.drone_within_expansion: A drone can only operate in one Ranch Expansion.
-ui:m.drone.target.name.category_plorts: Plorts
-ui:m.drone.target.name.category_fruits: Fruit
-ui:m.drone.target.name.category_veggies: Veggies
-ui:m.drone.target.name.category_meats: Meat
-ui:m.drone.target.name.category_elders: Elder Chickens
-ui:m.drone.source.name.anywhere: Anywhere
-ui:m.drone.source.name.corral: Corrals
-ui:m.drone.source.name.pond: Ponds
-ui:m.drone.source.name.incinerator: Incinerators
-ui:m.drone.source.name.garden: Gardens
-ui:m.drone.source.name.coop: Coops
-ui:m.drone.source.name.silo: Silos
-ui:m.drone.source.name.plort_collector: Plort Collectors
-ui:m.drone.source.name.dynamic: Outside Plots
-ui:m.drone.source.name.free_range: Free Range
-ui:m.drone.destination.name.corral: Corrals
-ui:m.drone.destination.name.garden: Gardens
-ui:m.drone.destination.name.silo: Silos
-ui:m.drone.destination.name.auto_feeder: Auto-Feeders
-ui:m.drone.destination.name.incinerator: Incinerators
-(Make Ash)
-ui:m.drone.destination.name.plort_market: Plort Market
-ui:m.drone.destination.name.market_link: Market Link
-ui:m.drone.destination.name.refinery: Refinery
-ui:m.drone.destination.name.refinery_link: Refinery Link
-ui:drone.target.none: None
-ui:drone.behaviour.none: None
-ui:m.partner_rank.1: Initiate
-ui:m.partner_rank.1.reward.1: Roostro Weathervane
-ui:m.partner_rank.2: Pioneer I
-ui:m.partner_rank.2.reward.1: Fence Upgrade
-ui:m.partner_rank.3: Pioneer II
-ui:m.partner_rank.3.reward.1: Path Upgrade
-ui:m.partner_rank.4: Pioneer III
-ui:m.partner_rank.4.reward.1: Porch Upgrade
-ui:m.partner_rank.5: Skylark I
-ui:m.partner_rank.5.reward.1: Chroma Station
-ui:m.partner_rank.5.reward.2: Cobalt Chroma
-ui:m.partner_rank.5.reward.3: Milkshake Chroma
-ui:m.partner_rank.6: Skylark II
-ui:m.partner_rank.6.reward.1: Arch Upgrade
-ui:m.partner_rank.7: Skylark III
-ui:m.partner_rank.7.reward.1: Firecracker Chroma
-ui:m.partner_rank.7.reward.2: Grapeshot Chroma
-ui:m.partner_rank.8: Rolling Beetle I
-ui:m.partner_rank.8.reward.1: Slime Toy Shop
-ui:m.partner_rank.9: Rolling Beetle II
-ui:m.partner_rank.9.reward.1: Robo Ranger Chroma
-ui:m.partner_rank.9.reward.2: Maidatron Chroma
-ui:m.partner_rank.10: Rolling Beetle III
-ui:m.partner_rank.10.reward.1: Advanced Slime Toys
-ui:m.partner_rank.11: Playful Fox I
-ui:m.partner_rank.11.reward.1: Gingersnap Chroma
-ui:m.partner_rank.11.reward.2: Peapod Chroma
-ui:m.partner_rank.11.reward.3: Market Link
-ui:m.partner_rank.12: Playful Fox II
-ui:m.partner_rank.12.reward.1: Grotto Upgrade
-ui:m.partner_rank.13: Playful Fox III
-ui:m.partner_rank.13.reward.1: Decorizer
-ui:m.partner_rank.13.reward.2: Vanguard Chroma
-ui:m.partner_rank.13.reward.3: Willow Chroma
-ui:m.partner_rank.14: Silver Storm I
-ui:m.partner_rank.14.reward.1: Slime Trophy I
-ui:m.partner_rank.15: Silver Storm II
-ui:m.partner_rank.15.reward.1: Daybreak Chroma
-ui:m.partner_rank.15.reward.2: Eventide Chroma
-ui:m.partner_rank.16: Silver Storm III
-ui:m.partner_rank.16.reward.1: Overgrowth Upgrade
-ui:m.partner_rank.17: Dancing Mongoose I
-ui:m.partner_rank.17.reward.1: Salamander Chroma
-ui:m.partner_rank.17.reward.2: Royalton Chroma
-ui:m.partner_rank.18: Dancing Mongoose II
-ui:m.partner_rank.18.reward.1: Slime Trophy II
-ui:m.partner_rank.19: Dancing Mongoose III
-ui:m.partner_rank.19.reward.1: Neopolitan Chroma
-ui:m.partner_rank.19.reward.2: Mint Chip Chroma
-ui:m.partner_rank.19.reward.3: Ultra Dash Boots
-ui:m.partner_rank.20: Endless Mountain I
-ui:m.partner_rank.20.reward.1: Tank Booster Ultra
-ui:m.partner_rank.20.reward.2: Master Gordo Snare Blueprint
-ui:m.partner_rank.21: Endless Mountain II
-ui:m.partner_rank.21.reward.1: Ghost Wine Chroma
-ui:m.partner_rank.21.reward.2: Volcanic Chroma
-ui:m.partner_rank.21.reward.3: Heart Module Ultra
-ui:m.partner_rank.22: Endless Mountain III
-ui:m.partner_rank.22.reward.1: Lab Upgrade
-ui:m.partner_rank.22.reward.2: Golden Sureshot
-ui:m.partner_rank.23: Wander Wolf I
-ui:m.partner_rank.23.reward.1: Knight Light Chroma
-ui:m.partner_rank.23.reward.2: Pretty Loud Chroma
-ui:m.partner_rank.23.reward.3: Titan Drill Blueprint
-ui:m.partner_rank.24: Wander Wolf II
-ui:m.partner_rank.24.reward.1: Slime Trophy III
-ui:m.partner_rank.24.reward.2: Abyssal Pump Blueprint
-ui:m.partner_rank.25: Wander Wolf III
-ui:m.partner_rank.25.reward.1: Silverfox Chroma
-ui:m.partner_rank.25.reward.2: Frozen Violet Chroma
-ui:m.partner_rank.25.reward.3: Royal Apiary Blueprint
-ui:m.partner_rank.26: Golden Owl I
-ui:m.partner_rank.26.reward.1: Docks Upgrade
-ui:m.partner_rank.26.reward.2: Gold Slime Lamp Blueprint
-ui:m.partner_rank.27: Golden Owl II
-ui:m.partner_rank.27.reward.1: Goldleaf Chroma
-ui:m.partner_rank.27.reward.2: Astro Pearl Chroma
-ui:m.partner_rank.27.reward.3: Gold Warp Depot Blueprint
-ui:m.partner_rank.28: Golden Owl III
-ui:m.partner_rank.28.reward.1: Slime Trophy IV
-ui:m.partner_rank.28.reward.2: Gold Teleporter Blueprint
-ui:l.autosave_tip: This icon indicates autosaving in progress:
-ui:m.loadingtip.0: A well-fed slime is a happy slime.
-ui:m.loadingtip.1: Never turn your back on a chicken.
-ui:m.loadingtip.2: Create largos out of pink slimes: they’ll eat anything!
-ui:m.loadingtip.3: Rumor has it Thora and Hobson were once in love... but then Hobson disappeared.
-ui:m.loadingtip.4: Rumor has it Ogden used to be the CEO of a major insta-food conglomerate.
-ui:m.loadingtip.5: Rumor has it Viktor invented a plort-cloning technology, and then destroyed it.
-ui:m.loadingtip.6: Rumor has it Mochi Miles hasn’t spoken to her father in years.
-ui:m.loadingtip.7: rOOmr hAZ eet BOb hOomin. plS chIKKn?
-ui:m.loadingtip.8: No one has seen Hobson in years. Some say he is traveling to the furthest reaches of the Far, Far Range.
-ui:m.loadingtip.9: Use silos to store plorts until they are in high demand on the plort market.
-ui:m.loadingtip.10: You’ll need to purchase a water tank before you can vac up fresh water.
-ui:m.loadingtip.11: The vile tarr are formed when a largo eats a plort unlike its own. Watch out!
-ui:m.loadingtip.12: The tarr are more common and survive longer at night. Be careful.
-ui:m.loadingtip.13: The Indigo Quarry is a great place to discover rare veggies.
-ui:m.loadingtip.14: The Moss Blanket has more fruit trees than anywhere else on the range.
-ui:m.loadingtip.15: Fresh water can prevent tarr from cloning and eventually, destroy them.
-ui:m.loadingtip.16: No one knows who or what created the ancient slime gates that are found on the range.
-ui:m.loadingtip.17: A gordo slime will eat until it bursts.
-ui:m.loadingtip.18: Mochi Miles claims she once caught a gold slime.
-ui:m.loadingtip.19: Feeding a slime their favorite food results in double the plorts!
-ui:m.loadingtip.20: A crazy slime scientist once proposed creating cube-shaped slimes. But that’s just silly.
-ui:l.language: Language:
-ui:l.lang_en: English
-ui:l.lang_de: German
-ui:l.lang_es: Spanish
-ui:l.lang_fr: French
-ui:l.lang_ru: Russian
-ui:l.lang_sv: Swedish
-ui:l.lang_zh: Chinese
-ui:l.lang_ja: Japanese
-ui:l.lang_pt: Brazilian Pt
-ui:l.lang_ko: Korean
-ui:m.herostat.sold_plorts: Has Sold {0} Plorts on the Plort Market!
-ui:l.herostat.newbucks_earned: Total Newbucks Earned
-ui:l.herostat.game_progress: Game Progress
-ui:l.herostat.total_plorts: Total Plorts Sold
-ui:m.rich_presence.in_desert: Exploring The Glass Desert
-ui:m.rich_presence.in_moss: Exploring The Moss Blanket
-ui:m.rich_presence.in_quarry: Exploring The Indigo Quarry
-ui:m.rich_presence.in_reef: Exploring The Reef
-ui:m.rich_presence.in_ruins: Exploring The Ruins
-ui:m.rich_presence.on_ranch: Tending The Ranch
-ui:m.rich_presence.main_menu: Preparing For Adventure!
-ui:t.map: Map of the Far, Far Range
-ui:t.current_location: Location:
-ui:t.unknown_location: UNKNOWN
-ui:b.dlc: Manage DLC
-ui:b.dlc.view_in_store: View in Store
-ui:b.dlc.installed: Installed
-ui:m.dlc.included_in: Included in {0}
-ui:b.appearances: Secret Styles
-ui:m.select_slime_type: Select a slime type from the menu on the left after you have unlocked its secret style.
-ui:b.appearance_activate: Activate Style
-ui:b.appearance_activated: Activated!
-ui:b.appearance_change_style: Change Style
-ui:b.appearance_tutorial_got_it: Got it!
-ui:b.appearance_info: Info
-ui:m.appearance_tutorial_body: Give your slimes a fresh, new look by discovering secret styles hidden in special treasure pods throughout the Far, Far Range. Once unlocked, you can manage which secret styles you wish to show on each slime.
+- Uncover the mysteries of the Ancient Ruins and what lies beyond!"
+ui:b.demo_end_visit_store_page: "Visit Store Page"
+ui:b.demo_end_back_to_main_menu: "Back to Main Menu"
+ui:t.place_gadget: "Install Gadget"
+ui:t.fabricate_gadget: "Fabricate Gadget"
+ui:t.purchase_blueprint: "Builder's Shop"
+ui:t.refinery: "Refinery"
+ui:m.gadget_pair: "{0} x2"
+ui:m.new_blueprint: "Blueprint Acquired!"
+ui:m.new_blueprint_hint: "Visit the Fabricator to build this gadget."
+ui:m.avail_blueprint: "New Blueprint Available!"
+ui:m.avail_blueprint_hint: "Visit the Builder's Shop to purchase."
+ui:m.ready: "Ready!"
+ui:l.installing: "Installing"
+ui:b.fabricate: "Fabricate"
+ui:l.requires: "Requires:"
+ui:m.count_of_required: "{0} / {1}"
+ui:e.insuf_craft_resources: "Not enough resources to craft item."
+ui:e.cannot_add_gadget: "You cannot produce another of that gadget."
+ui:e.cannot_destroy_gadget: "That gadget cannot be destroyed."
+ui:e.cannot_pickup_gadget: "That gadget cannot be picked up."
+ui:l.score: "Score:"
+ui:m.avail_upgrade: "New Upgrade Available!"
+ui:m.avail_upgrade_hint: "Visit the Upgrade Shop to purchase."
+ui:t.corporate_partner: "7Zee Rewards Club"
+ui:l.curr_rank: "Current Rank:"
+ui:l.next_rank: "Next Rank:"
+ui:l.rewards: "Rewards:"
+ui:e.ineligible_for_corp_level: "You are ineligible to reach that rank."
+ui:e.already_has_corp_level: "You already have that rank."
+ui:t.chroma_packs: "Chroma Packs"
+ui:t.drone: "Drone Program"
+ui:t.drone.pick_target: "Select Target"
+ui:t.drone.pick_source: "Select Source"
+ui:t.drone.pick_destination: "Select Destination"
+ui:l.drone.target: "Target"
+ui:l.drone.source: "Source"
+ui:l.drone.destination: "Destination"
+ui:b.drone.reset: "Reset"
+ui:b.drone.activate: "Activate"
+ui:m.drone.deactivated: "Deactivated"
+ui:w.not_on_ranch_drone: "Drones can only be installed on the Ranch."
+ui:w.limit_reached_drone: "Drone limit reached for this Ranch Expansion. Limit: 2"
+ui:w.drone_reprogram_drops_ammo: "This drone is currently carrying cargo. Modifying its target or resetting the program will result in dropped cargo."
+ui:w.drone_remove_drops_ammo: "This drone is currently carrying cargo. Removing it will result in dropped cargo."
+ui:w.drone_within_expansion: "A drone can only operate in one Ranch Expansion."
+ui:m.drone.target.name.category_plorts: "Plorts"
+ui:m.drone.target.name.category_fruits: "Fruit"
+ui:m.drone.target.name.category_veggies: "Veggies"
+ui:m.drone.target.name.category_meats: "Meat"
+ui:m.drone.target.name.category_elders: "Elder Chickens"
+ui:m.drone.source.name.anywhere: "Anywhere"
+ui:m.drone.source.name.corral: "Corrals"
+ui:m.drone.source.name.pond: "Ponds"
+ui:m.drone.source.name.incinerator: "Incinerators"
+ui:m.drone.source.name.garden: "Gardens"
+ui:m.drone.source.name.coop: "Coops"
+ui:m.drone.source.name.silo: "Silos"
+ui:m.drone.source.name.plort_collector: "Plort Collectors"
+ui:m.drone.source.name.dynamic: "Outside Plots"
+ui:m.drone.source.name.free_range: "Free Range"
+ui:m.drone.destination.name.corral: "Corrals"
+ui:m.drone.destination.name.garden: "Gardens"
+ui:m.drone.destination.name.silo: "Silos"
+ui:m.drone.destination.name.auto_feeder: "Auto-Feeders"
+ui:m.drone.destination.name.incinerator: "Incinerators
+(Make Ash)"
+ui:m.drone.destination.name.plort_market: "Plort Market"
+ui:m.drone.destination.name.market_link: "Market Link"
+ui:m.drone.destination.name.refinery: "Refinery"
+ui:m.drone.destination.name.refinery_link: "Refinery Link"
+ui:drone.target.none: "None"
+ui:drone.behaviour.none: "None"
+ui:m.partner_rank.1: "Initiate"
+ui:m.partner_rank.1.reward.1: "Roostro Weathervane"
+ui:m.partner_rank.2: "Pioneer I"
+ui:m.partner_rank.2.reward.1: "Fence Upgrade"
+ui:m.partner_rank.3: "Pioneer II"
+ui:m.partner_rank.3.reward.1: "Path Upgrade"
+ui:m.partner_rank.4: "Pioneer III"
+ui:m.partner_rank.4.reward.1: "Porch Upgrade"
+ui:m.partner_rank.5: "Skylark I"
+ui:m.partner_rank.5.reward.1: "Chroma Station"
+ui:m.partner_rank.5.reward.2: "Cobalt Chroma"
+ui:m.partner_rank.5.reward.3: "Milkshake Chroma"
+ui:m.partner_rank.6: "Skylark II"
+ui:m.partner_rank.6.reward.1: "Arch Upgrade"
+ui:m.partner_rank.7: "Skylark III"
+ui:m.partner_rank.7.reward.1: "Firecracker Chroma"
+ui:m.partner_rank.7.reward.2: "Grapeshot Chroma"
+ui:m.partner_rank.8: "Rolling Beetle I"
+ui:m.partner_rank.8.reward.1: "Slime Toy Shop"
+ui:m.partner_rank.9: "Rolling Beetle II"
+ui:m.partner_rank.9.reward.1: "Robo Ranger Chroma"
+ui:m.partner_rank.9.reward.2: "Maidatron Chroma"
+ui:m.partner_rank.10: "Rolling Beetle III"
+ui:m.partner_rank.10.reward.1: "Advanced Slime Toys"
+ui:m.partner_rank.11: "Playful Fox I"
+ui:m.partner_rank.11.reward.1: "Gingersnap Chroma"
+ui:m.partner_rank.11.reward.2: "Peapod Chroma"
+ui:m.partner_rank.11.reward.3: "Market Link"
+ui:m.partner_rank.12: "Playful Fox II"
+ui:m.partner_rank.12.reward.1: "Grotto Upgrade"
+ui:m.partner_rank.13: "Playful Fox III"
+ui:m.partner_rank.13.reward.1: "Decorizer"
+ui:m.partner_rank.13.reward.2: "Vanguard Chroma"
+ui:m.partner_rank.13.reward.3: "Willow Chroma"
+ui:m.partner_rank.14: "Silver Storm I"
+ui:m.partner_rank.14.reward.1: "Slime Trophy I"
+ui:m.partner_rank.15: "Silver Storm II"
+ui:m.partner_rank.15.reward.1: "Daybreak Chroma"
+ui:m.partner_rank.15.reward.2: "Eventide Chroma"
+ui:m.partner_rank.16: "Silver Storm III"
+ui:m.partner_rank.16.reward.1: "Overgrowth Upgrade"
+ui:m.partner_rank.17: "Dancing Mongoose I"
+ui:m.partner_rank.17.reward.1: "Salamander Chroma"
+ui:m.partner_rank.17.reward.2: "Royalton Chroma"
+ui:m.partner_rank.18: "Dancing Mongoose II"
+ui:m.partner_rank.18.reward.1: "Slime Trophy II"
+ui:m.partner_rank.19: "Dancing Mongoose III"
+ui:m.partner_rank.19.reward.1: "Neopolitan Chroma"
+ui:m.partner_rank.19.reward.2: "Mint Chip Chroma"
+ui:m.partner_rank.19.reward.3: "Ultra Dash Boots"
+ui:m.partner_rank.20: "Endless Mountain I"
+ui:m.partner_rank.20.reward.1: "Tank Booster Ultra"
+ui:m.partner_rank.20.reward.2: "Master Gordo Snare Blueprint"
+ui:m.partner_rank.21: "Endless Mountain II"
+ui:m.partner_rank.21.reward.1: "Ghost Wine Chroma"
+ui:m.partner_rank.21.reward.2: "Volcanic Chroma"
+ui:m.partner_rank.21.reward.3: "Heart Module Ultra"
+ui:m.partner_rank.22: "Endless Mountain III"
+ui:m.partner_rank.22.reward.1: "Lab Upgrade"
+ui:m.partner_rank.22.reward.2: "Golden Sureshot"
+ui:m.partner_rank.23: "Wander Wolf I"
+ui:m.partner_rank.23.reward.1: "Knight Light Chroma"
+ui:m.partner_rank.23.reward.2: "Pretty Loud Chroma"
+ui:m.partner_rank.23.reward.3: "Titan Drill Blueprint"
+ui:m.partner_rank.24: "Wander Wolf II"
+ui:m.partner_rank.24.reward.1: "Slime Trophy III"
+ui:m.partner_rank.24.reward.2: "Abyssal Pump Blueprint"
+ui:m.partner_rank.25: "Wander Wolf III"
+ui:m.partner_rank.25.reward.1: "Silverfox Chroma"
+ui:m.partner_rank.25.reward.2: "Frozen Violet Chroma"
+ui:m.partner_rank.25.reward.3: "Royal Apiary Blueprint"
+ui:m.partner_rank.26: "Golden Owl I"
+ui:m.partner_rank.26.reward.1: "Docks Upgrade"
+ui:m.partner_rank.26.reward.2: "Gold Slime Lamp Blueprint"
+ui:m.partner_rank.27: "Golden Owl II"
+ui:m.partner_rank.27.reward.1: "Goldleaf Chroma"
+ui:m.partner_rank.27.reward.2: "Astro Pearl Chroma"
+ui:m.partner_rank.27.reward.3: "Gold Warp Depot Blueprint"
+ui:m.partner_rank.28: "Golden Owl III"
+ui:m.partner_rank.28.reward.1: "Slime Trophy IV"
+ui:m.partner_rank.28.reward.2: "Gold Teleporter Blueprint"
+ui:l.autosave_tip: "This icon indicates autosaving in progress:"
+ui:m.loadingtip.0: "A well-fed slime is a happy slime."
+ui:m.loadingtip.1: "Never turn your back on a chicken."
+ui:m.loadingtip.2: "Create largos out of pink slimes: they’ll eat anything!"
+ui:m.loadingtip.3: "Rumor has it Thora and Hobson were once in love... but then Hobson disappeared."
+ui:m.loadingtip.4: "Rumor has it Ogden used to be the CEO of a major insta-food conglomerate."
+ui:m.loadingtip.5: "Rumor has it Viktor invented a plort-cloning technology, and then destroyed it."
+ui:m.loadingtip.6: "Rumor has it Mochi Miles hasn’t spoken to her father in years."
+ui:m.loadingtip.7: "rOOmr hAZ eet BOb hOomin. plS chIKKn?"
+ui:m.loadingtip.8: "No one has seen Hobson in years. Some say he is traveling to the furthest reaches of the Far, Far Range."
+ui:m.loadingtip.9: "Use silos to store plorts until they are in high demand on the plort market."
+ui:m.loadingtip.10: "You’ll need to purchase a water tank before you can vac up fresh water."
+ui:m.loadingtip.11: "The vile tarr are formed when a largo eats a plort unlike its own. Watch out!"
+ui:m.loadingtip.12: "The tarr are more common and survive longer at night. Be careful."
+ui:m.loadingtip.13: "The Indigo Quarry is a great place to discover rare veggies."
+ui:m.loadingtip.14: "The Moss Blanket has more fruit trees than anywhere else on the range."
+ui:m.loadingtip.15: "Fresh water can prevent tarr from cloning and eventually, destroy them."
+ui:m.loadingtip.16: "No one knows who or what created the ancient slime gates that are found on the range."
+ui:m.loadingtip.17: "A gordo slime will eat until it bursts."
+ui:m.loadingtip.18: "Mochi Miles claims she once caught a gold slime."
+ui:m.loadingtip.19: "Feeding a slime their favorite food results in double the plorts!"
+ui:m.loadingtip.20: "A crazy slime scientist once proposed creating cube-shaped slimes. But that’s just silly."
+ui:l.language: "Language:"
+ui:l.lang_en: "English"
+ui:l.lang_de: "Deutsch"
+ui:l.lang_es: "Español"
+ui:l.lang_fr: "Français"
+ui:l.lang_ru: "Pyccкий"
+ui:l.lang_sv: "Svenska"
+ui:l.lang_zh: "中文"
+ui:l.lang_ja: "日本語"
+ui:l.lang_pt: "Português-Brasil"
+ui:l.lang_ko: "한국어"
+ui:m.herostat.sold_plorts: "Has Sold {0} Plorts on the Plort Market!"
+ui:l.herostat.newbucks_earned: "Total Newbucks Earned"
+ui:l.herostat.game_progress: "Game Progress"
+ui:l.herostat.total_plorts: "Total Plorts Sold"
+ui:m.rich_presence.in_desert: "Exploring The Glass Desert"
+ui:m.rich_presence.in_moss: "Exploring The Moss Blanket"
+ui:m.rich_presence.in_quarry: "Exploring The Indigo Quarry"
+ui:m.rich_presence.in_reef: "Exploring The Reef"
+ui:m.rich_presence.in_ruins: "Exploring The Ruins"
+ui:m.rich_presence.on_ranch: "Tending The Ranch"
+ui:m.rich_presence.main_menu: "Preparing For Adventure!"
+ui:t.map: "Map of the Far, Far Range"
+ui:t.current_location: "Location:"
+ui:t.unknown_location: "UNKNOWN"
+ui:b.dlc: "Manage DLC"
+ui:b.dlc.view_in_store: "View in Store"
+ui:b.dlc.installed: "Installed"
+ui:m.dlc.included_in: "Included in {0}"
+ui:b.appearances: "Secret Styles"
+ui:m.select_slime_type: "Select a slime type from the menu on the left after you have unlocked its secret style."
+ui:b.appearance_activate: "Activate Style"
+ui:b.appearance_activated: "Activated!"
+ui:b.appearance_change_style: "Change Style"
+ui:b.appearance_tutorial_got_it: "Got it!"
+ui:b.appearance_info: "Info"
+ui:m.appearance_tutorial_body: "Give your slimes a fresh, new look by discovering secret styles hidden in special treasure pods throughout the Far, Far Range. Once unlocked, you can manage which secret styles you wish to show on each slime.
 
-Secret styles are purely cosmetic, and won't change a slime's diet, or the types of plorts they produce.
-ui:m.appearances.popup.title: Secret Style unlocked!
-ui:m.appearances.popup.description: Visit the ranch house to manage secret styles!
-ui:m.instrument.popup.title: New instrument unlocked!
-ui:m.instrument.popup.description: Visit the chime changer next to the ranch house to change instruments!
-ui:l.motd.default001: Welcome back!
-ui:l.motd.default002: Hello! Welcome to the Far, Far Range!
-ui:l.motd.default003: Hey there, rancher. Don't forget to water your crops!
-ui:l.motd.default004: A happy slime makes for a happy rancher!
-ui:l.motd.default005: Be sure to upgrade your vacpack so you can enjoy perks such as: flying!
-ui:l.motd.xbox001.announcement: New DLC!
-ui:l.motd.xbox001.title: Secret Style Pack
-ui:l.motd.xbox001.body: Discover the secret styles of all your favorite slimes!
-ui:l.motd.xbox001.button: Learn More
-ui:l.motd.ps4001.announcement: New DLC!
-ui:l.motd.ps4001.title: Secret Style Pack
-ui:l.motd.ps4001.body: Discover the secret styles of all your favorite slimes!
-ui:l.motd.ps4001.button: Learn More
-ui:t.decorizer: Decorizer
-ui:b.decorizer.retrieve: Withdraw
-ui:b.decorizer.cleanup: Area Cleanup
-ui:b.decorizer.cleanup.description: Transports items in this expansion to Decorizer
-ui:b.decorizer.cleanup.category.all: All Items
-ui:t.slimulations.exit_destination.active: Exit Portal Activated!
-ui:m.slimulations.activator.inactive_ammo: Empty vacpack required to activate
-ui:l.lang_cs: Czech
-ui:l.lang_pl: Polish
-ui:l.lang_fil: Filipino
+Secret styles are purely cosmetic, and won't change a slime's diet, or the types of plorts they produce."
+ui:m.appearances.popup.title: "Secret Style unlocked!"
+ui:m.appearances.popup.description: "Visit the ranch house to manage secret styles!"
+ui:m.instrument.popup.title: "New instrument unlocked!"
+ui:m.instrument.popup.description: "Visit the chime changer next to the ranch house to change instruments!"
+ui:l.motd.default001: "Welcome back!"
+ui:l.motd.default002: "Hello! Welcome to the Far, Far Range!"
+ui:l.motd.default003: "Hey there, rancher. Don't forget to water your crops!"
+ui:l.motd.default004: "A happy slime makes for a happy rancher!"
+ui:l.motd.default005: "Be sure to upgrade your vacpack so you can enjoy perks such as: flying!"
+ui:l.motd.xbox001.announcement: "New DLC!"
+ui:l.motd.xbox001.title: "Secret Style Pack"
+ui:l.motd.xbox001.body: "Discover the secret styles of all your favorite slimes!"
+ui:l.motd.xbox001.button: "Learn More"
+ui:l.motd.ps4001.announcement: "New DLC!"
+ui:l.motd.ps4001.title: "Secret Style Pack"
+ui:l.motd.ps4001.body: "Discover the secret styles of all your favorite slimes!"
+ui:l.motd.ps4001.button: "Learn More"
+ui:t.decorizer: "Decorizer"
+ui:b.decorizer.retrieve: "Withdraw"
+ui:b.decorizer.cleanup: "Area Cleanup"
+ui:b.decorizer.cleanup.description: "Transports items in this expansion to Decorizer"
+ui:b.decorizer.cleanup.category.all: "All Items"
+ui:t.slimulations.exit_destination.active: "Exit Portal Activated!"
+ui:m.slimulations.activator.inactive_ammo: "Empty vacpack required to activate"
+ui:l.lang_cs: "Čeština"
+ui:l.lang_pl: "Polski"
+ui:l.lang_fil: "Tagalog"

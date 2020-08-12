@@ -59,7 +59,7 @@ namespace VikDisk.Core
         // Fixes the language display of the game
         internal static void FixLangDisplay(MessageDirector dir)
         {
-            /*MessageBundle actor = dir.GetBundle("actor");
+            MessageBundle actor = dir.GetBundle("actor");
             ResourceBundle rActor = actor.GetPrivateField<ResourceBundle>("bundle");
 
             FileInfo fActor = new FileInfo(Application.dataPath + "/actor.yaml");
@@ -73,7 +73,7 @@ namespace VikDisk.Core
                 
                 foreach (string key in rActor.GetKeys())
                 {
-                    writer.WriteLine("actor:" + key + ": " + actor.Get(key));
+                    writer.WriteLine("actor:" + key + ": \"" + actor.Get(key) + "\"");
                 }
             }
             
@@ -91,7 +91,7 @@ namespace VikDisk.Core
                 
                 foreach (string key in rPedia.GetKeys())
                 {
-                    writer.WriteLine("pedia:" + key + ": " + pedia.Get(key));
+                    writer.WriteLine("pedia:" + key + ": \"" + pedia.Get(key) + "\"");
                 }
             }
             
@@ -109,9 +109,9 @@ namespace VikDisk.Core
                 
                 foreach (string key in rUi.GetKeys())
                 {
-                    writer.WriteLine("ui:" + key + ": " + ui.Get(key));
+                    writer.WriteLine("ui:" + key + ": \"" + ui.Get(key) + "\"");
                 }
-            }*/
+            }
         }
     }
 }

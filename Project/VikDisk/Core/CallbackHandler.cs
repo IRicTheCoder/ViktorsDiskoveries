@@ -38,7 +38,7 @@ namespace VikDisk.Core
 		internal static void LateSetup()
 		{
 			// LANGUAGE LISTENERS
-			SRGuu.RegisterTranslation(Main.execAssembly, null);
+			SRGuu.RegisterTranslation(Main.execAssembly, LanguageHandler.FixLangDisplay);
 		}
 
 		// Registers all content to the world
