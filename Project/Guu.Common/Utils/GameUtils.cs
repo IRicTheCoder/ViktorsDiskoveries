@@ -1,7 +1,10 @@
 ﻿using System.Collections.Generic;
+
+using SRML;
+
 using UnityEngine;
 
-namespace SRML
+namespace Guu.Utils
 {
 	/// <summary>
 	/// An utility class to help with various things in the game

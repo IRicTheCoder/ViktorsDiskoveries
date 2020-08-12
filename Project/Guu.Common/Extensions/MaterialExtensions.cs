@@ -4,6 +4,7 @@
 /// <summary>
 /// Contains extension methods for Materials
 /// </summary>
+// ReSharper disable once CheckNamespace
 public static class MaterialExtensions
 {
 	/// <summary>

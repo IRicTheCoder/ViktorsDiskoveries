@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Guu.Utils;
+
+using UnityEngine;
 
 namespace SRML.Debug
 {

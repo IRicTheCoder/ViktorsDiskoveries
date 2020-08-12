@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SRML
+namespace Guu.Utils
 {
 	/// <summary>
 	/// An utility class to help with Enums

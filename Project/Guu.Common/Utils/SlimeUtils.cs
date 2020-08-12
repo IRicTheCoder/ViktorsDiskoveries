@@ -3,10 +3,12 @@ using System.Linq;
 
 using SRML;
 using SRML.SR;
+
 using UnityEngine;
+
 using static SlimeEat;
 
-namespace Guu
+namespace Guu.Utils
 {
 	/// <summary>
 	/// An utility class to help with Slimes

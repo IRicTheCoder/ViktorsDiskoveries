@@ -18,9 +18,12 @@ public static class ObjectExtensions
 		try
 		{
 			FieldInfo field = obj.GetType().GetField(name, BindingFlags.NonPublic | BindingFlags.Instance);
-			field.SetValue(obj, value);
+			field?.SetValue(obj, value);
 		}
-		catch { }
+		catch
+		{
+			// ignored
+		}
 
 		return obj;
 	}
@@ -37,12 +40,18 @@ public static class ObjectExtensions
 		try
 		{
 			PropertyInfo field = obj.GetType().GetProperty(name, BindingFlags.NonPublic | BindingFlags.Instance);
+
+			if (field == null) return obj;
+			
 			if (field.CanWrite)
 				field.SetValue(obj, value, null);
 			else
 				return obj.SetPrivateField($"<{name}>k__BackingField", value);
 		}
-		catch { }
+		catch
+		{
+			// ignored
+		}
 
 		return obj;
 	}
@@ -58,9 +67,12 @@ public static class ObjectExtensions
 		try
 		{
 			FieldInfo field = obj.GetType().GetField(name, BindingFlags.NonPublic | BindingFlags.Instance);
-			return (E)field.GetValue(obj);
+			return (E)field?.GetValue(obj);
 		}
-		catch { }
+		catch
+		{
+			// ignored
+		}
 
 		return default;
 	}
@@ -76,9 +88,15 @@ public static class ObjectExtensions
 		try
 		{
 			PropertyInfo field = obj.GetType().GetProperty(name, BindingFlags.NonPublic | BindingFlags.Instance);
+			
+			if (field == null) return default;
+			
 			return field.CanRead ? (E)field.GetValue(obj, null) : obj.GetPrivateField<E>($"<{name}>k__BackingField");
 		}
-		catch { }
+		catch
+		{
+			// ignored
+		}
 
 		return default;
 	}

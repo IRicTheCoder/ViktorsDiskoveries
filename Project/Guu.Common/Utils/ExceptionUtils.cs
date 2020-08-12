@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SRML
+namespace Guu.Utils
 {
 	/// <summary>
 	/// An utility class to help with exceptions

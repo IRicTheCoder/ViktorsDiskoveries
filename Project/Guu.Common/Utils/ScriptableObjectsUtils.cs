@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace SRML
+namespace Guu.Utils
 {
 	/// <summary>
 	/// An utility class to help with Scriptable Objects

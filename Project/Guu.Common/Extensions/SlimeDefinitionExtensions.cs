@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 
 using Guu;
+using Guu.Utils;
 
 using UnityEngine;
 using SRML;
@@ -9,6 +10,7 @@ using SRML;
 /// <summary>
 /// Contains extension methods for Slime Definitions
 /// </summary>
+// ReSharper disable once CheckNamespace
 public static class SlimeDefinitionExtensions
 {
 	/// <summary>

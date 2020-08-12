@@ -38,7 +38,7 @@ namespace VikDisk.Core
 		internal static void LateSetup()
 		{
 			// LANGUAGE LISTENERS
-			SRGuu.RegisterTranslation(Main.execAssembly, LanguageHandler.FixLangDisplay);
+			SRGuu.RegisterTranslation(Main.execAssembly, null);
 		}
 
 		// Registers all content to the world
@@ -58,7 +58,8 @@ namespace VikDisk.Core
 			LanguageHandler.oldFont = ui.languageDropdown.captionText.font;
 			LanguageHandler.oldFont.m_FallbackFontAssetTable = new List<TMP_FontAsset>()
 			{
-				LanguageHandler.newFont
+				LanguageHandler.newFont,
+				LanguageHandler.oldFont
 			};
 		}
 	}
