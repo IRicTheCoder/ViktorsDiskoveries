@@ -38,21 +38,18 @@ namespace VikDisk.Core
 		internal static void LateSetup()
 		{
 			// LANGUAGE LISTENERS
-			SRGuu.RegisterTranslation(Main.execAssembly, LanguageHandler.FixLangDisplay);
+			SRGuu.RegisterTranslation(Main.execAssembly, null);
 		}
 
 		// Registers all content to the world
 		private static void RegisterWorld(SceneContext ctx)
 		{
-			// TODO: Change following lines to SRML
+			// TODO: Change following lines to Guu
 			//AreaRegistry.SpawnAreas();
 			//DebugHandler.Build();
 
 			// Fixes the objects on the world
 			GameFixer.FixAtWorldGen();
-
-			// Applies fixes for the language and checks translations
-			//LanguageHandler.FixLangDisplay(GameContext.Instance.MessageDirector);
 		}
 
 		// Applies changes to the main menu
@@ -63,8 +60,6 @@ namespace VikDisk.Core
 			{
 				LanguageHandler.newFont
 			};
-
-			//LanguageHandler.ApplyFontChange(GameContext.Instance.MessageDirector);
 		}
 	}
 }
