@@ -25,3 +25,20 @@ pedia:m.instructions.basics: "<b>W</b>: Move forward
 <b>Space</b>: Jump (hold to use jetpack, if available) 
 
 <b>E</b>: Interact (when prompted)"
+pedia:m.instructions.gamepad.basics: "<b>Left Stick</b>: Move
+
+<b>Hold Left Stick</b>: Sprint (uses energy) 
+
+<b>A</b>: Jump (hold to use jetpack, if available) 
+
+<b>X</b>: Interact (when prompted)"
+pedia:m.instructions.ps4.basics: "<b>Left Stick</b>: Move
+
+<b>L3</b>: Sprint (uses energy) 
+
+<b>cross button</b>: Jump (hold to use jetpack, if available) 
+
+<b>square button</b>: Interact (when prompted)"
+pedia:m.desc.basics: ""
+pedia:t.vacing: "Vacpack: Vac-ing and Shooting"
+pedia:m.intro.vacing: "Your first step to becoming a master rancher."
