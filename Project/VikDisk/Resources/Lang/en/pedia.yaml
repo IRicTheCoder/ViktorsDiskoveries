@@ -42,3 +42,99 @@ pedia:m.instructions.ps4.basics: "<b>Left Stick</b>: Move
 pedia:m.desc.basics: ""
 pedia:t.vacing: "Vacpack: Vac-ing and Shooting"
 pedia:m.intro.vacing: "Your first step to becoming a master rancher."
+pedia:m.instructions.vacing: "<b>Right Mouse Button</b>: Vacuum slimes or other objects 
+
+Larger objects will be held at the nozzle and can be dropped by releasing vac or fired by pressing shoot. 
+
+<b>Left Mouse Button</b>: Shoot slime or other object from the selected vac tank 
+
+Hold the shoot key to continuously shoot."
+pedia:m.instructions.gamepad.vacing: "<b>Left Trigger</b>: Vacuum slimes or other objects 
+
+Larger objects will be held at the nozzle and can be dropped by releasing vac or fired by pressing shoot. 
+
+<b>Right Trigger</b>: Shoot slime or other object from the selected vac tank 
+
+Hold the shoot button to continuously shoot."
+pedia:m.instructions.ps4.vacing: "<b>L2</b>: Vacuum slimes or other objects 
+
+Larger objects will be held at the nozzle and can be dropped by releasing vac or fired by pressing shoot. 
+
+<b>R2</b>: Shoot slime or other object from the selected vac tank 
+
+Hold the shoot button to continuously shoot."
+pedia:m.desc.vacing: ""
+pedia:t.capturetanks: "Vacpack: Vac Tanks"
+pedia:m.intro.capturetanks: "Nanotechnology makes everything possible, and everything smaller."
+pedia:m.instructions.capturetanks: "Vac tanks allow you to easily collect, sort, and transport slimes and other resources. 
+
+<b>1, 2, 3, 4, 5</b>: Select vac tank 
+<b>Mouse Wheel</b>: Cycle through vac tanks"
+pedia:m.instructions.gamepad.capturetanks: "Vac tanks allow you to easily collect, sort, and transport slimes and other resources. 
+
+<b>Left Bumper/Right Bumper</b>: Cycle through vac tanks"
+pedia:m.instructions.ps4.capturetanks: "Vac tanks allow you to easily collect, sort, and transport slimes and other resources. 
+
+<b>L1/R1</b>: Cycle through vac tanks"
+pedia:m.desc.capturetanks: ""
+pedia:t.energy: "Vacpack: Health and Energy"
+pedia:m.intro.energy: "Everything has a cost."
+pedia:m.instructions.energy: "Monitor your health and energy levels with the Health Meter and Energy Meter on the lower left of the screen. 
+
+Health will be automatically restored after not taking damage for a period of time. 
+
+Energy will be automatically restored after not using energy for a period of time."
+pedia:m.desc.energy: ""
+pedia:t.corralling: "Ranching Basics: Corralling Slimes"
+pedia:m.intro.corralling: "You can contain them, but you can't stop the wiggle."
+pedia:m.instructions.corralling: "Shoot slimes through corral walls to contain them and make them easier to manage. But remember: hungry slimes will always find a way out of their corrals! 
+
+<b>Mouse Wheel</b>: Select vac tank 
+<b>Left Mouse Button</b>: Shoot"
+pedia:m.instructions.gamepad.corralling: "Shoot slimes through corral walls to contain them and make them easier to manage. But remember: hungry slimes will always find a way out of their corrals! 
+
+<b>Left Bumper/Right Bumper</b>: Select vac tank 
+<b>Right Trigger</b>: Shoot"
+pedia:m.instructions.ps4.corralling: "Shoot slimes through corral walls to contain them and make them easier to manage. But remember: hungry slimes will always find a way out of their corrals! 
+
+<b>L1/R1</b>: Select vac tank 
+<b>R2</b>: Shoot"
+pedia:m.desc.corralling: ""
+pedia:t.feeding: "Ranching Basics: Feeding Slimes"
+pedia:m.intro.feeding: "A well-fed slime makes for a happy (and wealthy) rancher."
+pedia:m.instructions.feeding: "Each slime has a particular diet. Most prefer either fruit, veggies, or meat. When a slime eats, it produces a plort. 
+
+However, most slimes have a favorite food. When a slime eats its favorite food it produces double plorts! 
+
+<b>Mouse Wheel</b>: Select vac tank 
+<b>Left Mouse Button</b>: Shoot"
+pedia:m.instructions.gamepad.feeding: "Each slime has a particular diet. Most prefer either fruit, veggies, or meat. When a slime eats, it produces a plort. 
+
+However, most slimes have a favorite food. When a slime eats its favorite food it produces double plorts! 
+
+<b>Left Bumper/Right Bumper</b>: Select vac tank 
+<b>Right Trigger</b>: Shoot"
+pedia:m.instructions.ps4.feeding: "Each slime has a particular diet. Most prefer either fruit, veggies, or meat. When a slime eats, it produces a plort. 
+
+However, most slimes have a favorite food. When a slime eats its favorite food it produces double plorts! 
+
+<b>L1/R1</b>: Select vac tank 
+<b>R2</b>: Shoot"
+pedia:m.desc.feeding: ""
+pedia:t.plorts: "Ranching Basics: Plorts and the Plort Market"
+pedia:m.intro.plorts: "SELL! SELL! SELL!"
+pedia:m.instructions.plorts: "Vac up plorts and shoot them into the Plort Market to get newbucks. Plort values fluctuate daily depending on the types of plorts you've recently sold. 
+
+<b>Mouse Wheel</b>: Select vac tank 
+<b>Left Mouse Button</b>: Shoot"
+pedia:m.instructions.gamepad.plorts: "Vac up plorts and shoot them into the Plort Market to get newbucks. Plort values fluctuate daily depending on the types of plorts you've recently sold. 
+
+<b>Left Bumper/Right Bumper</b>: Select vac tank 
+<b>Right Trigger</b>: Shoot"
+pedia:m.instructions.ps4.plorts: "Vac up plorts and shoot them into the Plort Market to get newbucks. Plort values fluctuate daily depending on the types of plorts you've recently sold. 
+
+<b>L1/R1</b>: Select vac tank 
+<b>R2</b>: Shoot"
+pedia:m.desc.plorts: ""
+pedia:t.ssbasics: "Slime Science: Basics"
+pedia:m.intro.ssbasics: "Definitely weird."
