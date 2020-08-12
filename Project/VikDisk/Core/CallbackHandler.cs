@@ -39,6 +39,7 @@ namespace VikDisk.Core
 		{
 			// LANGUAGE LISTENERS
 			SRGuu.RegisterTranslation(Main.execAssembly, null);
+			//SRGuu.RegisterTranslation(Main.execAssembly, LanguageHandler.FixLangDisplay);
 		}
 
 		// Registers all content to the world

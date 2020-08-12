@@ -73,7 +73,7 @@ namespace VikDisk.Core
                 
                 foreach (string key in rActor.GetKeys())
                 {
-                    writer.WriteLine("actor:" + key + ": \"" + actor.Get(key) + "\"");
+                    writer.WriteLine("actor:" + key + ": \"" + actor.Get(key).Replace("\"", "\\\"") + "\"");
                 }
             }
             
@@ -91,7 +91,7 @@ namespace VikDisk.Core
                 
                 foreach (string key in rPedia.GetKeys())
                 {
-                    writer.WriteLine("pedia:" + key + ": \"" + pedia.Get(key) + "\"");
+                    writer.WriteLine("pedia:" + key + ": \"" + pedia.Get(key).Replace("\"", "\\\"") + "\"");
                 }
             }
             
@@ -109,7 +109,7 @@ namespace VikDisk.Core
                 
                 foreach (string key in rUi.GetKeys())
                 {
-                    writer.WriteLine("ui:" + key + ": \"" + ui.Get(key) + "\"");
+                    writer.WriteLine("ui:" + key + ": \"" + ui.Get(key).Replace("\"", "\\\"") + "\"");
                 }
             }
         }
