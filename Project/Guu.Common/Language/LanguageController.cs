@@ -14,10 +14,11 @@ namespace Guu.Language
 	public static class LanguageController
 	{
 		// To lock the system before it actually reads the language
+		// This prevents the auto select system from the game from loading files it can't yet access
 		private static bool firstLock = true;
 
 		// The current language to prevent the load for happening every time a scene changes
-		private static MessageDirector.Lang? currLang;
+		private static MessageDirector.Lang? currLang = null;
 
 		/// <summary>
 		/// Sets the translations from the language file for the current language

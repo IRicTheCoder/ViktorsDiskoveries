@@ -198,6 +198,7 @@
     <EmbeddedResource Include="modinfo.json" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Components\UI" />
     <Folder Include="Core\Callbacks\" />
     <Folder Include="Game\Identifiables\Largos\Synergies" />
     <Folder Include="Game\Others\Slime Appearance\" />

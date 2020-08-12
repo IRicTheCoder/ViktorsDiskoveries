@@ -16,6 +16,8 @@ using TMPro;
 
 using UnityEngine.EventSystems;
 
+using Object = System.Object;
+
 namespace VikDisk.Core
 {
 	/// <summary>
@@ -36,8 +38,7 @@ namespace VikDisk.Core
 		internal static void LateSetup()
 		{
 			// LANGUAGE LISTENERS
-			GameContext.Instance.MessageDirector.RegisterBundlesListener(LanguageChange);
-			GameContext.Instance.MessageDirector.RegisterBundlesListener(LanguageHandler.FixLangDisplay);
+			SRGuu.RegisterTranslation(Main.execAssembly, LanguageHandler.FixLangDisplay);
 		}
 
 		// Registers all content to the world
@@ -47,28 +48,23 @@ namespace VikDisk.Core
 			//AreaRegistry.SpawnAreas();
 			//DebugHandler.Build();
 
+			// Fixes the objects on the world
 			GameFixer.FixAtWorldGen();
 
-			// Fixes the objects on the world
-			LanguageHandler.FixLangDisplay(GameContext.Instance.MessageDirector);
+			// Applies fixes for the language and checks translations
+			//LanguageHandler.FixLangDisplay(GameContext.Instance.MessageDirector);
 		}
 
 		// Applies changes to the main menu
 		private static void ApplyMenuChanges(MainMenuUI ui)
 		{
 			LanguageHandler.oldFont = ui.languageDropdown.captionText.font;
-			LanguageHandler.newFont.m_FallbackFontAssetTable = new List<TMP_FontAsset>
+			LanguageHandler.oldFont.m_FallbackFontAssetTable = new List<TMP_FontAsset>()
 			{
-				LanguageHandler.oldFont
+				LanguageHandler.newFont
 			};
-			
-			LanguageHandler.ApplyFontChange(GameContext.Instance.MessageDirector);
-		}
 
-		// When the language changes
-		private static void LanguageChange(MessageDirector dir)
-		{
-			LanguageController.SetTranslations(Main.execAssembly);
+			//LanguageHandler.ApplyFontChange(GameContext.Instance.MessageDirector);
 		}
 	}
 }

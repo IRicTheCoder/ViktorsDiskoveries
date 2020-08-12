@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 
 using JetBrains.Annotations;
 
@@ -23,6 +24,8 @@ namespace VikDisk.Core
         internal static TMP_FontAsset oldFont;
         internal static TMP_FontAsset newFont;
 
+        internal static bool isNewFont = true;
+
         // List of all new languages added by the mod
         private static readonly Dictionary<MessageDirector.Lang, string> LANGUAGES = new Dictionary<MessageDirector.Lang, string>()
         {
@@ -36,7 +39,7 @@ namespace VikDisk.Core
             {MessageDirector.Lang.SV, "Swedish"}, //Svenska 
             {MessageDirector.Lang.PT, "Brazilian Pt"}, // Português-Brasil
             {MessageDirector.Lang.KO, "Korean"}, // 한국어
-            {Enums.Langs.CS, "Czech"}, // Čeština 
+            {Enums.Langs.CS, "Čeština"}, // Čeština 
             {Enums.Langs.PL, "Polish"}, // Polski
             {Enums.Langs.FIL, "Filipino"} // Tagalog
         };
@@ -65,21 +68,66 @@ namespace VikDisk.Core
             if (oldFont == null) return;
             
             ApplyFontChange(dir);
+
+            /*MessageBundle actor = dir.GetBundle("actor");
+            ResourceBundle rActor = actor.GetPrivateField<ResourceBundle>("bundle");
+
+            FileInfo fActor = new FileInfo(Application.dataPath + "/actor.yaml");
+
+            using (StreamWriter writer = fActor.CreateText())
+            {
+                writer.WriteLine("#=====================================");
+                writer.WriteLine("# AUTO GENERATED FROM THE GAME");
+                writer.WriteLine("#=====================================");
+                writer.WriteLine("");
+                
+                foreach (string key in rActor.GetKeys())
+                {
+                    writer.WriteLine("actor:" + key + ": " + actor.Get(key));
+                }
+            }
+            
+            MessageBundle pedia = dir.GetBundle("pedia");
+            ResourceBundle rPedia = pedia.GetPrivateField<ResourceBundle>("bundle");
+
+            FileInfo fPedia = new FileInfo(Application.dataPath + "/pedia.yaml");
+
+            using (StreamWriter writer = fPedia.CreateText())
+            {
+                writer.WriteLine("#=====================================");
+                writer.WriteLine("# AUTO GENERATED FROM THE GAME");
+                writer.WriteLine("#=====================================");
+                writer.WriteLine("");
+                
+                foreach (string key in rPedia.GetKeys())
+                {
+                    writer.WriteLine("pedia:" + key + ": " + pedia.Get(key));
+                }
+            }
+            
+            MessageBundle ui = dir.GetBundle("ui");
+            ResourceBundle rUi = ui.GetPrivateField<ResourceBundle>("bundle");
+
+            FileInfo fUi = new FileInfo(Application.dataPath + "/ui.yaml");
+
+            using (StreamWriter writer = fUi.CreateText())
+            {
+                writer.WriteLine("#=====================================");
+                writer.WriteLine("# AUTO GENERATED FROM THE GAME");
+                writer.WriteLine("#=====================================");
+                writer.WriteLine("");
+                
+                foreach (string key in rUi.GetKeys())
+                {
+                    writer.WriteLine("ui:" + key + ": " + ui.Get(key));
+                }
+            }*/
         }
 
         // Applies the new font to the game
         internal static void ApplyFontChange(MessageDirector dir)
         {
-            if (KANJI_LANGUAGES.Contains(dir.GetCultureLang()))
-            {
-                TMP_Text[] texts = Object.FindObjectsOfType<TMP_Text>();
-                foreach (TMP_Text text in texts) text.font = oldFont;
-            }
-            else
-            {
-                TMP_Text[] texts = Object.FindObjectsOfType<TMP_Text>();
-                foreach (TMP_Text text in texts) text.font = newFont;
-            }
+            isNewFont = !KANJI_LANGUAGES.Contains(dir.GetCultureLang());
         }
     }
 }

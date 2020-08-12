@@ -25,7 +25,7 @@ actor:l.tarr_plort: Tarr Plort
 actor:l.dream_plort: Dream Plort
 
 # Slimes
-actor:l.real_glitch_slime: 'Real' Glitch Slime
+actor:l.real_glitch_slime: \'Real\' Glitch Slime
 
 # Slime Resources
 actor:l.pink_slime_extract_craft: Pink Slime Extract
