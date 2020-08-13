@@ -3,50 +3,50 @@
 #FOOD
 #=====================================
 #Veggies
-"actor:l.dark_ginger_veggie": Dark Ginger
+"actor:l.dark_ginger_veggie": Gengibre Negro
 #Fruits
-"actor:l.glitch_pogo_fruit": Glitch Pogofruit
+"actor:l.glitch_pogo_fruit": Fruta Glitch Pogo
 #Meats
-"actor:l.fire_hen": Fire Hen
-"actor:l.fire_chick": Fire Chick
+"actor:l.fire_hen": Galinha de Fogo
+"actor:l.fire_chick": Pintainho de Fogo
 #Others
-"actor:l.extra_spicy_tofu": Extra Spicy Tofu
+"actor:l.extra_spicy_tofu": Tofu Extra Picante
 #=====================================
 #PLORTS, SLIMES & RESOURCES
 #=====================================
 #Plorts
-"actor:l.real_glitch_plort": Glitch Plort
-"actor:l.tarr_plort": Tarr Plort
-"actor:l.dream_plort": Dream Plort
+"actor:l.real_glitch_plort": Plort Glitch
+"actor:l.tarr_plort": Plort Tarr
+"actor:l.dream_plort": Plort Sonho
 #Slimes
-"actor:l.real_glitch_slime": "'Real' Glitch Slime"
+"actor:l.real_glitch_slime": "Slime Glitch 'Real'"
 #Slime Resources
-"actor:l.pink_slime_extract_craft": Pink Slime Extract
+"actor:l.pink_slime_extract_craft": Extrato de Slime Rosa
 #=====================================
 #DECORATIONS
 #=====================================
 #Echos
-"actor:l.white_echo": White Echo
-"actor:l.rainbow_echo": Rainbow Echo
+"actor:l.white_echo": Echo Branco
+"actor:l.rainbow_echo": Echo Arco-Íris
 #Effies
-"actor:l.glitch_effy": Glitch Effy
-"actor:l.cartoon_stars_effy": Toon Stars Effy
+"actor:l.glitch_effy": Effy Glitch
+"actor:l.cartoon_stars_effy": Effy Estrelas Cartoon
 #Ornaments
-"actor:l.dream_ornament": Dream Ornament
-"actor:l.viktor_ornament": Viktor Ornament
+"actor:l.dream_ornament": Ornamento de Sonho
+"actor:l.viktor_ornament": Ornamento do Viktor
 #=====================================
 #WORLD RELATED
 #=====================================
 #Crates
-"actor:l.glitch_crate": Glitch Crate
+"actor:l.glitch_crate": Caixa Glitch
 #Liquids
-"actor:l.guu_liquid": Slimy Guu
+"actor:l.guu_liquid": Monco Viscoso
 #=====================================
 #MISC
 #=====================================
 #Fashions
-"actor:l.santa_stache_fashion": Santa Stache Fashion
+"actor:l.santa_stache_fashion": Moda Bigode de Natal
 #Toys
-"actor:l.basket_ball_toy": Basket Ball
+"actor:l.basket_ball_toy": Bola de Basket
 #Others
-"actor:l.wonder_ticket": Wonderland Ticket
+"actor:l.wonder_ticket": Bilhete País-das-Maravilhas
