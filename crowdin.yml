@@ -1,0 +1,5 @@
+files:
+  - source: /Project/VikDisk/Resources/Lang/en
+    translation: /Project/VikDisk/Resources/Lang/%two_letters_code%/
+  - source: Project/VikDisk/Resources/Lang/en.yaml
+    translation: Project/VikDisk/Resources/Lang/%two_letters_code%.yaml
