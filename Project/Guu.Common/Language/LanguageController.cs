@@ -5,8 +5,12 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 
+using rail;
+
 using SRML.SR;
 using SRML.Utils;
+
+using UnityEngine;
 
 namespace Guu.Language
 {
@@ -15,6 +19,12 @@ namespace Guu.Language
 	/// </summary>
 	public static class LanguageController
 	{
+		// Resource Bundle Constants
+		private const string GLOBAL_BUNDLE = "global";
+		private const string ACTOR_BUNDLE = "actor";
+		private const string PEDIA_BUNDLE = "pedia";
+		private const string UI_BUNDLE = "ui";
+		
 		// A language fallback for a language added to the game that does not have the right symbol yet (multiple fallbacks
 		// are allowed)
 		private static readonly Dictionary<MessageDirector.Lang, List<string>> LANG_FALLBACK = new Dictionary<MessageDirector.Lang, List<string>>();
@@ -25,6 +35,15 @@ namespace Guu.Language
 
 		// The current language to prevent the load for happening every time a scene changes
 		private static MessageDirector.Lang? currLang;
+		
+		// A list of all custom translations added into the game
+		internal static Dictionary<string, Dictionary<string, string>> translations = new Dictionary<string, Dictionary<string, string>>()
+		{
+			{GLOBAL_BUNDLE, new Dictionary<string, string>()},
+			{ACTOR_BUNDLE, new Dictionary<string, string>()},
+			{PEDIA_BUNDLE, new Dictionary<string, string>()},
+			{UI_BUNDLE, new Dictionary<string, string>()}
+		};
 
 		/// <summary>
 		/// Sets the translations from the language file for the current language
@@ -44,7 +63,7 @@ namespace Guu.Language
 
 			MessageDirector.Lang lang = (MessageDirector.Lang)GameContext.Instance.AutoSaveDirector.ProfileManager.Settings.options.language;
 
-			if (Levels.isMainMenu() || currLang == lang)
+			if (Levels.isSpecialNonAlloc() || (Levels.IsLevel(Levels.WORLD) && !SceneContext.Instance.TimeDirector.HasPauser()) || currLang == lang)
 				return;
 
 			Assembly assembly = yourAssembly ?? ReflectionUtils.GetRelevantAssembly();
@@ -115,7 +134,7 @@ namespace Guu.Language
 						continue;
 
 					string[] args = line.Split(':');
-					TranslationPatcher.AddTranslationKey(args[0], args[1], args[2].TrimStart().Trim('"'));
+					AddTranslation(args[0], args[1], args[2].TrimStart().TrimStart('"').TrimEnd('"'));
 				}
 			}
 		}
@@ -129,6 +148,66 @@ namespace Guu.Language
 		{
 			if (!LANG_FALLBACK.ContainsKey(lang))  LANG_FALLBACK.Add(lang, new List<string>());
 			if (!LANG_FALLBACK[lang].Contains(fallback)) LANG_FALLBACK[lang].Add(fallback);
+		}
+
+		/// <summary>
+		/// Adds a new translation to the provided bundle
+		/// </summary>
+		/// <param name="bundle">Bundle to add to (can be custom)</param>
+		/// <param name="key">Key for the translation</param>
+		/// <param name="value">Value of the translation</param>
+		public static void AddTranslation(string bundle, string key, string value)
+		{
+			if (!translations.ContainsKey(bundle))
+				translations.Add(bundle, new Dictionary<string, string>());
+
+			if (translations[bundle].ContainsKey(key))
+			{
+				Debug.LogWarning($"Translation key '{key}' for bundle '{bundle}' is already taken! Overwriting...");
+				translations[bundle][key] = value;
+			}
+			else
+				translations[bundle].Add(key, value);
+		}
+		
+		/// <summary>
+		/// Adds a new translation to the global bundle
+		/// </summary>
+		/// <param name="key">Key for the translation</param>
+		/// <param name="value">Value of the translation</param>
+		public static void AddGlobalTranslation(string key, string value)
+		{
+			AddTranslation(GLOBAL_BUNDLE, key, value);
+		}
+
+		/// <summary>
+		/// Adds a new translation to the actor bundle
+		/// </summary>
+		/// <param name="key">Key for the translation</param>
+		/// <param name="value">Value of the translation</param>
+		public static void AddActorTranslation(string key, string value)
+		{
+			AddTranslation(ACTOR_BUNDLE, key, value);
+		}
+		
+		/// <summary>
+		/// Adds a new translation to the pedia bundle
+		/// </summary>
+		/// <param name="key">Key for the translation</param>
+		/// <param name="value">Value of the translation</param>
+		public static void AddPediaTranslation(string key, string value)
+		{
+			AddTranslation(PEDIA_BUNDLE, key, value);
+		}
+		
+		/// <summary>
+		/// Adds a new translation to the ui bundle
+		/// </summary>
+		/// <param name="key">Key for the translation</param>
+		/// <param name="value">Value of the translation</param>
+		public static void AddUITranslation(string key, string value)
+		{
+			AddTranslation(PEDIA_BUNDLE, key, value);
 		}
 	}
 }

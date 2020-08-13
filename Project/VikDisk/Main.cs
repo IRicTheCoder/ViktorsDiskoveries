@@ -1,5 +1,8 @@
 using System.Collections.Generic;
 using System.Reflection;
+
+using Guu;
+
 using HarmonyLib;
 using SRML;
 
@@ -21,6 +24,9 @@ namespace VikDisk
 			execAssembly = Assembly.GetExecutingAssembly();
 			HarmonyInstance.PatchAll(execAssembly);
 
+			// Activates Guu services
+			SRGuu.Init();
+			
 			// Sets up the mod
 			VikDisk.SetupMod();
 		}

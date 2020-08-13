@@ -46,6 +46,7 @@
     <Compile Include="Extensions\ObjectExtensions.cs" />
     <Compile Include="Extensions\ScriptableObjectExtensions.cs" />
     <Compile Include="Extensions\SlimeDefinitionExtensions.cs" />
+    <Compile Include="Language\Patchs\LanguagePatch.cs" />
     <Compile Include="SRGuu.cs" />
     <Compile Include="Language\LanguageController.cs" />
     <Compile Include="Modules\ModuleEntry.cs" />

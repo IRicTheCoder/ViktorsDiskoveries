@@ -6,7 +6,6 @@ using Guu.API.Upgrades;
 
 namespace VikDisk.Game
 {
-	[NoRegister]
 	public class UpgradeARGlasses : PlayerUpgrade
 	{
 		public override string Name => "ARGlasses";
