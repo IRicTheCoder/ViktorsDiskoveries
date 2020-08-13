@@ -1,0 +1,3 @@
+files:
+  - source: /Project/VikDisk/Resources/Lang/en
+    translation: /Project/VikDisk/Resources/Lang/%two_letters_code%/%original_file_name%
