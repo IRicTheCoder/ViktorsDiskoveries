@@ -57,11 +57,7 @@ namespace VikDisk.Core
 		private static void ApplyMenuChanges(MainMenuUI ui)
 		{
 			LanguageHandler.oldFont = ui.languageDropdown.captionText.font;
-			LanguageHandler.oldFont.m_FallbackFontAssetTable = new List<TMP_FontAsset>()
-			{
-				LanguageHandler.newFont,
-				LanguageHandler.oldFont
-			};
+			LanguageHandler.oldFont.m_FallbackFontAssetTable.Add(LanguageHandler.newFont);
 		}
 	}
 }

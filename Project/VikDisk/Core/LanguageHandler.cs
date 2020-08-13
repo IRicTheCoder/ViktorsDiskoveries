@@ -25,6 +25,7 @@ namespace VikDisk.Core
         // The fonts to use for the game, the new font is to support special symbols
         internal static TMP_FontAsset oldFont;
         internal static TMP_FontAsset newFont;
+        internal static TMP_FontAsset newFontCJK;
 
         // List of all new languages added by the mod
         private static readonly Dictionary<MessageDirector.Lang, string> LANGUAGES = new Dictionary<MessageDirector.Lang, string>()
@@ -49,6 +50,9 @@ namespace VikDisk.Core
         {
             newFont = TMP_FontAsset.CreateFontAsset(Packs.Global.Get<Font>("CustomFont"));
             newFont.name = "CustomFont";
+            
+            //newFontCJK = TMP_FontAsset.CreateFontAsset(Packs.Global.Get<Font>("CustomFontCJK"));
+            //newFontCJK.name = "CustomFontCJK";
 
             foreach (MessageDirector.Lang lang in LANGUAGES.Keys)
                 TranslationPatcher.AddUITranslation("l.lang_" + lang.ToString().ToLowerInvariant(), LANGUAGES[lang]);
@@ -73,7 +77,7 @@ namespace VikDisk.Core
                 
                 foreach (string key in rActor.GetKeys())
                 {
-                    writer.WriteLine("actor:" + key + ": \"" + actor.Get(key).Replace("\"", "\\\"") + "\"");
+                    writer.WriteLine("actor:" + key + ": \"" + actor.Get(key).Replace("\"", "\\\"").Replace("\n", "\\n") + "\"");
                 }
             }
             
@@ -91,7 +95,7 @@ namespace VikDisk.Core
                 
                 foreach (string key in rPedia.GetKeys())
                 {
-                    writer.WriteLine("pedia:" + key + ": \"" + pedia.Get(key).Replace("\"", "\\\"") + "\"");
+                    writer.WriteLine("pedia:" + key + ": \"" + pedia.Get(key).Replace("\"", "\\\"").Replace("\n", "\\n") + "\"");
                 }
             }
             
@@ -109,7 +113,7 @@ namespace VikDisk.Core
                 
                 foreach (string key in rUi.GetKeys())
                 {
-                    writer.WriteLine("ui:" + key + ": \"" + ui.Get(key).Replace("\"", "\\\"") + "\"");
+                    writer.WriteLine("ui:" + key + ": \"" + ui.Get(key).Replace("\"", "\\\"").Replace("\n", "\\n") + "\"");
                 }
             }
         }

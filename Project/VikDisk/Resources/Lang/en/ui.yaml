@@ -192,8 +192,7 @@ ui:m.desc.gamemode_time_limit: "A mad sprint for the most newbucks you can earn 
 ui:m.gamemode_time_limit_v2: "Rush"
 ui:m.gamemode_time_limit_v2.long: "Rush Mode"
 ui:m.desc.gamemode_time_limit_v2: "A race against the clock to earn as many newbucks as possible!"
-ui:m.desc.gamemode_time_limit_v2_high_score: "A race against the clock to earn as many newbucks as possible!
-High Score: {0}"
+ui:m.desc.gamemode_time_limit_v2_high_score: "A race against the clock to earn as many newbucks as possible!\nHigh Score: {0}"
 ui:b.resume: "Resume"
 ui:b.restart: "Restart"
 ui:b.screenshot: "Screenshot"
@@ -322,13 +321,11 @@ ui:l.deadzone: "Dead Zone"
 ui:l.invert_gamepad_look_y: "Invert Look Y Axis"
 ui:l.invert_mouse_look_y: "Invert Mouse Look Y Axis"
 ui:l.disable_mouse_look_smooth: "Disable Mouse Look Smooth"
-ui:l.disable_gamepad: "Disable Gamepad/Joystick Input
-(May fix some issues with camera spin)"
+ui:l.disable_gamepad: "Disable Gamepad/Joystick Input\n(May fix some issues with camera spin)"
 ui:m.gamepad_button: "{0}: {1}"
 ui:m.gamepad_button_action_only: "{0}"
 ui:m.gamepad_button_pause: "{0}: Pause"
-ui:m.gamepad_stick: "{0}: {1}
-{3}: {2}"
+ui:m.gamepad_stick: "{0}: {1}\n{3}: {2}"
 ui:l.gamepad_left_stick_press_action: "Push"
 ui:l.gamepad_right_stick_press_action: "Push"
 ui:l.move: "Move"
@@ -360,8 +357,7 @@ ui:l.time_hours_mins_unset: "--:--"
 ui:l.time_days_hours_mins: "{0}:{1}:{2}"
 ui:l.exchange_progress: "{0}/{1}"
 ui:l.no_offers_available: "Range Exchange Offline..."
-ui:l.select_offer: "Select Range
-Exchange Request"
+ui:l.select_offer: "Select Range\nExchange Request"
 ui:l.request: "Trade Me:"
 ui:l.receive: "And Receive:"
 ui:l.exchange_directions: "Shoot the requested items into the depositor to complete the trade."
@@ -385,13 +381,9 @@ ui:e.fallback_failed: "We were unable to load a valid autosave for this game."
 ui:e.yes_button: "Yes"
 ui:e.no_button: "No"
 ui:e.ok_button: "Ok"
-ui:e.file_load_failed.dlc_purged: "This save file is associated with DLC not found in system storage. Loading this save file without first downloading the DLC may result in loss of items within the game.
-
-Please download the following DLC before loading:
-{0}"
+ui:e.file_load_failed.dlc_purged: "This save file is associated with DLC not found in system storage. Loading this save file without first downloading the DLC may result in loss of items within the game.\n\nPlease download the following DLC before loading:\n{0}"
 ui:e.file_load_failed.dlc_purged.load_anyway_button: "Load Anyway"
-ui:e.please_contact_support: "Please Contact Support at
-support@monomipark.com"
+ui:e.please_contact_support: "Please Contact Support at\nsupport@monomipark.com"
 ui:e.no_buffered_gif: "No video has been buffered to save as a GIF."
 ui:b.take_screenshot: "Take Screenshot"
 ui:m.slime_rancher: "Slime Rancher"
@@ -453,15 +445,9 @@ ui:l.xbox_faq_a_achievements: "Xbox achievements will be enabled after Slime Ran
 ui:l.xbox_faq_q_versions: "Are the PC and Xbox One versions of Slime Rancher the same?"
 ui:l.xbox_faq_a_versions: "Yes, our aim is to keep both versions in sync. However, at any given time there may be a few days difference during Xbox build certification."
 ui:l.xbox_faq_q_whats_next: "What’s next for Slime Rancher?"
-ui:l.xbox_faq_a_whats_next: "We’ve got a lot of great content in development, including new zones to explore, slimes to wrangle, and brand-new features like Slime Science! Learn more on our public roadmap:
-slimerancher.com/roadmap"
+ui:l.xbox_faq_a_whats_next: "We’ve got a lot of great content in development, including new zones to explore, slimes to wrangle, and brand-new features like Slime Science! Learn more on our public roadmap:\nslimerancher.com/roadmap"
 ui:l.demo_end_title: "This trial is over but the adventure has just begun!"
-ui:l.demo_end_message: "Purchase the full version of Slime Rancher to keep your progress and experience these awesome features:
-
-- Boom slimes, honey slimes, rad slimes, hunter slimes, and many more!
-- A giant, open world filled with secrets to uncover!
-- Build strange gadgets and helpful tools with Slime Science!
-- Uncover the mysteries of the Ancient Ruins and what lies beyond!"
+ui:l.demo_end_message: "Purchase the full version of Slime Rancher to keep your progress and experience these awesome features:\n\n- Boom slimes, honey slimes, rad slimes, hunter slimes, and many more!\n- A giant, open world filled with secrets to uncover!\n- Build strange gadgets and helpful tools with Slime Science!\n- Uncover the mysteries of the Ancient Ruins and what lies beyond!"
 ui:b.demo_end_visit_store_page: "Visit Store Page"
 ui:b.demo_end_back_to_main_menu: "Back to Main Menu"
 ui:t.place_gadget: "Install Gadget"
@@ -526,8 +512,7 @@ ui:m.drone.destination.name.corral: "Corrals"
 ui:m.drone.destination.name.garden: "Gardens"
 ui:m.drone.destination.name.silo: "Silos"
 ui:m.drone.destination.name.auto_feeder: "Auto-Feeders"
-ui:m.drone.destination.name.incinerator: "Incinerators
-(Make Ash)"
+ui:m.drone.destination.name.incinerator: "Incinerators\n(Make Ash)"
 ui:m.drone.destination.name.plort_market: "Plort Market"
 ui:m.drone.destination.name.market_link: "Market Link"
 ui:m.drone.destination.name.refinery: "Refinery"
@@ -673,9 +658,7 @@ ui:b.appearance_activated: "Activated!"
 ui:b.appearance_change_style: "Change Style"
 ui:b.appearance_tutorial_got_it: "Got it!"
 ui:b.appearance_info: "Info"
-ui:m.appearance_tutorial_body: "Give your slimes a fresh, new look by discovering secret styles hidden in special treasure pods throughout the Far, Far Range. Once unlocked, you can manage which secret styles you wish to show on each slime.
-
-Secret styles are purely cosmetic, and won't change a slime's diet, or the types of plorts they produce."
+ui:m.appearance_tutorial_body: "Give your slimes a fresh, new look by discovering secret styles hidden in special treasure pods throughout the Far, Far Range. Once unlocked, you can manage which secret styles you wish to show on each slime.\n\nSecret styles are purely cosmetic, and won't change a slime's diet, or the types of plorts they produce."
 ui:m.appearances.popup.title: "Secret Style unlocked!"
 ui:m.appearances.popup.description: "Visit the ranch house to manage secret styles!"
 ui:m.instrument.popup.title: "New instrument unlocked!"

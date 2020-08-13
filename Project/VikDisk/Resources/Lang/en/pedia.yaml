@@ -15,186 +15,55 @@ pedia:m.how_to_use.locked: "???"
 pedia:m.resource_type.locked: "???"
 pedia:t.basics: "Basic Player Controls"
 pedia:m.intro.basics: "Get a move on."
-pedia:m.instructions.basics: "<b>W</b>: Move forward 
-<b>A</b>: Move left 
-<b>S</b>: Move backward 
-<b>D</b>: Move right 
-
-<b>Shift</b>: Sprint (uses energy) 
-
-<b>Space</b>: Jump (hold to use jetpack, if available) 
-
-<b>E</b>: Interact (when prompted)"
-pedia:m.instructions.gamepad.basics: "<b>Left Stick</b>: Move
-
-<b>Hold Left Stick</b>: Sprint (uses energy) 
-
-<b>A</b>: Jump (hold to use jetpack, if available) 
-
-<b>X</b>: Interact (when prompted)"
-pedia:m.instructions.ps4.basics: "<b>Left Stick</b>: Move
-
-<b>L3</b>: Sprint (uses energy) 
-
-<b>cross button</b>: Jump (hold to use jetpack, if available) 
-
-<b>square button</b>: Interact (when prompted)"
+pedia:m.instructions.basics: "<b>W</b>: Move forward \n<b>A</b>: Move left \n<b>S</b>: Move backward \n<b>D</b>: Move right \n\n<b>Shift</b>: Sprint (uses energy) \n\n<b>Space</b>: Jump (hold to use jetpack, if available) \n\n<b>E</b>: Interact (when prompted)"
+pedia:m.instructions.gamepad.basics: "<b>Left Stick</b>: Move\n\n<b>Hold Left Stick</b>: Sprint (uses energy) \n\n<b>A</b>: Jump (hold to use jetpack, if available) \n\n<b>X</b>: Interact (when prompted)"
+pedia:m.instructions.ps4.basics: "<b>Left Stick</b>: Move\n\n<b>L3</b>: Sprint (uses energy) \n\n<b>cross button</b>: Jump (hold to use jetpack, if available) \n\n<b>square button</b>: Interact (when prompted)"
 pedia:m.desc.basics: ""
 pedia:t.vacing: "Vacpack: Vac-ing and Shooting"
 pedia:m.intro.vacing: "Your first step to becoming a master rancher."
-pedia:m.instructions.vacing: "<b>Right Mouse Button</b>: Vacuum slimes or other objects 
-
-Larger objects will be held at the nozzle and can be dropped by releasing vac or fired by pressing shoot. 
-
-<b>Left Mouse Button</b>: Shoot slime or other object from the selected vac tank 
-
-Hold the shoot key to continuously shoot."
-pedia:m.instructions.gamepad.vacing: "<b>Left Trigger</b>: Vacuum slimes or other objects 
-
-Larger objects will be held at the nozzle and can be dropped by releasing vac or fired by pressing shoot. 
-
-<b>Right Trigger</b>: Shoot slime or other object from the selected vac tank 
-
-Hold the shoot button to continuously shoot."
-pedia:m.instructions.ps4.vacing: "<b>L2</b>: Vacuum slimes or other objects 
-
-Larger objects will be held at the nozzle and can be dropped by releasing vac or fired by pressing shoot. 
-
-<b>R2</b>: Shoot slime or other object from the selected vac tank 
-
-Hold the shoot button to continuously shoot."
+pedia:m.instructions.vacing: "<b>Right Mouse Button</b>: Vacuum slimes or other objects \n\nLarger objects will be held at the nozzle and can be dropped by releasing vac or fired by pressing shoot. \n\n<b>Left Mouse Button</b>: Shoot slime or other object from the selected vac tank \n\nHold the shoot key to continuously shoot."
+pedia:m.instructions.gamepad.vacing: "<b>Left Trigger</b>: Vacuum slimes or other objects \n\nLarger objects will be held at the nozzle and can be dropped by releasing vac or fired by pressing shoot. \n\n<b>Right Trigger</b>: Shoot slime or other object from the selected vac tank \n\nHold the shoot button to continuously shoot."
+pedia:m.instructions.ps4.vacing: "<b>L2</b>: Vacuum slimes or other objects \n\nLarger objects will be held at the nozzle and can be dropped by releasing vac or fired by pressing shoot. \n\n<b>R2</b>: Shoot slime or other object from the selected vac tank \n\nHold the shoot button to continuously shoot."
 pedia:m.desc.vacing: ""
 pedia:t.capturetanks: "Vacpack: Vac Tanks"
 pedia:m.intro.capturetanks: "Nanotechnology makes everything possible, and everything smaller."
-pedia:m.instructions.capturetanks: "Vac tanks allow you to easily collect, sort, and transport slimes and other resources. 
-
-<b>1, 2, 3, 4, 5</b>: Select vac tank 
-<b>Mouse Wheel</b>: Cycle through vac tanks"
-pedia:m.instructions.gamepad.capturetanks: "Vac tanks allow you to easily collect, sort, and transport slimes and other resources. 
-
-<b>Left Bumper/Right Bumper</b>: Cycle through vac tanks"
-pedia:m.instructions.ps4.capturetanks: "Vac tanks allow you to easily collect, sort, and transport slimes and other resources. 
-
-<b>L1/R1</b>: Cycle through vac tanks"
+pedia:m.instructions.capturetanks: "Vac tanks allow you to easily collect, sort, and transport slimes and other resources. \n\n<b>1, 2, 3, 4, 5</b>: Select vac tank \n<b>Mouse Wheel</b>: Cycle through vac tanks"
+pedia:m.instructions.gamepad.capturetanks: "Vac tanks allow you to easily collect, sort, and transport slimes and other resources. \n\n<b>Left Bumper/Right Bumper</b>: Cycle through vac tanks"
+pedia:m.instructions.ps4.capturetanks: "Vac tanks allow you to easily collect, sort, and transport slimes and other resources. \n\n<b>L1/R1</b>: Cycle through vac tanks"
 pedia:m.desc.capturetanks: ""
 pedia:t.energy: "Vacpack: Health and Energy"
 pedia:m.intro.energy: "Everything has a cost."
-pedia:m.instructions.energy: "Monitor your health and energy levels with the Health Meter and Energy Meter on the lower left of the screen. 
-
-Health will be automatically restored after not taking damage for a period of time. 
-
-Energy will be automatically restored after not using energy for a period of time."
+pedia:m.instructions.energy: "Monitor your health and energy levels with the Health Meter and Energy Meter on the lower left of the screen. \n\nHealth will be automatically restored after not taking damage for a period of time. \n\nEnergy will be automatically restored after not using energy for a period of time."
 pedia:m.desc.energy: ""
 pedia:t.corralling: "Ranching Basics: Corralling Slimes"
 pedia:m.intro.corralling: "You can contain them, but you can't stop the wiggle."
-pedia:m.instructions.corralling: "Shoot slimes through corral walls to contain them and make them easier to manage. But remember: hungry slimes will always find a way out of their corrals! 
-
-<b>Mouse Wheel</b>: Select vac tank 
-<b>Left Mouse Button</b>: Shoot"
-pedia:m.instructions.gamepad.corralling: "Shoot slimes through corral walls to contain them and make them easier to manage. But remember: hungry slimes will always find a way out of their corrals! 
-
-<b>Left Bumper/Right Bumper</b>: Select vac tank 
-<b>Right Trigger</b>: Shoot"
-pedia:m.instructions.ps4.corralling: "Shoot slimes through corral walls to contain them and make them easier to manage. But remember: hungry slimes will always find a way out of their corrals! 
-
-<b>L1/R1</b>: Select vac tank 
-<b>R2</b>: Shoot"
+pedia:m.instructions.corralling: "Shoot slimes through corral walls to contain them and make them easier to manage. But remember: hungry slimes will always find a way out of their corrals! \n\n<b>Mouse Wheel</b>: Select vac tank \n<b>Left Mouse Button</b>: Shoot"
+pedia:m.instructions.gamepad.corralling: "Shoot slimes through corral walls to contain them and make them easier to manage. But remember: hungry slimes will always find a way out of their corrals! \n\n<b>Left Bumper/Right Bumper</b>: Select vac tank \n<b>Right Trigger</b>: Shoot"
+pedia:m.instructions.ps4.corralling: "Shoot slimes through corral walls to contain them and make them easier to manage. But remember: hungry slimes will always find a way out of their corrals! \n\n<b>L1/R1</b>: Select vac tank \n<b>R2</b>: Shoot"
 pedia:m.desc.corralling: ""
 pedia:t.feeding: "Ranching Basics: Feeding Slimes"
 pedia:m.intro.feeding: "A well-fed slime makes for a happy (and wealthy) rancher."
-pedia:m.instructions.feeding: "Each slime has a particular diet. Most prefer either fruit, veggies, or meat. When a slime eats, it produces a plort. 
-
-However, most slimes have a favorite food. When a slime eats its favorite food it produces double plorts! 
-
-<b>Mouse Wheel</b>: Select vac tank 
-<b>Left Mouse Button</b>: Shoot"
-pedia:m.instructions.gamepad.feeding: "Each slime has a particular diet. Most prefer either fruit, veggies, or meat. When a slime eats, it produces a plort. 
-
-However, most slimes have a favorite food. When a slime eats its favorite food it produces double plorts! 
-
-<b>Left Bumper/Right Bumper</b>: Select vac tank 
-<b>Right Trigger</b>: Shoot"
-pedia:m.instructions.ps4.feeding: "Each slime has a particular diet. Most prefer either fruit, veggies, or meat. When a slime eats, it produces a plort. 
-
-However, most slimes have a favorite food. When a slime eats its favorite food it produces double plorts! 
-
-<b>L1/R1</b>: Select vac tank 
-<b>R2</b>: Shoot"
+pedia:m.instructions.feeding: "Each slime has a particular diet. Most prefer either fruit, veggies, or meat. When a slime eats, it produces a plort. \n\nHowever, most slimes have a favorite food. When a slime eats its favorite food it produces double plorts! \n\n<b>Mouse Wheel</b>: Select vac tank \n<b>Left Mouse Button</b>: Shoot"
+pedia:m.instructions.gamepad.feeding: "Each slime has a particular diet. Most prefer either fruit, veggies, or meat. When a slime eats, it produces a plort. \n\nHowever, most slimes have a favorite food. When a slime eats its favorite food it produces double plorts! \n\n<b>Left Bumper/Right Bumper</b>: Select vac tank \n<b>Right Trigger</b>: Shoot"
+pedia:m.instructions.ps4.feeding: "Each slime has a particular diet. Most prefer either fruit, veggies, or meat. When a slime eats, it produces a plort. \n\nHowever, most slimes have a favorite food. When a slime eats its favorite food it produces double plorts! \n\n<b>L1/R1</b>: Select vac tank \n<b>R2</b>: Shoot"
 pedia:m.desc.feeding: ""
 pedia:t.plorts: "Ranching Basics: Plorts and the Plort Market"
 pedia:m.intro.plorts: "SELL! SELL! SELL!"
-pedia:m.instructions.plorts: "Vac up plorts and shoot them into the Plort Market to get newbucks. Plort values fluctuate daily depending on the types of plorts you've recently sold. 
-
-<b>Mouse Wheel</b>: Select vac tank 
-<b>Left Mouse Button</b>: Shoot"
-pedia:m.instructions.gamepad.plorts: "Vac up plorts and shoot them into the Plort Market to get newbucks. Plort values fluctuate daily depending on the types of plorts you've recently sold. 
-
-<b>Left Bumper/Right Bumper</b>: Select vac tank 
-<b>Right Trigger</b>: Shoot"
-pedia:m.instructions.ps4.plorts: "Vac up plorts and shoot them into the Plort Market to get newbucks. Plort values fluctuate daily depending on the types of plorts you've recently sold. 
-
-<b>L1/R1</b>: Select vac tank 
-<b>R2</b>: Shoot"
+pedia:m.instructions.plorts: "Vac up plorts and shoot them into the Plort Market to get newbucks. Plort values fluctuate daily depending on the types of plorts you've recently sold. \n\n<b>Mouse Wheel</b>: Select vac tank \n<b>Left Mouse Button</b>: Shoot"
+pedia:m.instructions.gamepad.plorts: "Vac up plorts and shoot them into the Plort Market to get newbucks. Plort values fluctuate daily depending on the types of plorts you've recently sold. \n\n<b>Left Bumper/Right Bumper</b>: Select vac tank \n<b>Right Trigger</b>: Shoot"
+pedia:m.instructions.ps4.plorts: "Vac up plorts and shoot them into the Plort Market to get newbucks. Plort values fluctuate daily depending on the types of plorts you've recently sold. \n\n<b>L1/R1</b>: Select vac tank \n<b>R2</b>: Shoot"
 pedia:m.desc.plorts: ""
 pedia:t.ssbasics: "Slime Science: Basics"
 pedia:m.intro.ssbasics: "Definitely weird."
-pedia:m.instructions.ssbasics: "Slime Science allows you to use plorts and other resources to make fantastic gadgets that you can install all over the world. 
-
-Slime Science basics: 
-- Shoot plorts and resources into the Refinery (cannot be withdrawn once deposited) 
-- Buy new blueprints or discover them in treasure pods 
-- Use the Fabricator to make new gadgets 
-- <b>T</b>: Enter Gadget Mode 
-- Place gadgets in Gadget Mode 
-- <b>Left Mouse Button/Right Mouse Button</b>: Rotate gadget (when in Gadget Mode) 
-
-Visit the Slime Science section of the Slimepedia for more details on Slime Science."
-pedia:m.instructions.gamepad.ssbasics: "Slime Science allows you to use plorts and other resources to make fantastic gadgets that you can install all over the world. 
-
-Slime Science basics: 
-- Shoot plorts and resources into the Refinery (cannot be withdrawn once deposited) 
-- Buy new blueprints or discover them in treasure pods 
-- Use the Fabricator to make new gadgets 
-- <b>Down</b>: Enter Gadget Mode 
-- Place gadgets in Gadget Mode 
-- <b>Left Trigger/Right Trigger</b>: Rotate gadget (when in Gadget Mode) 
-
-Visit the Slime Science section of the Slimepedia for more details on Slime Science."
-pedia:m.instructions.ps4.ssbasics: "Slime Science allows you to use plorts and other resources to make fantastic gadgets that you can install all over the world. 
-
-Slime Science basics: 
-- Shoot plorts and resources into the Refinery (cannot be withdrawn once deposited) 
-- Buy new blueprints or discover them in treasure pods 
-- Use the Fabricator to make new gadgets 
-- <b>down button</b>: Enter Gadget Mode 
-- Place gadgets in Gadget Mode 
-- <b>L2/R2</b>: Rotate gadget (when in Gadget Mode) 
-
-Visit the Slime Science section of the Slimepedia for more details on Slime Science."
+pedia:m.instructions.ssbasics: "Slime Science allows you to use plorts and other resources to make fantastic gadgets that you can install all over the world. \n\nSlime Science basics: \n- Shoot plorts and resources into the Refinery (cannot be withdrawn once deposited) \n- Buy new blueprints or discover them in treasure pods \n- Use the Fabricator to make new gadgets \n- <b>T</b>: Enter Gadget Mode \n- Place gadgets in Gadget Mode \n- <b>Left Mouse Button/Right Mouse Button</b>: Rotate gadget (when in Gadget Mode) \n\nVisit the Slime Science section of the Slimepedia for more details on Slime Science."
+pedia:m.instructions.gamepad.ssbasics: "Slime Science allows you to use plorts and other resources to make fantastic gadgets that you can install all over the world. \n\nSlime Science basics: \n- Shoot plorts and resources into the Refinery (cannot be withdrawn once deposited) \n- Buy new blueprints or discover them in treasure pods \n- Use the Fabricator to make new gadgets \n- <b>Down</b>: Enter Gadget Mode \n- Place gadgets in Gadget Mode \n- <b>Left Trigger/Right Trigger</b>: Rotate gadget (when in Gadget Mode) \n\nVisit the Slime Science section of the Slimepedia for more details on Slime Science."
+pedia:m.instructions.ps4.ssbasics: "Slime Science allows you to use plorts and other resources to make fantastic gadgets that you can install all over the world. \n\nSlime Science basics: \n- Shoot plorts and resources into the Refinery (cannot be withdrawn once deposited) \n- Buy new blueprints or discover them in treasure pods \n- Use the Fabricator to make new gadgets \n- <b>down button</b>: Enter Gadget Mode \n- Place gadgets in Gadget Mode \n- <b>L2/R2</b>: Rotate gadget (when in Gadget Mode) \n\nVisit the Slime Science section of the Slimepedia for more details on Slime Science."
 pedia:m.desc.ssbasics: ""
 pedia:t.gadgetmode: "Slime Science: Gadget Mode"
 pedia:m.intro.gadgetmode: "A more scientific perspective."
-pedia:m.instructions.gadgetmode: "In Gadget Mode you can see all available build sites where you can install gadgets. 
-
-<b>T</b>: Toggle Gadget Mode 
-<b>Left Mouse Button</b>: Rotate gadget clockwise 
-<b>Right Mouse Button</b>: Rotate gadget counter-clockwise 
-
-NOTE: Your vacpack cannot vac or shoot while in Gadget Mode."
-pedia:m.instructions.gamepad.gadgetmode: "In Gadget Mode you can see all available build sites where you can install gadgets. 
-
-<b>Down</b>: Toggle Gadget Mode 
-<b>Left Trigger</b>: Rotate gadget clockwise 
-<b>Right Trigger</b>: Rotate gadget counter-clockwise 
-
-NOTE: Your vacpack cannot vac or shoot while in Gadget Mode."
-pedia:m.instructions.ps4.gadgetmode: "In Gadget Mode you can see all available build sites where you can install gadgets. 
-
-<b>down button</b>: Toggle Gadget Mode 
-<b>L2</b>: Rotate gadget clockwise 
-<b>R2</b>: Rotate gadget counter-clockwise 
-
-NOTE: Your vacpack cannot vac or shoot while in Gadget Mode."
+pedia:m.instructions.gadgetmode: "In Gadget Mode you can see all available build sites where you can install gadgets. \n\n<b>T</b>: Toggle Gadget Mode \n<b>Left Mouse Button</b>: Rotate gadget clockwise \n<b>Right Mouse Button</b>: Rotate gadget counter-clockwise \n\nNOTE: Your vacpack cannot vac or shoot while in Gadget Mode."
+pedia:m.instructions.gamepad.gadgetmode: "In Gadget Mode you can see all available build sites where you can install gadgets. \n\n<b>Down</b>: Toggle Gadget Mode \n<b>Left Trigger</b>: Rotate gadget clockwise \n<b>Right Trigger</b>: Rotate gadget counter-clockwise \n\nNOTE: Your vacpack cannot vac or shoot while in Gadget Mode."
+pedia:m.instructions.ps4.gadgetmode: "In Gadget Mode you can see all available build sites where you can install gadgets. \n\n<b>down button</b>: Toggle Gadget Mode \n<b>L2</b>: Rotate gadget clockwise \n<b>R2</b>: Rotate gadget counter-clockwise \n\nNOTE: Your vacpack cannot vac or shoot while in Gadget Mode."
 pedia:m.desc.gadgetmode: ""
 pedia:t.pink_slime: "Pink Slime"
 pedia:m.intro.pink_slime: "Their coral hue is scientifically proven to be the color of cheer."
@@ -249,27 +118,15 @@ pedia:t.hunter_slime: "Hunter Slime"
 pedia:m.intro.hunter_slime: "Nevermind the rabbit, have you seen any chickens?"
 pedia:m.diet.hunter_slime: "Meat"
 pedia:m.favorite.hunter_slime: "Roostro"
-pedia:m.slimeology.hunter_slime: "The hunter slime is the wild cousin of the tabby slime. A much more capable creature than the playful tabbies, the hunter slime excels at stalking the chickens of the Far, Far Range.
-
-A hunter slime's slimological makeup allows for a natural cloaking ability that renders it almost completely invisible. Their only tell is in their giant, almond eyes, which can often be seen hovering in the dark. This effect is often described by unsuspecting ranchers as 'aaaahhhhHHH!'"
-pedia:m.risks.hunter_slime: "A hunter slime has keen senses and can detect its prey from great distances. This makes finding a good location for their corrals challenging.
-
-Additionally, the wild nature of the hunter is also passed on to any largos formed from its plorts. A newly created hunter largo will always be feral! A prepared rancher knows that breeding hunter largos should always be done slowly, with a few chickens on hand to calm them down."
-pedia:m.plortonomics.hunter_slime: "Amazingly, a serum can be made from hunter slime plorts that can actually render a person invisible! The effect only lasts for about a day, but this serum is nonetheless incredibly popular back on Earth as many people find its effects very soothing.
-
-Sometimes you feel like you just want to disappear for a while. But then about a day goes by and you realize that not only did you miss being seen, but others missed seeing you too."
+pedia:m.slimeology.hunter_slime: "The hunter slime is the wild cousin of the tabby slime. A much more capable creature than the playful tabbies, the hunter slime excels at stalking the chickens of the Far, Far Range.\n\nA hunter slime's slimological makeup allows for a natural cloaking ability that renders it almost completely invisible. Their only tell is in their giant, almond eyes, which can often be seen hovering in the dark. This effect is often described by unsuspecting ranchers as 'aaaahhhhHHH!'"
+pedia:m.risks.hunter_slime: "A hunter slime has keen senses and can detect its prey from great distances. This makes finding a good location for their corrals challenging.\n\nAdditionally, the wild nature of the hunter is also passed on to any largos formed from its plorts. A newly created hunter largo will always be feral! A prepared rancher knows that breeding hunter largos should always be done slowly, with a few chickens on hand to calm them down."
+pedia:m.plortonomics.hunter_slime: "Amazingly, a serum can be made from hunter slime plorts that can actually render a person invisible! The effect only lasts for about a day, but this serum is nonetheless incredibly popular back on Earth as many people find its effects very soothing.\n\nSometimes you feel like you just want to disappear for a while. But then about a day goes by and you realize that not only did you miss being seen, but others missed seeing you too."
 pedia:t.puddle_slime: "Puddle Slime"
 pedia:m.intro.puddle_slime: "Keep one in your boot and you'll always stay cool. But it's weird."
 pedia:m.diet.puddle_slime: "Water"
 pedia:m.favorite.puddle_slime: "(none)"
-pedia:m.slimeology.puddle_slime: "Puddle slimes are a rare species of slime that live in fresh water pools found on the range. These slimes don't eat fruits, veggies, or meat like most other slimes. Instead, puddle slimes absorb water into their bodies while they sit on the surface of a pool.
-
-Puddle slimes need fresh water to survive and will quickly evaporate if left on any other surface for too long."
-pedia:m.risks.puddle_slime: "Puddle slimes aren't risky to manage, they just require a fair bit of maintenance. A rancher needs a pool of fresh water, like a pond, available for a puddle slime and its plorts to sit in as they will evaporate if away from water.
-
-Finally, puddle slimes are exceptionally shy and will not produce plorts if they are in close proximity to more than 3 other slimes.
-
-Overall, a puddle slime is a better fit for a more experienced rancher, not one still wet behind the ears."
+pedia:m.slimeology.puddle_slime: "Puddle slimes are a rare species of slime that live in fresh water pools found on the range. These slimes don't eat fruits, veggies, or meat like most other slimes. Instead, puddle slimes absorb water into their bodies while they sit on the surface of a pool.\n\nPuddle slimes need fresh water to survive and will quickly evaporate if left on any other surface for too long."
+pedia:m.risks.puddle_slime: "Puddle slimes aren't risky to manage, they just require a fair bit of maintenance. A rancher needs a pool of fresh water, like a pond, available for a puddle slime and its plorts to sit in as they will evaporate if away from water.\n\nFinally, puddle slimes are exceptionally shy and will not produce plorts if they are in close proximity to more than 3 other slimes.\n\nOverall, a puddle slime is a better fit for a more experienced rancher, not one still wet behind the ears."
 pedia:m.plortonomics.puddle_slime: "Puddle plorts are made almost entirely from an incredible hydro compound known by chemists across the galaxy as H2Ohhhhh. This compound is used to create an absurdly expensive brand of bottled drinking water that is sought after by the elite back on Earth. While some people argue that there is little difference in taste between it and tap water, those people seriously are not getting it."
 pedia:t.crystal_slime: "Crystal Slime"
 pedia:m.intro.crystal_slime: "It's as clear as shiny, transparent rocks that these slimes are dangerous."
@@ -289,71 +146,43 @@ pedia:t.fire_slime: "Fire Slime"
 pedia:m.intro.fire_slime: "Like a little campfire, except that it moves and it's a slime."
 pedia:m.diet.fire_slime: "Ash"
 pedia:m.favorite.fire_slime: "(none)"
-pedia:m.slimeology.fire_slime: "Fire slimes are a rare breed of slime that lives on ash. Fire slimes will eat just about any food, but not without it being burned into ash first. The only way to feed a fire slime is to use an incinerator with an ash trough upgrade.
-
-Fire slimes need ash to survive and will quickly snuff out if left on any other surface for too long. When keeping fire slimes in an ash trough, simply burn any food item to produce some ash and fill the trough."
+pedia:m.slimeology.fire_slime: "Fire slimes are a rare breed of slime that lives on ash. Fire slimes will eat just about any food, but not without it being burned into ash first. The only way to feed a fire slime is to use an incinerator with an ash trough upgrade.\n\nFire slimes need ash to survive and will quickly snuff out if left on any other surface for too long. When keeping fire slimes in an ash trough, simply burn any food item to produce some ash and fill the trough."
 pedia:m.risks.fire_slime: "A fire slime's naturally burning state makes them bad companions for other slimes as their fiery touch will send a slime flying. Additionally, fire slimes and their plorts need to be kept in an ash trough under an incinerator or they'll quickly snuff out. If you need to deal with fire slimes directly, a splash of fresh water will put out their fires for a short while."
-pedia:m.plortonomics.fire_slime: "Fire plorts are used in the developing world on Earth to keep stoves and fireplaces burning. Thanks to fire plorts, warm hands and hot food is a possibility for millions of people who otherwise would not have access to such luxuries.
-
-A rancher won't get rich selling fire plorts, and certainly managing them can be a dangerous endeavour, but they should know that the sale of each helps those in need. Now and far into the future, the little noble actions of every individual help us move forward as a people. That much will never change."
+pedia:m.plortonomics.fire_slime: "Fire plorts are used in the developing world on Earth to keep stoves and fireplaces burning. Thanks to fire plorts, warm hands and hot food is a possibility for millions of people who otherwise would not have access to such luxuries.\n\nA rancher won't get rich selling fire plorts, and certainly managing them can be a dangerous endeavour, but they should know that the sale of each helps those in need. Now and far into the future, the little noble actions of every individual help us move forward as a people. That much will never change."
 pedia:t.dervish_slime: "Dervish Slime"
 pedia:m.intro.dervish_slime: "Twists and turns all day and spirals all night."
 pedia:m.diet.dervish_slime: "Fruit"
 pedia:m.favorite.dervish_slime: "Prickle Pear"
-pedia:m.slimeology.dervish_slime: "A dervish slime is a swirling, whirling bundle of energy in slimy form. Dervish slimes are commonly found in the Glass Desert, cruising across its dusty dunes at high speed atop little whirlwinds.
-
-One thing is for certain: wherever the dervish slime needs to go, it gets there in a hurry."
-pedia:m.risks.dervish_slime: "Dervish slimes can cause total chaos on a ranch if not cared for properly. In addition to frequently riding atop whirlwinds at high speed and collecting objects along the way, a highly agitated dervish slime can produce giant cyclones of air that vacuum up and toss about anything they touch.
-
-When cyclones are roaring across your ranch there's little you can do other than brace for the chaos that will soon follow!"
+pedia:m.slimeology.dervish_slime: "A dervish slime is a swirling, whirling bundle of energy in slimy form. Dervish slimes are commonly found in the Glass Desert, cruising across its dusty dunes at high speed atop little whirlwinds.\n\nOne thing is for certain: wherever the dervish slime needs to go, it gets there in a hurry."
+pedia:m.risks.dervish_slime: "Dervish slimes can cause total chaos on a ranch if not cared for properly. In addition to frequently riding atop whirlwinds at high speed and collecting objects along the way, a highly agitated dervish slime can produce giant cyclones of air that vacuum up and toss about anything they touch.\n\nWhen cyclones are roaring across your ranch there's little you can do other than brace for the chaos that will soon follow!"
 pedia:m.plortonomics.dervish_slime: "Dervish plorts are a fantastic source of clean energy that helps give turbines and generators an extra boost. They are in constant demand as curiously, there is a finite number of spins stored in every dervish plort."
 pedia:t.tangle_slime: "Tangle Slime"
 pedia:m.intro.tangle_slime: "A slime that- that- AACHOOOO!"
 pedia:m.diet.tangle_slime: "Meat"
 pedia:m.favorite.tangle_slime: "Painted Hen"
-pedia:m.slimeology.tangle_slime: "Though the tangle slime may look innocent with its wide smile and colorful flower atop its head, it's actually a fearsome predator with a big appetite for tasty meat. The tangle slime earned its name from the twisting vines that it can produce to grab things in the environment. 
-
-It's unknown what caused the tangle slime to become such a fearsome predator in the barren wastes of the Glass Desert. However, if the land once resembled the lush greenery of the oases within, perhaps the tangle slime evolved in a much different environment than what you see today."
-pedia:m.risks.tangle_slime: "The tangle slime can be a handful on the ranch if they're not well-fed at all times. Not only can tangle slimes tunnel their vines underground to snatch food and plorts from outside of their corrals, but the flowers on their head can produce a noxious pollen cloud that causes other slimes to go into sneezing fits.
-
-When slimes sneeze from the pollen their agitation rapidly increases, causing more boom slime explosions, crystal slime spikes, and all around jumpiness."
-pedia:m.plortonomics.tangle_slime: "Despite the troublesome nature of the slimes that create them, tangle plorts have incredibly beneficial agricultural applications. Fertilizers and growth formulas made from tangle plorts are used by farms all across Earth to greatly enhance crop production.
-
-It's speculated that the unusually high nutrient count found within tangle plorts that now grow Earth's vegetables results from the tangle slime's incredible appetite for chickens, but that's super gruesome so let's just ignore that."
+pedia:m.slimeology.tangle_slime: "Though the tangle slime may look innocent with its wide smile and colorful flower atop its head, it's actually a fearsome predator with a big appetite for tasty meat. The tangle slime earned its name from the twisting vines that it can produce to grab things in the environment. \n\nIt's unknown what caused the tangle slime to become such a fearsome predator in the barren wastes of the Glass Desert. However, if the land once resembled the lush greenery of the oases within, perhaps the tangle slime evolved in a much different environment than what you see today."
+pedia:m.risks.tangle_slime: "The tangle slime can be a handful on the ranch if they're not well-fed at all times. Not only can tangle slimes tunnel their vines underground to snatch food and plorts from outside of their corrals, but the flowers on their head can produce a noxious pollen cloud that causes other slimes to go into sneezing fits.\n\nWhen slimes sneeze from the pollen their agitation rapidly increases, causing more boom slime explosions, crystal slime spikes, and all around jumpiness."
+pedia:m.plortonomics.tangle_slime: "Despite the troublesome nature of the slimes that create them, tangle plorts have incredibly beneficial agricultural applications. Fertilizers and growth formulas made from tangle plorts are used by farms all across Earth to greatly enhance crop production.\n\nIt's speculated that the unusually high nutrient count found within tangle plorts that now grow Earth's vegetables results from the tangle slime's incredible appetite for chickens, but that's super gruesome so let's just ignore that."
 pedia:t.mosaic_slime: "Mosaic Slime"
 pedia:m.intro.mosaic_slime: "Remarkable from every angle."
 pedia:m.diet.mosaic_slime: "Veggies"
 pedia:m.favorite.mosaic_slime: "Silver Parsnip"
 pedia:m.slimeology.mosaic_slime: "The mosaic slime gets its name from the glittering array of glass tiles that cover its body. This glass produces a similar anomaly found in the desert itself, making the mosaic slime beautiful, but quite dangerous."
-pedia:m.risks.mosaic_slime: "Mosaic slimes can be very dangerous for an unprepared rancher. Their glass tiles create a shimmering effect in daylight that attracts other slimes to them. It is unknown why slimes exhibit this behavior exactly, but leading theories indicate that 'sparkly things are super cool.'
-
-Even more dangerous, the mosaic slime can produce glints in the space around them: ultra-hot solar anomalies that grow in intensity before drifting toward the ground and bursting into flames. Glints can be snuffed with a splash of water, but the best way to reduce their appearance is to ensure your mosaic slimes are well-fed and not agitated."
-pedia:m.plortonomics.mosaic_slime: "Mosaic plorts are desired for researching the glass structures within the Glass Desert. Samples of this glass turn brittle when taken from the Far, Far Range, yet interestingly, mosaic plorts seem unaffected by this phenomenon.
-
-Almost certainly, this glass is being studied because it's really pretty and not because it can cause devastating solar anomalies."
+pedia:m.risks.mosaic_slime: "Mosaic slimes can be very dangerous for an unprepared rancher. Their glass tiles create a shimmering effect in daylight that attracts other slimes to them. It is unknown why slimes exhibit this behavior exactly, but leading theories indicate that 'sparkly things are super cool.'\n\nEven more dangerous, the mosaic slime can produce glints in the space around them: ultra-hot solar anomalies that grow in intensity before drifting toward the ground and bursting into flames. Glints can be snuffed with a splash of water, but the best way to reduce their appearance is to ensure your mosaic slimes are well-fed and not agitated."
+pedia:m.plortonomics.mosaic_slime: "Mosaic plorts are desired for researching the glass structures within the Glass Desert. Samples of this glass turn brittle when taken from the Far, Far Range, yet interestingly, mosaic plorts seem unaffected by this phenomenon.\n\nAlmost certainly, this glass is being studied because it's really pretty and not because it can cause devastating solar anomalies."
 pedia:t.saber_slime: "Saber Slime"
 pedia:m.intro.saber_slime: "Or at least, its descendant."
 pedia:m.diet.saber_slime: "Meat"
 pedia:m.favorite.saber_slime: "(unknown)"
-pedia:m.slimeology.saber_slime: "Though believed to be long extinct, the saber slime lives on through the largo slimes in The Wilds. Saber slimes were believed to be one of the fiercest predators during the Jellassic Period of the Far, Far Range, a time when gigantic slimes roamed the planet.
-
-Though saber slimes are carnivores, the largos in The Wilds display a curious habit of bundling the rare kookadoba fruit into bundles of sticks, mud, and slime that become rock-hard in time. Only Ogden's specially engineered kookacrackers are capable of breaking them."
-pedia:m.risks.saber_slime: "Most saber slime largos found in The Wilds are feral, looking to take a bite out of whatever they see. They're also incredibly agile for slimes, capable of powerful jumps that allow them to bound off other surfaces before targeting their prey.
-
-If you encounter a horde of feral saber slime largos, watch your back so you don't get flanked!"
+pedia:m.slimeology.saber_slime: "Though believed to be long extinct, the saber slime lives on through the largo slimes in The Wilds. Saber slimes were believed to be one of the fiercest predators during the Jellassic Period of the Far, Far Range, a time when gigantic slimes roamed the planet.\n\nThough saber slimes are carnivores, the largos in The Wilds display a curious habit of bundling the rare kookadoba fruit into bundles of sticks, mud, and slime that become rock-hard in time. Only Ogden's specially engineered kookacrackers are capable of breaking them."
+pedia:m.risks.saber_slime: "Most saber slime largos found in The Wilds are feral, looking to take a bite out of whatever they see. They're also incredibly agile for slimes, capable of powerful jumps that allow them to bound off other surfaces before targeting their prey.\n\nIf you encounter a horde of feral saber slime largos, watch your back so you don't get flanked!"
 pedia:m.plortonomics.saber_slime: "Saber plorts are collected for their historical value, offering a window into the primitive past of the Far, Far Range. Some slime scientists have tried to extract the slime DNA from these plorts in order to recreate a true saber slime, but all have failed. And honestly, that's probably for the better, because as soon as that happens some charming billionaire would be talking about making a whole theme park to view them in captivity and then..."
 pedia:t.tarr_slime: "The Tarr"
 pedia:m.intro.tarr_slime: "Those awful, ravenous, rainbows."
 pedia:m.diet.tarr_slime: "Slimes"
 pedia:m.favorite.tarr_slime: "Ranchers!"
-pedia:m.slimeology.tarr_slime: "The tarr are formed when a largo eats a plort unlike the ones it produces. A terrible transformation occurs that turns the slime into a sludge filled with a swirling, prismatic array of colors and a relentless appetite. The tarr seek only to consume and replicate.
-
-The only way to stop a tarr outside of incinerating it or throwing it into the slime sea is with fresh water. One splash will stop a tarr from spawning new tarr, and repeated splashes will destroy it entirely.
-
-Alternatively many ranchers recommend running away with their arms waving, and screaming."
-pedia:m.risks.tarr_slime: "The tarr are the single biggest threat to ranchers. The tarr will seek out slimes to consume and replicate themselves, but will also devour chickens, rot crops in their proximity, and even devour ranchers! 
-
-Remember: ranching largos may be highly profitable, but one stray plort and you could wind up with a devastating tarr outbreak."
+pedia:m.slimeology.tarr_slime: "The tarr are formed when a largo eats a plort unlike the ones it produces. A terrible transformation occurs that turns the slime into a sludge filled with a swirling, prismatic array of colors and a relentless appetite. The tarr seek only to consume and replicate.\n\nThe only way to stop a tarr outside of incinerating it or throwing it into the slime sea is with fresh water. One splash will stop a tarr from spawning new tarr, and repeated splashes will destroy it entirely.\n\nAlternatively many ranchers recommend running away with their arms waving, and screaming."
+pedia:m.risks.tarr_slime: "The tarr are the single biggest threat to ranchers. The tarr will seek out slimes to consume and replicate themselves, but will also devour chickens, rot crops in their proximity, and even devour ranchers! \n\nRemember: ranching largos may be highly profitable, but one stray plort and you could wind up with a devastating tarr outbreak."
 pedia:m.plortonomics.tarr_slime: "The tarr produce no plorts, only more tarr. And then more tarr still."
 pedia:t.gold_slime: "Gold Slime"
 pedia:m.intro.gold_slime: "Get rich or die sliming."
@@ -366,75 +195,49 @@ pedia:t.quicksilver_slime: "Quicksilver Slime"
 pedia:m.intro.quicksilver_slime: "A swift, sterling shimmer of static slime. (repeat)"
 pedia:m.diet.quicksilver_slime: "Electricity"
 pedia:m.favorite.quicksilver_slime: "(none)"
-pedia:m.slimeology.quicksilver_slime: "Quicksilver slimes are among the rarest slimes on the Far, Far Range, thanks in large part to their only known habitat being owned exclusively by Mochi Miles.
-
-Quicksilver slimes are lightning quick, and feed on electricity. This is generally accomplished by their moving really fast and slowly accumulating the static charge they generate. However, Mochi has decided to speed up the process and created a method for feeding them energy in a far more direct fashion."
-pedia:m.risks.quicksilver_slime: "Quicksilver slimes are not normally harmful to a rancher as the static they generate has a low current.
-
-However, Mochi's method of feeding them a great deal of electricity at once makes quicksilver slimes temporarily overcharged with a current high enough to be harmful if touched. So be careful when firing those spark shots as a mob of well-fed quicksilvers could leave you zapped!"
+pedia:m.slimeology.quicksilver_slime: "Quicksilver slimes are among the rarest slimes on the Far, Far Range, thanks in large part to their only known habitat being owned exclusively by Mochi Miles.\n\nQuicksilver slimes are lightning quick, and feed on electricity. This is generally accomplished by their moving really fast and slowly accumulating the static charge they generate. However, Mochi has decided to speed up the process and created a method for feeding them energy in a far more direct fashion."
+pedia:m.risks.quicksilver_slime: "Quicksilver slimes are not normally harmful to a rancher as the static they generate has a low current.\n\nHowever, Mochi's method of feeding them a great deal of electricity at once makes quicksilver slimes temporarily overcharged with a current high enough to be harmful if touched. So be careful when firing those spark shots as a mob of well-fed quicksilvers could leave you zapped!"
 pedia:m.plortonomics.quicksilver_slime: "Mochi sells quicksilver plorts off-market and little is known about her buyers or their motives."
 pedia:t.lucky_slime: "Lucky Slime"
 pedia:m.intro.lucky_slime: "Oooh, shiny!"
 pedia:m.diet.lucky_slime: "Meat"
 pedia:m.favorite.lucky_slime: "(none)"
-pedia:m.slimeology.lucky_slime: "Lucky slimes are a strange variant of tabby slimes that seem to have a fascination with shiny objects, particularly newbuck coins. A lucky slime gobbles up any coin it can find, giving it a distinct jingling sound as they move about.
-
-However, coins don't make for a balanced diet and a lucky slime will still greedily devour meat of any kind. In so doing, its body bursts with a shower of newbucks, having little room left in its slimy tummy. This burst often sends the lucky slime flying into the air.
-
-Upon detecting a rancher, the lucky slime will soon make a hasty retreat. No known rancher has ever been skillful enough, or perhaps lucky enough, to capture one of these slippery slimes."
-pedia:m.risks.lucky_slime: "Lucky slimes pose the same risk to ranchers as other rare slimes: mainly, accidents in their pursuit that can lead to a rancher's demise. The promise of a small fortune when encountering a lucky slime has led more than a few ranchers head-first into the slime sea.
-
-This occurence has led some of the more superstitious ranchers to see the lucky slime as a bad omen, or perhaps as the universe testing their greed. These ranchers will ignore lucky slimes altogether, even purposefully shooing them away. Well, until you hear those newbucks jingling, and then, maybe just one shot couldn't hurt..."
+pedia:m.slimeology.lucky_slime: "Lucky slimes are a strange variant of tabby slimes that seem to have a fascination with shiny objects, particularly newbuck coins. A lucky slime gobbles up any coin it can find, giving it a distinct jingling sound as they move about.\n\nHowever, coins don't make for a balanced diet and a lucky slime will still greedily devour meat of any kind. In so doing, its body bursts with a shower of newbucks, having little room left in its slimy tummy. This burst often sends the lucky slime flying into the air.\n\nUpon detecting a rancher, the lucky slime will soon make a hasty retreat. No known rancher has ever been skillful enough, or perhaps lucky enough, to capture one of these slippery slimes."
+pedia:m.risks.lucky_slime: "Lucky slimes pose the same risk to ranchers as other rare slimes: mainly, accidents in their pursuit that can lead to a rancher's demise. The promise of a small fortune when encountering a lucky slime has led more than a few ranchers head-first into the slime sea.\n\nThis occurence has led some of the more superstitious ranchers to see the lucky slime as a bad omen, or perhaps as the universe testing their greed. These ranchers will ignore lucky slimes altogether, even purposefully shooing them away. Well, until you hear those newbucks jingling, and then, maybe just one shot couldn't hurt..."
 pedia:m.plortonomics.lucky_slime: "A lucky slime isn't known to produce plorts of any kind. Leading slime scientists believe this to be the result of the lucky slime not being a true slime variant. Rather, lucky slimes are believed to be just an abnormal tabby slime: one whose color has faded as a result of ingesting so many coins. It is perhaps this very change that also led to ceasing plort production."
 pedia:t.largo_slime: "Largo Slimes"
 pedia:m.intro.largo_slime: "There's just more to love."
 pedia:m.diet.largo_slime: "(source slime's diet)"
 pedia:m.favorite.largo_slime: "(source slime's favorite)"
-pedia:m.slimeology.largo_slime: "Largo slimes are a hybrid of two slimes resulting from a slime eating a plort unlike its own. They are twice as big as normal slimes and have a combined diet of their two source slimes, making them enticing for ranchers that want to maximize their profits. 
-
-However, a largo is too big to vac and can only be transported using the end of the vac nozzle. This makes them difficult to control if things get out of hand."
-pedia:m.risks.largo_slime: "In addition to largos being more difficult to manage and having the combined powers of two slimes, an even greater threat to ranchers lies within these super-sized slimes. If a largo eats a plort unlike its two source slimes, it will transform into a ravenous tarr slime! 
-
-Ranchers need to be very careful when dealing with largos or risk an outbreak of tarr that can quickly overtake their entire ranch. Always carry a full tank of water just in case!"
+pedia:m.slimeology.largo_slime: "Largo slimes are a hybrid of two slimes resulting from a slime eating a plort unlike its own. They are twice as big as normal slimes and have a combined diet of their two source slimes, making them enticing for ranchers that want to maximize their profits. \n\nHowever, a largo is too big to vac and can only be transported using the end of the vac nozzle. This makes them difficult to control if things get out of hand."
+pedia:m.risks.largo_slime: "In addition to largos being more difficult to manage and having the combined powers of two slimes, an even greater threat to ranchers lies within these super-sized slimes. If a largo eats a plort unlike its two source slimes, it will transform into a ravenous tarr slime! \n\nRanchers need to be very careful when dealing with largos or risk an outbreak of tarr that can quickly overtake their entire ranch. Always carry a full tank of water just in case!"
 pedia:m.plortonomics.largo_slime: "When a largo eats, it produces plorts of both source slime types, making them potentially very lucrative for ranchers that can deal with the added risk of keeping them."
 pedia:t.gordo_slime: "Gordo Slimes"
 pedia:m.intro.gordo_slime: "Bon appetit!"
 pedia:m.diet.gordo_slime: "(source slime's diet)"
 pedia:m.favorite.gordo_slime: "(source slime's favorite)"
-pedia:m.slimeology.gordo_slime: "Gordo slimes are a rare phenomenon that occurs when multiple slimes of the same type congregate. The result is that the slimes seem to merge together into a much larger slime that is seemingly incapable of movement. 
-
-A gordo will eat until it bursts, causing all the slimes to separate once more, as well as revealing whatever object it was that caused the gordo to form in the first place."
+pedia:m.slimeology.gordo_slime: "Gordo slimes are a rare phenomenon that occurs when multiple slimes of the same type congregate. The result is that the slimes seem to merge together into a much larger slime that is seemingly incapable of movement. \n\nA gordo will eat until it bursts, causing all the slimes to separate once more, as well as revealing whatever object it was that caused the gordo to form in the first place."
 pedia:m.risks.gordo_slime: "Gordos pose no real risk to ranchers, they can only sometimes be a nuisance in that they are hiding something a rancher might need. So if you see a gordo, feed it!"
 pedia:m.plortonomics.gordo_slime: "Gordos produce no plorts on their own, however the slimes they produce after bursting do like any normal slime."
 pedia:t.party_gordo_slime: "Party Gordo"
 pedia:m.intro.party_gordo_slime: "And you thought slimes couldn't get any more awesome."
 pedia:m.diet.party_gordo_slime: "Fruit, Veggies, Meat"
 pedia:m.favorite.party_gordo_slime: "(none)"
-pedia:m.slimeology.party_gordo_slime: "The Party Gordo is a mysterious gordo slime that visits the Far, Far Range every weekend to bring the party to ranchers.
-
-The party begins every Friday when the Party Gordo appears somewhere in the Far, Far Range. Find where the Party Gordo is hiding and pop it for a bunch of unique prizes. But the party doesn't end there: for the duration of the weekend (all-day Friday, Saturday, and Sunday) you can randomly find special presents all over the Far, Far Range. Keep your eyes peeled!
-
-Slime scientists have attempted to study this phenomenon and explain it but, like, you can't explain it. It's just party time."
+pedia:m.slimeology.party_gordo_slime: "The Party Gordo is a mysterious gordo slime that visits the Far, Far Range every weekend to bring the party to ranchers.\n\nThe party begins every Friday when the Party Gordo appears somewhere in the Far, Far Range. Find where the Party Gordo is hiding and pop it for a bunch of unique prizes. But the party doesn't end there: for the duration of the weekend (all-day Friday, Saturday, and Sunday) you can randomly find special presents all over the Far, Far Range. Keep your eyes peeled!\n\nSlime scientists have attempted to study this phenomenon and explain it but, like, you can't explain it. It's just party time."
 pedia:m.risks.party_gordo_slime: "Ranchers who hang out near the Party Gordo might find themselves dancing the night away and never getting any work done. Be. Careful."
 pedia:m.plortonomics.party_gordo_slime: "There's nothing scientifically unique about the Party Gordo's pink plorts. Wait, does this mean that the spirit of dance and celebration lives in your heart? Ohhhhh."
 pedia:t.echo_note_gordo_slime: "Twinkle Slime"
 pedia:m.intro.echo_note_gordo_slime: "However bright, all things become but a twinkle."
 pedia:m.diet.echo_note_gordo_slime: "(none)"
 pedia:m.favorite.echo_note_gordo_slime: "(none)"
-pedia:m.slimeology.echo_note_gordo_slime: "Few ranchers have ever even glimpsed a twinkle slime, with most believing it to be a legend. But those that have know it's real, and that the twinkle slime seems to be related to the passing of time, or a change in seasons. However, this is only a theory as data on twinkle slime behaviors is quite limited.
-
-When they are found, twinkle slimes give away their location with the beautiful songs they sing. On approach, their song will reach a crescendo and all at once, vanish from sight and fill the immediate area with strange motes of energy called chimes.
-
-Twinkle slimes also create a mysterious portal after they vanish that always wisks those who enter it back home. It's not clear what purpose this serves, but some believe that the twinkle slime is reminding those who witness it that time passes whether you notice it or not, and when you do, it's sometimes nice to return home and remind yourself of the person you once were, and the people that made you who you are today."
+pedia:m.slimeology.echo_note_gordo_slime: "Few ranchers have ever even glimpsed a twinkle slime, with most believing it to be a legend. But those that have know it's real, and that the twinkle slime seems to be related to the passing of time, or a change in seasons. However, this is only a theory as data on twinkle slime behaviors is quite limited.\n\nWhen they are found, twinkle slimes give away their location with the beautiful songs they sing. On approach, their song will reach a crescendo and all at once, vanish from sight and fill the immediate area with strange motes of energy called chimes.\n\nTwinkle slimes also create a mysterious portal after they vanish that always wisks those who enter it back home. It's not clear what purpose this serves, but some believe that the twinkle slime is reminding those who witness it that time passes whether you notice it or not, and when you do, it's sometimes nice to return home and remind yourself of the person you once were, and the people that made you who you are today."
 pedia:m.risks.echo_note_gordo_slime: "Twinkle slimes pose no known risks to ranchers. They appear to be almost ethereal in nature."
 pedia:m.plortonomics.echo_note_gordo_slime: "Twinkle slimes do not seem to eat, and do not produce plorts."
 pedia:t.feral_slime: "Feral Slimes"
 pedia:m.intro.feral_slime: "It's hard to be nice on an empty stomach."
 pedia:m.diet.feral_slime: "(source slime's diet)"
 pedia:m.favorite.feral_slime: "(source slime's favorite)"
-pedia:m.slimeology.feral_slime: "Feral slimes are largos with a mean streak that will attack a rancher on sight. It's not known what exactly causes a largo to become so grumpy that it goes feral, but it's suspected that they've simply gone too long without a bite to eat. Like so many things with slimes, food is everything. 
-
-If a feral slime eats, it will revert to a normal largo."
+pedia:m.slimeology.feral_slime: "Feral slimes are largos with a mean streak that will attack a rancher on sight. It's not known what exactly causes a largo to become so grumpy that it goes feral, but it's suspected that they've simply gone too long without a bite to eat. Like so many things with slimes, food is everything. \n\nIf a feral slime eats, it will revert to a normal largo."
 pedia:m.risks.feral_slime: "Feral slimes can pose a serious risk to ranchers if they're not dealt with quickly, or avoided altogether. Feral slimes will attempt to bite ranchers at close range or jump in the air and try to stomp them with their... butts? In any case, a rancher needs to act fast and feed the feral slime something tasty to avoid such troubles."
 pedia:m.plortonomics.feral_slime: "Feeding a feral slime not only calms it down, but it also produces plorts in the same manner as a largo. Though, there are certainly easier ways out there to acquire plorts!"
 pedia:t.carrot: "Carrot"
@@ -502,9 +305,7 @@ pedia:m.intro.lemon: "Plucked from a tree rooted in the... past? Future? Or...?"
 pedia:m.favored_by.lemon: "Quantum Slime"
 pedia:m.resource_type.lemon: "Fruit"
 pedia:m.how_to_use.lemon: "Deposit a phase lemon into a garden's depositor and you'll grow a large phase lemon tree of your very own."
-pedia:m.desc.lemon: "A phase lemon comes from a different place and time. They are like an echo, reverberating through the halls of the Ancient Ruins, never staying in the same place for long.
-
-In order to harvest phase lemons a rancher must pass fruit matter through the phase lemon tree when lemons are present. This process somehow removes the fruit from our reality and phases in a lemon in exchange."
+pedia:m.desc.lemon: "A phase lemon comes from a different place and time. They are like an echo, reverberating through the halls of the Ancient Ruins, never staying in the same place for long.\n\nIn order to harvest phase lemons a rancher must pass fruit matter through the phase lemon tree when lemons are present. This process somehow removes the fruit from our reality and phases in a lemon in exchange."
 pedia:t.kookadoba: "Kookadoba"
 pedia:m.intro.kookadoba: "You'd have to be crazy to collect these things."
 pedia:l.favored_by.kookadoba: "Favored By:"
@@ -517,33 +318,25 @@ pedia:m.intro.chickadoo: "So little and soft you'd think they're filled with mar
 pedia:m.favored_by.chickadoo: "(not slime food)"
 pedia:m.resource_type.chickadoo: "Future Meat"
 pedia:m.how_to_use.chickadoo: "Keep chickadoos in a safe place and they'll eventually grow into a hen hen or roostro."
-pedia:m.desc.chickadoo: "Chickadoos are baby chickens that will eventually grow into a hen hen or more rarely, a roostro.
-
-Chickadoos of all varieties will never be eaten by slimes. Some believe this is because slimes are too kind-hearted to do such a thing. Others believe it's because chickadoos don't yet have enough meat on their bones."
+pedia:m.desc.chickadoo: "Chickadoos are baby chickens that will eventually grow into a hen hen or more rarely, a roostro.\n\nChickadoos of all varieties will never be eaten by slimes. Some believe this is because slimes are too kind-hearted to do such a thing. Others believe it's because chickadoos don't yet have enough meat on their bones."
 pedia:t.stony_chickadoo: "Stony Chickadoo"
 pedia:m.intro.stony_chickadoo: "This little chick had quite a hard upbringing."
 pedia:m.favored_by.stony_chickadoo: "(not slime food)"
 pedia:m.resource_type.stony_chickadoo: "Future Meat"
 pedia:m.how_to_use.stony_chickadoo: "Keep stony chickadoos in a safe place and they'll eventually grow into a stony hen or roostro."
-pedia:m.desc.stony_chickadoo: "Stony chickadoos are baby chickens that will eventually grow into a stony hen or more rarely, a roostro.
-
-Chickadoos of all varieties will never be eaten by slimes. Some believe this is because slimes are too kind-hearted to do such a thing. Others believe it's because chickadoos don't yet have enough meat on their bones."
+pedia:m.desc.stony_chickadoo: "Stony chickadoos are baby chickens that will eventually grow into a stony hen or more rarely, a roostro.\n\nChickadoos of all varieties will never be eaten by slimes. Some believe this is because slimes are too kind-hearted to do such a thing. Others believe it's because chickadoos don't yet have enough meat on their bones."
 pedia:t.briar_chickadoo: "Briar Chickadoo"
 pedia:m.intro.briar_chickadoo: "A breed of chick that's totally bush-league."
 pedia:m.favored_by.briar_chickadoo: "(not slime food)"
 pedia:m.resource_type.briar_chickadoo: "Future Meat"
 pedia:m.how_to_use.briar_chickadoo: "Keep briar chickadoos in a safe place and they'll eventually grow into a briar hen or roostro."
-pedia:m.desc.briar_chickadoo: "Briar chickadoos are baby chickens that will eventually grow into a briar hen or more rarely, a roostro.
-
-Chickadoos of all varieties will never be eaten by slimes. Some believe this is because slimes are too kind-hearted to do such a thing. Others believe it's because chickadoos don't yet have enough meat on their bones."
+pedia:m.desc.briar_chickadoo: "Briar chickadoos are baby chickens that will eventually grow into a briar hen or more rarely, a roostro.\n\nChickadoos of all varieties will never be eaten by slimes. Some believe this is because slimes are too kind-hearted to do such a thing. Others believe it's because chickadoos don't yet have enough meat on their bones."
 pedia:t.painted_chickadoo: "Painted Chickadoo"
 pedia:m.intro.painted_chickadoo: "A tiny chick that's hiding a bounty of colorful potential."
 pedia:m.favored_by.painted_chickadoo: "(not slime food)"
 pedia:m.resource_type.painted_chickadoo: "Future Meat"
 pedia:m.how_to_use.painted_chickadoo: "Keep painted chickadoos in a safe place and they'll eventually grow into a painted hen or roostro."
-pedia:m.desc.painted_chickadoo: "Painted chickadoos are baby chickens that will eventually grow into a painted hen or more rarely, a roostro.
-
-Chickadoos of all varieties will never be eaten by slimes. Some believe this is because slimes are too kind-hearted to do such a thing. Others believe it's because chickadoos don't yet have enough meat on their bones."
+pedia:m.desc.painted_chickadoo: "Painted chickadoos are baby chickens that will eventually grow into a painted hen or more rarely, a roostro.\n\nChickadoos of all varieties will never be eaten by slimes. Some believe this is because slimes are too kind-hearted to do such a thing. Others believe it's because chickadoos don't yet have enough meat on their bones."
 pedia:t.henhen: "Hen Hen"
 pedia:m.intro.henhen: "A hearty chicken bred to be twice as tasty as its cousin on Earth."
 pedia:m.favored_by.henhen: "(none)"
@@ -567,17 +360,13 @@ pedia:m.intro.painted_hen: "Some believe it's what lies at the end of the rainbo
 pedia:m.favored_by.painted_hen: "Tangle Slime"
 pedia:m.resource_type.painted_hen: "Meat"
 pedia:m.how_to_use.painted_hen: "Painted hens in close proximity to roostros will periodically lay eggs that produce painted chickadoos. However, keeping too many hens or roostros in close proximity makes them anxious and egg production will come to a halt. Savvy ranchers with an understanding of the complex nature of chicken romance always keep their coops from exceeding 12 grown chickens."
-pedia:m.desc.painted_hen: "Painted hens are the colorful chicken variants found in the Glass Desert. It is unknown what caused their rainbow-like plumage to occur. One theory suggests their colors are a biological mimicry of the prismatic glass found within the desert, while another theory states that their wild colors made them the dominant mates of the Cluck Kingdoms and were thus banished to the desert by a coalition of jealous chickens who couldn't compete with these fashionable fouls.
-
-But the latter theory is only actually believed by one very strange person, so we're not sure why it would have been included here."
+pedia:m.desc.painted_hen: "Painted hens are the colorful chicken variants found in the Glass Desert. It is unknown what caused their rainbow-like plumage to occur. One theory suggests their colors are a biological mimicry of the prismatic glass found within the desert, while another theory states that their wild colors made them the dominant mates of the Cluck Kingdoms and were thus banished to the desert by a coalition of jealous chickens who couldn't compete with these fashionable fouls.\n\nBut the latter theory is only actually believed by one very strange person, so we're not sure why it would have been included here."
 pedia:t.roostro: "Roostro"
 pedia:m.intro.roostro: "Struts his stuff like he's king of the coop."
 pedia:m.favored_by.roostro: "Hunter Slime"
 pedia:m.resource_type.roostro: "Meat"
 pedia:m.how_to_use.roostro: "All hens in close proximity to roostros will periodically lay eggs that produce chickadoos. However, keeping too many hens or roostros in close proximity makes them anxious and egg production will come to a halt. Savvy ranchers with an understanding of the complex nature of chicken romance always keep their coops from exceeding 12 grown chickens."
-pedia:m.desc.roostro: "Roostros are the alpha birds on the Far, Far Range and half of the equation required to breed chickens on the ranch. However, roostros are rarer than any hen making them a great find any time one is discovered.
-
-To acquire a roostro, either find one out on the range or breed them on the ranch. Any type of chickadoo has a small chance of growing into a roostro. Some ranchers believe that these odds increase if you greet the Rooster King's crow at sunrise with an enthusiastic 'good morning!'"
+pedia:m.desc.roostro: "Roostros are the alpha birds on the Far, Far Range and half of the equation required to breed chickens on the ranch. However, roostros are rarer than any hen making them a great find any time one is discovered.\n\nTo acquire a roostro, either find one out on the range or breed them on the ranch. Any type of chickadoo has a small chance of growing into a roostro. Some ranchers believe that these odds increase if you greet the Rooster King's crow at sunrise with an enthusiastic 'good morning!'"
 pedia:t.elder_roostro: "Elder Roostro"
 pedia:m.intro.elder_roostro: "Shakes his tail feathers and no one cares."
 pedia:m.favored_by.elder_roostro: "(none)"
@@ -601,146 +390,108 @@ pedia:m.intro.primordy_oil_craft: "This stuff is pre-pre-prehistoric."
 pedia:m.favored_by.primordy_oil_craft: "(not slime food)"
 pedia:m.resource_type.primordy_oil_craft: "Slime Science Material"
 pedia:m.how_to_use.primordy_oil_craft: "Deposit primordy oil into the Lab's Refinery where it can then be used for fabricating Slime Science gadgets."
-pedia:m.desc.primordy_oil_craft: "Primordy oil is a common resource obtained with a pump.
-
-Found deep below the surface of the Far, Far Range, primordy oil is an ancient substance containing a wide array of organic compounds, making it perfect as a base for many Slime Science creations."
+pedia:m.desc.primordy_oil_craft: "Primordy oil is a common resource obtained with a pump.\n\nFound deep below the surface of the Far, Far Range, primordy oil is an ancient substance containing a wide array of organic compounds, making it perfect as a base for many Slime Science creations."
 pedia:t.deep_brine_craft: "Deep Brine"
 pedia:m.intro.deep_brine_craft: "Salt of the earth kind of stuff."
 pedia:m.favored_by.deep_brine_craft: "(not slime food)"
 pedia:m.resource_type.deep_brine_craft: "Slime Science Material"
 pedia:m.how_to_use.deep_brine_craft: "Deposit deep brine into the Lab's Refinery where it can then be used for fabricating Slime Science gadgets."
-pedia:m.desc.deep_brine_craft: "Deep brine is a common resource exclusive to the Dry Reef, obtained with a pump.
-
-Not safe for drinking, deep brine is thought to be water from the Slime Sea that has been filtered by the subterranean coral of the Dry Reef. It is significantly denser than fresh water and loaded with salt."
+pedia:m.desc.deep_brine_craft: "Deep brine is a common resource exclusive to the Dry Reef, obtained with a pump.\n\nNot safe for drinking, deep brine is thought to be water from the Slime Sea that has been filtered by the subterranean coral of the Dry Reef. It is significantly denser than fresh water and loaded with salt."
 pedia:t.spiral_steam_craft: "Spiral Steam"
 pedia:m.intro.spiral_steam_craft: "If you search for it, you'll find something wonderful."
 pedia:m.favored_by.spiral_steam_craft: "(not slime food)"
 pedia:m.resource_type.spiral_steam_craft: "Slime Science Material"
 pedia:m.how_to_use.spiral_steam_craft: "Deposit spiral steam into the Lab's Refinery where it can then be used for fabricating Slime Science gadgets."
-pedia:m.desc.spiral_steam_craft: "Spiral steam is an uncommon resource obtained with a pump.
-
-Found in highly pressurized vacuums of rock below the surface, spiral steam exhibits a curious behavior when released into the atmosphere, swirling into a series of dancing spirals before dissipating. It is valued for the countless micro-particles found within the steam itself."
+pedia:m.desc.spiral_steam_craft: "Spiral steam is an uncommon resource obtained with a pump.\n\nFound in highly pressurized vacuums of rock below the surface, spiral steam exhibits a curious behavior when released into the atmosphere, swirling into a series of dancing spirals before dissipating. It is valued for the countless micro-particles found within the steam itself."
 pedia:t.lava_dust_craft: "Lava Dust"
 pedia:m.intro.lava_dust_craft: "A survey on the state of this matter answered 'undecided.'"
 pedia:m.favored_by.lava_dust_craft: "(not slime food)"
 pedia:m.resource_type.lava_dust_craft: "Slime Science Material"
 pedia:m.how_to_use.lava_dust_craft: "Deposit lava dust into the Lab's Refinery where it can then be used for fabricating Slime Science gadgets."
-pedia:m.desc.lava_dust_craft: "Lava dust is a rare resource obtained with a pump.
-
-Neither a solid or a liquid, lava dust seems to be something in between, having the characteristics of both. It is believed to be a mixture of magma and slime, though this has never been proven. And despite its name, lava dust is only warm to the touch."
+pedia:m.desc.lava_dust_craft: "Lava dust is a rare resource obtained with a pump.\n\nNeither a solid or a liquid, lava dust seems to be something in between, having the characteristics of both. It is believed to be a mixture of magma and slime, though this has never been proven. And despite its name, lava dust is only warm to the touch."
 pedia:t.buzz_wax_craft: "Buzz Wax"
 pedia:m.intro.buzz_wax_craft: "Can be used to make a great scented candle if you enjoy the smell of bee abdominal glands."
 pedia:m.favored_by.buzz_wax_craft: "(not slime food)"
 pedia:m.resource_type.buzz_wax_craft: "Slime Science Material"
 pedia:m.how_to_use.buzz_wax_craft: "Deposit buzz wax into the Lab's Refinery where it can then be used for fabricating Slime Science gadgets."
-pedia:m.desc.buzz_wax_craft: "Buzz wax is a common resource obtained with an apiary.
-
-Just like bees on Earth, bees on the Far, Far Range produce a waxy substance that they use to form their hives. Buzz wax is the still malleable deposits of unused wax found in apiaries. It has many practical uses ranging from building materials to medicines. You can also chew it as the worst gum in the world."
+pedia:m.desc.buzz_wax_craft: "Buzz wax is a common resource obtained with an apiary.\n\nJust like bees on Earth, bees on the Far, Far Range produce a waxy substance that they use to form their hives. Buzz wax is the still malleable deposits of unused wax found in apiaries. It has many practical uses ranging from building materials to medicines. You can also chew it as the worst gum in the world."
 pedia:t.wild_honey_craft: "Wild Honey"
 pedia:m.intro.wild_honey_craft: "Tastes great in tea or in shameful handfuls when no one is looking."
 pedia:m.favored_by.wild_honey_craft: "(not slime food)"
 pedia:m.resource_type.wild_honey_craft: "Slime Science Material"
 pedia:m.how_to_use.wild_honey_craft: "Deposit wild honey into the Lab's Refinery where it can then be used for fabricating Slime Science gadgets."
-pedia:m.desc.wild_honey_craft: "Wild honey is a common resource exclusive to the Moss Blanket, obtained with an apiary.
-
-All the rich pollens and sweet nectars found in the forests of the Moss Blanket combine in a beautiful alchemy to form some of the most delicious honey in the galaxy. Wild honey is a staple of rancher life; a dollop of it makes just about any food taste better, and it provides a natural boost of energy to get through a tough day of wrangling slimes."
+pedia:m.desc.wild_honey_craft: "Wild honey is a common resource exclusive to the Moss Blanket, obtained with an apiary.\n\nAll the rich pollens and sweet nectars found in the forests of the Moss Blanket combine in a beautiful alchemy to form some of the most delicious honey in the galaxy. Wild honey is a staple of rancher life; a dollop of it makes just about any food taste better, and it provides a natural boost of energy to get through a tough day of wrangling slimes."
 pedia:t.hexacomb_craft: "Hexacomb"
 pedia:m.intro.hexacomb_craft: "Bee stuff and geometry: the chocolate and peanut butter of nature."
 pedia:m.favored_by.hexacomb_craft: "(not slime food)"
 pedia:m.resource_type.hexacomb_craft: "Slime Science Material"
 pedia:m.how_to_use.hexacomb_craft: "Deposit hexacomb into the Lab's Refinery where it can then be used for fabricating Slime Science gadgets."
-pedia:m.desc.hexacomb_craft: "Hexacomb is an uncommon resource obtained with an apiary.
-
-Hexacomb is the result of bees arranging buzz wax into complex patterns to store their honey and eggs. Why the hexagonal shape? Bees understand that the hexagon is the shape of the future. Bees were Sci-Fi before it was cool."
+pedia:m.desc.hexacomb_craft: "Hexacomb is an uncommon resource obtained with an apiary.\n\nHexacomb is the result of bees arranging buzz wax into complex patterns to store their honey and eggs. Why the hexagonal shape? Bees understand that the hexagon is the shape of the future. Bees were Sci-Fi before it was cool."
 pedia:t.royal_jelly_craft: "Royal Jelly"
 pedia:m.intro.royal_jelly_craft: "The king of all jellies... that is, until you meet the queen."
 pedia:m.favored_by.royal_jelly_craft: "(not slime food)"
 pedia:m.resource_type.royal_jelly_craft: "Slime Science Material"
 pedia:m.how_to_use.royal_jelly_craft: "Deposit royal jelly into the Lab's Refinery where it can then be used for fabricating Slime Science gadgets."
-pedia:m.desc.royal_jelly_craft: "Royal jelly is a rare resource obtained with an apiary. 
-
-The royal jelly found in the hives across the Far, Far Range is special as it is unnaturally sweet compared to other varieties. It's believed that this is a result of bees collecting small deposits of slime from honey slimes and working it into their royal jelly mixture. If a rancher is lucky enough to acquire some, they'll find its unique properties are very valuable in certain Slime Science endeavors."
+pedia:m.desc.royal_jelly_craft: "Royal jelly is a rare resource obtained with an apiary. \n\nThe royal jelly found in the hives across the Far, Far Range is special as it is unnaturally sweet compared to other varieties. It's believed that this is a result of bees collecting small deposits of slime from honey slimes and working it into their royal jelly mixture. If a rancher is lucky enough to acquire some, they'll find its unique properties are very valuable in certain Slime Science endeavors."
 pedia:t.jellystone_craft: "Jellystone"
 pedia:m.intro.jellystone_craft: "It's both solid and squishy at the same time."
 pedia:m.favored_by.jellystone_craft: "(not slime food)"
 pedia:m.resource_type.jellystone_craft: "Slime Science Material"
 pedia:m.how_to_use.jellystone_craft: "Deposit jellystone into the Lab's Refinery where it can then be used for fabricating Slime Science gadgets."
-pedia:m.desc.jellystone_craft: "Jellystone is a common resource obtained with a drill.
-
-Jellystone is a semi-hardened mixture of minerals and slime, possibly resulting from plorts sinking back into the earth below. Because of its softer texture, it's a favorite stone for sculptors."
+pedia:m.desc.jellystone_craft: "Jellystone is a common resource obtained with a drill.\n\nJellystone is a semi-hardened mixture of minerals and slime, possibly resulting from plorts sinking back into the earth below. Because of its softer texture, it's a favorite stone for sculptors."
 pedia:t.indigonium_craft: "Indigonium"
 pedia:m.intro.indigonium_craft: "Heavy metal experts often call this hard rock 'deep purple.'"
 pedia:m.favored_by.indigonium_craft: "(not slime food)"
 pedia:m.resource_type.indigonium_craft: "Slime Science Material"
 pedia:m.how_to_use.indigonium_craft: "Deposit indigonium into the Lab's Refinery where it can then be used for fabricating Slime Science gadgets."
-pedia:m.desc.indigonium_craft: "Indigonium is a common resource exclusive to the Indigo Quarry, obtained with a drill.
-
-Indigonium is the ore that gives the Indigo Quarry its name. There's a little indigonium found in every inch of the quarry, but the purest ore is only found deep underground."
+pedia:m.desc.indigonium_craft: "Indigonium is a common resource exclusive to the Indigo Quarry, obtained with a drill.\n\nIndigonium is the ore that gives the Indigo Quarry its name. There's a little indigonium found in every inch of the quarry, but the purest ore is only found deep underground."
 pedia:t.slime_fossil_craft: "Slime Fossil"
 pedia:m.intro.slime_fossil_craft: "If history could smile, it would look like this."
 pedia:m.favored_by.slime_fossil_craft: "(not slime food)"
 pedia:m.resource_type.slime_fossil_craft: "Slime Science Material"
 pedia:m.how_to_use.slime_fossil_craft: "Deposit slime fossils into the Lab's Refinery where they can then be used for fabricating Slime Science gadgets."
-pedia:m.desc.slime_fossil_craft: "Slime fossils are an uncommon resource obtained with a drill.
-
-Prized for the ancient minerals they contain, slime fossils are like nature capturing a moment in time. Specifically, that moment seems to be when a great avalanche or mudslide occurred and a slime was totally cool with it."
+pedia:m.desc.slime_fossil_craft: "Slime fossils are an uncommon resource obtained with a drill.\n\nPrized for the ancient minerals they contain, slime fossils are like nature capturing a moment in time. Specifically, that moment seems to be when a great avalanche or mudslide occurred and a slime was totally cool with it."
 pedia:t.strange_diamond_craft: "Strange Diamond"
 pedia:m.intro.strange_diamond_craft: "Very strange, but even more valuable."
 pedia:m.favored_by.strange_diamond_craft: "(not slime food)"
 pedia:m.resource_type.strange_diamond_craft: "Slime Science Material"
 pedia:m.how_to_use.strange_diamond_craft: "Deposit strange diamonds into the Lab's Refinery where they can then be used for fabricating Slime Science gadgets."
-pedia:m.desc.strange_diamond_craft: "Strange diamonds are a rare resource obtained with a drill.
-
-Even in the dark, these diamonds seem to shine as if light is passing through them. Strange diamonds are highly valued for their use in a variety of warp tech processes. Being almost impossibly dense and intricate in their composition, a strange diamond can reflect light within itself so profoundly that it actually bends time."
+pedia:m.desc.strange_diamond_craft: "Strange diamonds are a rare resource obtained with a drill.\n\nEven in the dark, these diamonds seem to shine as if light is passing through them. Strange diamonds are highly valued for their use in a variety of warp tech processes. Being almost impossibly dense and intricate in their composition, a strange diamond can reflect light within itself so profoundly that it actually bends time."
 pedia:t.silky_sand_craft: "Silky Sand"
 pedia:m.intro.silky_sand_craft: "The finest, smoothest sand you'll ever see. Rubbish for sand castles."
 pedia:m.favored_by.silky_sand_craft: "(not slime food)"
 pedia:m.resource_type.silky_sand_craft: "Slime Science Material"
 pedia:m.how_to_use.silky_sand_craft: "Deposit silky sand into the Lab's Refinery where they can then be used for fabricating Slime Science gadgets."
-pedia:m.desc.silky_sand_craft: "Silky sand is a common resource exclusive to the Glass Desert, obtained with a pump.
-
-Though the Glass Desert is covered with sand, silky sand found deep below the surface is so smooth and pure it almost feels like water. These qualities make it very useful in gadget fabrication."
+pedia:m.desc.silky_sand_craft: "Silky sand is a common resource exclusive to the Glass Desert, obtained with a pump.\n\nThough the Glass Desert is covered with sand, silky sand found deep below the surface is so smooth and pure it almost feels like water. These qualities make it very useful in gadget fabrication."
 pedia:t.pepper_jam_craft: "Pepper Jam"
 pedia:m.intro.pepper_jam_craft: "Sweet, spicy, and delicious! Bees are awesome."
 pedia:m.favored_by.pepper_jam_craft: "(not slime food)"
 pedia:m.resource_type.pepper_jam_craft: "Slime Science Material"
 pedia:m.how_to_use.pepper_jam_craft: "Deposit pepper jam into the Lab's Refinery where they can then be used for fabricating Slime Science gadgets."
-pedia:m.desc.pepper_jam_craft: "Pepper jam is a common resource exclusive to the Glass Desert, obtained with an apiary.
-
-Pepper jam is a strange substance found only in beehives of the Glass Desert. It is believed to be a product of desert bees obtaining pollen from the flowers of a spicy pepper plant found somewhere in the desert. Regardless of its origin, pepper jam gives an otherwise boring, old toast experience a real kick!"
+pedia:m.desc.pepper_jam_craft: "Pepper jam is a common resource exclusive to the Glass Desert, obtained with an apiary.\n\nPepper jam is a strange substance found only in beehives of the Glass Desert. It is believed to be a product of desert bees obtaining pollen from the flowers of a spicy pepper plant found somewhere in the desert. Regardless of its origin, pepper jam gives an otherwise boring, old toast experience a real kick!"
 pedia:t.glass_shard_craft: "Glass Shard"
 pedia:m.intro.glass_shard_craft: "A solid fragment of frozen fire."
 pedia:m.favored_by.glass_shard_craft: "(not slime food)"
 pedia:m.resource_type.glass_shard_craft: "Slime Science Material"
 pedia:m.how_to_use.glass_shard_craft: "Deposit glass shards into the Lab's Refinery where they can then be used for fabricating Slime Science gadgets."
-pedia:m.desc.glass_shard_craft: "Glass shards are a common resource exclusive to the Glass Desert, obtained with a drill.
-
-The glass shards found in the desert are small fragments of the monolithic structures that cover its dunes and cliffs. These structures are believed to be the cause of the dangerous solar anomalies that scorch the landscape, so using a drill to collect these shards is a much safer means of collecting samples of the glass."
+pedia:m.desc.glass_shard_craft: "Glass shards are a common resource exclusive to the Glass Desert, obtained with a drill.\n\nThe glass shards found in the desert are small fragments of the monolithic structures that cover its dunes and cliffs. These structures are believed to be the cause of the dangerous solar anomalies that scorch the landscape, so using a drill to collect these shards is a much safer means of collecting samples of the glass."
 pedia:t.manifold_cube_craft: "Manifold Cube"
 pedia:m.intro.manifold_cube_craft: "It's a little bit of everything."
 pedia:m.favored_by.manifold_cube_craft: "(not slime food)"
 pedia:m.resource_type.manifold_cube_craft: "Slime Science Material"
 pedia:m.how_to_use.manifold_cube_craft: "Deposit manifold cubes into the Lab's Refinery where it can then be used for crafting Slime Science gadgets."
-pedia:m.desc.manifold_cube_craft: "A manifold cube is an invention of slime scientist Viktor Humphries. He developed manifold cubes in order to save time, as manifold cubes contain traces of thousands of unique minerals and compounds, one of which can be activated by a fabricator to transform the whole manifold cube into the selected material.
-
-Mochi once offered Viktor a fortune in newbucks for the formula to creating manifold cubes, and he politely declined. Following this, Viktor noted several attempts to hack his data server. When Viktor asked Mochi to comment on the incident, she politely declined."
+pedia:m.desc.manifold_cube_craft: "A manifold cube is an invention of slime scientist Viktor Humphries. He developed manifold cubes in order to save time, as manifold cubes contain traces of thousands of unique minerals and compounds, one of which can be activated by a fabricator to transform the whole manifold cube into the selected material.\n\nMochi once offered Viktor a fortune in newbucks for the formula to creating manifold cubes, and he politely declined. Following this, Viktor noted several attempts to hack his data server. When Viktor asked Mochi to comment on the incident, she politely declined."
 pedia:t.echoes: "Echoes"
 pedia:m.intro.echoes: "A mote of light, or perhaps, a memory?"
 pedia:m.favored_by.echoes: "(not slime food)"
 pedia:m.resource_type.echoes: "Unique"
 pedia:m.how_to_use.echoes: "Echoes can be used as decorations. Simply vac them up and shoot them anywhere you want. They'll hover in that spot until you vac them up."
-pedia:m.desc.echoes: "Within the crumbling walls of the Ancient Ruins, small traces of energy can be found, never staying in one place for very long. Called echoes, they are believed to be a phenomenon resulting from some kind of ancient event. Since they are harmless, echoes are often collected by ranchers as good luck charms or used as decorations.
-
-Echoes appear regularly in the nooks and crannies of the Ancient Ruins, as well as from extractors."
+pedia:m.desc.echoes: "Within the crumbling walls of the Ancient Ruins, small traces of energy can be found, never staying in one place for very long. Called echoes, they are believed to be a phenomenon resulting from some kind of ancient event. Since they are harmless, echoes are often collected by ranchers as good luck charms or used as decorations.\n\nEchoes appear regularly in the nooks and crannies of the Ancient Ruins, as well as from extractors."
 pedia:t.slime_toys: "Slime Toys"
 pedia:m.intro.slime_toys: "Never quit playing around."
 pedia:m.favored_by.slime_toys: "(Varies by slime)"
 pedia:m.resource_type.slime_toys: "Unique"
-pedia:m.desc.slime_toys: "Slime toys come in a variety of forms, and all reduce slime agitation of any nearby slimes, so it's a good idea to toss one in a corral for slimes to enjoy.
-
-Each slime has a favorite toy, which reduces their agitation even more. A largo will favor either of its types.
-
-The soothing quality of slime toys do not stack, so while you don't need more than one in a corral, it certainly doesn't hurt anything either!"
+pedia:m.desc.slime_toys: "Slime toys come in a variety of forms, and all reduce slime agitation of any nearby slimes, so it's a good idea to toss one in a corral for slimes to enjoy.\n\nEach slime has a favorite toy, which reduces their agitation even more. A largo will favor either of its types.\n\nThe soothing quality of slime toys do not stack, so while you don't need more than one in a corral, it certainly doesn't hurt anything either!"
 pedia:t.echo_notes: "Chimes"
 pedia:m.intro.echo_notes: "Fill your world with song."
 pedia:m.favored_by.echo_notes: "(not slime food)"
@@ -749,9 +500,7 @@ pedia:m.how_to_use.echo_notes: "Chimes can be used as decorations, and their mus
 pedia:m.desc.echo_notes: "Chimes are mysterious motes of energy that twinkle slimes produce. When an object passes through them, they emit a musical sound, allowing ranchers who have collected them to compose a kind of music in the air around them. The only known means of collecting chimes is through chance encounters with twinkle slimes, making them quite rare among the curiosities of the Far, Far Range."
 pedia:t.corral: "Corral"
 pedia:m.intro.corral: "A happy slime makes for a happy rancher."
-pedia:m.desc.corral: "A corral is used to keep slimes on a ranch. The open-air corrals are designed for maximum slime satisfaction, with the rich soil of the Range beneath them and its expansive sky above them. Slimes will remain perfectly happy within corrals so long as they are fed regularly.
-
-Remember: You can shoot things THROUGH a corral barrier. Handy!"
+pedia:m.desc.corral: "A corral is used to keep slimes on a ranch. The open-air corrals are designed for maximum slime satisfaction, with the rich soil of the Range beneath them and its expansive sky above them. Slimes will remain perfectly happy within corrals so long as they are fed regularly.\n\nRemember: You can shoot things THROUGH a corral barrier. Handy!"
 pedia:m.upgrade.name.corral.walls: "High Walls"
 pedia:m.upgrade.desc.corral.walls: "Higher corral walls ensure that even the bounciest of slimes will have difficulty escaping."
 pedia:m.upgrade.name.corral.music_box: "Music Box"
@@ -803,9 +552,7 @@ pedia:m.intro.pond: "Water you going to do with this?"
 pedia:m.desc.pond: "A pond gives you a source of fresh water on the ranch that you can use for watering gardens, calming slimes in a corral, defeating tarr, or giving your puddle slimes a place to hang out and feed."
 pedia:t.plort_market: "Plort Market"
 pedia:m.intro.plort_market: "Feed slimes. Collect plorts. Get paid."
-pedia:m.desc.plort_market: "The plort market is a network of buyers and sellers of plorts across the galaxy. Ranchers use plort market machines on their ranch to send plorts to the market for sale. Ranchers are paid immediately when depositing plorts at the plort's current market value.
-
-Plort market values fluctuate and some of the more savvy ranchers will hoard certain plorts for days when sale prices are high, especially rare plorts."
+pedia:m.desc.plort_market: "The plort market is a network of buyers and sellers of plorts across the galaxy. Ranchers use plort market machines on their ranch to send plorts to the market for sale. Ranchers are paid immediately when depositing plorts at the plort's current market value.\n\nPlort market values fluctuate and some of the more savvy ranchers will hoard certain plorts for days when sale prices are high, especially rare plorts."
 pedia:t.overgrowth: "The Overgrowth"
 pedia:m.intro.overgrowth: "The ranch's very own wild side."
 pedia:m.desc.overgrowth: "The Overgrowth is an expansion to the ranch that is covered in moss and tall grasses. The thicket it creates allows for fruits and veggies to grow naturally and attracts the occasional wild chicken, making it an ideal space for a rancher that wants to let their slimes roam more freely."
@@ -814,201 +561,104 @@ pedia:m.intro.grotto: "A dark and gloomy cavern above the sea and a likely first
 pedia:m.desc.grotto: "The Grotto is an expansion to the ranch set inside a (slightly spooky) cave that allows a rancher to care for light-sensitive slimes without the need for a solar shield. Never has a phosphor slime felt so liberated."
 pedia:t.lab: "The Lab"
 pedia:m.intro.lab: "Allows you to begin your career as an amateur, unlicensed Slime Scientist."
-pedia:m.desc.lab: "The Lab is an expansion to the ranch that houses a barn containing Hobson's old, Slime Science workshop. Once unlocked, the Lab will allow you to fabricate dozens of useful gadgets using Slime Science!
-
-It is recommended that only more experienced ranchers unlock the Lab, as Slime Science requires a great many resources and lots of newbucks to fully master."
+pedia:m.desc.lab: "The Lab is an expansion to the ranch that houses a barn containing Hobson's old, Slime Science workshop. Once unlocked, the Lab will allow you to fabricate dozens of useful gadgets using Slime Science!\n\nIt is recommended that only more experienced ranchers unlock the Lab, as Slime Science requires a great many resources and lots of newbucks to fully master."
 pedia:t.docks: "The Docks"
 pedia:m.intro.docks: "Deep, deep down in the great, blue sea, I saw a thousand slimes smiling back at me."
-pedia:m.desc.docks: "The Docks is an expansion to the ranch that repurposes a cozy, little lookout along the waterfront. This expansion offers a few extra ranch patches flanked on several sides with fishing nets. The nets can be used to temporarily catch escaped slimes or as a means of creating physical collages of slimes because it's fun.
-
-It also houses a natural wellspring, allowing you to fill your tank with unlimited fresh water, or for a few puddle slimes that prefer a natural place to soak."
+pedia:m.desc.docks: "The Docks is an expansion to the ranch that repurposes a cozy, little lookout along the waterfront. This expansion offers a few extra ranch patches flanked on several sides with fishing nets. The nets can be used to temporarily catch escaped slimes or as a means of creating physical collages of slimes because it's fun.\n\nIt also houses a natural wellspring, allowing you to fill your tank with unlimited fresh water, or for a few puddle slimes that prefer a natural place to soak."
 pedia:t.ogden_retreat: "Ogden's Retreat"
 pedia:m.intro.ogden_retreat: "Where to retreat after you've escaped."
 pedia:m.desc.ogden_retreat: "Ogden built this little getaway as a place where he could take a break from his ranch and collect his thoughts. But soon it led to an obsession as he discovered the nearby Wilds, and the tasty kookadoba fruit within."
 pedia:t.mochi_manor: "Mochi's Manor"
 pedia:m.intro.mochi_manor: "Unequivocally the most amazing place on the Far, Far Range."
-pedia:m.desc.mochi_manor: "Mochi's Manor is one of several of its kind, (and this one isn't even the best one) owned by the great Mochi Miles. Her accomplishments are known throughout the galaxy, earning her the respect of every rancher on the Far, Far Range. Other ranchers can't even compete. They were even going to give an award to Mochi, but she said no thanks.
-
-[ERROR: THIS SLIMEPEDIA ENTRY HAS BEEN ALTERED BY AN EXTERNAL SOURCE]"
+pedia:m.desc.mochi_manor: "Mochi's Manor is one of several of its kind, (and this one isn't even the best one) owned by the great Mochi Miles. Her accomplishments are known throughout the galaxy, earning her the respect of every rancher on the Far, Far Range. Other ranchers can't even compete. They were even going to give an award to Mochi, but she said no thanks.\n\n[ERROR: THIS SLIMEPEDIA ENTRY HAS BEEN ALTERED BY AN EXTERNAL SOURCE]"
 pedia:t.partner: "7Zee Rewards Club"
 pedia:m.intro.partner: "Style. Sophistication. Other good things. 7Zee."
-pedia:m.desc.partner: "The 7Zee Rewards Club is an optional program that allows you to purchase prestigious rewards for large sums of newbucks. Each rank brings unique rewards and a new rank title.
-
-Some ranchers point out that the whole thing seems like a way of siphoning enormous sums of newbucks in exchange for fancy colors and trophies that don't actually serve any real purpose. But those ranchers aren't sporting the latest, most fashionable vacpack colors and obviously cannot be trusted."
+pedia:m.desc.partner: "The 7Zee Rewards Club is an optional program that allows you to purchase prestigious rewards for large sums of newbucks. Each rank brings unique rewards and a new rank title.\n\nSome ranchers point out that the whole thing seems like a way of siphoning enormous sums of newbucks in exchange for fancy colors and trophies that don't actually serve any real purpose. But those ranchers aren't sporting the latest, most fashionable vacpack colors and obviously cannot be trusted."
 pedia:t.chroma: "Chroma Packs"
 pedia:m.intro.chroma: "A picture is always more beautiful when there are more colors than you can count."
-pedia:m.desc.chroma: "Chroma Packs can be applied from the terminal on the ranch earned in the 7Zee Rewards Club. They allow you to apply color schemes you have earned to your ranch house, vacpack, and ranch tech such as corrals and silos.
-
-You can acquire more chroma packs by continuing to rank up in the 7Zee Rewards Club. Only the most successful ranchers will be able to show off the rarest chroma packs!"
+pedia:m.desc.chroma: "Chroma Packs can be applied from the terminal on the ranch earned in the 7Zee Rewards Club. They allow you to apply color schemes you have earned to your ranch house, vacpack, and ranch tech such as corrals and silos.\n\nYou can acquire more chroma packs by continuing to rank up in the 7Zee Rewards Club. Only the most successful ranchers will be able to show off the rarest chroma packs!"
 pedia:t.reef: "Dry Reef"
 pedia:m.intro.reef: "A coral-crusted ocean floor that now basks under a golden sun."
-pedia:m.desc.reef: "The environment surrounding the ranch is known as the Dry Reef and is an arid, wind-swept land covered in dusty crags and rocky cliffs shaped by the wind over the millennia.
-
-The Dry Reef is primarily home to pink, tabby, and rock slimes though phosphor slimes will also come out of hiding when the sun sets. The Dry Reef's climate doesn't make for an abundance of any particular resource, but plenty of carrots, pogofruit, and hen hens are everywhere, as well as some less common resources if you know where to look."
+pedia:m.desc.reef: "The environment surrounding the ranch is known as the Dry Reef and is an arid, wind-swept land covered in dusty crags and rocky cliffs shaped by the wind over the millennia.\n\nThe Dry Reef is primarily home to pink, tabby, and rock slimes though phosphor slimes will also come out of hiding when the sun sets. The Dry Reef's climate doesn't make for an abundance of any particular resource, but plenty of carrots, pogofruit, and hen hens are everywhere, as well as some less common resources if you know where to look."
 pedia:t.quarry: "Indigo Quarry"
 pedia:m.intro.quarry: "All that remains of a mining project that quickly went bust."
-pedia:m.desc.quarry: "The Indigo Quarry is a winding network of caves and cliffs, striated with deep purple hues from the rare minerals found within it. It was once the site of a mining project but went bust after the discovery that the rare ores it produces quickly break down in atmospheres other than that of the Far, Far Range.
-
-It was later discovered that the means to harness these metals was via rock slime plorts. Somehow, rock slime plorts preserve the minerals within, a process that eludes even the most prestigious slime scientists.
-
-The Indigo Quarry is a natural home for rock slimes and the more elusive rad slime, and its naturally mineral-rich soil make it a great place to harvest most wild veggies."
+pedia:m.desc.quarry: "The Indigo Quarry is a winding network of caves and cliffs, striated with deep purple hues from the rare minerals found within it. It was once the site of a mining project but went bust after the discovery that the rare ores it produces quickly break down in atmospheres other than that of the Far, Far Range.\n\nIt was later discovered that the means to harness these metals was via rock slime plorts. Somehow, rock slime plorts preserve the minerals within, a process that eludes even the most prestigious slime scientists.\n\nThe Indigo Quarry is a natural home for rock slimes and the more elusive rad slime, and its naturally mineral-rich soil make it a great place to harvest most wild veggies."
 pedia:t.moss: "Moss Blanket"
 pedia:m.intro.moss: "Like a flower blooming from a rocky crack, this emerald expanse hints at what could be."
-pedia:m.desc.moss: "The Moss Blanket is an island covered in a thick layer of moss where flora grows wild in great, tangling knots at every turn. The high walls of the cliffs surrounding the island and its great canopy of trees allow for sea mists to pass in and become trapped, creating a unique climate within the otherwise arid range.
-
-The slimes primarily found within the Moss Blanket find its jungle-like conditions perfect: tabby and boom slimes hunt their prey through the thickets with abandon, and honey slimes lounge in the flower beds, eating the great abundance of fruit that can be found at every turn."
+pedia:m.desc.moss: "The Moss Blanket is an island covered in a thick layer of moss where flora grows wild in great, tangling knots at every turn. The high walls of the cliffs surrounding the island and its great canopy of trees allow for sea mists to pass in and become trapped, creating a unique climate within the otherwise arid range.\n\nThe slimes primarily found within the Moss Blanket find its jungle-like conditions perfect: tabby and boom slimes hunt their prey through the thickets with abandon, and honey slimes lounge in the flower beds, eating the great abundance of fruit that can be found at every turn."
 pedia:t.ruins: "Ancient Ruins"
 pedia:m.intro.ruins: "All that is lost is eventually found, and lost once more."
-pedia:m.desc.ruins: "Hidden behind a vast mountain range, the Ancient Ruins stand as one of the few known unnatural structures on the Far, Far Range. Their origin remains a mystery, as do the strange occurences that happen within.
-
-Home to quantum slimes that seem to express many other possible realities of their being, and phase lemon trees that do not remain in one time or place for very long, the Ancient Ruins defy logic and expectation.
-
-Only one thing is certain in the Ancient Ruins: within its deepest chambers lies its greatest secret."
+pedia:m.desc.ruins: "Hidden behind a vast mountain range, the Ancient Ruins stand as one of the few known unnatural structures on the Far, Far Range. Their origin remains a mystery, as do the strange occurences that happen within.\n\nHome to quantum slimes that seem to express many other possible realities of their being, and phase lemon trees that do not remain in one time or place for very long, the Ancient Ruins defy logic and expectation.\n\nOnly one thing is certain in the Ancient Ruins: within its deepest chambers lies its greatest secret."
 pedia:t.desert: "Glass Desert"
 pedia:m.intro.desert: "Under a blistering sun, prismatic giants evoke beauty and peril."
-pedia:m.desc.desert: "The Glass Desert is mostly uncharted territory within the Far, Far Range, located so far beyond the ranch it is only accessible via teleportation.
-
-The Glass Desert gets its name from the monolithic glass structures that dot its landscape. Resembling prismatic, frozen flames, these glass structures are believed to have been created during a violent solar event, scorching the land and heating sand and stone into glass. These glass structures are also believed to be the catalyst for the dangerous solar anomalies that regularly occur in the Glass Desert: firestorms that burst from the ground, as if intense heat is desperate to escape the ground below.
-
-But the desert's barren, unforgiving, sometimes violent environment hides a secret: somewhere deep within it lies a memory of what once was, and a means of restoring parts of that memory."
+pedia:m.desc.desert: "The Glass Desert is mostly uncharted territory within the Far, Far Range, located so far beyond the ranch it is only accessible via teleportation.\n\nThe Glass Desert gets its name from the monolithic glass structures that dot its landscape. Resembling prismatic, frozen flames, these glass structures are believed to have been created during a violent solar event, scorching the land and heating sand and stone into glass. These glass structures are also believed to be the catalyst for the dangerous solar anomalies that regularly occur in the Glass Desert: firestorms that burst from the ground, as if intense heat is desperate to escape the ground below.\n\nBut the desert's barren, unforgiving, sometimes violent environment hides a secret: somewhere deep within it lies a memory of what once was, and a means of restoring parts of that memory."
 pedia:t.sea: "The Slime Sea"
 pedia:m.intro.sea: "An expansive body of water and slime compound that's not fit for swimming, let alone drinking."
-pedia:m.desc.sea: "The Slime Sea that covers most of the Far, Far Range is something of a mystery. It is seemingly a mixture of water and slime that is believed to be the primordial pool whence all slimes emerged, though its true purpose is entirely unknown by even the most esteemed slime scientists.
-
-What is known is that the liquid found within the Slime Sea is not fit for drinking, watering crops, or even swimming, as most things seem to quickly sink to the bottom. When a slime enters the slime sea it quickly vanishes but it is widely believed that this far from ends the slime's existence, for slimes that enter the sea can often be seen quickly reappearing back on land, happy as ever. In fact, many slime scientists believe that slimes use the sea as a means of transportation, moving swiftly below the surface and popping out on land wherever they see fit.
-
-But all theories aside, one fact remains very clear, most especially to ranchers: don't enter the Slime Sea!"
+pedia:m.desc.sea: "The Slime Sea that covers most of the Far, Far Range is something of a mystery. It is seemingly a mixture of water and slime that is believed to be the primordial pool whence all slimes emerged, though its true purpose is entirely unknown by even the most esteemed slime scientists.\n\nWhat is known is that the liquid found within the Slime Sea is not fit for drinking, watering crops, or even swimming, as most things seem to quickly sink to the bottom. When a slime enters the slime sea it quickly vanishes but it is widely believed that this far from ends the slime's existence, for slimes that enter the sea can often be seen quickly reappearing back on land, happy as ever. In fact, many slime scientists believe that slimes use the sea as a means of transportation, moving swiftly below the surface and popping out on land wherever they see fit.\n\nBut all theories aside, one fact remains very clear, most especially to ranchers: don't enter the Slime Sea!"
 pedia:t.wilds: "The Wilds"
 pedia:m.intro.wilds: "Filled with the deepest roots of the slime family tree."
-pedia:m.desc.wilds: "The Wilds are an ancient, untamed collection of islands that are home to an enormous population of feral slimes. All of these slimes are largo desecendants of saber slimes, one of the oldest known species of slimes.
-
-Ogden Ortiz once explored The Wilds and discovered the rare kookadoba fruit growing within. Since then he has contracted out the dangerous task of collecting these fruits to anyone willing to take on the risk."
+pedia:m.desc.wilds: "The Wilds are an ancient, untamed collection of islands that are home to an enormous population of feral slimes. All of these slimes are largo desecendants of saber slimes, one of the oldest known species of slimes.\n\nOgden Ortiz once explored The Wilds and discovered the rare kookadoba fruit growing within. Since then he has contracted out the dangerous task of collecting these fruits to anyone willing to take on the risk."
 pedia:t.the_ranch: "The Ranch"
 pedia:m.intro.the_ranch: "A distant home for distant hearts."
-pedia:m.desc.the_ranch: "Beatrix begins her life on a humble ranch in the middle of an area of the Far, Far Range known as the Dry Reef. Once the property of the legendary slime rancher and notorious old codger, Hobson Twillgers, the ranch has seen better days, as Hobson let it come into a state of disrepair shortly before disappearing completely.
-
-Hobson's whereabouts are currently unknown."
+pedia:m.desc.the_ranch: "Beatrix begins her life on a humble ranch in the middle of an area of the Far, Far Range known as the Dry Reef. Once the property of the legendary slime rancher and notorious old codger, Hobson Twillgers, the ranch has seen better days, as Hobson let it come into a state of disrepair shortly before disappearing completely.\n\nHobson's whereabouts are currently unknown."
 pedia:t.keys: "Slime Keys"
 pedia:m.intro.keys: "An ancient key for an ancient lock."
 pedia:m.desc.keys: "Slime Keys are large, stone keys that are used to open the ancient slime gates across the range. These gates often lead to new areas to explore or create shortcuts to familiar ones."
 pedia:t.refinery: "Refinery"
 pedia:m.intro.refinery: "The first step to building fantastic gadgets."
-pedia:m.desc.refinery: "Using advanced technology, the Refinery breaks down plorts and other resources to their molecular level, allowing them to be fabricated into various Slime Science gadgets. Aside from plorts, the bulk of resources you will use in Slime Science will be obtained from extractors.
-
-Be sure to choose what to deposit into the Refinery wisely: any resources you deposit cannot be removed from the refinery, but instead used only for building gadgets."
+pedia:m.desc.refinery: "Using advanced technology, the Refinery breaks down plorts and other resources to their molecular level, allowing them to be fabricated into various Slime Science gadgets. Aside from plorts, the bulk of resources you will use in Slime Science will be obtained from extractors.\n\nBe sure to choose what to deposit into the Refinery wisely: any resources you deposit cannot be removed from the refinery, but instead used only for building gadgets."
 pedia:t.fabricator: "Fabricator"
 pedia:m.intro.fabricator: "Let's get crafty."
 pedia:m.desc.fabricator: "The Fabricator allows you to craft gadgets from a blueprint using resources you have stored in the Refinery. You can generally build as many gadgets of a specific blueprint as you wish, however some special gadgets have build limits, allowing you to only own a certain number of them at a time."
 pedia:t.blueprints: "Blueprints"
 pedia:m.intro.blueprints: "All great scientists have a plan... most of the time."
-pedia:m.desc.blueprints: "Blueprints allow you to craft gadgets at the Fabricator. Once you own a blueprint for a specific gadget, you can craft it as many times as you like, provided you have the necessary resources and are not exceeding the build limit.
-
-Blueprints can be purchased from the Builder's Shop, or found in treasure pods throughout the Far, Far Range. Some of them are hiding in really secret spots!"
+pedia:m.desc.blueprints: "Blueprints allow you to craft gadgets at the Fabricator. Once you own a blueprint for a specific gadget, you can craft it as many times as you like, provided you have the necessary resources and are not exceeding the build limit.\n\nBlueprints can be purchased from the Builder's Shop, or found in treasure pods throughout the Far, Far Range. Some of them are hiding in really secret spots!"
 pedia:t.extractors: "Extractors"
 pedia:m.intro.extractors: "Nature is a treasure hoarder."
-pedia:m.desc.extractors: "Extractors are a special class of Slime Science gadgets that are essential for building all other types of gadgets. Extractors include drills, pumps, and apiaries.
-
-Once placed on a build site, an extractor will begin working, collecting resources from the environment over time. Once it is full of resources, an extractor can be emptied. The best extractors can repeat this cycle multiple times before they finally break down.
-
-Each extractor can find exclusive resources if used in the correct zone:
-Pumps can find a special resource in the Dry Reef.
-Drills can find a special resource in the Indigo Quarry.
-Apiaries can find a special resource in the Moss Blanket.
-All extractors can find special resources in the Glass Desert."
+pedia:m.desc.extractors: "Extractors are a special class of Slime Science gadgets that are essential for building all other types of gadgets. Extractors include drills, pumps, and apiaries.\n\nOnce placed on a build site, an extractor will begin working, collecting resources from the environment over time. Once it is full of resources, an extractor can be emptied. The best extractors can repeat this cycle multiple times before they finally break down.\n\nEach extractor can find exclusive resources if used in the correct zone:\nPumps can find a special resource in the Dry Reef.\nDrills can find a special resource in the Indigo Quarry.\nApiaries can find a special resource in the Moss Blanket.\nAll extractors can find special resources in the Glass Desert."
 pedia:t.utilities: "Utilities"
 pedia:m.intro.utilities: "Tools for getting the job done."
-pedia:m.desc.utilities: "Utilities are a class of Slime Science gadgets that provide useful features to aid you in managing your ranch, as well as exploring the range.
-
-Craft utilities in order to make your slime ranching a little easier."
+pedia:m.desc.utilities: "Utilities are a class of Slime Science gadgets that provide useful features to aid you in managing your ranch, as well as exploring the range.\n\nCraft utilities in order to make your slime ranching a little easier."
 pedia:t.warp_tech: "Warp Tech"
 pedia:m.intro.warp_tech: "Try not to think about how it works."
-pedia:m.desc.warp_tech: "Warp tech is a class of Slime Science gadgets that allow you to harness the power of instantaneous travel. It includes teleporters that you can use to create shortcuts, as well as gadgets that allow you to transport items.
-
-Craft warp tech in order to ranch and explore much faster and more efficiently."
+pedia:m.desc.warp_tech: "Warp tech is a class of Slime Science gadgets that allow you to harness the power of instantaneous travel. It includes teleporters that you can use to create shortcuts, as well as gadgets that allow you to transport items.\n\nCraft warp tech in order to ranch and explore much faster and more efficiently."
 pedia:t.decorations: "Decorations"
 pedia:m.intro.decorations: "Be the best rancher, but do it in style."
-pedia:m.desc.decorations: "Decorations are a class of Slime Science gadgets that allow you to decorate the world with attractive objects or recreations of natural findings from the environment.
-
-Craft decorations in order to make your slime ranching a more beautiful experience!"
+pedia:m.desc.decorations: "Decorations are a class of Slime Science gadgets that allow you to decorate the world with attractive objects or recreations of natural findings from the environment.\n\nCraft decorations in order to make your slime ranching a more beautiful experience!"
 pedia:t.curios: "Curios"
 pedia:m.intro.curios: "Because why not?"
-pedia:m.desc.curios: "Curios are a class of Slime Science gadgets that while functional, are not necessarily useful. Curios include toys, games, and other gimmicky gadgets that can be a great time with an equally great imagination.
-
-Craft curios in order to make your slime ranching a little sillier (which is the best kind of slime ranching, to be honest)."
+pedia:m.desc.curios: "Curios are a class of Slime Science gadgets that while functional, are not necessarily useful. Curios include toys, games, and other gimmicky gadgets that can be a great time with an equally great imagination.\n\nCraft curios in order to make your slime ranching a little sillier (which is the best kind of slime ranching, to be honest)."
 pedia:t.drones: "Drones"
 pedia:m.intro.drones: "Because everyone can use a helping hand."
-pedia:m.desc.drones: "Drones are a highly useful gadget that can reduce some of the work a rancher needs to perform on the ranch to keep things running smoothly.
-
-Once you've built a drone, simply give it a program using three simple inputs:
-1. Target: What the drone is looking for on your ranch.
-2. Source: Where the drone gets its target.
-3. Destination: Where the drone takes its target.
-
-If you give a drone an impossible task, or a drone simply cannot complete their task presently, it will go idle.
-
-A drone can run for about a day before it will return to its station and must be powered up again. Simply give it a refreshing blast of water to recharge it.
-
-A drone only works on your ranch and will only work within the ranch expansion in which you place it.
-
-Sometimes, a drone will overfill an auto-feeder or silo due to a bug in their software. The 7Zee corporation insists this bug is a feature."
+pedia:m.desc.drones: "Drones are a highly useful gadget that can reduce some of the work a rancher needs to perform on the ranch to keep things running smoothly.\n\nOnce you've built a drone, simply give it a program using three simple inputs:\n1. Target: What the drone is looking for on your ranch.\n2. Source: Where the drone gets its target.\n3. Destination: Where the drone takes its target.\n\nIf you give a drone an impossible task, or a drone simply cannot complete their task presently, it will go idle.\n\nA drone can run for about a day before it will return to its station and must be powered up again. Simply give it a refreshing blast of water to recharge it.\n\nA drone only works on your ranch and will only work within the ranch expansion in which you place it.\n\nSometimes, a drone will overfill an auto-feeder or silo due to a bug in their software. The 7Zee corporation insists this bug is a feature."
 pedia:t.valley: "Nimble Valley"
 pedia:m.intro.valley: "A nice place to visit, if Mochi ever lets you."
-pedia:m.desc.valley: "The Nimble Valley is a wholly-owned property of Mochi Miles and the only known habitat of the exceedingly rare quicksilver slimes.
-
-Mochi uses a complex system of proprietary electrical generators to call quicksilver slimes out from hiding and then a modified vacpack to feed them charges of electrical energy. The Nimble Valley is also rigged with a series of warptech satellites that instantly transfer quicksilver plorts into a rancher's vac tank, because according to Mochi, having to vac up plorts manually \"is for chumps.\""
+pedia:m.desc.valley: "The Nimble Valley is a wholly-owned property of Mochi Miles and the only known habitat of the exceedingly rare quicksilver slimes.\n\nMochi uses a complex system of proprietary electrical generators to call quicksilver slimes out from hiding and then a modified vacpack to feed them charges of electrical energy. The Nimble Valley is also rigged with a series of warptech satellites that instantly transfer quicksilver plorts into a rancher's vac tank, because according to Mochi, having to vac up plorts manually \"is for chumps.\""
 pedia:t.glitch_slime: "Glitch Slime"
 pedia:m.intro.glitch_slime: "If you're reading this inside the Slimeulation, how do you know it's real?"
 pedia:m.diet.glitch_slime: "Unknown"
 pedia:m.favorite.glitch_slime: "(none)"
 pedia:m.slimeology.glitch_slime: "Glitch slimes were formed from a bug in the codebase of Viktor's Slimeulation of the Far, Far Range. Though a wholly digital entity, these slimes could easily be considered 'real' within the limits of the world they inhabit. Glitch slimes do not seek out food like physical slimes; instead, they seem to be expanding to every corner of the Slimeulation, driven by some unknown purpose."
-pedia:m.risks.glitch_slime: "Though glitch slimes pose no direct danger to a rancher, their mischievous nature can make for hazardous situations when attempting to wrangle them. Glitch slimes will take the form of other slimes, distinguishable only by the inaccurate face they present. Vac-ing them up or using debug spray will reveal their true form.
-
-Additionally, a glitch slime can take the form of objects commonly found in the Far, Far Range. If you're familiar with the real range, look for objects like rocks and trees that don't seem to belong. A splash of debug spray can reveal many glitch slimes in disguise."
-pedia:m.plortonomics.glitch_slime: "A glitch slime does not display any drive to eat the simulated food of the Slimeulation and so no known plorts exist.
-
-However, if glitch slime plorts did exist, they would be virtual like everything in the Slimeulation and have no actual value. Unless of course, a bunch of people decided virtual plorts have value, and then maybe everyone would start buying them. Heck, maybe eventually glitch slime plorts would be worth a fortune because a bunch of us just agree on that too and then we all created our own Slimeulations to generate glitch slime plorts. But if that happened, then we would all be using an absurd amount of real energy, harming our real environment further, all to generate virtual plorts?
-
-So obviously, that's a very silly thing and we'd never do that."
+pedia:m.risks.glitch_slime: "Though glitch slimes pose no direct danger to a rancher, their mischievous nature can make for hazardous situations when attempting to wrangle them. Glitch slimes will take the form of other slimes, distinguishable only by the inaccurate face they present. Vac-ing them up or using debug spray will reveal their true form.\n\nAdditionally, a glitch slime can take the form of objects commonly found in the Far, Far Range. If you're familiar with the real range, look for objects like rocks and trees that don't seem to belong. A splash of debug spray can reveal many glitch slimes in disguise."
+pedia:m.plortonomics.glitch_slime: "A glitch slime does not display any drive to eat the simulated food of the Slimeulation and so no known plorts exist.\n\nHowever, if glitch slime plorts did exist, they would be virtual like everything in the Slimeulation and have no actual value. Unless of course, a bunch of people decided virtual plorts have value, and then maybe everyone would start buying them. Heck, maybe eventually glitch slime plorts would be worth a fortune because a bunch of us just agree on that too and then we all created our own Slimeulations to generate glitch slime plorts. But if that happened, then we would all be using an absurd amount of real energy, harming our real environment further, all to generate virtual plorts?\n\nSo obviously, that's a very silly thing and we'd never do that."
 pedia:t.wilds_tutorial: "Ogden's Kookadoba Hunt"
 pedia:m.intro.wilds_tutorial: "Survival guide to The Wilds."
-pedia:m.instructions.wilds_tutorial: "Kookadobas can be found growing all over The Wilds or packed together in saber slime mudballs.
-
-Bring mudballs to kookacrackers to release the kookadobas inside.
-
-Teleporters to The Wilds are a little unreliable.  You won't always end up in the same spot each time and you'll need to find a different teleporter back to Ogden's Retreat."
+pedia:m.instructions.wilds_tutorial: "Kookadobas can be found growing all over The Wilds or packed together in saber slime mudballs.\n\nBring mudballs to kookacrackers to release the kookadobas inside.\n\nTeleporters to The Wilds are a little unreliable.  You won't always end up in the same spot each time and you'll need to find a different teleporter back to Ogden's Retreat."
 pedia:m.desc.wilds_tutorial: ""
 pedia:t.valley_tutorial: "Mochi's Quicksilver Job"
 pedia:m.intro.valley_tutorial: "Mochi's new employee handbook."
-pedia:m.instructions.valley_tutorial: "Starting a generator in the Nimble Valley activates all sorts of handy MilesTech stations:
-
-- Spark shots: Feed one of these sparks to a quicksilver for PROFIT!
-- Charge stations: Grants a random power shot. Experiment with all three!
-- Relay rings: Charges the generator and adds more time to the clock.
-- Energy boost stations: Refills all your energy."
+pedia:m.instructions.valley_tutorial: "Starting a generator in the Nimble Valley activates all sorts of handy MilesTech stations:\n\n- Spark shots: Feed one of these sparks to a quicksilver for PROFIT!\n- Charge stations: Grants a random power shot. Experiment with all three!\n- Relay rings: Charges the generator and adds more time to the clock.\n- Energy boost stations: Refills all your energy."
 pedia:m.desc.valley_tutorial: ""
 pedia:t.slimulations_tutorial: "Viktor's Slimeulation Testing"
 pedia:m.intro.slimulations_tutorial: "Proper testing procedures."
-pedia:m.instructions.slimulations_tutorial: "Help Viktor identify and capture glitch slimes, which will turn into bug reports after you leave the Slimeulation.
-
-- Vac up suspicious slimes to reveal glitch slimes.
-- Use debug spray on suspicious objects to reveal glitch slimes.
-- Glitch slimes can escape if you take damage from the corruption!
-- Once an exit appears, follow the beacons to find it and escape.
-
-Also, never under any circumstances press the_
-
-_hallOO_cHickeN?"
+pedia:m.instructions.slimulations_tutorial: "Help Viktor identify and capture glitch slimes, which will turn into bug reports after you leave the Slimeulation.\n\n- Vac up suspicious slimes to reveal glitch slimes.\n- Use debug spray on suspicious objects to reveal glitch slimes.\n- Glitch slimes can escape if you take damage from the corruption!\n- Once an exit appears, follow the beacons to find it and escape.\n\nAlso, never under any circumstances press the_\n\n_hallOO_cHickeN?"
 pedia:m.desc.slimulations_tutorial: ""
 pedia:t.viktor_lab: "Viktor's Workshop"
 pedia:m.intro.viktor_lab: "No chickens or carrots. Only slimes."
-pedia:m.desc.viktor_lab: "Deep below the Slime Sea, Viktor's Workshop is one part laboratory, one part ranch that Viktor developed himself. The workshop houses his Slimeulation system that is currently filled with bugs and technical glitches and in need of further testing. Because of this, Viktor has moved on to an unknown, new project somewhere on the Far, Far Range while he seeks a partner to help troubleshoot the Slimeulation.
-
-Though the workshop's undersea nature provides a dramatic effect, it is an extremely practical decision in that the Slime Sea provides a natural cooling system for the tremendous amount of heat the Slimeulation generates. This unnatural warming effect on the Slime Sea is a top priority of Viktor's, and he has stated that if he cannot reduce Slimeulation heat output significantly in the near future, he will shut the entire project down for fear of harming the natural environment."
+pedia:m.desc.viktor_lab: "Deep below the Slime Sea, Viktor's Workshop is one part laboratory, one part ranch that Viktor developed himself. The workshop houses his Slimeulation system that is currently filled with bugs and technical glitches and in need of further testing. Because of this, Viktor has moved on to an unknown, new project somewhere on the Far, Far Range while he seeks a partner to help troubleshoot the Slimeulation.\n\nThough the workshop's undersea nature provides a dramatic effect, it is an extremely practical decision in that the Slime Sea provides a natural cooling system for the tremendous amount of heat the Slimeulation generates. This unnatural warming effect on the Slime Sea is a top priority of Viktor's, and he has stated that if he cannot reduce Slimeulation heat output significantly in the near future, he will shut the entire project down for fear of harming the natural environment."
 pedia:t.slimulations_world: "The Slimeulation"
 pedia:m.intro.slimulations_world: "Virtually better than the real thing."
-pedia:m.desc.slimulations_world: "The Slimeulation is an in-development, virtual re-creation of the Far, Far Range created by Viktor Humphries. The goal of the Slimeulation is to predict slime behaviors and evolution, but unfortunately it is riddled with bugs in the codebase which have produced a curious anomally known as glitch slimes.
-
-Viktor is now seeking a partner to enter the Slimeulation, wrangle glitch slimes out of hiding, and file valuable bug reports."
+pedia:m.desc.slimulations_world: "The Slimeulation is an in-development, virtual re-creation of the Far, Far Range created by Viktor Humphries. The goal of the Slimeulation is to predict slime behaviors and evolution, but unfortunately it is riddled with bugs in the codebase which have produced a curious anomally known as glitch slimes.\n\nViktor is now seeking a partner to enter the Slimeulation, wrangle glitch slimes out of hiding, and file valuable bug reports."
 pedia:t.pink_gordo: "Pink Gordo"
 pedia:t.rock_gordo: "Rock Gordo"
 pedia:t.tabby_gordo: "Tabby Gordo"
@@ -1432,38 +1082,23 @@ pedia:m.intro.ornaments: "Collectible decorations for your ranch!"
 pedia:m.favored_by.ornaments: "(not slime food)"
 pedia:m.resource_type.ornaments: "Unique"
 pedia:m.how_to_use.ornaments: "Ornaments make great decorations for any part of your ranch. Vac them up and shoot them wherever you'd like. They stick to just about anything and can even float midair!"
-pedia:m.desc.ornaments: "Ornaments are unique decorations which can be found in party crates or during special events. There are dozens of different ornaments to find and collect, but only a handful of designs seem to be available at any one time. 
-They're fun to collect but... who is making all of these ornaments and hiding them around the Far, Far Range? Probably best to not think about it too much."
+pedia:m.desc.ornaments: "Ornaments are unique decorations which can be found in party crates or during special events. There are dozens of different ornaments to find and collect, but only a handful of designs seem to be available at any one time. \nThey're fun to collect but... who is making all of these ornaments and hiding them around the Far, Far Range? Probably best to not think about it too much."
 pedia:t.dlc: "Manage DLC"
 pedia:m.dlc.playset_pirate: "Slime Rancher Piratey Bundle"
 pedia:m.dlc.playset_pirate.contents.playset_pirate: "Piratey Playset"
-pedia:m.dlc.playset_pirate.contents.playset_pirate.desc: "Includes an exclusive Piratey Fashion Pod and Treasure Chest slime toy!
-
-You can access the fashion pod after unlocking Slime Science in The Lab. Slime toys can be accessed after unlocking them via the 7Zee Rewards Club."
+pedia:m.dlc.playset_pirate.contents.playset_pirate.desc: "Includes an exclusive Piratey Fashion Pod and Treasure Chest slime toy!\n\nYou can access the fashion pod after unlocking Slime Science in The Lab. Slime toys can be accessed after unlocking them via the 7Zee Rewards Club."
 pedia:m.dlc.playset_pirate.contents.chroma_pack_emerald: "Emerald Chroma Pack"
-pedia:m.dlc.playset_pirate.contents.chroma_pack_emerald.desc: "Includes an exclusive Emerald Chroma Pack that you can apply to your vacpack, ranch tech, or ranch house!
-
-You can access chroma packs after unlocking the Chroma Station from the 7Zee Rewards Club."
+pedia:m.dlc.playset_pirate.contents.chroma_pack_emerald.desc: "Includes an exclusive Emerald Chroma Pack that you can apply to your vacpack, ranch tech, or ranch house!\n\nYou can access chroma packs after unlocking the Chroma Station from the 7Zee Rewards Club."
 pedia:m.dlc.playset_heroic: "Slime Rancher Heroic Bundle"
 pedia:m.dlc.playset_heroic.contents.playset_heroic: "Heroic Playset"
-pedia:m.dlc.playset_heroic.contents.playset_heroic.desc: "Includes an exclusive Heroic Fashion Pod and Bop Goblin slime toy!
-
-You can access the fashion pod after unlocking Slime Science in The Lab. Slime toys can be accessed after unlocking them via the 7Zee Rewards Club."
+pedia:m.dlc.playset_heroic.contents.playset_heroic.desc: "Includes an exclusive Heroic Fashion Pod and Bop Goblin slime toy!\n\nYou can access the fashion pod after unlocking Slime Science in The Lab. Slime toys can be accessed after unlocking them via the 7Zee Rewards Club."
 pedia:m.dlc.playset_heroic.contents.chroma_pack_sapphire: "Sapphire Chroma Pack"
-pedia:m.dlc.playset_heroic.contents.chroma_pack_sapphire.desc: "Includes an exclusive Sapphire Chroma Pack that you can apply to your vacpack, ranch tech, or ranch house!
-
-You can access chroma packs after unlocking the Chroma Station from the 7Zee Rewards Club."
+pedia:m.dlc.playset_heroic.contents.chroma_pack_sapphire.desc: "Includes an exclusive Sapphire Chroma Pack that you can apply to your vacpack, ranch tech, or ranch house!\n\nYou can access chroma packs after unlocking the Chroma Station from the 7Zee Rewards Club."
 pedia:m.dlc.playset_scifi: "Slime Rancher Galactic Bundle"
 pedia:m.dlc.playset_scifi.contents.playset_scifi: "Galactic Playset"
-pedia:m.dlc.playset_scifi.contents.playset_scifi.desc: "Includes an exclusive Galactic Fashion Pod and Beeper Bot slime toy!
-
-You can access the fashion pod after unlocking Slime Science in The Lab. Slime toys can be accessed after unlocking them via the 7Zee Rewards Club."
+pedia:m.dlc.playset_scifi.contents.playset_scifi.desc: "Includes an exclusive Galactic Fashion Pod and Beeper Bot slime toy!\n\nYou can access the fashion pod after unlocking Slime Science in The Lab. Slime toys can be accessed after unlocking them via the 7Zee Rewards Club."
 pedia:m.dlc.playset_scifi.contents.chroma_pack_ruby: "Ruby Chroma Pack"
-pedia:m.dlc.playset_scifi.contents.chroma_pack_ruby.desc: "Includes an exclusive Ruby Chroma Pack that you can apply to your vacpack, ranch tech, or ranch house!
-
-You can access chroma packs after unlocking the Chroma Station from the 7Zee Rewards Club."
+pedia:m.dlc.playset_scifi.contents.chroma_pack_ruby.desc: "Includes an exclusive Ruby Chroma Pack that you can apply to your vacpack, ranch tech, or ranch house!\n\nYou can access chroma packs after unlocking the Chroma Station from the 7Zee Rewards Club."
 pedia:m.dlc.secret_style: "Secret Style Pack"
 pedia:m.dlc.secret_style.contents.pack: "Secret Style Pack"
-pedia:m.dlc.secret_style.contents.pack.desc: "Includes secret new looks for your slimes. Make your phosphor slimes angelic, your tabbies look like tigers, and more!
-
-You can access Secret Styles in the ranch house menu after finding them hidden in special treasure pods out on the range."
+pedia:m.dlc.secret_style.contents.pack.desc: "Includes secret new looks for your slimes. Make your phosphor slimes angelic, your tabbies look like tigers, and more!\n\nYou can access Secret Styles in the ranch house menu after finding them hidden in special treasure pods out on the range."

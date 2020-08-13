@@ -134,7 +134,7 @@ namespace Guu.Language
 						continue;
 
 					string[] args = line.Split(':');
-					AddTranslation(args[0], args[1], args[2].TrimStart().TrimStart('"').TrimEnd('"'));
+					AddTranslation(args[0], args[1], args[2].TrimStart().TrimStart('"').TrimEnd('"').Replace("\\n", "\n"));
 				}
 			}
 		}
