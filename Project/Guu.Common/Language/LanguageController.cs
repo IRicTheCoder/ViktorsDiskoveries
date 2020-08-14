@@ -29,10 +29,6 @@ namespace Guu.Language
 		// are allowed)
 		private static readonly Dictionary<MessageDirector.Lang, List<string>> LANG_FALLBACK = new Dictionary<MessageDirector.Lang, List<string>>();
 		
-		// To lock the system before it actually reads the language
-		// This prevents the auto select system from the game from loading files it can't yet access
-		private static bool firstLock = true;
-
 		// The current language to prevent the load for happening every time a scene changes
 		private static MessageDirector.Lang? currLang;
 		
@@ -60,12 +56,6 @@ namespace Guu.Language
 		[SuppressMessage("ReSharper", "AssignNullToNotNullAttribute")]
 		public static void SetTranslations(MessageDirector dir, Assembly yourAssembly = null)
 		{
-			/*if (firstLock)
-			{
-				firstLock = false;
-				return;
-			}*/
-
 			MessageDirector.Lang lang = dir.GetCultureLang();
 
 			if (currLang == lang)

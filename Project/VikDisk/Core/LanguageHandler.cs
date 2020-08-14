@@ -56,8 +56,11 @@ namespace VikDisk.Core
             newFontArmenian.name = "CustomFontArmenian";
 
             foreach (MessageDirector.Lang lang in LANGUAGES.Keys)
-                LanguageController.AddUITranslation("l.lang_" + lang.ToString().ToLowerInvariant(), LANGUAGES[lang]);
-            
+            {
+                LanguageController.AddUITranslation("l.lang_" + lang.ToString().ToLowerInvariant(),
+                                                    RTL_LANGUAGES.Contains(lang) ? LANGUAGES[lang].Reverse() : LANGUAGES[lang]);
+            }
+
             LanguageController.AddLanguageFallback(Enums.Langs.FIL, "tl");
             LanguageController.AddLanguageFallback(Enums.Langs.HY, "arm");
         }
