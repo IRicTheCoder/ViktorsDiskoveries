@@ -47,6 +47,7 @@
     <Compile Include="Components\Food\CorrusiveAura.cs" />
     <Compile Include="Components\Plorts\PlortSmoke.cs" />
     <Compile Include="Components\Plorts\GlitchedPlort.cs" />
+    <Compile Include="Components\UI\RTLSupport.cs" />
     <Compile Include="Core\Attributes\NoRegisterAttribute.cs" />
     <Compile Include="Core\GameFixer.cs" />
     <Compile Include="Core\CallbackHandler.cs" />
@@ -198,7 +199,6 @@
     <EmbeddedResource Include="modinfo.json" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Components\UI" />
     <Folder Include="Core\Callbacks\" />
     <Folder Include="Game\Identifiables\Largos\Synergies" />
     <Folder Include="Game\Others\Slime Appearance\" />

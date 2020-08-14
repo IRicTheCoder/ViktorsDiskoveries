@@ -14,6 +14,8 @@ namespace VikDisk.Core
         // The fonts to use for the game, the new font is to support special symbols
         internal static TMP_FontAsset oldFont;
         internal static TMP_FontAsset newFont;
+        internal static TMP_FontAsset newFontHebrew;
+        internal static TMP_FontAsset newFontArmenian;
 
         // List of all new languages added by the mod
         private static readonly Dictionary<MessageDirector.Lang, string> LANGUAGES = new Dictionary<MessageDirector.Lang, string>
@@ -30,7 +32,15 @@ namespace VikDisk.Core
             {MessageDirector.Lang.KO, "한국어"}, // Korean
             {Enums.Langs.CS, "Čeština"}, // Czech 
             {Enums.Langs.PL, "Polski"}, // Polish
-            {Enums.Langs.FIL, "Tagalog"} // Tagalog / Filipino
+            {Enums.Langs.FIL, "Tagalog"}, // Tagalog / Filipino
+            {Enums.Langs.HE, "עברית"}, // Hebrew
+            {Enums.Langs.HY, "հայերեն"} // Armenian
+        };
+        
+        // List of all languages that are RTL
+        internal static readonly List<MessageDirector.Lang> RTL_LANGUAGES = new List<MessageDirector.Lang>
+        {
+            Enums.Langs.HE
         };
 
         // Sets up all the languages
@@ -38,11 +48,18 @@ namespace VikDisk.Core
         {
             newFont = TMP_FontAsset.CreateFontAsset(Packs.Global.Get<Font>("CustomFont"));
             newFont.name = "CustomFont";
+            
+            newFontHebrew = TMP_FontAsset.CreateFontAsset(Packs.Global.Get<Font>("CustomFontHebrew"));
+            newFontHebrew.name = "CustomFontHebrew";
+            
+            newFontArmenian = TMP_FontAsset.CreateFontAsset(Packs.Global.Get<Font>("CustomFontArmenian"));
+            newFontArmenian.name = "CustomFontArmenian";
 
             foreach (MessageDirector.Lang lang in LANGUAGES.Keys)
                 LanguageController.AddUITranslation("l.lang_" + lang.ToString().ToLowerInvariant(), LANGUAGES[lang]);
             
             LanguageController.AddLanguageFallback(Enums.Langs.FIL, "tl");
+            LanguageController.AddLanguageFallback(Enums.Langs.HY, "arm");
         }
 
         // Fixes the language display of the game

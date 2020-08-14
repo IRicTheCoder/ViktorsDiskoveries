@@ -14,6 +14,8 @@ namespace VikDisk
 			public static MessageDirector.Lang CS; // Czech
 			public static MessageDirector.Lang PL; // Polish
 			public static MessageDirector.Lang FIL; // Tagalog (Filipino)
+			public static MessageDirector.Lang HE; // Hebrew
+			public static MessageDirector.Lang HY; // Armenian
 		}
 	}
 }

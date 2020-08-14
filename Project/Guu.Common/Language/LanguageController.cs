@@ -176,7 +176,6 @@ namespace Guu.Language
 			if (!TRANSLATIONS.ContainsKey(bundle))
 				TRANSLATIONS.Add(bundle, new Dictionary<string, string>());
 
-			Debug.Log("ADDING TO BUNDLE " + bundle + "  " + key + " : " + value);
 			if (TRANSLATIONS[bundle].ContainsKey(key))
 				TRANSLATIONS[bundle][key] = value;
 			else

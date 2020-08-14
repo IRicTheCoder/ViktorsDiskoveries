@@ -1,7 +1,4 @@
-﻿using Guu;
-
-using SRML;
-using SRML.Console;
+﻿using SRML.Console;
 using VikDisk.Core;
 using VikDisk.Debug;
 using VikDisk.Game;

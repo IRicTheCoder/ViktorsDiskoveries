@@ -1,22 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-
-using Guu;
-using Guu.Language;
-
-using SRML.Debug;
-using UnityEngine.SceneManagement;
-using SRML.Registries;
-using SRML;
+﻿using Guu;
 using UnityEngine;
 using SRML.SR;
-using SRML.Areas;
 
 using TMPro;
 
-using UnityEngine.EventSystems;
-
-using Object = System.Object;
+using VikDisk.Components.UI;
 
 namespace VikDisk.Core
 {
@@ -38,8 +26,8 @@ namespace VikDisk.Core
 		internal static void LateSetup()
 		{
 			// LANGUAGE LISTENERS
-			//SRGuu.RegisterTranslation(Main.execAssembly, null);
-			SRGuu.RegisterTranslation(Main.execAssembly, LanguageHandler.FixLangDisplay);
+			SRGuu.RegisterTranslation(Main.execAssembly, null);
+			//SRGuu.RegisterTranslation(Main.execAssembly, LanguageHandler.FixLangDisplay);
 		}
 
 		// Registers all content to the world
@@ -58,6 +46,11 @@ namespace VikDisk.Core
 		{
 			LanguageHandler.oldFont = ui.languageDropdown.captionText.font;
 			LanguageHandler.oldFont.m_FallbackFontAssetTable.Add(LanguageHandler.newFont);
+			LanguageHandler.oldFont.m_FallbackFontAssetTable.Add(LanguageHandler.newFontHebrew);
+			LanguageHandler.oldFont.m_FallbackFontAssetTable.Add(LanguageHandler.newFontArmenian);
+
+			foreach (TMP_Text text in Resources.FindObjectsOfTypeAll<TMP_Text>())
+				text.gameObject.AddComponent<RTLSupport>().SetText(text);
 		}
 	}
 }
