@@ -2,12 +2,8 @@
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 
-using rail;
-
-using SRML.SR;
 using SRML.Utils;
 
 using UnityEngine;
@@ -24,6 +20,10 @@ namespace Guu.Language
 		private const string ACTOR_BUNDLE = "actor";
 		private const string PEDIA_BUNDLE = "pedia";
 		private const string UI_BUNDLE = "ui";
+		private const string RANGE_BUNDLE = "range";
+		private const string BUILD_BUNDLE = "build";
+		private const string MAIL_BUNDLE = "mail";
+		private const string KEYS_BUNDLE = "keys";
 		
 		// A language fallback for a language added to the game that does not have the right symbol yet (multiple fallbacks
 		// are allowed)
@@ -37,12 +37,16 @@ namespace Guu.Language
 		private static MessageDirector.Lang? currLang;
 		
 		// A list of all custom translations added into the game
-		internal static Dictionary<string, Dictionary<string, string>> translations = new Dictionary<string, Dictionary<string, string>>()
+		internal static readonly Dictionary<string, Dictionary<string, string>> TRANSLATIONS = new Dictionary<string, Dictionary<string, string>>
 		{
 			{GLOBAL_BUNDLE, new Dictionary<string, string>()},
 			{ACTOR_BUNDLE, new Dictionary<string, string>()},
 			{PEDIA_BUNDLE, new Dictionary<string, string>()},
-			{UI_BUNDLE, new Dictionary<string, string>()}
+			{UI_BUNDLE, new Dictionary<string, string>()},
+			{RANGE_BUNDLE, new Dictionary<string, string>()},
+			{BUILD_BUNDLE, new Dictionary<string, string>()},
+			{MAIL_BUNDLE, new Dictionary<string, string>()},
+			{KEYS_BUNDLE, new Dictionary<string, string>()}
 		};
 
 		/// <summary>
@@ -50,20 +54,21 @@ namespace Guu.Language
 		/// <para>This will load keys from the language file and add them to
 		/// the game's translation directly</para>
 		/// </summary>
+		/// <param name="dir">The MessageDirector to get the language from</param>
 		/// <param name="yourAssembly">The assembly you want to get it from 
 		/// (if null will get the relevant assembly for your mod)</param>
 		[SuppressMessage("ReSharper", "AssignNullToNotNullAttribute")]
-		public static void SetTranslations(Assembly yourAssembly = null)
+		public static void SetTranslations(MessageDirector dir, Assembly yourAssembly = null)
 		{
-			if (firstLock)
+			/*if (firstLock)
 			{
 				firstLock = false;
 				return;
-			}
+			}*/
 
-			MessageDirector.Lang lang = (MessageDirector.Lang)GameContext.Instance.AutoSaveDirector.ProfileManager.Settings.options.language;
+			MessageDirector.Lang lang = dir.GetCultureLang();
 
-			if (Levels.isSpecialNonAlloc() || (Levels.IsLevel(Levels.WORLD) && !SceneContext.Instance.TimeDirector.HasPauser()) || currLang == lang)
+			if (currLang == lang)
 				return;
 
 			Assembly assembly = yourAssembly ?? ReflectionUtils.GetRelevantAssembly();
@@ -76,12 +81,16 @@ namespace Guu.Language
 			FileInfo langFile = new FileInfo(Path.Combine(Path.GetDirectoryName(path), $"Resources\\Lang\\{code}.yaml"));
 			if (!langFile.Exists)
 			{
-				foreach (string fallback in LANG_FALLBACK[lang])
+				if (LANG_FALLBACK.ContainsKey(lang))
 				{
-					code = fallback;
-					langFile = new FileInfo(Path.Combine(Path.GetDirectoryName(path), $"Resources\\Lang\\{code}.yaml"));
+					foreach (string fallback in LANG_FALLBACK[lang])
+					{
+						code = fallback;
+						langFile = new FileInfo(Path.Combine(Path.GetDirectoryName(path),
+						                                     $"Resources\\Lang\\{code}.yaml"));
 
-					if (langFile.Exists) break;
+						if (langFile.Exists) break;
+					}
 				}
 
 				if (!langFile.Exists)
@@ -134,9 +143,15 @@ namespace Guu.Language
 						continue;
 
 					string[] args = line.Split(':');
-					AddTranslation(args[0], args[1], args[2].TrimStart().TrimStart('"').TrimEnd('"').Replace("\\n", "\n"));
+					AddTranslation(args[0], args[1], Unescape(args[2]));
 				}
 			}
+		}
+
+		// Unescapes some characters
+		private static string Unescape(string toUnescape)
+		{
+			return toUnescape.TrimStart().TrimStart('"').TrimEnd('"').Replace("\\n", "\n");
 		}
 
 		/// <summary>
@@ -146,7 +161,7 @@ namespace Guu.Language
 		/// <param name="fallback">The fallback to add</param>
 		public static void AddLanguageFallback(MessageDirector.Lang lang, string fallback)
 		{
-			if (!LANG_FALLBACK.ContainsKey(lang))  LANG_FALLBACK.Add(lang, new List<string>());
+			if (!LANG_FALLBACK.ContainsKey(lang)) LANG_FALLBACK.Add(lang, new List<string>());
 			if (!LANG_FALLBACK[lang].Contains(fallback)) LANG_FALLBACK[lang].Add(fallback);
 		}
 
@@ -158,16 +173,14 @@ namespace Guu.Language
 		/// <param name="value">Value of the translation</param>
 		public static void AddTranslation(string bundle, string key, string value)
 		{
-			if (!translations.ContainsKey(bundle))
-				translations.Add(bundle, new Dictionary<string, string>());
+			if (!TRANSLATIONS.ContainsKey(bundle))
+				TRANSLATIONS.Add(bundle, new Dictionary<string, string>());
 
-			if (translations[bundle].ContainsKey(key))
-			{
-				Debug.LogWarning($"Translation key '{key}' for bundle '{bundle}' is already taken! Overwriting...");
-				translations[bundle][key] = value;
-			}
+			Debug.Log("ADDING TO BUNDLE " + bundle + "  " + key + " : " + value);
+			if (TRANSLATIONS[bundle].ContainsKey(key))
+				TRANSLATIONS[bundle][key] = value;
 			else
-				translations[bundle].Add(key, value);
+				TRANSLATIONS[bundle].Add(key, value);
 		}
 		
 		/// <summary>
@@ -207,7 +220,37 @@ namespace Guu.Language
 		/// <param name="value">Value of the translation</param>
 		public static void AddUITranslation(string key, string value)
 		{
-			AddTranslation(PEDIA_BUNDLE, key, value);
+			AddTranslation(UI_BUNDLE, key, value);
+		}
+		
+		/// <summary>
+		/// Adds a new translation to the range bundle
+		/// </summary>
+		/// <param name="key">Key for the translation</param>
+		/// <param name="value">Value of the translation</param>
+		public static void AddRangeTranslation(string key, string value)
+		{
+			AddTranslation(RANGE_BUNDLE, key, value);
+		}
+		
+		/// <summary>
+		/// Adds a new translation to the build bundle
+		/// </summary>
+		/// <param name="key">Key for the translation</param>
+		/// <param name="value">Value of the translation</param>
+		public static void AddBuildTranslation(string key, string value)
+		{
+			AddTranslation(BUILD_BUNDLE, key, value);
+		}
+		
+		/// <summary>
+		/// Adds a new translation to the mail bundle
+		/// </summary>
+		/// <param name="key">Key for the translation</param>
+		/// <param name="value">Value of the translation</param>
+		public static void AddMailTranslation(string key, string value)
+		{
+			AddTranslation(MAIL_BUNDLE, key, value);
 		}
 	}
 }

@@ -1,19 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-
 using Guu.Language;
-
-using JetBrains.Annotations;
-
-using SRML.SR;
-
 using TMPro;
-
 using UnityEngine;
-
-using Object = UnityEngine.Object;
 
 namespace VikDisk.Core
 {
@@ -25,10 +14,9 @@ namespace VikDisk.Core
         // The fonts to use for the game, the new font is to support special symbols
         internal static TMP_FontAsset oldFont;
         internal static TMP_FontAsset newFont;
-        internal static TMP_FontAsset newFontCJK;
 
         // List of all new languages added by the mod
-        private static readonly Dictionary<MessageDirector.Lang, string> LANGUAGES = new Dictionary<MessageDirector.Lang, string>()
+        private static readonly Dictionary<MessageDirector.Lang, string> LANGUAGES = new Dictionary<MessageDirector.Lang, string>
         {
             {MessageDirector.Lang.EN, "English"}, // English
             {MessageDirector.Lang.DE, "Deutsch"}, // German
@@ -50,12 +38,9 @@ namespace VikDisk.Core
         {
             newFont = TMP_FontAsset.CreateFontAsset(Packs.Global.Get<Font>("CustomFont"));
             newFont.name = "CustomFont";
-            
-            //newFontCJK = TMP_FontAsset.CreateFontAsset(Packs.Global.Get<Font>("CustomFontCJK"));
-            //newFontCJK.name = "CustomFontCJK";
 
             foreach (MessageDirector.Lang lang in LANGUAGES.Keys)
-                TranslationPatcher.AddUITranslation("l.lang_" + lang.ToString().ToLowerInvariant(), LANGUAGES[lang]);
+                LanguageController.AddUITranslation("l.lang_" + lang.ToString().ToLowerInvariant(), LANGUAGES[lang]);
             
             LanguageController.AddLanguageFallback(Enums.Langs.FIL, "tl");
         }
@@ -63,57 +48,29 @@ namespace VikDisk.Core
         // Fixes the language display of the game
         internal static void FixLangDisplay(MessageDirector dir)
         {
-            MessageBundle actor = dir.GetBundle("actor");
-            ResourceBundle rActor = actor.GetPrivateField<ResourceBundle>("bundle");
+            string[] bundles = {
+                "actor", "pedia", "ui", "range", "build", "mail", "keys"
+            };
 
-            FileInfo fActor = new FileInfo(Application.dataPath + "/actor.yaml");
-
-            using (StreamWriter writer = fActor.CreateText())
+            foreach (string bundle in bundles)
             {
-                writer.WriteLine("#=====================================");
-                writer.WriteLine("# AUTO GENERATED FROM THE GAME");
-                writer.WriteLine("#=====================================");
-                writer.WriteLine("");
-                
-                foreach (string key in rActor.GetKeys())
+                MessageBundle actor = dir.GetBundle(bundle);
+                ResourceBundle rActor = actor.GetPrivateField<ResourceBundle>("bundle");
+
+                FileInfo fActor = new FileInfo(Application.dataPath + $"/{bundle}.yaml");
+
+                using (StreamWriter writer = fActor.CreateText())
                 {
-                    writer.WriteLine("actor:" + key + ": \"" + actor.Get(key).Replace("\"", "\\\"").Replace("\n", "\\n") + "\"");
-                }
-            }
-            
-            MessageBundle pedia = dir.GetBundle("pedia");
-            ResourceBundle rPedia = pedia.GetPrivateField<ResourceBundle>("bundle");
+                    writer.WriteLine("#=====================================");
+                    writer.WriteLine("# AUTO GENERATED FROM THE GAME");
+                    writer.WriteLine("#=====================================");
+                    writer.WriteLine("");
 
-            FileInfo fPedia = new FileInfo(Application.dataPath + "/pedia.yaml");
-
-            using (StreamWriter writer = fPedia.CreateText())
-            {
-                writer.WriteLine("#=====================================");
-                writer.WriteLine("# AUTO GENERATED FROM THE GAME");
-                writer.WriteLine("#=====================================");
-                writer.WriteLine("");
-                
-                foreach (string key in rPedia.GetKeys())
-                {
-                    writer.WriteLine("pedia:" + key + ": \"" + pedia.Get(key).Replace("\"", "\\\"").Replace("\n", "\\n") + "\"");
-                }
-            }
-            
-            MessageBundle ui = dir.GetBundle("ui");
-            ResourceBundle rUi = ui.GetPrivateField<ResourceBundle>("bundle");
-
-            FileInfo fUi = new FileInfo(Application.dataPath + "/ui.yaml");
-
-            using (StreamWriter writer = fUi.CreateText())
-            {
-                writer.WriteLine("#=====================================");
-                writer.WriteLine("# AUTO GENERATED FROM THE GAME");
-                writer.WriteLine("#=====================================");
-                writer.WriteLine("");
-                
-                foreach (string key in rUi.GetKeys())
-                {
-                    writer.WriteLine("ui:" + key + ": \"" + ui.Get(key).Replace("\"", "\\\"").Replace("\n", "\\n") + "\"");
+                    foreach (string key in rActor.GetKeys())
+                    {
+                        writer.WriteLine($"{bundle}:" + key + ": \"" +
+                                         actor.Get(key).Replace("\"", "\\\"").Replace("\n", "\\n") + "\"");
+                    }
                 }
             }
         }
