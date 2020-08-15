@@ -1,0 +1,17 @@
+---
+- //=====================================
+- // GLOBAL
+- //=====================================
+- // Common Language Files
+- '@import overrides.yaml'
+- //=====================================
+- // CHAPTER 1
+- //=====================================
+- // Common Language Files
+- '@import Chapter1\identifiables.yaml'
+- '@import Chapter1\pedia.yaml'
+- '@import Chapter1\ui.yaml'
+- '@import Chapter1\upgrades.yaml'
+- // Mails
+- '@import Chapter1\Mails\viktor.yaml'
+- '@import Chapter1\Mails\mattie.yaml'
