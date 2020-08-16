@@ -47,7 +47,6 @@
     <Compile Include="Components\Food\CorrusiveAura.cs" />
     <Compile Include="Components\Plorts\PlortSmoke.cs" />
     <Compile Include="Components\Plorts\GlitchedPlort.cs" />
-    <Compile Include="Components\UI\RTLSupport.cs" />
     <Compile Include="Core\Attributes\NoRegisterAttribute.cs" />
     <Compile Include="Core\GameFixer.cs" />
     <Compile Include="Core\CallbackHandler.cs" />
@@ -199,6 +198,7 @@
     <EmbeddedResource Include="modinfo.json" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Components\UI" />
     <Folder Include="Core\Callbacks\" />
     <Folder Include="Game\Identifiables\Largos\Synergies" />
     <Folder Include="Game\Others\Slime Appearance\" />
@@ -208,6 +208,7 @@
     <Folder Include="Game\Upgrades\Tech\" />
     <Folder Include="Game\Upgrades\World\" />
     <Folder Include="Resources\Lang\en\Chapter1\Mails\" />
+    <Folder Include="Resources\Lang\he\Chapter1\Mails" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Bundles\Chapter1">
@@ -236,6 +237,33 @@
     <Content Include="Resources\Bundles\Global">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Lang\cs.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\cs\actor.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\cs\Chapter1\identifiables.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\cs\Chapter1\pedia.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\cs\Chapter1\ui.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\cs\Chapter1\upgrades.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\cs\keys.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\cs\overrides.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\cs\range.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Lang\en.yaml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -252,6 +280,98 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Lang\en\overrides.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\he.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\he\Base\actor.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\he\Base\build.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\he\Base\keys.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\he\Base\mail.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\he\Base\pedia.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\he\Base\range.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\he\Base\ui.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\he\Chapter1\identifiables.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\he\Chapter1\pedia.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\he\Chapter1\ui.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\he\Chapter1\upgrades.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\he\overrides.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\pl.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\pl\actor.yaml" />
+    <Content Include="Resources\Lang\pl\Chapter1\identifiables.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\pl\Chapter1\pedia.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\pl\Chapter1\ui.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\pl\Chapter1\upgrades.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\pl\overrides.yaml" />
+    <Content Include="Resources\Lang\pt.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\pt\Chapter1\identifiables.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\pt\Chapter1\pedia.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\pt\Chapter1\ui.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\pt\Chapter1\upgrades.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\pt\overrides.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\ru.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\ru\Chapter1\identifiables.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\ru\Chapter1\pedia.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\ru\Chapter1\ui.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\ru\Chapter1\upgrades.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\ru\overrides.yaml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

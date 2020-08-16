@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text.RegularExpressions;
+using UnityEngine;
 
 /// <summary>
 /// Contains extension methods for strings
@@ -7,6 +8,9 @@ using System.Text.RegularExpressions;
 // ReSharper disable once CheckNamespace
 public static class StringExtensions
 {
+    /// <summary>
+    /// Reverses the string
+    /// </summary>
     public static string Reverse(this string original)
     {
         string[] division = original.Split(' ');
@@ -14,7 +18,7 @@ public static class StringExtensions
 
         foreach (string value in division)
         {
-            if (Regex.IsMatch(value, @"[\d.]+"))
+            if (Regex.IsMatch(value, @"[\dA-Za-z]+"))
             {
                 result += " " + value;
                 continue;
@@ -28,24 +32,15 @@ public static class StringExtensions
         return result.TrimStart();
     }
 
-    public static string FixRTLNumbers(this string original)
+    /// <summary>
+    /// Fixes the string that came from translation
+    /// </summary>
+    public static string FixTranslatedString(this string toFix)
     {
-        string[] division = original.Split(' ');
-        string result = "";
-
-        foreach (string value in division)
-        {
-            if (!Regex.IsMatch(value, @"[\d.]+"))
-            {
-                result += " " + value;
-                continue;
-            }
-
-            char[] chars = value.ToCharArray();
-            Array.Reverse(chars);
-            result += " " + new string(chars);
-        }
-
-        return result.TrimStart();
+        return toFix.TrimStart()
+                    .TrimStart('"')
+                    .TrimEnd('"')
+                    .Replace("\\n", "\n")
+                    .Replace("\\\"", "\"");;
     }
 }

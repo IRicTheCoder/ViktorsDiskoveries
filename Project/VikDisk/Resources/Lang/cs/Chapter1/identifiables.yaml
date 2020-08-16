@@ -1,0 +1,52 @@
+---
+#=====================================
+#FOOD
+#=====================================
+#Veggies
+"actor:l.dark_ginger_veggie": Temný Zázvor
+#Fruits
+"actor:l.glitch_pogo_fruit": Glitch PogoOvoce
+#Meats
+"actor:l.fire_hen": Ohnivá Slepice
+"actor:l.fire_chick": Ohnivé Kuře
+#Others
+"actor:l.extra_spicy_tofu": Extra pálivé tofu
+#=====================================
+#PLORTS, SLIMES & RESOURCES
+#=====================================
+#Plorts
+"actor:l.real_glitch_plort": Glitch Plort
+"actor:l.tarr_plort": Zamazaný Plort
+"actor:l.dream_plort": Plort snů
+#Slimes
+"actor:l.real_glitch_slime": "\"reálný\" Glitch Plort"
+#Slime Resources
+"actor:l.pink_slime_extract_craft": Extrakt z Růžového Slima
+#=====================================
+#DECORATIONS
+#=====================================
+#Echos
+"actor:l.white_echo": Bíla Ozvěna
+"actor:l.rainbow_echo": Duhová Ozvěna
+#Effies
+"actor:l.glitch_effy": Glitch Effy
+"actor:l.cartoon_stars_effy": Pohádkové Hvězdy Effy
+#Ornaments
+"actor:l.dream_ornament": Ornament Snů
+"actor:l.viktor_ornament": Viktorův Ornament
+#=====================================
+#WORLD RELATED
+#=====================================
+#Crates
+"actor:l.glitch_crate": Glitch Bedna
+#Liquids
+"actor:l.guu_liquid": Slizké Guu
+#=====================================
+#MISC
+#=====================================
+#Fashions
+"actor:l.santa_stache_fashion": Santův Knír Pod
+#Toys
+"actor:l.basket_ball_toy": Basketballový Míč
+#Others
+"actor:l.wonder_ticket": Lístek do Říše Snů

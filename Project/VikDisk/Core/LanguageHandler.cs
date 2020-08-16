@@ -32,20 +32,15 @@ namespace VikDisk.Core
             {MessageDirector.Lang.KO, "한국어"}, // Korean
             {Enums.Langs.CS, "Čeština"}, // Czech 
             {Enums.Langs.PL, "Polski"}, // Polish
-            {Enums.Langs.FIL, "Tagalog"}, // Tagalog / Filipino
-            {Enums.Langs.HE, "עברית"}, // Hebrew
+            {Enums.Langs.FIL, "Filipino"}, // Filipino
+            //{Enums.Langs.HE, "עברית"}, // Hebrew
             {Enums.Langs.HY, "հայերեն"} // Armenian
         };
         
-        // List of all languages that are RTL
-        internal static readonly List<MessageDirector.Lang> RTL_LANGUAGES = new List<MessageDirector.Lang>
-        {
-            Enums.Langs.HE
-        };
-
         // Sets up all the languages
         internal static void Setup()
         {
+            // Constructs new fonts for the game
             newFont = TMP_FontAsset.CreateFontAsset(Packs.Global.Get<Font>("CustomFont"));
             newFont.name = "CustomFont";
             
@@ -54,15 +49,25 @@ namespace VikDisk.Core
             
             newFontArmenian = TMP_FontAsset.CreateFontAsset(Packs.Global.Get<Font>("CustomFontArmenian"));
             newFontArmenian.name = "CustomFontArmenian";
+            
+            // Creates language fallback for language symbols
 
+            // Marks languages as RTL to adjust them then loading
+            //LanguageController.AddRTLSupport(Enums.Langs.HE);
+
+            // Corrects the language display on the language selection
+            LangTranslations(null);
+            LanguageController.TranslationReset += LangTranslations;
+        }
+
+        // Sets the translations for the languages
+        internal static void LangTranslations(MessageDirector.Lang? curr)
+        {
             foreach (MessageDirector.Lang lang in LANGUAGES.Keys)
             {
                 LanguageController.AddUITranslation("l.lang_" + lang.ToString().ToLowerInvariant(),
-                                                    RTL_LANGUAGES.Contains(lang) ? LANGUAGES[lang].Reverse() : LANGUAGES[lang]);
+                                                    LanguageController.IsRTL(lang) ? LANGUAGES[lang].Reverse() : LANGUAGES[lang]);
             }
-
-            LanguageController.AddLanguageFallback(Enums.Langs.FIL, "tl");
-            LanguageController.AddLanguageFallback(Enums.Langs.HY, "arm");
         }
 
         // Fixes the language display of the game

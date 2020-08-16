@@ -1,9 +1,9 @@
-﻿using Guu.Utils;
+﻿using Guu.Language;
+using Guu.Utils;
 using TMPro;
 using UnityEngine;
-using VikDisk.Core;
 
-namespace VikDisk.Components.UI
+namespace Guu.Components.UI
 {
     public class RTLSupport : MonoBehaviour
     {
@@ -17,9 +17,7 @@ namespace VikDisk.Components.UI
 
         private void CheckRTL(MessageDirector dir)
         {
-            text.isRightToLeftText = LanguageHandler.RTL_LANGUAGES.Contains(dir.GetCultureLang());
-
-            if (text.isRightToLeftText)
+            if (LanguageController.IsRTL(dir.GetCultureLang()))
             {
                 if (text.alignment.ToString().Contains("Left"))
                 {
@@ -27,7 +25,7 @@ namespace VikDisk.Components.UI
                         EnumUtils.Parse<TextAlignmentOptions>(text.alignment.ToString().Replace("Left", "Right"));
                 }
 
-                Invoke(nameof(FixRTL), 40);
+                Invoke(nameof(ApplyRTL), 0.5f);
             }
             else
             {
@@ -39,9 +37,10 @@ namespace VikDisk.Components.UI
             }
         }
 
-        private void FixRTL()
+        private void ApplyRTL()
         {
-            text.text = text.text.FixRTLNumbers();
+            if (text != null)
+                text.text = text.text.Reverse();
         }
     }
 }

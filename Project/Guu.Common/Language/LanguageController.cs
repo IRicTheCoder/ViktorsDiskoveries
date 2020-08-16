@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Reflection;
-
+using rail;
 using SRML.Utils;
 
 using UnityEngine;
@@ -15,6 +15,9 @@ namespace Guu.Language
 	/// </summary>
 	public static class LanguageController
 	{
+		// Language Reset Event
+		public static event Action<MessageDirector.Lang?> TranslationReset;
+		
 		// Resource Bundle Constants
 		private const string GLOBAL_BUNDLE = "global";
 		private const string ACTOR_BUNDLE = "actor";
@@ -44,6 +47,9 @@ namespace Guu.Language
 			{MAIL_BUNDLE, new Dictionary<string, string>()},
 			{KEYS_BUNDLE, new Dictionary<string, string>()}
 		};
+
+		// A list of all languages registered as RTL, to fix them on translation
+		private static readonly List<MessageDirector.Lang> RTL_LANGUAGES = new List<MessageDirector.Lang>();
 
 		/// <summary>
 		/// Sets the translations from the language file for the current language
@@ -89,6 +95,8 @@ namespace Guu.Language
 					langFile = new FileInfo(Path.Combine(Path.GetDirectoryName(path), $"Resources\\Lang\\{code}.yaml"));
 				}
 			}
+			
+			currLang = lang;
 
 			using (StreamReader reader = new StreamReader(langFile.FullName))
 			{
@@ -103,8 +111,6 @@ namespace Guu.Language
 					if (extFile.Exists) SetTranslations(extFile);
 				}
 			}
-
-			currLang = lang;
 		}
 
 		/// <summary>
@@ -133,26 +139,9 @@ namespace Guu.Language
 						continue;
 
 					string[] args = line.Split(':');
-					AddTranslation(args[0], args[1], Unescape(args[2]));
+					AddTranslation(args[0], args[1], args[2].FixTranslatedString());
 				}
 			}
-		}
-
-		// Unescapes some characters
-		private static string Unescape(string toUnescape)
-		{
-			return toUnescape.TrimStart().TrimStart('"').TrimEnd('"').Replace("\\n", "\n");
-		}
-
-		/// <summary>
-		/// Adds a fallback code for a given language
-		/// </summary>
-		/// <param name="lang">The language to add to</param>
-		/// <param name="fallback">The fallback to add</param>
-		public static void AddLanguageFallback(MessageDirector.Lang lang, string fallback)
-		{
-			if (!LANG_FALLBACK.ContainsKey(lang)) LANG_FALLBACK.Add(lang, new List<string>());
-			if (!LANG_FALLBACK[lang].Contains(fallback)) LANG_FALLBACK[lang].Add(fallback);
 		}
 
 		/// <summary>
@@ -240,6 +229,49 @@ namespace Guu.Language
 		public static void AddMailTranslation(string key, string value)
 		{
 			AddTranslation(MAIL_BUNDLE, key, value);
+		}
+
+		// Resets the translations so they can be repopulated
+		internal static void ResetTranslations(MessageDirector dir)
+		{
+			foreach (string bundle in TRANSLATIONS.Keys)
+			{
+				TRANSLATIONS[bundle].Clear();
+			}
+			
+			TranslationReset?.Invoke(dir.GetCultureLang());
+		}
+		
+		/// <summary>
+		/// Add RTL Support to a language, this will make the language behave as RTL
+		/// instead of LTR, numbers will be preserved.
+		/// </summary>
+		/// <param name="lang">The language to mark as RTL</param>
+		public static void AddRTLSupport(MessageDirector.Lang lang)
+		{
+			if (!RTL_LANGUAGES.Contains(lang))
+				RTL_LANGUAGES.Add(lang);
+		}
+
+		/// <summary>
+		/// Checks if a language is RTL
+		/// </summary>
+		/// <param name="lang">The language to check</param>
+		/// <returns>True if it's RTL, false otherwise</returns>
+		public static bool IsRTL(MessageDirector.Lang lang)
+		{
+			return RTL_LANGUAGES.Contains(lang);
+		}
+
+		/// <summary>
+		/// Adds a fallback code for a given language
+		/// </summary>
+		/// <param name="lang">The language to add to</param>
+		/// <param name="fallback">The fallback to add</param>
+		public static void AddLanguageFallback(MessageDirector.Lang lang, string fallback)
+		{
+			if (!LANG_FALLBACK.ContainsKey(lang)) LANG_FALLBACK.Add(lang, new List<string>());
+			if (!LANG_FALLBACK[lang].Contains(fallback)) LANG_FALLBACK[lang].Add(fallback);
 		}
 	}
 }

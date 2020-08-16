@@ -2,6 +2,15 @@
 # GLOBAL
 #=====================================
 
+# Base game translations
+@import Base/actor.yaml
+@import Base/build.yaml
+@import Base/keys.yaml
+@import Base/mail.yaml
+@import Base/pedia.yaml
+@import Base/range.yaml
+@import Base/ui.yaml
+
 # Common Language Files
 @import overrides.yaml
 

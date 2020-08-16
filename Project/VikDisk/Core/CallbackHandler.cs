@@ -4,8 +4,6 @@ using SRML.SR;
 
 using TMPro;
 
-using VikDisk.Components.UI;
-
 namespace VikDisk.Core
 {
 	/// <summary>
@@ -18,8 +16,8 @@ namespace VikDisk.Core
 		internal static void Setup()
 		{
 			// UNITY CALLBACKS
-			SRCallbacks.OnMainMenuLoaded += ApplyMenuChanges;
-			SRCallbacks.OnSaveGameLoaded += RegisterWorld;
+			SRGuu.MainMenuLoaded += ApplyMenuChanges;
+			SRGuu.PreLoadGame += RegisterWorld;
 		}
 
 		// Makes a late setup of the remaining callbacks
@@ -48,17 +46,6 @@ namespace VikDisk.Core
 			LanguageHandler.oldFont.m_FallbackFontAssetTable.Add(LanguageHandler.newFont);
 			LanguageHandler.oldFont.m_FallbackFontAssetTable.Add(LanguageHandler.newFontHebrew);
 			LanguageHandler.oldFont.m_FallbackFontAssetTable.Add(LanguageHandler.newFontArmenian);
-			
-			foreach (TMP_Text text in Resources.FindObjectsOfTypeAll<TMP_Text>())
-			{
-				if (text.GetComponentInParent<TMP_Dropdown>() != null)
-				{
-					if (text.GetComponentInParent<TMP_Dropdown>().name.Equals(ui.languageDropdown.name))
-						continue;
-				}
-				
-				text.gameObject.AddComponent<RTLSupport>().SetText(text);
-			}
 		}
 	}
 }

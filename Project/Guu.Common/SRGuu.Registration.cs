@@ -1,27 +1,13 @@
 ﻿using System.Reflection;
-
 using Guu.Language;
-
-using HarmonyLib;
-
-using SRML;
 
 using UnityEngine;
 
 namespace Guu
 {
     // TODO: FINISH THIS
-    public class SRGuu
+    public partial class SRGuu
     {
-        // Is the services initialized
-        private static bool isInitialized = false;
-
-        // The assembly from Guu
-        internal static Assembly assembly;
-
-        // The harmony instance for Guu
-        internal static Harmony harmony;
-        
         /// <summary>
         /// Registers this mod for translation
         /// </summary>
@@ -47,22 +33,6 @@ namespace Guu
             
             foreach (MessageDirector.BundlesListener listener in otherListeners)
                 GameContext.Instance.MessageDirector.RegisterBundlesListener(listener);
-        }
-
-        /// <summary>
-        /// Enables the Guu services for your mod
-        /// </summary>
-        public static void Init()
-        {
-            if (isInitialized)
-                return;
-
-            harmony = new Harmony("Guu");
-            
-            assembly = Assembly.GetAssembly(typeof(SRGuu));
-            harmony.PatchAll(assembly);
-            
-            isInitialized = true;
         }
     }
 }
