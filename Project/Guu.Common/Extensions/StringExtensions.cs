@@ -18,7 +18,8 @@ public static class StringExtensions
 
         foreach (string value in division)
         {
-            if (Regex.IsMatch(value, @"[\dA-Za-z]+"))
+            // Currently compatible with Hebrew, Arabic and Syriac Characters
+            if (!Regex.IsMatch(value, @"[\u0591-\u05F4]+|[\u060C-\u06FE\uFB50-\uFDFF\uFE70-\uFEFE]+|[\u0700-\u074A]+|[\u0780-\u07B0]+"))
             {
                 result += " " + value;
                 continue;

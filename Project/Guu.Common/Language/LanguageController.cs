@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Reflection;
-using rail;
 using SRML.Utils;
-
 using UnityEngine;
 
 namespace Guu.Language
@@ -16,7 +14,7 @@ namespace Guu.Language
 	public static class LanguageController
 	{
 		// Language Reset Event
-		public static event Action<MessageDirector.Lang?> TranslationReset;
+		public static event Action<MessageDirector> TranslationReset;
 		
 		// Resource Bundle Constants
 		private const string GLOBAL_BUNDLE = "global";
@@ -137,9 +135,9 @@ namespace Guu.Language
 
 					if (line.StartsWith("#") || line.Equals(string.Empty) || !line.Contains(":"))
 						continue;
-
+					
 					string[] args = line.Split(':');
-					AddTranslation(args[0], args[1], args[2].FixTranslatedString());
+					AddTranslation(args[0].Trim('"'), args[1].Trim('"'), args[2].FixTranslatedString());
 				}
 			}
 		}
@@ -234,12 +232,14 @@ namespace Guu.Language
 		// Resets the translations so they can be repopulated
 		internal static void ResetTranslations(MessageDirector dir)
 		{
+			if (currLang == dir.GetCultureLang()) return;
+			
 			foreach (string bundle in TRANSLATIONS.Keys)
 			{
 				TRANSLATIONS[bundle].Clear();
 			}
 			
-			TranslationReset?.Invoke(dir.GetCultureLang());
+			TranslationReset?.Invoke(dir);
 		}
 		
 		/// <summary>

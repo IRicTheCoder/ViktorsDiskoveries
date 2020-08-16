@@ -41,7 +41,7 @@
     <Compile Include="Areas\AreaObjMarker.cs" />
     <Compile Include="Assets\AssetLoader.cs" />
     <Compile Include="Assets\AssetPack.cs" />
-    <Compile Include="Components\UI\RTLSupport.cs" />
+    <Compile Include="Components\UI\CustomLangSupport.cs" />
     <Compile Include="Core\Patchs\GameContextPatch.cs" />
     <Compile Include="Core\Patchs\LoadGamePatch.cs" />
     <Compile Include="Core\Patchs\MenuLoadPatch.cs" />

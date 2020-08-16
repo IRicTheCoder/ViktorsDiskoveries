@@ -33,7 +33,7 @@ namespace VikDisk.Core
             {Enums.Langs.CS, "Čeština"}, // Czech 
             {Enums.Langs.PL, "Polski"}, // Polish
             {Enums.Langs.FIL, "Filipino"}, // Filipino
-            //{Enums.Langs.HE, "עברית"}, // Hebrew
+            {Enums.Langs.HE, "עברית"}, // Hebrew
             {Enums.Langs.HY, "հայերեն"} // Armenian
         };
         
@@ -53,7 +53,7 @@ namespace VikDisk.Core
             // Creates language fallback for language symbols
 
             // Marks languages as RTL to adjust them then loading
-            //LanguageController.AddRTLSupport(Enums.Langs.HE);
+            LanguageController.AddRTLSupport(Enums.Langs.HE);
 
             // Corrects the language display on the language selection
             LangTranslations(null);
@@ -61,7 +61,7 @@ namespace VikDisk.Core
         }
 
         // Sets the translations for the languages
-        internal static void LangTranslations(MessageDirector.Lang? curr)
+        internal static void LangTranslations(MessageDirector dir)
         {
             foreach (MessageDirector.Lang lang in LANGUAGES.Keys)
             {

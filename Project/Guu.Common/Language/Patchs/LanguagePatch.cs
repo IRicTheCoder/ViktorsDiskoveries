@@ -2,8 +2,6 @@
 
 using HarmonyLib;
 
-using UnityEngine;
-
 namespace Guu.Language.Patchs
 {
     [HarmonyPatch(typeof (ResourceBundle))]
@@ -14,7 +12,12 @@ namespace Guu.Language.Patchs
         private static void Postfix(string path, Dictionary<string, string> __result, string text)
         {
             foreach (KeyValuePair<string, string> keyValuePair in LanguageController.TRANSLATIONS[path])
-                __result[keyValuePair.Key] = keyValuePair.Value;
+            {
+                if (__result.ContainsKey(keyValuePair.Key))
+                    __result[keyValuePair.Key] = keyValuePair.Value;
+                else
+                    __result.Add(keyValuePair.Key, keyValuePair.Value);
+            }
         }
     }
 }

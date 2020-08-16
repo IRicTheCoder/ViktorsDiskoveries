@@ -240,7 +240,13 @@
     <Content Include="Resources\Lang\cs.yaml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Lang\cs\actor.yaml">
+    <Content Include="Resources\Lang\cs\Base\actor.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\cs\Base\keys.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\cs\Base\range.yaml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Lang\cs\Chapter1\identifiables.yaml">
@@ -255,13 +261,7 @@
     <Content Include="Resources\Lang\cs\Chapter1\upgrades.yaml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Lang\cs\keys.yaml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Resources\Lang\cs\overrides.yaml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\Lang\cs\range.yaml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Lang\en.yaml">
@@ -280,6 +280,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Lang\en\overrides.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\fil\Chapter1\identifiables.yaml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Lang\he.yaml">
@@ -324,7 +327,9 @@
     <Content Include="Resources\Lang\pl.yaml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Lang\pl\actor.yaml" />
+    <Content Include="Resources\Lang\pl\Base\actor.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Lang\pl\Chapter1\identifiables.yaml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

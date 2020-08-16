@@ -46,6 +46,16 @@ namespace VikDisk.Core
 			LanguageHandler.oldFont.m_FallbackFontAssetTable.Add(LanguageHandler.newFont);
 			LanguageHandler.oldFont.m_FallbackFontAssetTable.Add(LanguageHandler.newFontHebrew);
 			LanguageHandler.oldFont.m_FallbackFontAssetTable.Add(LanguageHandler.newFontArmenian);
+
+			/*foreach (Transform child in ui.optionsUI.transform.Find("MainPanel/TabsPanel"))
+			{
+				ModLogger.Log(child.name);
+			}*/
+
+			/*foreach (Component comp in ui.optionsUI.transform.Find("MainPanel/TabsPanel/VideoTab").GetComponents<Component>())
+			{
+				ModLogger.Log(comp);
+			}*/
 		}
 	}
 }
