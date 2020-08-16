@@ -1,0 +1,52 @@
+---
+#=====================================
+#FOOD
+#=====================================
+#Veggies
+"actor:l.dark_ginger_veggie": Maitim na Luya
+#Fruits
+"actor:l.glitch_pogo_fruit": Glitch Pogoprutas
+#Meats
+"actor:l.fire_hen": Apoy na Inahin
+"actor:l.fire_chick": Apoy na Sisiw
+#Others
+"actor:l.extra_spicy_tofu": Napaka-anghang na Tokwa
+#=====================================
+#PLORTS, SLIMES & RESOURCES
+#=====================================
+#Plorts
+"actor:l.real_glitch_plort": Plort ng Glitch
+"actor:l.tarr_plort": Tarr Plort
+"actor:l.dream_plort": Panaginip Plort
+#Slimes
+"actor:l.real_glitch_slime": "'Totoong' Depektibong Slime"
+#Slime Resources
+"actor:l.pink_slime_extract_craft": Katas ng Pink Slime
+#=====================================
+#DECORATIONS
+#=====================================
+#Echos
+"actor:l.white_echo": Puting Echo
+"actor:l.rainbow_echo": Bahagharing Echo
+#Effies
+"actor:l.glitch_effy": Epektong Glitch
+"actor:l.cartoon_stars_effy": Epektong Toon Stars
+#Ornaments
+"actor:l.dream_ornament": Dekorasyong Panaginip
+"actor:l.viktor_ornament": Dekorasyong Viktor
+#=====================================
+#WORLD RELATED
+#=====================================
+#Crates
+"actor:l.glitch_crate": Depektibong Kahon
+#Liquids
+"actor:l.guu_liquid": Slimy Guu
+#=====================================
+#MISC
+#=====================================
+#Fashions
+"actor:l.santa_stache_fashion": Bigote ni Santa Fashion
+#Toys
+"actor:l.basket_ball_toy": Basketbol
+#Others
+"actor:l.wonder_ticket": Tiket sa Lugar ng Kamanghaan
