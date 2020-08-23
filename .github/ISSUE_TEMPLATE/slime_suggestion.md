@@ -1,6 +1,6 @@
 ---
 name: Slime Suggestion
-about: Suggest a slime for this project that
+about: Suggest a slime for this project
 title: ''
 labels: Suggestion
 assignees: ''
