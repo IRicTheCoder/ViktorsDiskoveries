@@ -477,7 +477,7 @@
 "ui:l.rewards": "Nagrody:"
 "ui:e.ineligible_for_corp_level": "Nie kwalifikujesz się do tej rangi."
 "ui:e.already_has_corp_level": "Posiadasz już tą rangę."
-"ui:t.chroma_packs": "Pakiety Kolorów"
+"ui:t.chroma_packs": "Palety Kolorów"
 "ui:t.drone": "Programowanie Dronów"
 "ui:t.drone.pick_target": "Wybierz Cel"
 "ui:t.drone.pick_source": "Wybierz Źródło"
