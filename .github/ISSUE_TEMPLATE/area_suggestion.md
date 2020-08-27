@@ -2,7 +2,7 @@
 name: Area Suggestion
 about: Suggest a area for this project
 title: ''
-labels: suggestion
+labels: suggestion, biome
 assignees: ''
 
 ---
