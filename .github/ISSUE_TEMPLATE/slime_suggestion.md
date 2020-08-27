@@ -2,7 +2,7 @@
 name: Slime Suggestion
 about: Suggest a slime for this project
 title: ''
-labels: Suggestion, slime
+labels: Suggestion, Slime
 assignees: ''
 
 ---
