@@ -71,6 +71,7 @@ assignees: ''
 *If this slime has a condition to find or see it, write it here*
 
 ### Environment?
+* [ ] **Any Kind** - Anywhere independent of the type of environment
 * [ ] **Land** – Anywhere on land, does not need a special condition for it
 * [ ] **Water** – Anywhere on water, does not need a special condition for it
 * [ ] **Deep Water** – On water, requires a place where the water pressure is higher (deep water)
