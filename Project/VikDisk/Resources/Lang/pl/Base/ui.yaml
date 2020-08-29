@@ -369,7 +369,7 @@
 "ui:m.achievement_unlocked": "Osiągnięcie Odblokowano!"
 "ui:m.achieve_progress": "{0} / {1}"
 "ui:m.achieve_overall_progress": "Łącznie: {0} / {1}"
-"ui:m.knocked_out1": "Zostałeś Zabity!"
+"ui:m.knocked_out1": "Straciłe/aś Przytomność!"
 "ui:m.knocked_out2": "(Ale odpoczynek powinien naprawić cię w prosty sposób...)"
 "ui:e.savefile_inaccessible": "Plik zapisu jest niedostępny i nie można go zapisać: {0}"
 "ui:e.savefile_invalid_name": "Nazwa pliku zapisu jest nieprawidłowa i nie może być zapisana: {0}"
