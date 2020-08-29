@@ -61,7 +61,7 @@ namespace VikDisk.Core
         }
 
         // Sets the translations for the languages
-        internal static void LangTranslations(MessageDirector dir)
+        private static void LangTranslations(MessageDirector dir)
         {
             foreach (MessageDirector.Lang lang in LANGUAGES.Keys)
             {
@@ -74,7 +74,7 @@ namespace VikDisk.Core
         internal static void FixLangDisplay(MessageDirector dir)
         {
             string[] bundles = {
-                "actor", "pedia", "ui", "range", "build", "mail", "keys"
+                "achieve", "exchange"
             };
 
             foreach (string bundle in bundles)

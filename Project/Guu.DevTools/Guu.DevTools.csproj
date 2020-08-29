@@ -40,10 +40,10 @@
   <ItemGroup>
     <Compile Include="Areas\AreaBuilder.cs" />
     <Compile Include="Areas\BuilderUI.cs" />
-    <Compile Include="Debug\Command\DebugModeCommand.cs" />
-    <Compile Include="Debug\Command\DumperCommand.cs" />
-    <Compile Include="Debug\Command\TPCommand.cs" />
-    <Compile Include="Debug\Command\UnlockAllCommand.cs" />
+    <Compile Include="Debug\Commands\DebugModeCommand.cs" />
+    <Compile Include="Debug\Commands\DumperCommand.cs" />
+    <Compile Include="Debug\Commands\TPCommand.cs" />
+    <Compile Include="Debug\Commands\UnlockAllCommand.cs" />
     <Compile Include="Debug\DebugHandler.cs" />
     <Compile Include="Debug\Dumper.cs" />
     <Compile Include="Debug\Markers\IMarkerTarget.cs" />

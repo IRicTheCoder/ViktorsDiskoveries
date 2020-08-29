@@ -38,6 +38,8 @@ namespace VikDisk.API.Identifiables
 		protected virtual float DrivePerEat { get; } = 0.333f;
 		protected virtual float AgitationPerEat { get; } = 0.15f;
 		protected virtual float AgitationPerFavEat { get; } = 0.3f;
+		
+		protected virtual GameObject CustomBase { get; } = null;
 
 		protected virtual List<Identifiable.Id> FavoriteFoods { get; } = null;
 		protected virtual List<Identifiable.Id> SuperFoods { get; } = null;
@@ -48,7 +50,7 @@ namespace VikDisk.API.Identifiables
 		protected override void Build()
 		{
 			// Get GameObjects
-			Prefab = PrefabUtils.CopyPrefab(BaseItem);
+			Prefab = CustomBase != null ? PrefabUtils.CopyPrefab(CustomBase) : PrefabUtils.CopyPrefab(BaseItem);
 			Prefab.name = NamePrefix + Name;
 			Prefab.transform.localScale = Scale * Definition.PrefabScale;
 
@@ -86,9 +88,8 @@ namespace VikDisk.API.Identifiables
 		/// <summary>Registers the item into it's registry</summary>
 		public override IdentifiableItem Register()
 		{
-			//Identifiable.SLIME_CLASS.Add(ID);
 			Identifiable.LARGO_CLASS.Add(ID);
-			
+
 			base.Register();
 
 			if (Definition.Diet == null)

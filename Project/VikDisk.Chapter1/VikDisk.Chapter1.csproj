@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{599D5EDD-9787-4C66-BA24-A1FE7FF67D55}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>VikDisk.Chapter1</RootNamespace>
+        <AssemblyName>VikDisk.Chapter1</AssemblyName>
+        <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>C:\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SRML\Mods\VikDisk\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>C:\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SRML\Mods\VikDisk\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="0Harmony, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SRML\Libs\0Harmony.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\Assembly-CSharp.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="SRML, Version=0.1.8.2, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\SRML.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="System" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Data.DataSetExtensions" />
+        <Reference Include="System.Xml" />
+        <Reference Include="System.Xml.Linq" />
+        <Reference Include="Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.AssetBundleModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.ImageConversionModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.InputLegacyModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.UI.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.UIElementsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Slime Rancher\SlimeRancher_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Colors.Largos.cs" />
+        <Compile Include="Colors.Slimes.cs" />
+        <Compile Include="Gadgets\FashionPods\SantaStachePod.cs" />
+        <Compile Include="Identifiables\Crates\GlitchCrate.cs" />
+        <Compile Include="Identifiables\Decorations\CartoonStarsEffy.cs" />
+        <Compile Include="Identifiables\Decorations\DreamOrnament.cs" />
+        <Compile Include="Identifiables\Decorations\GlitchEffy.cs" />
+        <Compile Include="Identifiables\Decorations\RainbowEcho.cs" />
+        <Compile Include="Identifiables\Decorations\ViktorOrnament.cs" />
+        <Compile Include="Identifiables\Decorations\WhiteEcho.cs" />
+        <Compile Include="Identifiables\Fashions\SantaStacheFashion.cs" />
+        <Compile Include="Identifiables\Food\DarkGinger.cs" />
+        <Compile Include="Identifiables\Food\ExtraSpicyTofu.cs" />
+        <Compile Include="Identifiables\Food\FireChick.cs" />
+        <Compile Include="Identifiables\Food\FireHen.cs" />
+        <Compile Include="Identifiables\Food\GlitchPogofruit.cs" />
+        <Compile Include="Identifiables\Largos\AlbinoLargos.cs" />
+        <Compile Include="Identifiables\Largos\RealGlitchLargos.cs" />
+        <Compile Include="Identifiables\Liquid\GuuLiquid.cs" />
+        <Compile Include="Identifiables\Others\WonderTicket.cs" />
+        <Compile Include="Identifiables\Plorts\AlbinoPlort.cs" />
+        <Compile Include="Identifiables\Plorts\DreamPlort.cs" />
+        <Compile Include="Identifiables\Plorts\GlitchPlort.cs" />
+        <Compile Include="Identifiables\Plorts\TarrPlort.cs" />
+        <Compile Include="Identifiables\Resources\PinkSlimeExtract.cs" />
+        <Compile Include="Identifiables\Slimes\AlbinoSlime.cs" />
+        <Compile Include="Identifiables\Slimes\DigiTarrSlime.cs" />
+        <Compile Include="Identifiables\Slimes\GlitchSlime.cs" />
+        <Compile Include="Identifiables\Synergies\ElectricLargo.cs" />
+        <Compile Include="Identifiables\Toys\ToyBasketBall.cs" />
+        <Compile Include="Others\Mails\PostVaccineMail.cs" />
+        <Compile Include="Others\Slime Appearance\Synergies\ElectricNormalAppearance.cs" />
+        <Compile Include="Others\Slime Appearance\Slimes\AlbinoNormalAppearance.cs" />
+        <Compile Include="Others\Slime Definitions\Slimes\AlbinoDefinition.cs" />
+        <Compile Include="Others\Slime Definitions\Synergies\ElectricLargoDefinition.cs" />
+        <Compile Include="Others\Slime Definitions\Slimes\DigiTarrDefinition.cs" />
+        <Compile Include="Others\Slime Definitions\Slimes\GlitchDefinition.cs" />
+        <Compile Include="Plots\TestCorral.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="SpawnResources\Garden\DarkGingerGarden.cs" />
+        <Compile Include="SpawnResources\Garden\DarkGingerGardenDeluxe.cs" />
+        <Compile Include="SpawnResources\Garden\GingerGarden.cs" />
+        <Compile Include="SpawnResources\Garden\GingerGardenDeluxe.cs" />
+        <Compile Include="SpawnResources\Garden\GlitchPogoGarden.cs" />
+        <Compile Include="SpawnResources\Garden\GlitchPogoGardenDeluxe.cs" />
+        <Compile Include="UI\TestCorralUI.cs" />
+        <Compile Include="Upgrades\Player\UpgradeARGlasses.cs" />
+        <Compile Include="Upgrades\Player\UpgradeSlimeVaccine.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Guu.API\Guu.API.csproj">
+        <Project>{d5841ab9-bcc8-4fd7-b49e-bda353be0964}</Project>
+        <Name>Guu.API</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\Guu.Common\Guu.Common.csproj">
+        <Project>{983fbf90-1f81-4eae-8c73-ec2570b8e00f}</Project>
+        <Name>Guu.Common</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\Guu.DevTools\Guu.DevTools.csproj">
+        <Project>{5226813f-4651-40ab-97e7-4a8475e61a27}</Project>
+        <Name>Guu.DevTools</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\VikDisk.Improvements\VikDisk.Improvements.csproj">
+        <Project>{fd5a13c8-5491-4f3f-8294-d8a2c93b8a04}</Project>
+        <Name>VikDisk.Improvements</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\VikDisk\VikDisk.csproj">
+        <Project>{b32a88e3-5022-421c-9569-db8446f2733d}</Project>
+        <Name>VikDisk</Name>
+      </ProjectReference>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>

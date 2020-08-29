@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using SRML.Utils;
 using UnityEngine;
 
@@ -25,6 +26,7 @@ namespace Guu.Language
 		private const string BUILD_BUNDLE = "build";
 		private const string MAIL_BUNDLE = "mail";
 		private const string KEYS_BUNDLE = "keys";
+		private const string ACHIVE_BUNDLE = "achieve";
 		
 		// A language fallback for a language added to the game that does not have the right symbol yet (multiple fallbacks
 		// are allowed)
@@ -43,7 +45,8 @@ namespace Guu.Language
 			{RANGE_BUNDLE, new Dictionary<string, string>()},
 			{BUILD_BUNDLE, new Dictionary<string, string>()},
 			{MAIL_BUNDLE, new Dictionary<string, string>()},
-			{KEYS_BUNDLE, new Dictionary<string, string>()}
+			{KEYS_BUNDLE, new Dictionary<string, string>()},
+			{ACHIVE_BUNDLE, new Dictionary<string, string>()}
 		};
 
 		// A list of all languages registered as RTL, to fix them on translation
@@ -135,9 +138,15 @@ namespace Guu.Language
 
 					if (line.StartsWith("#") || line.Equals(string.Empty) || !line.Contains(":"))
 						continue;
+
+					string bundle = line.Substring(0, line.IndexOf(':'));
 					
-					string[] args = line.Split(':');
-					AddTranslation(args[0].Trim('"'), args[1].Trim('"'), args[2].FixTranslatedString());
+					string key = line.Substring(0, line.IndexOf(':', bundle.Length+1))
+					                 .Replace($"{bundle}:", string.Empty);
+					
+					string value = line.Replace($"{bundle}:{key}:", string.Empty);
+
+					AddTranslation(bundle.Trim('"'), key.Trim('"'), value.FixTranslatedString());
 				}
 			}
 		}
@@ -227,6 +236,16 @@ namespace Guu.Language
 		public static void AddMailTranslation(string key, string value)
 		{
 			AddTranslation(MAIL_BUNDLE, key, value);
+		}
+		
+		/// <summary>
+		/// Adds a new translation to the achievements bundle
+		/// </summary>
+		/// <param name="key">Key for the translation</param>
+		/// <param name="value">Value of the translation</param>
+		public static void AddAchieveTranslation(string key, string value)
+		{
+			AddTranslation(ACHIVE_BUNDLE, key, value);
 		}
 
 		// Resets the translations so they can be repopulated

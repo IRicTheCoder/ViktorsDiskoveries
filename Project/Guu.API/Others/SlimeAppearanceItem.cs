@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using Guu.Utils;
 using SRML.SR;
 using UnityEngine;
 
@@ -13,7 +15,7 @@ namespace Guu.API.Others
 		protected abstract SlimeAppearance BaseApp { get; }
 
 		/// <summary>The slime appearance of this item</summary>
-		private SlimeAppearance Appearance { get; set; }
+		public SlimeAppearance Appearance { get; set; }
 
 		/// <summary>The translate key of the name of this appearance</summary>
 		public virtual string NameXlateKey { get; } = "l.custom_appearance";
@@ -79,10 +81,20 @@ namespace Guu.API.Others
 				Appearance.ShockedAppearance = ShockedAppearance;
 				Appearance.QubitAppearance = QubitAppearance;
 				Appearance.Face = Face;
-				Appearance.Structures = Structures;
+
+				Appearance.Structures = Structures.Select(SlimeUtils.CloneAppearanceStructure).ToArray();
+				
 				Appearance.AnimatorOverride = AnimatorOverride;
 				Appearance.Icon = Icon;
 				Appearance.ColorPalette = ColorPalette ?? SlimeAppearance.Palette.Default;
+			}
+
+			foreach (SlimeAppearanceStructure str in Appearance.Structures)
+			{
+				foreach (Material mat in str.DefaultMaterials)
+				{
+					mat.SetTripleColor(Appearance.ColorPalette);
+				}
 			}
 		}
 

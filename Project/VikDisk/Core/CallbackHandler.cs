@@ -1,8 +1,4 @@
 ﻿using Guu;
-using UnityEngine;
-using SRML.SR;
-
-using TMPro;
 
 namespace VikDisk.Core
 {
@@ -12,22 +8,27 @@ namespace VikDisk.Core
 	/// </summary>
 	internal static class CallbackHandler
 	{
+		//+ Setup Handling
 		// Setup all callbacks
 		internal static void Setup()
 		{
-			// UNITY CALLBACKS
+			// GUU CALLBACKS
 			SRGuu.MainMenuLoaded += ApplyMenuChanges;
 			SRGuu.PreLoadGame += RegisterWorld;
+			SRGuu.TimedUpdate += TimedUpdate;
+			
+			// TODO: Remove this
+			SRGuu.ZoneEnter += (zone, state) => { ModLogger.Log("Entering zone: " + zone); };
 		}
 
 		// Makes a late setup of the remaining callbacks
 		internal static void LateSetup()
 		{
 			// LANGUAGE LISTENERS
-			SRGuu.RegisterTranslation(Main.execAssembly, null);
-			//SRGuu.RegisterTranslation(Main.execAssembly, LanguageHandler.FixLangDisplay);
+			SRGuu.RegisterTranslation(Main.execAssembly, LanguageHandler.FixLangDisplay); //LanguageHandler.FixLangDisplay
 		}
 
+		//+ Callback Functions
 		// Registers all content to the world
 		private static void RegisterWorld(SceneContext ctx)
 		{
@@ -37,6 +38,12 @@ namespace VikDisk.Core
 
 			// Fixes the objects on the world
 			GameFixer.FixAtWorldGen();
+			
+			// Check if certain upgrades are bought
+			/*if (ctx.PlayerState.HasUpgrade(Enums.PlayerUpgrades.SLIME_VACCINE))
+			{
+				SlimeDietHandler.FixDiets();
+			}*/
 		}
 
 		// Applies changes to the main menu
@@ -46,16 +53,11 @@ namespace VikDisk.Core
 			LanguageHandler.oldFont.m_FallbackFontAssetTable.Add(LanguageHandler.newFont);
 			LanguageHandler.oldFont.m_FallbackFontAssetTable.Add(LanguageHandler.newFontHebrew);
 			LanguageHandler.oldFont.m_FallbackFontAssetTable.Add(LanguageHandler.newFontArmenian);
+		}
 
-			/*foreach (Transform child in ui.optionsUI.transform.Find("MainPanel/TabsPanel"))
-			{
-				ModLogger.Log(child.name);
-			}*/
-
-			/*foreach (Component comp in ui.optionsUI.transform.Find("MainPanel/TabsPanel/VideoTab").GetComponents<Component>())
-			{
-				ModLogger.Log(comp);
-			}*/
+		// The timed update for the mod
+		private static void TimedUpdate()
+		{
 		}
 	}
 }

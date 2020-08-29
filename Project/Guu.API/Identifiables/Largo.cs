@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
-
+using Guu.Language;
 using Guu.Utils;
 
 using SRML;
@@ -143,7 +143,7 @@ namespace Guu.API.Identifiables
 				IdentifiableRegistry.CategorizeId(id);
 
 				if (GameContext.Instance.MessageDirector.Get("actor", "l." + id.ToString().ToLower()) == null)
-					TranslationPatcher.AddActorTranslation("l." + id.ToString().ToLower(), DefTranslation[id]);
+					LanguageController.AddActorTranslation("l." + id.ToString().ToLower(), DefTranslation[id]);
 
 				LookupRegistry.RegisterIdentifiablePrefab(Prefabs[id]);
 

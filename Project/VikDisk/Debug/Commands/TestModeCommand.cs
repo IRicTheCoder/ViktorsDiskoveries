@@ -12,8 +12,6 @@ namespace VikDisk.Debug
 	/// </summary>
 	public class TestModeCommand : ConsoleCommand
 	{
-		private PlayerState Player => SceneContext.Instance.PlayerState;
-
 		public override bool Execute(string[] args)
 		{
 			new UnlockAllCommand().Execute(args);

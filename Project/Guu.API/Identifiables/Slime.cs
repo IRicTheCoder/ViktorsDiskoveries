@@ -35,6 +35,8 @@ namespace Guu.API.Identifiables
 		protected virtual float AgitationPerEat { get; } = 0.15f;
 		protected virtual float AgitationPerFavEat { get; } = 0.3f;
 
+		protected virtual GameObject CustomBase { get; } = null;
+
 		protected virtual List<Identifiable.Id> FavoriteFoods { get; } = null;
 
 		// Methods
@@ -43,7 +45,7 @@ namespace Guu.API.Identifiables
 		protected override void Build()
 		{
 			// Get GameObjects
-			Prefab = PrefabUtils.CopyPrefab(BaseItem);
+			Prefab = CustomBase != null ? PrefabUtils.CopyPrefab(CustomBase) : PrefabUtils.CopyPrefab(BaseItem);
 			Prefab.name = NamePrefix + Name;
 			Prefab.transform.localScale = Scale * Definition.PrefabScale;
 
@@ -56,9 +58,10 @@ namespace Guu.API.Identifiables
 			Rigidbody body = Prefab.GetComponent<Rigidbody>();
 			Vacuumable vac = Prefab.GetComponent<Vacuumable>();
 			Identifiable iden = Prefab.GetComponent<Identifiable>();
-
+			
 			// Setup Components
 			app.SlimeDefinition = Definition;
+			app.Appearance = Definition.AppearancesDefault[0];
 			mod.baseModule = Definition.BaseModule;
 			mod.slimeModules = Definition.SlimeModules;
 
@@ -85,10 +88,11 @@ namespace Guu.API.Identifiables
 
 			if (Definition.Diet == null)
 				Definition.Diet = new SlimeDiet();
-
+			
+			Definition.Diet.EatMap = new List<SlimeDiet.EatMapEntry>();
 			SlimeDiet diet = Definition.Diet;
 
-			if (CustomDietBehaviour) return this;
+			if (CustomDietBehaviour || FoodGroups.Count <= 0) return this;
 
 			// TODO: Add the new diets
 			if (FoodGroups.Contains(SlimeEat.FoodGroup.FRUIT))

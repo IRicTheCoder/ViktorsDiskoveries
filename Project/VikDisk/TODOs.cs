@@ -21,10 +21,21 @@ This is just a class to contain all the global TODOs in the mod
 // Vik Disk should be as extendable and compatible as possible, if people want to make addons or add things to
 // theirs mods that will interface with mine that should be always allowed.
 
+// TODO: Add a chapter handler to be able to trigger chapter end and beginning
 
-//=========================
-// Guu
-//=========================
+//+-------------------------
+//+ Guu - Urgent
+//+-------------------------
+
+// TODO: Create a Custom Component for almost all components in the game
+// This way I can control everything related to those components and behaviours
+
+// TODO: Create Custom Scriptable Objects for almost all SOs in the game
+// Same as the above
+
+//+-------------------------
+//+ Guu
+//+-------------------------
 
 // TODO: Fix the LandPlotUpgradeRegistry, cause it is not working as it is suppose to.
 // There should be a way to register a shop entry with System.Type

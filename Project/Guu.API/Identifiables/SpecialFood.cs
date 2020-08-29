@@ -21,14 +21,14 @@ namespace Guu.API.Identifiables
 		// Material for the Model
 		private Material ModelMat { get; set; }
 		
-		// Overrides
+		//+ Overrides
 		protected override string NamePrefix => IsTofu ? "tofu" : "special";
 
-		// Abstracts
+		//+ Abstracts
 		protected abstract bool IsTofu { get; }
 		protected abstract Mesh Mesh { get; }
 		
-		// Virtual
+		//+ Virtual
 		protected virtual bool IsPlantable { get; } = true;
 		protected virtual bool VacuumableWhenRipe { get; } = true;
 		
@@ -38,12 +38,12 @@ namespace Guu.API.Identifiables
 		protected virtual float RottenGameHours { get; } = 6f;
 		
 		protected virtual Vector3 ModelScale { get; } = Vector3.one * 0.2f;
-		
+
 		protected virtual Material RottenMat { get; } = null;
 		
 		protected virtual List<Identifiable.Id> IsFavoritedBy { get; } = null;
 
-		// Methods
+		//+ Methods
 		protected abstract Material CreateModelMat();
 
 		protected override bool ValidSiloAmmo(SiloStorage.StorageType type) =>

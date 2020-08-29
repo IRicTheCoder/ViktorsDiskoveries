@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using Guu.API;
 
 namespace VikDisk.Utils
@@ -9,6 +10,9 @@ namespace VikDisk.Utils
 	/// </summary>
 	public static class RegistryUtils
 	{
+		// Used to provide extra modules to the registry process
+		internal static List<Assembly> extraModules = new List<Assembly> { Main.execAssembly };
+		
 		/// <summary>
 		/// Registers all items of a type and id
 		/// </summary>
@@ -20,15 +24,17 @@ namespace VikDisk.Utils
 		{
 			foreach (Type order in priorities)
 			{
-				foreach (Type type in Main.execAssembly.GetTypes())
+				foreach (Assembly ass in extraModules)
 				{
-					if (type.IsSubclassOf(order))
+					foreach (Type type in ass.GetTypes())
 					{
-						if (type.GetCustomAttributes(typeof(NoRegisterAttribute), false).Length > 0)
-							continue;
+						if (type.IsSubclassOf(order))
+						{
+							if (type.GetCustomAttributes(typeof(NoRegisterAttribute), false).Length > 0) continue;
 
-						V item = Activator.CreateInstance(type) as V;
-						register?.Invoke(item);
+							V item = Activator.CreateInstance(type) as V;
+							register?.Invoke(item);
+						}
 					}
 				}
 			}

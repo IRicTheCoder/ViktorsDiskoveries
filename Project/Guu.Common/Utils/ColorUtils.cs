@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace Guu.Utils
 {
@@ -17,6 +18,24 @@ namespace Guu.Utils
 			ColorUtility.TryParseHtmlString("#" + hex.ToUpper(), out Color color);
 
 			return color;
+		}
+		
+		/// <summary>
+		/// Gets colors from an array of Hexadecimal Codes
+		/// </summary>
+		/// <param name="hexas">Hexa Codes (without the #)</param>
+		/// <returns>The array of colors (invalid hexas will be white)</returns>
+		public static Color[] FromHexArray(params string[] hexas)
+		{
+			List<Color> colors = new List<Color>();
+
+			foreach (string hex in hexas)
+			{
+				ColorUtility.TryParseHtmlString("#" + hex.ToUpper(), out Color color);
+				colors.Add(color);
+			}
+
+			return colors.ToArray();
 		}
 
 		/// <summary>

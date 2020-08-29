@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using SRML.SR;
 using UnityEngine;
 
@@ -63,8 +64,18 @@ namespace Guu.API.Others
 			Definition.BaseModule = BaseModule;
 			Definition.BaseSlimes = BaseSlimes;
 			Definition.CanLargofy = CanLargofy;
-			Definition.Diet = Diet;
-			Definition.FavoriteToys = FavoriteToys;
+			
+			Definition.Diet = new SlimeDiet
+			{
+				EatMap = new List<SlimeDiet.EatMapEntry>(Diet.EatMap),
+				Favorites = Diet.Favorites,
+				Produces = Diet.Produces,
+				AdditionalFoods = Diet.AdditionalFoods,
+				FavoriteProductionCount = Diet.FavoriteProductionCount,
+				MajorFoodGroups = Diet.MajorFoodGroups
+			};
+
+				Definition.FavoriteToys = FavoriteToys;
 			Definition.IdentifiableId = IdentifiableId;
 			Definition.IsLargo = IsLargo;
 			Definition.Name = DefName;

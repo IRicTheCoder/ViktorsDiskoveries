@@ -27,16 +27,16 @@ public static class SlimeDefinitionExtensions
 
 		SlimeDefinition def = ScriptableObject.CreateInstance<SlimeDefinition>();
 
-		def.name = our.name + other.name;
+		def.name = our.name + " " + other.name;
 
 		def.BaseModule = our.BaseModule;
-		def.BaseSlimes = new SlimeDefinition[] { our, other };
+		def.BaseSlimes = new[] { our, other };
 		def.CanLargofy = false;
 
 		def.IdentifiableId = SlimeUtils.GetLargoID(our.IdentifiableId, other.IdentifiableId);
-		def.IsLargo = true;
+		def.IsLargo = false;
 
-		def.Name = "Largo" + our.Name + other.name;
+		def.Name = "Largo " + our.Name + " " + other.Name;
 		def.PrefabScale = 2f;
 
 		List<GameObject> modules = new List<GameObject>(our.SlimeModules);

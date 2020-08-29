@@ -50,53 +50,26 @@
     <Compile Include="Core\Attributes\NoRegisterAttribute.cs" />
     <Compile Include="Core\GameFixer.cs" />
     <Compile Include="Core\CallbackHandler.cs" />
+    <Compile Include="Core\Injector.cs" />
     <Compile Include="Core\LanguageHandler.cs" />
     <Compile Include="Core\ModLogger.cs" />
+    <Compile Include="Debug\Commands\UpgradeUnlockCommand.cs" />
     <Compile Include="Enums\Enums.Lang.cs" />
-    <Compile Include="Game\Gadgets\FashionPods\SantaStachePod.cs" />
-    <Compile Include="Game\Gadgets\Gadgets.cs" />
-    <Compile Include="Game\Identifiables\Largos\RealGlitchLargos.cs" />
-    <Compile Include="Game\Identifiables\Largos\ElectricLargo.cs" />
-    <Compile Include="Game\Others\Slime Definitions\ElectricLargoDefinition.cs" />
-    <Compile Include="Game\Others\Slime Definitions\RealGlitchDefinition.cs" />
-    <Compile Include="Game\Identifiables\Decorations\CartoonStarsEffy.cs" />
-    <Compile Include="Game\Identifiables\Decorations\GlitchEffy.cs" />
-    <Compile Include="Game\Identifiables\Food\DarkGinger.cs" />
-    <Compile Include="Game\UI\UIs.cs" />
-    <Compile Include="Game\UI\TestCorralUI.cs" />
-    <Compile Include="Game\Plots\Plots.cs" />
-    <Compile Include="Game\Plots\TestCorral.cs" />
-    <Compile Include="Game\SpawnResources\Garden\GlitchPogoGardenDeluxe.cs" />
-    <Compile Include="Game\SpawnResources\Garden\GlitchPogoGarden.cs" />
-    <Compile Include="Game\SpawnResources\Garden\DarkGingerGarden.cs" />
-    <Compile Include="Game\SpawnResources\Garden\DarkGingerGardenDeluxe.cs" />
-    <Compile Include="Game\SpawnResources\Garden\GingerGardenDeluxe.cs" />
-    <Compile Include="Game\SpawnResources\GardenResourceFixes.cs" />
-    <Compile Include="Game\SpawnResources\SpawnResources.cs" />
-    <Compile Include="Game\SpawnResources\Garden\GingerGarden.cs" />
-    <Compile Include="Game\Upgrades\Upgrades.cs" />
-    <Compile Include="Game\Upgrades\Player\UpgradeARGlasses.cs" />
+    <Compile Include="Game\Chapters\Chapter1.cs" />
+    <Compile Include="Game\Fixes\GardenResourceFixes.cs" />
+    <Compile Include="Game\Gadgets.cs" />
+    <Compile Include="Game\Handlers\IdentifiableHandler.cs" />
+    <Compile Include="Game\Handlers\SlimeDietHandler.cs" />
+    <Compile Include="Game\Handlers\SlimeSpawnHandler.cs" />
+    <Compile Include="Game\Identifiables.cs" />
+    <Compile Include="Game\Interfaces\IPediaRegistry.cs" />
+    <Compile Include="Game\Others.cs" />
+    <Compile Include="Game\Overrides\AdvEatMapEntry.cs" />
+    <Compile Include="Game\Plots.cs" />
+    <Compile Include="Game\SpawnResources.cs" />
+    <Compile Include="Game\UIs.cs" />
+    <Compile Include="Game\Upgrades.cs" />
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="Game\Identifiables\Decorations\ViktorOrnament.cs" />
-    <Compile Include="Game\Identifiables\Decorations\RainbowEcho.cs" />
-    <Compile Include="Game\Identifiables\Fashions\SantaStacheFashion.cs" />
-    <Compile Include="Game\Identifiables\Food\FireChick.cs" />
-    <Compile Include="Game\Identifiables\Food\FireHen.cs" />
-    <Compile Include="Game\Identifiables\Toys\ToyBasketBall.cs" />
-    <Compile Include="Game\Identifiables\Liquid\GuuLiquid.cs" />
-    <Compile Include="Game\Identifiables\Resources\PinkSlimeExtract.cs" />
-    <Compile Include="Game\Identifiables\Decorations\WhiteEcho.cs" />
-    <Compile Include="Game\Identifiables\Food\ExtraSpicyTofu.cs" />
-    <Compile Include="Game\Identifiables\IPediaRegistry.cs" />
-    <Compile Include="Game\Identifiables\Decorations\DreamOrnament.cs" />
-    <Compile Include="Game\Identifiables\Plorts\DreamPlort.cs" />
-    <Compile Include="Game\Identifiables\Plorts\RealGlitchPlort.cs" />
-    <Compile Include="Game\Identifiables\Others\WonderTicket.cs" />
-    <Compile Include="Game\Identifiables\Plorts\TarrPlort.cs" />
-    <Compile Include="Game\Identifiables\Crates\GlitchCrate.cs" />
-    <Compile Include="Game\Identifiables\Slimes\RealGlitchSlime.cs" />
-    <Compile Include="Game\Identifiables\Food\GlitchPogofruit.cs" />
-    <Compile Include="Game\Identifiables\Identifiables.cs" />
     <Compile Include="Enums\Enums.Identifiables.cs" />
     <Compile Include="Enums\Enums.LandPlots.cs" />
     <Compile Include="Enums\Enums.Gadgets.cs" />
@@ -108,7 +81,6 @@
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\GlobalSuppressions.cs" />
-    <Compile Include="Game\Others\Others.cs" />
     <Compile Include="Debug\Commands\TestModeCommand.cs" />
     <Compile Include="TODOs.cs" />
     <Compile Include="Utils\DelegateUtils.cs" />
@@ -200,13 +172,6 @@
   <ItemGroup>
     <Folder Include="Components\UI" />
     <Folder Include="Core\Callbacks\" />
-    <Folder Include="Game\Identifiables\Largos\Synergies" />
-    <Folder Include="Game\Others\Slime Appearance\" />
-    <Folder Include="Game\SpawnResources\World\" />
-    <Folder Include="Game\Upgrades\Plots\" />
-    <Folder Include="Game\Upgrades\Ranch\" />
-    <Folder Include="Game\Upgrades\Tech\" />
-    <Folder Include="Game\Upgrades\World\" />
     <Folder Include="Resources\Lang\en\Chapter1\Mails\" />
     <Folder Include="Resources\Lang\he\Chapter1\Mails" />
   </ItemGroup>
@@ -328,6 +293,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Lang\pl\Base\actor.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\pl\Base\keys.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\pl\Base\pedia.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lang\pl\Base\ui.yaml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Lang\pl\Chapter1\identifiables.yaml">

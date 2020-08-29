@@ -9,7 +9,6 @@ namespace Guu.Core.Patchs
     {
         private static void Postfix(GameContext __instance)
         {
-            __instance.MessageDirector.RegisterBundlesListener(LanguageController.ResetTranslations);
             SRGuu.OnGameContextReady(__instance);
         }
     }

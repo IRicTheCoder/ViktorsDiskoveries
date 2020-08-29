@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Reflection;
 
 using Guu;
-
+using Guu.Modules;
 using HarmonyLib;
 using SRML;
 

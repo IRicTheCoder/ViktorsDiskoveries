@@ -16,16 +16,16 @@ namespace Guu.Utils
 	public static class SlimeUtils
 	{
 		/// <summary>A constant that represents the min. drive to eat</summary>
-		private const float EAT_MIN_DRIVE = 0f;
+		public const float EAT_MIN_DRIVE = 0f;
 
 		/// <summary>A constant that represents the min. drive to eat plorts</summary>
-		private const float EAT_PLORT_MIN_DRIVE = 0.5f;
+		public const float EAT_PLORT_MIN_DRIVE = 0.5f;
 
 		/// <summary>A constant that represents the default extra drive in diets</summary>
-		private const float DEFAULT_EXTRA_DRIVE = 0f;
+		public const float DEFAULT_EXTRA_DRIVE = 0f;
 
 		/// <summary>A constant that represents the default favorite production count</summary>
-		private const int DEFAULT_FAV_COUNT = 2;
+		public const int DEFAULT_FAV_COUNT = 2;
 
 		/// <summary>
 		/// Add food to a food group for all slimes inside that group
@@ -163,20 +163,13 @@ namespace Guu.Utils
 		/// Gets the Plort for a Slime
 		/// </summary>
 		/// <param name="slime">ID of the slime</param>
-		private static Identifiable.Id SlimeToPlort(Identifiable.Id slime)
+		public static Identifiable.Id SlimeToPlort(Identifiable.Id slime)
 		{
 			SlimeDefinition def = GameContext.Instance.SlimeDefinitions.GetSlimeByIdentifiableId(slime);
 
-			if (def.Diet != null && def.Diet.EatMap != null)
-			{
-				foreach (SlimeDiet.EatMapEntry entry in def.Diet.EatMap)
-				{
-					if (Identifiable.IsPlort(entry.producesId))
-						return entry.producesId;
-				}
-			}
-
-			return Identifiable.Id.NONE;
+			return def.Diet?.EatMap == null ? 
+				Identifiable.Id.NONE : 
+				(from entry in def.Diet.EatMap where Identifiable.IsPlort(entry.producesId) select entry.producesId).FirstOrDefault();
 		}
 
 		/// <summary>
@@ -184,7 +177,7 @@ namespace Guu.Utils
 		/// </summary>
 		/// <param name="plortA">ID of the first plort</param>
 		/// <param name="plortB">ID of the second plort</param>
-		private static Identifiable.Id PlortToLargo(Identifiable.Id plortA, Identifiable.Id plortB)
+		public static Identifiable.Id PlortToLargo(Identifiable.Id plortA, Identifiable.Id plortB)
 		{
 			return GameContext.Instance.SlimeDefinitions.GetLargoByPlorts(plortA, plortB)?.IdentifiableId ?? Identifiable.Id.NONE;
 		}
@@ -198,13 +191,7 @@ namespace Guu.Utils
 			if (GameContext.Instance != null)
 				return GameContext.Instance.SlimeDefinitions.GetSlimeByIdentifiableId(id);
 
-			foreach (SlimeDefinition def in SRObjects.GetAll<SlimeDefinition>())
-			{
-				if (def.IdentifiableId == id)
-					return def;
-			}
-
-			return null;
+			return SRObjects.GetAll<SlimeDefinition>().FirstOrDefault(def => def.IdentifiableId == id);
 		}
 
 		/// <summary>
@@ -285,22 +272,37 @@ namespace Guu.Utils
 			return Sprite.Create(result, new Rect(Vector2.zero, Vector2.one * 512), Vector2.one * 256, 50, 1, SpriteMeshType.Tight);
 		}*/
 
-		// TODO: Fix this code
-		public static SlimeAppearanceStructure CloneAppearanceStructure(SlimeAppearanceStructure old, SlimeAppearanceObject[] appObjs)
+		/// <summary>
+		/// Clones an Appearance Structure the right way
+		/// </summary>
+		/// <param name="old">The old appearance to clone</param>
+		/// <returns>The new cloned appearance</returns>
+		public static SlimeAppearanceStructure CloneAppearanceStructure(SlimeAppearanceStructure old)
 		{
-			SlimeAppearanceStructure newApp = new SlimeAppearanceStructure(old);
+			// The cloned app
+			SlimeAppearanceStructure newApp = new SlimeAppearanceStructure(old)
+			{
+				DefaultMaterials = new Material[old.DefaultMaterials.Length],
+				ElementMaterials = new SlimeAppearanceMaterials[old.ElementMaterials.Length],
+				Element = ScriptableObject.CreateInstance<SlimeAppearanceElement>(),
+				SupportsFaces = old.SupportsFaces,
+				FaceRules = new SlimeFaceRules[old.FaceRules.Length]
+			};
 
-			// Clones the Materials (REMOVE IF YOU WANT TO JUST USE THE SAME MATERIALS)
-			newApp.DefaultMaterials = new Material[old.DefaultMaterials.Length];
+			// Adjust other values
+			newApp.Element.Name = old.Element.Name;
+			newApp.Element.Prefabs = old.Element.Prefabs;
+			
+			for (int i = 0; i < old.FaceRules.Length; i++)
+			{
+				newApp.FaceRules[i].ShowEyes = old.FaceRules[i].ShowEyes;
+				newApp.FaceRules[i].ShowMouth = old.FaceRules[i].ShowMouth;
+			}
+			
+			// Clone the Materials
 			for (int i = 0; i < old.DefaultMaterials.Length; i++)
 				newApp.DefaultMaterials[i] = Object.Instantiate(old.DefaultMaterials[i]);
-
-			newApp.Element = ScriptableObject.CreateInstance<SlimeAppearanceElement>();
-			newApp.Element.Name = old.Element.Name;
-			newApp.Element.Prefabs = appObjs;
 			
-			// Clones the Materials (REMOVES IF YOU WANT TO JUST USE THE SAME MATERIALS)
-			newApp.ElementMaterials = new SlimeAppearanceMaterials[old.ElementMaterials.Length];
 			for (int i = 0; i < old.ElementMaterials.Length; i++)
 			{
 				newApp.ElementMaterials[i] = new SlimeAppearanceMaterials
@@ -313,15 +315,6 @@ namespace Guu.Utils
 				{
 					newApp.ElementMaterials[i].Materials[m] = Object.Instantiate(old.ElementMaterials[i].Materials[m]);
 				}
-			}
-
-			newApp.SupportsFaces = old.SupportsFaces;
-
-			newApp.FaceRules = new SlimeFaceRules[old.FaceRules.Length];
-			for (int i = 0; i < old.FaceRules.Length; i++)
-			{
-				newApp.FaceRules[i].ShowEyes = old.FaceRules[i].ShowEyes;
-				newApp.FaceRules[i].ShowMouth = old.FaceRules[i].ShowMouth;
 			}
 
 			return newApp;

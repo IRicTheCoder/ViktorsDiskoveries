@@ -3,46 +3,44 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-namespace SRML.Modules
+namespace Guu.Modules
 {
 	/// <summary>
-	/// The manager for SRML or Mod Modules
+	/// The manager for Mod Modules
 	/// </summary>
 	internal static class ModuleManager
 	{
 		/// <summary>The list of loaded entries</summary>
-		public static Dictionary<string, ModuleEntry> loadedEntries;
+		private static readonly Dictionary<string, ModuleEntry> LOADED_ENTRIES = new Dictionary<string, ModuleEntry>();
 
 		/// <summary>
-		/// Loads all modules from a mod entry point
+		/// Loads all modules from a mod
 		/// </summary>
-		/// <param name="modEntry">The entry point for the mod from where the modules should be loaded</param>
-		/// <param name="modInfo">The info for the mod from where the modules are loaded</param>
+		/// <param name="modEntry">The entry type for the mod</param>
 		/// <param name="modAssembly">The assembly of the mod loading the modules</param>
-		public static void LoadModules(IModEntryPoint modEntry, SRModInfo modInfo, Assembly modAssembly)
+		public static void LoadModules(Type modEntry, Assembly modAssembly)
 		{
-			ModuleEntry[] entries = modEntry.GetType().GetCustomAttributes(typeof(ModuleEntry), false) as ModuleEntry[];
-
-			if (entries.Length == 0)
+			if (!(modEntry.GetCustomAttributes(typeof(ModuleEntry), false) is ModuleEntry[] entries) || entries.Length == 0)
 				return;
 
 			foreach (ModuleEntry entry in entries)
 			{
-				string entryID = $"{modInfo.Id}.{entry.moduleName}";
+				string entryID = $"{entry.modID}.{entry.moduleName}";
 
-				if (loadedEntries.ContainsKey(entryID))
+				if (LOADED_ENTRIES.ContainsKey(entryID))
 					continue;
 
 				int dependencies = entry.dependencies.Count;
 				bool canLoad = true;
-				foreach (SRModInfo mod in SRModLoader.LoadedMods)
+				
+				foreach (Assembly ass in AppDomain.CurrentDomain.GetAssemblies())
 				{
-					if (mod == modInfo || !entry.dependencies.ContainsKey(mod.Id))
+					if (ass == modAssembly || !entry.dependencies.ContainsKey(ass.GetName().Name))
 						continue;
 
 					dependencies--;
-
-					if (!mod.Version.ToString().Equals(entry.dependencies[mod.Id]))
+					
+					if (!ass.GetName().Version.ToString().Equals(entry.dependencies[ass.GetName().Name]))
 						canLoad = false;
 				}
 
@@ -51,14 +49,14 @@ namespace SRML.Modules
 
 				if (canLoad)
 				{
-					loadedEntries.Add(entryID, entry);
-					loadedEntries[entryID].modID = modInfo.Id;
+					LOADED_ENTRIES.Add(entryID, entry);
 
 					string codeBase = modAssembly.CodeBase;
 					UriBuilder uri = new UriBuilder(codeBase);
 					string path = Uri.UnescapeDataString(uri.Path);
 
-					Assembly.LoadFile(Path.Combine(Path.Combine(Path.GetDirectoryName(path), $"{entry.moduleName}.dll")));
+					// ReSharper disable once AssignNullToNotNullAttribute
+					Assembly.LoadFile(Path.Combine(Path.Combine(Path.GetDirectoryName(path), $"{entryID}.dll")));
 				}
 			}
 		}

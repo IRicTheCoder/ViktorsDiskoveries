@@ -7,7 +7,6 @@ using UnityEngine;
 
 namespace Guu
 {
-    // TODO: FINISH THIS
     public partial class SRGuu
     {
         // Is the services initialized

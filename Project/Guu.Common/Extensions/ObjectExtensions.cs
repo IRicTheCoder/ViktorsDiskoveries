@@ -4,6 +4,7 @@ using UnityEngine;
 /// <summary>
 /// Contains extension methods for Objects
 /// </summary>
+// ReSharper disable once CheckNamespace
 public static class ObjectExtensions
 {
 	/// <summary>
@@ -99,5 +100,13 @@ public static class ObjectExtensions
 		}
 
 		return default;
+	}
+
+	/// <summary>
+	/// Clones the object
+	/// </summary>
+	public static T CloneInstance<T>(this T obj) where T : Object
+	{
+		return Object.Instantiate(obj);
 	}
 }

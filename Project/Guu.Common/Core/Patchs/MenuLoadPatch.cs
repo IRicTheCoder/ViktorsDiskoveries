@@ -18,7 +18,7 @@ namespace Guu.Core.Patchs
             {
                 if (text.GetComponentInParent<TMP_Dropdown>() != null) continue;
 
-                if (text.GetComponent<CustomLangSupport>() == null) text.gameObject.AddComponent<CustomLangSupport>().SetText(text);
+                if (text.GetComponent<CustomLangSupport>() == null) text.gameObject.AddComponent<CustomLangSupport>();
             }
         }
     }

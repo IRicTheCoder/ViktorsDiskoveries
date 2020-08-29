@@ -41,13 +41,16 @@
     <Compile Include="Areas\AreaObjMarker.cs" />
     <Compile Include="Assets\AssetLoader.cs" />
     <Compile Include="Assets\AssetPack.cs" />
+    <Compile Include="Components\System\SystemUpdater.cs" />
     <Compile Include="Components\UI\CustomLangSupport.cs" />
+    <Compile Include="Core\Patchs\EnterZonePatch.cs" />
     <Compile Include="Core\Patchs\GameContextPatch.cs" />
     <Compile Include="Core\Patchs\LoadGamePatch.cs" />
     <Compile Include="Core\Patchs\MenuLoadPatch.cs" />
     <Compile Include="Extensions\LookupDirectorExtensions.cs" />
     <Compile Include="Extensions\MaterialExtensions.cs" />
     <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Extensions\ColorExtensions.cs" />
     <Compile Include="Extensions\ScriptableObjectExtensions.cs" />
     <Compile Include="Extensions\SlimeDefinitionExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
@@ -65,6 +68,7 @@
     <Compile Include="Utils\ExceptionUtils.cs" />
     <Compile Include="Utils\GameUtils.cs" />
     <Compile Include="Utils\ScriptableObjectsUtils.cs" />
+    <Compile Include="Utils\ShaderProps.cs" />
     <Compile Include="Utils\SlimeUtils.cs" />
     <Compile Include="Utils\TextureUtils.cs" />
   </ItemGroup>

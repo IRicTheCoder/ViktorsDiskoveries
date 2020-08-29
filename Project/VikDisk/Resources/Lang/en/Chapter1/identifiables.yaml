@@ -26,6 +26,10 @@ actor:l.dream_plort: Dream Plort
 
 # Slimes
 actor:l.real_glitch_slime: "'Real' Glitch Slime"
+actor:l.albino_slime: Albino Slime
+
+# Synergistic Largos
+actor:l.eletric_largo_synergy: Eletric Largo
 
 # Slime Resources
 actor:l.pink_slime_extract_craft: Pink Slime Extract

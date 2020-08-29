@@ -1,4 +1,5 @@
 ﻿using SRML.Utils.Enum;
+// ReSharper disable All
 
 namespace VikDisk
 {
@@ -10,11 +11,17 @@ namespace VikDisk
 		[EnumHolder]
 		public static class PlayerUpgrades
 		{
-			// BASE UPGRADES
+			//+-----------------------------
+			//+ BASE UPGRADES
+			//+-----------------------------
+			//. Chapter 1
+			public static PlayerState.Upgrade SLIME_VACCINE;
 			public static PlayerState.Upgrade AR_GLASSES;
 
-			// IMPROVED ORIGINAL UPGRADES
-
+			//+-----------------------------
+			//+ IMPROVED ORIGINAL UPGRADES
+			//+-----------------------------
+			
 		}
 	}
 }
