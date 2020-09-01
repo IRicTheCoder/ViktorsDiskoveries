@@ -3,9 +3,9 @@
 #FOOD
 #=====================================
 #Veggies
-"actor:l.dark_ginger_veggie": Czarny Imbir
+"actor:l.dark_ginger_veggie": Mroczny Imbir
 #Fruits
-"actor:l.glitch_pogo_fruit": Uszkodzony Pogofruit
+"actor:l.glitch_pogo_fruit": Zbugowany Pogofruit
 #Meats
 "actor:l.fire_hen": Płonący Kurczak
 "actor:l.fire_chick": Płonący Kurczaczek
@@ -15,11 +15,14 @@
 #PLORTS, SLIMES & RESOURCES
 #=====================================
 #Plorts
-"actor:l.real_glitch_plort": Uszkodzony Plort
-"actor:l.tarr_plort": Mroczny Plort
+"actor:l.real_glitch_plort": Zbugowany Plort
+"actor:l.tarr_plort": Spaczony Plort
 "actor:l.dream_plort": Plort Marzeń
 #Slimes
-"actor:l.real_glitch_slime": "Prawdziwy Uszkodzony Slime"
+"actor:l.real_glitch_slime": "Prawdziwy Zbugowany Slime"
+"actor:l.albino_slime": Albino Slime
+#Synergistic Largos
+"actor:l.eletric_largo_synergy": Elektryczna Synergia
 #Slime Resources
 "actor:l.pink_slime_extract_craft": Ekstrakt ze Różowy Slime
 #=====================================
