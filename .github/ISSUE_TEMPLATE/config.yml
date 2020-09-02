@@ -1,8 +1,8 @@
 blank_issues_enabled: true
 contact_links:
-  - name: GitHub Community Support
-    url: https://github.community/
-    about: Please ask and answer questions here.
-  - name: GitHub Security Bug Bounty
-    url: https://bounty.github.com/
-    about: Please report security vulnerabilities here.
+  - name: You have questions?
+    url: https://discord.gg/eBPAdFw
+    about: You can ask your questions or look for support on Discord. Do so before posting an issue
+  - name: Community Suggestions
+    url: https://github.com/RicardoTheCoder/ViktorsDiskoveries/issues/13
+    about: Before posting make sure your look at the suggestions from the community, yours might already be there.
