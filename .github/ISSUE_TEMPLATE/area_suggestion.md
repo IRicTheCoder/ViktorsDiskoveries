@@ -9,7 +9,7 @@ assignees: ''
 
 # New Area Suggestion
 
-**NOTE: If you wish to present more than one area in this suggestion write each one in a comment and use the following structure**
+[[comment:]]NOTE: If you wish to present more than one area in this suggestion write each one in a comment and use the following structure**
 
 ## What will this area look like?
 *A clear and concise description of what this area will look like*
