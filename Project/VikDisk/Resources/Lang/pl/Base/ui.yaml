@@ -119,7 +119,7 @@
 "ui:w.limit_reached_apiary": "Osiągnięto limit instalacji apiarek. Limit: 6"
 "ui:w.cannot_demolish_corral_tutorial": "W tej chwili nie możesz zniszczyć zagrody."
 "ui:b.limit_reached": "Osiągnięto Limit"
-"ui:t.empty_plot": "Pusty Plac"
+"ui:t.empty_plot": "Pusta Działka"
 "ui:t.coop": "Kurnik"
 "ui:b.walls": "Ściany"
 "ui:b.feeder": "Karmnik"
