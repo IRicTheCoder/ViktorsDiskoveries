@@ -2,7 +2,7 @@
 #=====================================
 #AUTO GENERATED FROM THE GAME
 #=====================================
-"ui:l.version_watermark": "Slime Rancher v {0}"
+"ui:l.version_watermark": "Slime Rancher v {0}\nUwaga język polski jest nieukończony pełni!"
 "ui:l.version_watermark_xbox": "Slime Rancher v {0}"
 "ui:l.version_watermark_xboxgp": "Slime Rancher (Game Preview) v {0}"
 "ui:l.version_full_watermark": "Wersja: {0} ({1})"
@@ -250,7 +250,7 @@
 "ui:l.antialiasing_multisampling_2x": "2x Wielopróbkowanie"
 "ui:l.antialiasing_multisampling_4x": "4x Wielopróbkowanie"
 "ui:l.antialiasing_multisampling_8x": "8x Wielopróbkowanie"
-"ui:l.model_detail": "Jakość Modelu:"
+"ui:l.model_detail": "Jakość Modeli:"
 "ui:l.model_detail_low": "Niskie"
 "ui:l.model_detail_medium": "Średnie"
 "ui:l.model_detail_high": "Wysokie"
