@@ -2,7 +2,7 @@
 #=====================================
 #AUTO GENERATED FROM THE GAME
 #=====================================
-"ui:l.version_watermark": "Slime Rancher v {0}\nUwaga język polski jest nieukończony pełni!"
+"ui:l.version_watermark": "Slime Rancher v {0}\nUwaga! Język polski jest nieukończony pełni!"
 "ui:l.version_watermark_xbox": "Slime Rancher v {0}"
 "ui:l.version_watermark_xboxgp": "Slime Rancher (Game Preview) v {0}"
 "ui:l.version_full_watermark": "Wersja: {0} ({1})"
