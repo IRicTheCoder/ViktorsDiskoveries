@@ -20,13 +20,13 @@ assignees: ''
 * [ ] **Pet Slime** - A slime that can follow you around and do some tasks
 
 ## Diet & Favorite Food
-<!-- *What kind of diet and favority food would this slime have?* -->
+<!-- *What kind of diet and favorite food would this slime have?* -->
 
 ## Plort
 <!-- *What would be it's plort, does it have any abilities?* -->
 
-## Favority Toy
-<!-- *Does it have a favority toy?* -->
+## Favorite Toy
+<!-- *Does it have a favorite toy?* -->
 
 ## Slime Technical Sheet
 ### Type
