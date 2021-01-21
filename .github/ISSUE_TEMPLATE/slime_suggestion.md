@@ -9,10 +9,10 @@ assignees: ''
 
 # New Slime Suggestion
 
-**NOTE: If you wish to present more than one slime in this suggestion write each one in a comment and use the following structure**
+<!-- **NOTE: If you wish to present more than one slime in this suggestion write each one in a comment and use the following structure** -->
 
 ## What will this slime look like?
-*A clear and concise description of what this slime will look like*
+<!-- *A clear and concise description of what this slime will look like* -->
 
 ## What kind of slime is it?
 * [ ] **Ranchable Slime** - A slime that can be ranched
@@ -20,13 +20,13 @@ assignees: ''
 * [ ] **Pet Slime** - A slime that can follow you around and do some tasks
 
 ## Diet & Favorite Food
-*What kind of diet and favority food would this slime have?*
+<!-- *What kind of diet and favority food would this slime have?* -->
 
 ## Plort
-*What would be it's plort, does it have any abilities?*
+<!-- *What would be it's plort, does it have any abilities?* -->
 
 ## Favority Toy
-*Does it have a favority toy?*
+<!-- *Does it have a favority toy?* -->
 
 ## Slime Technical Sheet
 ### Type
@@ -38,7 +38,7 @@ assignees: ''
 * [ ] **Special** – Slimes like the Tarr or Twinkle slime are seen as special cause they aren’t normal and don’t fit into any other category.
 
 ### Mutation of what slime? (If you choose Mutation above)
-*Identify a slime that this is a mutation of, if it is a mutation of something previously suggested, say it is a suggestion given before*
+<!-- *Identify a slime that this is a mutation of, if it is a mutation of something previously suggested, say it is a suggestion given before* -->
 
 ### Behavior
 * [ ] **Passive** – Does not damage the rancher in any way. The aggitation will not cause difference in behaviours.
@@ -46,7 +46,7 @@ assignees: ''
 * [ ] **Aggressive** – Attacks the rancher directly.
 
 ### Risk for the rancher? (If you choose something other than Passive above)
-*What is the risk for the rancher? Directly or Indirectly*
+<!-- *What is the risk for the rancher? Directly or Indirectly* -->
 
 ### Activity Pattern
 * [ ] **Diurnal** – Only survives in the light / during the day
@@ -62,13 +62,13 @@ assignees: ''
 * [ ] **No** - This slime cannot become a largo.
 
 ### Largo Specification (If you choose specific above)
-*What are the slimes this slime can make largos with?*
+<!-- *What are the slimes this slime can make largos with?* -->
 
 ### Location?
-*Either give a specific location or give an idea of places where it could spawn*
+<!-- *Either give a specific location or give an idea of places where it could spawn* -->
 
 ### Condition to find?
-*If this slime has a condition to find or see it, write it here*
+<!-- *If this slime has a condition to find or see it, write it here* -->
 
 ### Environment?
 * [ ] **Any Kind** - Anywhere independent of the type of environment
@@ -80,7 +80,7 @@ assignees: ''
 * [ ] **Other** - Make a suggestion of a new environment
 
 ### Environment Specification (If you choose other above)
-*Specify the type of environment and talk a bit about it*
+<!-- *Specify the type of environment and talk a bit about it* -->
 
 ### Temperature
 * [ ] **Cold** – Requires cold temperatures (below 15°C/59°F)
@@ -95,13 +95,13 @@ assignees: ''
 * [ ] **No** - This slime can't be vacced
 
 ### Vac Upgrade or Condition (If you choose Upgrade or Conditional above)
-*Explain what is the upgrade or condition for this slime to be vacced*
+<!-- *Explain what is the upgrade or condition for this slime to be vacced* -->
 
 ## Synergies
-*Can this slime synergize with another? If so provide a list of suggestions*
+<!-- *Can this slime synergize with another? If so provide a list of suggestions* -->
 
 ## Possible names for the slime? (Optional)
-*If you wish to, please give some names for this slime*
+<!-- *If you wish to, please give some names for this slime* -->
 
 ## Additional context
-*Add any other context or screenshots about the feature suggestion here.*
+<!-- *Add any other context or screenshots about the feature suggestion here.* -->
