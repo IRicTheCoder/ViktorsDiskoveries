@@ -69,7 +69,7 @@
 "ui:m.press_to_open_pod.pre_gamepad": "Naciśnij"
 "ui:m.press_to_open_pod.post_gamepad": "aby otworzyć pod"
 "ui:m.needs_treasure_cracker": "Pod jest zablokowany"
-"ui:m.insuf_treasure_cracker": "Bardziej zaawansowany cracker podów jest wymagany"
+"ui:m.insuf_treasure_cracker": "Bardziej zaawansowany rozbrajacz podów jest wymagany"
 "ui:m.press_to_open_gate": "Naciśnij {0}, aby otworzyć bramę"
 "ui:m.press_to_open_gate.pre_gamepad": "Naciśnij"
 "ui:m.press_to_open_gate.post_gamepad": "aby otworzyć bramę"
