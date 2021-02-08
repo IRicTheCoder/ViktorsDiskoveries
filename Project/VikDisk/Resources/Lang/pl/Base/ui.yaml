@@ -460,7 +460,7 @@
 "ui:m.avail_blueprint": "Dostępny Nowy Schemat!"
 "ui:m.avail_blueprint_hint": "Odwiedź Sklep Budowniczego aby kupić."
 "ui:m.ready": "Gotowe!"
-"ui:l.installing": "Instalacja w toku..."
+"ui:l.installing": "Instalowanie"
 "ui:b.fabricate": "Produkuj"
 "ui:l.requires": "Wymaga"
 "ui:m.count_of_required": "{0} / {1}"
