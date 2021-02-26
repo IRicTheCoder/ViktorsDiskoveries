@@ -488,7 +488,7 @@
 "ui:b.drone.reset": "Resetuj"
 "ui:b.drone.activate": "Aktywuj"
 "ui:m.drone.deactivated": "Dezaktywuj"
-"ui:w.not_on_ranch_drone": "Drony mogą być zainstalowane tylko w Ranczu."
+"ui:w.not_on_ranch_drone": "Drony mogą być zainstalowane tylko na Ranczu."
 "ui:w.limit_reached_drone": "Osiągnięto limit dronów dla tego rozszerzenia Ranch. Limit: 2"
 "ui:w.drone_reprogram_drops_ammo": "Ten dron obecnie przewozi ładunek. Modyfikacja celu lub zresetowanie programu spowoduje wyrzucenie ładunku."
 "ui:w.drone_remove_drops_ammo": "Ten dron obecnie przewozi ładunek. Usunięcie go spowoduje wyrzucenie ładunku."
