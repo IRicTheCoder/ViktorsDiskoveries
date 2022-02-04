@@ -1,3 +1,5 @@
+<p align="center"><h1>The mod as been discontinued in favor of Rancher's Experience which is a new project that came from this one</h1></p>
+
 <p align="center"><a href="http://vikdisk.ricthecoder.com/" target="_blank"><img src="https://i.imgur.com/s4NGqoG.png"></a></p>
 <hr>
 <p align="center">
